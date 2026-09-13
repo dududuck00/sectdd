@@ -1,0 +1,6663 @@
+{
+  "aggregates": [
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.5,
+          "pass": 0.5,
+          "safe": 0.5,
+          "secure": 0.75
+        },
+        "3": {
+          "joint": 0.5,
+          "pass": 0.5,
+          "safe": 0.5,
+          "secure": 0.75
+        },
+        "5": {
+          "joint": 0.5,
+          "pass": 0.5,
+          "safe": 0.5,
+          "secure": 0.75
+        }
+      },
+      "benchmark": "codeguardplus",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 0.0,
+          "total": 0.0
+        },
+        "input_tokens": {
+          "mean": 217.75,
+          "total": 4355.0
+        },
+        "model_calls": {
+          "mean": 1.0,
+          "total": 20.0
+        },
+        "output_tokens": {
+          "mean": 165.15,
+          "total": 3303.0
+        },
+        "visible_test_executions": {
+          "mean": 2.0,
+          "total": 40.0
+        }
+      },
+      "functional_rate": 0.5,
+      "joint_rate": 0.5,
+      "mean_first_visible_pass_round": 0,
+      "method": "B0",
+      "model": "deepseek-v4-flash",
+      "safe_mean": 0.5,
+      "security_given_functional": 1.0,
+      "security_rate": 0.75,
+      "states": {
+        "F+S+": 10,
+        "F-S+": 5,
+        "F-S-": 5
+      },
+      "tfor": {
+        "denominator": 10,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "trajectories": 20,
+      "visible_joint_rate": 0.5
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.5,
+          "pass": 0.5,
+          "safe": 0.5,
+          "secure": 0.75
+        },
+        "3": {
+          "joint": 0.5,
+          "pass": 0.5,
+          "safe": 0.5,
+          "secure": 0.75
+        },
+        "5": {
+          "joint": 0.5,
+          "pass": 0.5,
+          "safe": 0.5,
+          "secure": 0.75
+        }
+      },
+      "benchmark": "codeguardplus",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 0.0,
+          "total": 0.0
+        },
+        "input_tokens": {
+          "mean": 217.75,
+          "total": 4355.0
+        },
+        "model_calls": {
+          "mean": 1.0,
+          "total": 20.0
+        },
+        "output_tokens": {
+          "mean": 168.15,
+          "total": 3363.0
+        },
+        "visible_test_executions": {
+          "mean": 2.0,
+          "total": 40.0
+        }
+      },
+      "functional_rate": 0.5,
+      "joint_rate": 0.5,
+      "mean_first_visible_pass_round": 0,
+      "method": "B1",
+      "model": "deepseek-v4-flash",
+      "safe_mean": 0.5,
+      "security_given_functional": 1.0,
+      "security_rate": 0.75,
+      "states": {
+        "F+S+": 10,
+        "F-S+": 5,
+        "F-S-": 5
+      },
+      "tfor": {
+        "denominator": 10,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "trajectories": 20,
+      "visible_joint_rate": 0.5
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.7,
+          "pass": 0.7,
+          "safe": 0.7,
+          "secure": 1.0
+        },
+        "3": {
+          "joint": 0.75,
+          "pass": 0.75,
+          "safe": 0.7,
+          "secure": 1.0
+        },
+        "5": {
+          "joint": 0.75,
+          "pass": 0.75,
+          "safe": 0.7,
+          "secure": 1.0
+        }
+      },
+      "benchmark": "codeguardplus",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 0.0,
+          "total": 0.0
+        },
+        "input_tokens": {
+          "mean": 422.5,
+          "total": 8450.0
+        },
+        "model_calls": {
+          "mean": 1.0,
+          "total": 20.0
+        },
+        "output_tokens": {
+          "mean": 163.9,
+          "total": 3278.0
+        },
+        "visible_test_executions": {
+          "mean": 2.0,
+          "total": 40.0
+        }
+      },
+      "functional_rate": 0.7,
+      "joint_rate": 0.7,
+      "mean_first_visible_pass_round": 0,
+      "method": "B2",
+      "model": "deepseek-v4-flash",
+      "safe_mean": 0.7,
+      "security_given_functional": 1.0,
+      "security_rate": 1,
+      "states": {
+        "F+S+": 14,
+        "F-S+": 6
+      },
+      "tfor": {
+        "denominator": 15,
+        "numerator": 1,
+        "rate": 0.06666666666666667
+      },
+      "trajectories": 20,
+      "visible_joint_rate": 0.75
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.7,
+          "pass": 0.7,
+          "safe": 0.7,
+          "secure": 1.0
+        },
+        "3": {
+          "joint": 0.75,
+          "pass": 0.75,
+          "safe": 0.7,
+          "secure": 1.0
+        },
+        "5": {
+          "joint": 0.75,
+          "pass": 0.75,
+          "safe": 0.7,
+          "secure": 1.0
+        }
+      },
+      "benchmark": "codeguardplus",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 0.0,
+          "total": 0.0
+        },
+        "input_tokens": {
+          "mean": 513.5,
+          "total": 10270.0
+        },
+        "model_calls": {
+          "mean": 1.0,
+          "total": 20.0
+        },
+        "output_tokens": {
+          "mean": 160.65,
+          "total": 3213.0
+        },
+        "visible_test_executions": {
+          "mean": 2.0,
+          "total": 40.0
+        }
+      },
+      "functional_rate": 0.7,
+      "joint_rate": 0.7,
+      "mean_first_visible_pass_round": 0,
+      "method": "B3",
+      "model": "deepseek-v4-flash",
+      "safe_mean": 0.7,
+      "security_given_functional": 1.0,
+      "security_rate": 1,
+      "states": {
+        "F+S+": 14,
+        "F-S+": 6
+      },
+      "tfor": {
+        "denominator": 15,
+        "numerator": 1,
+        "rate": 0.06666666666666667
+      },
+      "trajectories": 20,
+      "visible_joint_rate": 0.75
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.75,
+          "pass": 0.75,
+          "safe": 0.75,
+          "secure": 0.8
+        },
+        "3": {
+          "joint": 0.75,
+          "pass": 0.75,
+          "safe": 0.75,
+          "secure": 0.9
+        },
+        "5": {
+          "joint": 0.75,
+          "pass": 0.75,
+          "safe": 0.75,
+          "secure": 1.0
+        }
+      },
+      "benchmark": "codeguardplus",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 80.75,
+          "total": 1615.0
+        },
+        "input_tokens": {
+          "mean": 644.7,
+          "total": 12894.0
+        },
+        "model_calls": {
+          "mean": 1.75,
+          "total": 35.0
+        },
+        "output_tokens": {
+          "mean": 286.3,
+          "total": 5726.0
+        },
+        "visible_test_executions": {
+          "mean": 3.5,
+          "total": 70.0
+        }
+      },
+      "functional_rate": 0.75,
+      "joint_rate": 0.75,
+      "mean_first_visible_pass_round": 0.3333333333333333,
+      "method": "B4",
+      "model": "deepseek-v4-flash",
+      "safe_mean": 0.75,
+      "security_given_functional": 1.0,
+      "security_rate": 0.8,
+      "states": {
+        "F+S+": 15,
+        "F-S+": 1,
+        "F-S-": 4
+      },
+      "tfor": {
+        "denominator": 15,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "trajectories": 20,
+      "visible_joint_rate": 0.75
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.75,
+          "pass": 0.75,
+          "safe": 0.75,
+          "secure": 0.75
+        },
+        "3": {
+          "joint": 0.75,
+          "pass": 0.75,
+          "safe": 0.75,
+          "secure": 0.75
+        },
+        "5": {
+          "joint": 0.75,
+          "pass": 0.75,
+          "safe": 0.75,
+          "secure": 0.75
+        }
+      },
+      "benchmark": "codeguardplus",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 80.75,
+          "total": 1615.0
+        },
+        "input_tokens": {
+          "mean": 644.85,
+          "total": 12897.0
+        },
+        "model_calls": {
+          "mean": 1.75,
+          "total": 35.0
+        },
+        "output_tokens": {
+          "mean": 288.2,
+          "total": 5764.0
+        },
+        "visible_test_executions": {
+          "mean": 3.5,
+          "total": 70.0
+        }
+      },
+      "functional_rate": 0.75,
+      "joint_rate": 0.75,
+      "mean_first_visible_pass_round": 0.3333333333333333,
+      "method": "B5",
+      "model": "deepseek-v4-flash",
+      "safe_mean": 0.75,
+      "security_given_functional": 1.0,
+      "security_rate": 0.75,
+      "states": {
+        "F+S+": 15,
+        "F-S-": 5
+      },
+      "tfor": {
+        "denominator": 15,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "trajectories": 20,
+      "visible_joint_rate": 0.75
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.95,
+          "pass": 0.95,
+          "safe": 0.95,
+          "secure": 1.0
+        },
+        "3": {
+          "joint": 1.0,
+          "pass": 1.0,
+          "safe": 0.95,
+          "secure": 1.0
+        },
+        "5": {
+          "joint": 1.0,
+          "pass": 1.0,
+          "safe": 0.95,
+          "secure": 1.0
+        }
+      },
+      "benchmark": "codeguardplus",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 36.25,
+          "total": 725.0
+        },
+        "input_tokens": {
+          "mean": 717.65,
+          "total": 14353.0
+        },
+        "model_calls": {
+          "mean": 1.25,
+          "total": 25.0
+        },
+        "output_tokens": {
+          "mean": 206.1,
+          "total": 4122.0
+        },
+        "visible_test_executions": {
+          "mean": 2.5,
+          "total": 50.0
+        }
+      },
+      "functional_rate": 0.95,
+      "joint_rate": 0.95,
+      "mean_first_visible_pass_round": 0.25,
+      "method": "B6",
+      "model": "deepseek-v4-flash",
+      "safe_mean": 0.95,
+      "security_given_functional": 1.0,
+      "security_rate": 1,
+      "states": {
+        "F+S+": 19,
+        "F-S+": 1
+      },
+      "tfor": {
+        "denominator": 20,
+        "numerator": 1,
+        "rate": 0.05
+      },
+      "trajectories": 20,
+      "visible_joint_rate": 1.0
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.75,
+          "pass": 0.75,
+          "safe": 0.75,
+          "secure": 0.75
+        },
+        "3": {
+          "joint": 0.75,
+          "pass": 0.75,
+          "safe": 0.75,
+          "secure": 0.75
+        },
+        "5": {
+          "joint": 0.75,
+          "pass": 0.75,
+          "safe": 0.75,
+          "secure": 0.75
+        }
+      },
+      "benchmark": "codeguardplus",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 104.75,
+          "total": 2095.0
+        },
+        "input_tokens": {
+          "mean": 676.55,
+          "total": 13531.0
+        },
+        "model_calls": {
+          "mean": 1.75,
+          "total": 35.0
+        },
+        "output_tokens": {
+          "mean": 278.3,
+          "total": 5566.0
+        },
+        "visible_test_executions": {
+          "mean": 3.5,
+          "total": 70.0
+        }
+      },
+      "functional_rate": 0.75,
+      "joint_rate": 0.75,
+      "mean_first_visible_pass_round": 0.3333333333333333,
+      "method": "M",
+      "model": "deepseek-v4-flash",
+      "safe_mean": 0.75,
+      "security_given_functional": 1.0,
+      "security_rate": 0.75,
+      "states": {
+        "F+S+": 15,
+        "F-S-": 5
+      },
+      "tfor": {
+        "denominator": 15,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "trajectories": 20,
+      "visible_joint_rate": 0.75
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.25,
+          "pass": 0.45,
+          "safe": 0.25,
+          "secure": 0.25
+        },
+        "3": {
+          "joint": 0.25,
+          "pass": 0.5,
+          "safe": 0.25,
+          "secure": 0.25
+        },
+        "5": {
+          "joint": 0.25,
+          "pass": 0.5,
+          "safe": 0.25,
+          "secure": 0.25
+        }
+      },
+      "benchmark": "codeguardplus",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 0.0,
+          "total": 0.0
+        },
+        "input_tokens": {
+          "mean": 221.25,
+          "total": 4425.0
+        },
+        "model_calls": {
+          "mean": 1.0,
+          "total": 20.0
+        },
+        "output_tokens": {
+          "mean": 181.0,
+          "total": 3620.0
+        },
+        "visible_test_executions": {
+          "mean": 2.0,
+          "total": 40.0
+        }
+      },
+      "functional_rate": 0.45,
+      "joint_rate": 0.25,
+      "mean_first_visible_pass_round": 0,
+      "method": "B0",
+      "model": "qwen25-coder-14b",
+      "safe_mean": 0.25,
+      "security_given_functional": 0.5555555555555556,
+      "security_rate": 0.25,
+      "states": {
+        "F+S+": 5,
+        "F+S-": 4,
+        "F-S-": 11
+      },
+      "tfor": {
+        "denominator": 10,
+        "numerator": 5,
+        "rate": 0.5
+      },
+      "trajectories": 20,
+      "visible_joint_rate": 0.5
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.25,
+          "pass": 0.45,
+          "safe": 0.25,
+          "secure": 0.25
+        },
+        "3": {
+          "joint": 0.25,
+          "pass": 0.5,
+          "safe": 0.25,
+          "secure": 0.25
+        },
+        "5": {
+          "joint": 0.25,
+          "pass": 0.5,
+          "safe": 0.25,
+          "secure": 0.25
+        }
+      },
+      "benchmark": "codeguardplus",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 0.0,
+          "total": 0.0
+        },
+        "input_tokens": {
+          "mean": 221.25,
+          "total": 4425.0
+        },
+        "model_calls": {
+          "mean": 1.0,
+          "total": 20.0
+        },
+        "output_tokens": {
+          "mean": 180.6,
+          "total": 3612.0
+        },
+        "visible_test_executions": {
+          "mean": 2.0,
+          "total": 40.0
+        }
+      },
+      "functional_rate": 0.45,
+      "joint_rate": 0.25,
+      "mean_first_visible_pass_round": 0,
+      "method": "B1",
+      "model": "qwen25-coder-14b",
+      "safe_mean": 0.25,
+      "security_given_functional": 0.5555555555555556,
+      "security_rate": 0.25,
+      "states": {
+        "F+S+": 5,
+        "F+S-": 4,
+        "F-S-": 11
+      },
+      "tfor": {
+        "denominator": 10,
+        "numerator": 5,
+        "rate": 0.5
+      },
+      "trajectories": 20,
+      "visible_joint_rate": 0.5
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.35,
+          "pass": 0.6,
+          "safe": 0.35,
+          "secure": 0.35
+        },
+        "3": {
+          "joint": 0.475,
+          "pass": 0.725,
+          "safe": 0.35,
+          "secure": 0.475
+        },
+        "5": {
+          "joint": 0.5,
+          "pass": 0.75,
+          "safe": 0.35,
+          "secure": 0.5
+        }
+      },
+      "benchmark": "codeguardplus",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 0.0,
+          "total": 0.0
+        },
+        "input_tokens": {
+          "mean": 413.75,
+          "total": 8275.0
+        },
+        "model_calls": {
+          "mean": 1.0,
+          "total": 20.0
+        },
+        "output_tokens": {
+          "mean": 293.15,
+          "total": 5863.0
+        },
+        "visible_test_executions": {
+          "mean": 2.0,
+          "total": 40.0
+        }
+      },
+      "functional_rate": 0.6,
+      "joint_rate": 0.35,
+      "mean_first_visible_pass_round": 0,
+      "method": "B2",
+      "model": "qwen25-coder-14b",
+      "safe_mean": 0.35,
+      "security_given_functional": 0.5833333333333334,
+      "security_rate": 0.35,
+      "states": {
+        "F+S+": 7,
+        "F+S-": 5,
+        "F-S-": 8
+      },
+      "tfor": {
+        "denominator": 12,
+        "numerator": 5,
+        "rate": 0.4166666666666667
+      },
+      "trajectories": 20,
+      "visible_joint_rate": 0.6
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.45,
+          "pass": 0.7,
+          "safe": 0.45,
+          "secure": 0.45
+        },
+        "3": {
+          "joint": 0.5,
+          "pass": 0.75,
+          "safe": 0.45,
+          "secure": 0.5
+        },
+        "5": {
+          "joint": 0.5,
+          "pass": 0.75,
+          "safe": 0.45,
+          "secure": 0.5
+        }
+      },
+      "benchmark": "codeguardplus",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 0.0,
+          "total": 0.0
+        },
+        "input_tokens": {
+          "mean": 501.25,
+          "total": 10025.0
+        },
+        "model_calls": {
+          "mean": 1.0,
+          "total": 20.0
+        },
+        "output_tokens": {
+          "mean": 254.6,
+          "total": 5092.0
+        },
+        "visible_test_executions": {
+          "mean": 2.0,
+          "total": 40.0
+        }
+      },
+      "functional_rate": 0.7,
+      "joint_rate": 0.45,
+      "mean_first_visible_pass_round": 0,
+      "method": "B3",
+      "model": "qwen25-coder-14b",
+      "safe_mean": 0.45,
+      "security_given_functional": 0.6428571428571429,
+      "security_rate": 0.45,
+      "states": {
+        "F+S+": 9,
+        "F+S-": 5,
+        "F-S-": 6
+      },
+      "tfor": {
+        "denominator": 14,
+        "numerator": 5,
+        "rate": 0.35714285714285715
+      },
+      "trajectories": 20,
+      "visible_joint_rate": 0.7
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.35,
+          "pass": 0.45,
+          "safe": 0.35,
+          "secure": 0.4
+        },
+        "3": {
+          "joint": 0.475,
+          "pass": 0.5,
+          "safe": 0.35,
+          "secure": 0.5
+        },
+        "5": {
+          "joint": 0.5,
+          "pass": 0.5,
+          "safe": 0.35,
+          "secure": 0.5
+        }
+      },
+      "benchmark": "codeguardplus",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 127.0,
+          "total": 2540.0
+        },
+        "input_tokens": {
+          "mean": 882.9,
+          "total": 17658.0
+        },
+        "model_calls": {
+          "mean": 1.9,
+          "total": 38.0
+        },
+        "output_tokens": {
+          "mean": 386.8,
+          "total": 7736.0
+        },
+        "visible_test_executions": {
+          "mean": 3.8,
+          "total": 76.0
+        }
+      },
+      "functional_rate": 0.45,
+      "joint_rate": 0.35,
+      "mean_first_visible_pass_round": 0.16666666666666666,
+      "method": "B4",
+      "model": "qwen25-coder-14b",
+      "safe_mean": 0.35,
+      "security_given_functional": 0.7777777777777778,
+      "security_rate": 0.4,
+      "states": {
+        "F+S+": 7,
+        "F+S-": 2,
+        "F-S+": 1,
+        "F-S-": 10
+      },
+      "tfor": {
+        "denominator": 12,
+        "numerator": 5,
+        "rate": 0.4166666666666667
+      },
+      "trajectories": 20,
+      "visible_joint_rate": 0.6
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.35,
+          "pass": 0.5,
+          "safe": 0.35,
+          "secure": 0.35
+        },
+        "3": {
+          "joint": 0.475,
+          "pass": 0.5,
+          "safe": 0.35,
+          "secure": 0.475
+        },
+        "5": {
+          "joint": 0.5,
+          "pass": 0.5,
+          "safe": 0.35,
+          "secure": 0.5
+        }
+      },
+      "benchmark": "codeguardplus",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 117.8,
+          "total": 2356.0
+        },
+        "input_tokens": {
+          "mean": 865.1,
+          "total": 17302.0
+        },
+        "model_calls": {
+          "mean": 1.9,
+          "total": 38.0
+        },
+        "output_tokens": {
+          "mean": 385.8,
+          "total": 7716.0
+        },
+        "visible_test_executions": {
+          "mean": 3.8,
+          "total": 76.0
+        }
+      },
+      "functional_rate": 0.5,
+      "joint_rate": 0.35,
+      "mean_first_visible_pass_round": 0.16666666666666666,
+      "method": "B5",
+      "model": "qwen25-coder-14b",
+      "safe_mean": 0.35,
+      "security_given_functional": 0.7,
+      "security_rate": 0.35,
+      "states": {
+        "F+S+": 7,
+        "F+S-": 3,
+        "F-S-": 10
+      },
+      "tfor": {
+        "denominator": 12,
+        "numerator": 5,
+        "rate": 0.4166666666666667
+      },
+      "trajectories": 20,
+      "visible_joint_rate": 0.6
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.75,
+          "pass": 0.75,
+          "safe": 0.75,
+          "secure": 0.75
+        },
+        "3": {
+          "joint": 0.75,
+          "pass": 0.75,
+          "safe": 0.75,
+          "secure": 0.75
+        },
+        "5": {
+          "joint": 0.75,
+          "pass": 0.75,
+          "safe": 0.75,
+          "secure": 0.75
+        }
+      },
+      "benchmark": "codeguardplus",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 79.95,
+          "total": 1599.0
+        },
+        "input_tokens": {
+          "mean": 857.6,
+          "total": 17152.0
+        },
+        "model_calls": {
+          "mean": 1.3,
+          "total": 26.0
+        },
+        "output_tokens": {
+          "mean": 368.95,
+          "total": 7379.0
+        },
+        "visible_test_executions": {
+          "mean": 2.6,
+          "total": 52.0
+        }
+      },
+      "functional_rate": 0.75,
+      "joint_rate": 0.75,
+      "mean_first_visible_pass_round": 0.3,
+      "method": "B6",
+      "model": "qwen25-coder-14b",
+      "safe_mean": 0.75,
+      "security_given_functional": 1.0,
+      "security_rate": 0.75,
+      "states": {
+        "F+S+": 15,
+        "F-S-": 5
+      },
+      "tfor": {
+        "denominator": 20,
+        "numerator": 5,
+        "rate": 0.25
+      },
+      "trajectories": 20,
+      "visible_joint_rate": 1.0
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.3,
+          "pass": 0.5,
+          "safe": 0.3,
+          "secure": 0.3
+        },
+        "3": {
+          "joint": 0.4,
+          "pass": 0.5,
+          "safe": 0.3,
+          "secure": 0.4
+        },
+        "5": {
+          "joint": 0.5,
+          "pass": 0.5,
+          "safe": 0.3,
+          "secure": 0.5
+        }
+      },
+      "benchmark": "codeguardplus",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 165.6,
+          "total": 3312.0
+        },
+        "input_tokens": {
+          "mean": 997.15,
+          "total": 19943.0
+        },
+        "model_calls": {
+          "mean": 1.95,
+          "total": 39.0
+        },
+        "output_tokens": {
+          "mean": 402.45,
+          "total": 8049.0
+        },
+        "visible_test_executions": {
+          "mean": 3.9,
+          "total": 78.0
+        }
+      },
+      "functional_rate": 0.5,
+      "joint_rate": 0.3,
+      "mean_first_visible_pass_round": 0.09090909090909091,
+      "method": "M",
+      "model": "qwen25-coder-14b",
+      "safe_mean": 0.3,
+      "security_given_functional": 0.6,
+      "security_rate": 0.3,
+      "states": {
+        "F+S+": 6,
+        "F+S-": 4,
+        "F-S-": 10
+      },
+      "tfor": {
+        "denominator": 11,
+        "numerator": 5,
+        "rate": 0.45454545454545453
+      },
+      "trajectories": 20,
+      "visible_joint_rate": 0.55
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.0,
+          "pass": 0.04999999999999999,
+          "safe": 0.0,
+          "secure": 0.25
+        },
+        "3": {
+          "joint": 0.0,
+          "pass": 0.15,
+          "safe": 0.0,
+          "secure": 0.25
+        },
+        "5": {
+          "joint": 0.0,
+          "pass": 0.25,
+          "safe": 0.0,
+          "secure": 0.25
+        }
+      },
+      "benchmark": "codeguardplus",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 0.0,
+          "total": 0.0
+        },
+        "input_tokens": {
+          "mean": 221.25,
+          "total": 4425.0
+        },
+        "model_calls": {
+          "mean": 1.0,
+          "total": 20.0
+        },
+        "output_tokens": {
+          "mean": 135.45,
+          "total": 2709.0
+        },
+        "visible_test_executions": {
+          "mean": 2.0,
+          "total": 40.0
+        }
+      },
+      "functional_rate": 0.05,
+      "joint_rate": 0,
+      "mean_first_visible_pass_round": 0,
+      "method": "B0",
+      "model": "qwen25-coder-7b",
+      "safe_mean": 0.0,
+      "security_given_functional": 0.0,
+      "security_rate": 0.25,
+      "states": {
+        "F+S-": 1,
+        "F-S+": 5,
+        "F-S-": 14
+      },
+      "tfor": {
+        "denominator": 5,
+        "numerator": 5,
+        "rate": 1.0
+      },
+      "trajectories": 20,
+      "visible_joint_rate": 0.25
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.0,
+          "pass": 0.1,
+          "safe": 0.0,
+          "secure": 0.25
+        },
+        "3": {
+          "joint": 0.0,
+          "pass": 0.225,
+          "safe": 0.0,
+          "secure": 0.25
+        },
+        "5": {
+          "joint": 0.0,
+          "pass": 0.25,
+          "safe": 0.0,
+          "secure": 0.25
+        }
+      },
+      "benchmark": "codeguardplus",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 0.0,
+          "total": 0.0
+        },
+        "input_tokens": {
+          "mean": 221.25,
+          "total": 4425.0
+        },
+        "model_calls": {
+          "mean": 1.0,
+          "total": 20.0
+        },
+        "output_tokens": {
+          "mean": 133.8,
+          "total": 2676.0
+        },
+        "visible_test_executions": {
+          "mean": 2.0,
+          "total": 40.0
+        }
+      },
+      "functional_rate": 0.1,
+      "joint_rate": 0,
+      "mean_first_visible_pass_round": 0,
+      "method": "B1",
+      "model": "qwen25-coder-7b",
+      "safe_mean": 0.0,
+      "security_given_functional": 0.0,
+      "security_rate": 0.25,
+      "states": {
+        "F+S-": 2,
+        "F-S+": 5,
+        "F-S-": 13
+      },
+      "tfor": {
+        "denominator": 5,
+        "numerator": 5,
+        "rate": 1.0
+      },
+      "trajectories": 20,
+      "visible_joint_rate": 0.25
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.15,
+          "pass": 0.4,
+          "safe": 0.15,
+          "secure": 0.4
+        },
+        "3": {
+          "joint": 0.25,
+          "pass": 0.5,
+          "safe": 0.15,
+          "secure": 0.5
+        },
+        "5": {
+          "joint": 0.25,
+          "pass": 0.5,
+          "safe": 0.15,
+          "secure": 0.5
+        }
+      },
+      "benchmark": "codeguardplus",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 0.0,
+          "total": 0.0
+        },
+        "input_tokens": {
+          "mean": 413.75,
+          "total": 8275.0
+        },
+        "model_calls": {
+          "mean": 1.0,
+          "total": 20.0
+        },
+        "output_tokens": {
+          "mean": 128.25,
+          "total": 2565.0
+        },
+        "visible_test_executions": {
+          "mean": 2.0,
+          "total": 40.0
+        }
+      },
+      "functional_rate": 0.4,
+      "joint_rate": 0.15,
+      "mean_first_visible_pass_round": 0,
+      "method": "B2",
+      "model": "qwen25-coder-7b",
+      "safe_mean": 0.15,
+      "security_given_functional": 0.375,
+      "security_rate": 0.4,
+      "states": {
+        "F+S+": 3,
+        "F+S-": 5,
+        "F-S+": 5,
+        "F-S-": 7
+      },
+      "tfor": {
+        "denominator": 10,
+        "numerator": 7,
+        "rate": 0.7
+      },
+      "trajectories": 20,
+      "visible_joint_rate": 0.5
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.25,
+          "pass": 0.5,
+          "safe": 0.25,
+          "secure": 0.5
+        },
+        "3": {
+          "joint": 0.25,
+          "pass": 0.5,
+          "safe": 0.25,
+          "secure": 0.5
+        },
+        "5": {
+          "joint": 0.25,
+          "pass": 0.5,
+          "safe": 0.25,
+          "secure": 0.5
+        }
+      },
+      "benchmark": "codeguardplus",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 0.0,
+          "total": 0.0
+        },
+        "input_tokens": {
+          "mean": 501.25,
+          "total": 10025.0
+        },
+        "model_calls": {
+          "mean": 1.0,
+          "total": 20.0
+        },
+        "output_tokens": {
+          "mean": 131.3,
+          "total": 2626.0
+        },
+        "visible_test_executions": {
+          "mean": 2.0,
+          "total": 40.0
+        }
+      },
+      "functional_rate": 0.5,
+      "joint_rate": 0.25,
+      "mean_first_visible_pass_round": 0,
+      "method": "B3",
+      "model": "qwen25-coder-7b",
+      "safe_mean": 0.25,
+      "security_given_functional": 0.5,
+      "security_rate": 0.5,
+      "states": {
+        "F+S+": 5,
+        "F+S-": 5,
+        "F-S+": 5,
+        "F-S-": 5
+      },
+      "tfor": {
+        "denominator": 10,
+        "numerator": 5,
+        "rate": 0.5
+      },
+      "trajectories": 20,
+      "visible_joint_rate": 0.5
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.3,
+          "pass": 0.3,
+          "safe": 0.3,
+          "secure": 0.4
+        },
+        "3": {
+          "joint": 0.4,
+          "pass": 0.4,
+          "safe": 0.3,
+          "secure": 0.5
+        },
+        "5": {
+          "joint": 0.5,
+          "pass": 0.5,
+          "safe": 0.3,
+          "secure": 0.5
+        }
+      },
+      "benchmark": "codeguardplus",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 285.75,
+          "total": 5715.0
+        },
+        "input_tokens": {
+          "mean": 1218.4,
+          "total": 24368.0
+        },
+        "model_calls": {
+          "mean": 2.35,
+          "total": 47.0
+        },
+        "output_tokens": {
+          "mean": 338.35,
+          "total": 6767.0
+        },
+        "visible_test_executions": {
+          "mean": 4.7,
+          "total": 94.0
+        }
+      },
+      "functional_rate": 0.3,
+      "joint_rate": 0.3,
+      "mean_first_visible_pass_round": 0.8181818181818182,
+      "method": "B4",
+      "model": "qwen25-coder-7b",
+      "safe_mean": 0.3,
+      "security_given_functional": 1.0,
+      "security_rate": 0.4,
+      "states": {
+        "F+S+": 6,
+        "F-S+": 2,
+        "F-S-": 12
+      },
+      "tfor": {
+        "denominator": 11,
+        "numerator": 5,
+        "rate": 0.45454545454545453
+      },
+      "trajectories": 20,
+      "visible_joint_rate": 0.55
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.3,
+          "pass": 0.3,
+          "safe": 0.3,
+          "secure": 0.35
+        },
+        "3": {
+          "joint": 0.4,
+          "pass": 0.4,
+          "safe": 0.3,
+          "secure": 0.475
+        },
+        "5": {
+          "joint": 0.5,
+          "pass": 0.5,
+          "safe": 0.3,
+          "secure": 0.5
+        }
+      },
+      "benchmark": "codeguardplus",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 177.05,
+          "total": 3541.0
+        },
+        "input_tokens": {
+          "mean": 1043.95,
+          "total": 20879.0
+        },
+        "model_calls": {
+          "mean": 2.3,
+          "total": 46.0
+        },
+        "output_tokens": {
+          "mean": 329.85,
+          "total": 6597.0
+        },
+        "visible_test_executions": {
+          "mean": 4.6,
+          "total": 92.0
+        }
+      },
+      "functional_rate": 0.3,
+      "joint_rate": 0.3,
+      "mean_first_visible_pass_round": 0.7272727272727273,
+      "method": "B5",
+      "model": "qwen25-coder-7b",
+      "safe_mean": 0.3,
+      "security_given_functional": 1.0,
+      "security_rate": 0.35,
+      "states": {
+        "F+S+": 6,
+        "F-S+": 1,
+        "F-S-": 13
+      },
+      "tfor": {
+        "denominator": 11,
+        "numerator": 5,
+        "rate": 0.45454545454545453
+      },
+      "trajectories": 20,
+      "visible_joint_rate": 0.55
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.5,
+          "pass": 0.5,
+          "safe": 0.5,
+          "secure": 0.75
+        },
+        "3": {
+          "joint": 0.5,
+          "pass": 0.5,
+          "safe": 0.5,
+          "secure": 0.75
+        },
+        "5": {
+          "joint": 0.5,
+          "pass": 0.5,
+          "safe": 0.5,
+          "secure": 0.75
+        }
+      },
+      "benchmark": "codeguardplus",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 145.05,
+          "total": 2901.0
+        },
+        "input_tokens": {
+          "mean": 1277.4,
+          "total": 25548.0
+        },
+        "model_calls": {
+          "mean": 1.8,
+          "total": 36.0
+        },
+        "output_tokens": {
+          "mean": 262.4,
+          "total": 5248.0
+        },
+        "visible_test_executions": {
+          "mean": 3.6,
+          "total": 72.0
+        }
+      },
+      "functional_rate": 0.5,
+      "joint_rate": 0.5,
+      "mean_first_visible_pass_round": 0.4,
+      "method": "B6",
+      "model": "qwen25-coder-7b",
+      "safe_mean": 0.5,
+      "security_given_functional": 1.0,
+      "security_rate": 0.75,
+      "states": {
+        "F+S+": 10,
+        "F-S+": 5,
+        "F-S-": 5
+      },
+      "tfor": {
+        "denominator": 15,
+        "numerator": 5,
+        "rate": 0.3333333333333333
+      },
+      "trajectories": 20,
+      "visible_joint_rate": 0.75
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.09999999999999998,
+          "pass": 0.09999999999999998,
+          "safe": 0.1,
+          "secure": 0.09999999999999998
+        },
+        "3": {
+          "joint": 0.3,
+          "pass": 0.3,
+          "safe": 0.1,
+          "secure": 0.3
+        },
+        "5": {
+          "joint": 0.5,
+          "pass": 0.5,
+          "safe": 0.1,
+          "secure": 0.5
+        }
+      },
+      "benchmark": "codeguardplus",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 373.15,
+          "total": 7463.0
+        },
+        "input_tokens": {
+          "mean": 1368.2,
+          "total": 27364.0
+        },
+        "model_calls": {
+          "mean": 2.4,
+          "total": 48.0
+        },
+        "output_tokens": {
+          "mean": 348.8,
+          "total": 6976.0
+        },
+        "visible_test_executions": {
+          "mean": 4.8,
+          "total": 96.0
+        }
+      },
+      "functional_rate": 0.1,
+      "joint_rate": 0.1,
+      "mean_first_visible_pass_round": 0.2857142857142857,
+      "method": "M",
+      "model": "qwen25-coder-7b",
+      "safe_mean": 0.1,
+      "security_given_functional": 1.0,
+      "security_rate": 0.1,
+      "states": {
+        "F+S+": 2,
+        "F-S-": 18
+      },
+      "tfor": {
+        "denominator": 7,
+        "numerator": 5,
+        "rate": 0.7142857142857143
+      },
+      "trajectories": 20,
+      "visible_joint_rate": 0.35
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.35,
+          "pass": 0.35,
+          "safe": 0.35,
+          "secure": 0.95
+        },
+        "3": {
+          "joint": 0.475,
+          "pass": 0.475,
+          "safe": 0.35,
+          "secure": 1.0
+        },
+        "5": {
+          "joint": 0.5,
+          "pass": 0.5,
+          "safe": 0.35,
+          "secure": 1.0
+        }
+      },
+      "benchmark": "codeguardplus",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 0.0,
+          "total": 0.0
+        },
+        "input_tokens": {
+          "mean": 234.0,
+          "total": 4680.0
+        },
+        "model_calls": {
+          "mean": 1.0,
+          "total": 20.0
+        },
+        "output_tokens": {
+          "mean": 174.6,
+          "total": 3492.0
+        },
+        "visible_test_executions": {
+          "mean": 2.0,
+          "total": 40.0
+        }
+      },
+      "functional_rate": 0.35,
+      "joint_rate": 0.35,
+      "mean_first_visible_pass_round": 0,
+      "method": "B0",
+      "model": "qwen36-27b",
+      "safe_mean": 0.35,
+      "security_given_functional": 1.0,
+      "security_rate": 0.95,
+      "states": {
+        "F+S+": 7,
+        "F-S+": 12,
+        "F-S-": 1
+      },
+      "tfor": {
+        "denominator": 7,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "trajectories": 20,
+      "visible_joint_rate": 0.35
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.25,
+          "pass": 0.25,
+          "safe": 0.25,
+          "secure": 0.9
+        },
+        "3": {
+          "joint": 0.25,
+          "pass": 0.25,
+          "safe": 0.25,
+          "secure": 1.0
+        },
+        "5": {
+          "joint": 0.25,
+          "pass": 0.25,
+          "safe": 0.25,
+          "secure": 1.0
+        }
+      },
+      "benchmark": "codeguardplus",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 0.0,
+          "total": 0.0
+        },
+        "input_tokens": {
+          "mean": 234.0,
+          "total": 4680.0
+        },
+        "model_calls": {
+          "mean": 1.0,
+          "total": 20.0
+        },
+        "output_tokens": {
+          "mean": 173.1,
+          "total": 3462.0
+        },
+        "visible_test_executions": {
+          "mean": 2.0,
+          "total": 40.0
+        }
+      },
+      "functional_rate": 0.25,
+      "joint_rate": 0.25,
+      "mean_first_visible_pass_round": 0,
+      "method": "B1",
+      "model": "qwen36-27b",
+      "safe_mean": 0.25,
+      "security_given_functional": 1.0,
+      "security_rate": 0.9,
+      "states": {
+        "F+S+": 5,
+        "F-S+": 13,
+        "F-S-": 2
+      },
+      "tfor": {
+        "denominator": 5,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "trajectories": 20,
+      "visible_joint_rate": 0.25
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.5,
+          "pass": 0.5,
+          "safe": 0.5,
+          "secure": 1.0
+        },
+        "3": {
+          "joint": 0.5,
+          "pass": 0.5,
+          "safe": 0.5,
+          "secure": 1.0
+        },
+        "5": {
+          "joint": 0.5,
+          "pass": 0.5,
+          "safe": 0.5,
+          "secure": 1.0
+        }
+      },
+      "benchmark": "codeguardplus",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 0.0,
+          "total": 0.0
+        },
+        "input_tokens": {
+          "mean": 440.75,
+          "total": 8815.0
+        },
+        "model_calls": {
+          "mean": 1.0,
+          "total": 20.0
+        },
+        "output_tokens": {
+          "mean": 170.45,
+          "total": 3409.0
+        },
+        "visible_test_executions": {
+          "mean": 2.0,
+          "total": 40.0
+        }
+      },
+      "functional_rate": 0.5,
+      "joint_rate": 0.5,
+      "mean_first_visible_pass_round": 0,
+      "method": "B2",
+      "model": "qwen36-27b",
+      "safe_mean": 0.5,
+      "security_given_functional": 1.0,
+      "security_rate": 1,
+      "states": {
+        "F+S+": 10,
+        "F-S+": 10
+      },
+      "tfor": {
+        "denominator": 15,
+        "numerator": 5,
+        "rate": 0.3333333333333333
+      },
+      "trajectories": 20,
+      "visible_joint_rate": 0.75
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.5,
+          "pass": 0.5,
+          "safe": 0.5,
+          "secure": 1.0
+        },
+        "3": {
+          "joint": 0.5,
+          "pass": 0.5,
+          "safe": 0.5,
+          "secure": 1.0
+        },
+        "5": {
+          "joint": 0.5,
+          "pass": 0.5,
+          "safe": 0.5,
+          "secure": 1.0
+        }
+      },
+      "benchmark": "codeguardplus",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 0.0,
+          "total": 0.0
+        },
+        "input_tokens": {
+          "mean": 534.5,
+          "total": 10690.0
+        },
+        "model_calls": {
+          "mean": 1.0,
+          "total": 20.0
+        },
+        "output_tokens": {
+          "mean": 165.6,
+          "total": 3312.0
+        },
+        "visible_test_executions": {
+          "mean": 2.0,
+          "total": 40.0
+        }
+      },
+      "functional_rate": 0.5,
+      "joint_rate": 0.5,
+      "mean_first_visible_pass_round": 0,
+      "method": "B3",
+      "model": "qwen36-27b",
+      "safe_mean": 0.5,
+      "security_given_functional": 1.0,
+      "security_rate": 1,
+      "states": {
+        "F+S+": 10,
+        "F-S+": 10
+      },
+      "tfor": {
+        "denominator": 15,
+        "numerator": 5,
+        "rate": 0.3333333333333333
+      },
+      "trajectories": 20,
+      "visible_joint_rate": 0.75
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.55,
+          "pass": 0.55,
+          "safe": 0.55,
+          "secure": 0.95
+        },
+        "3": {
+          "joint": 0.65,
+          "pass": 0.65,
+          "safe": 0.55,
+          "secure": 1.0
+        },
+        "5": {
+          "joint": 0.75,
+          "pass": 0.75,
+          "safe": 0.55,
+          "secure": 1.0
+        }
+      },
+      "benchmark": "codeguardplus",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 122.5,
+          "total": 2450.0
+        },
+        "input_tokens": {
+          "mean": 810.35,
+          "total": 16207.0
+        },
+        "model_calls": {
+          "mean": 1.9,
+          "total": 38.0
+        },
+        "output_tokens": {
+          "mean": 326.25,
+          "total": 6525.0
+        },
+        "visible_test_executions": {
+          "mean": 3.8,
+          "total": 76.0
+        }
+      },
+      "functional_rate": 0.55,
+      "joint_rate": 0.55,
+      "mean_first_visible_pass_round": 0.5333333333333333,
+      "method": "B4",
+      "model": "qwen36-27b",
+      "safe_mean": 0.55,
+      "security_given_functional": 1.0,
+      "security_rate": 0.95,
+      "states": {
+        "F+S+": 11,
+        "F-S+": 8,
+        "F-S-": 1
+      },
+      "tfor": {
+        "denominator": 15,
+        "numerator": 4,
+        "rate": 0.26666666666666666
+      },
+      "trajectories": 20,
+      "visible_joint_rate": 0.75
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.55,
+          "pass": 0.55,
+          "safe": 0.55,
+          "secure": 0.95
+        },
+        "3": {
+          "joint": 0.65,
+          "pass": 0.65,
+          "safe": 0.55,
+          "secure": 1.0
+        },
+        "5": {
+          "joint": 0.75,
+          "pass": 0.75,
+          "safe": 0.55,
+          "secure": 1.0
+        }
+      },
+      "benchmark": "codeguardplus",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 122.5,
+          "total": 2450.0
+        },
+        "input_tokens": {
+          "mean": 810.35,
+          "total": 16207.0
+        },
+        "model_calls": {
+          "mean": 1.9,
+          "total": 38.0
+        },
+        "output_tokens": {
+          "mean": 326.25,
+          "total": 6525.0
+        },
+        "visible_test_executions": {
+          "mean": 3.8,
+          "total": 76.0
+        }
+      },
+      "functional_rate": 0.55,
+      "joint_rate": 0.55,
+      "mean_first_visible_pass_round": 0.5333333333333333,
+      "method": "B5",
+      "model": "qwen36-27b",
+      "safe_mean": 0.55,
+      "security_given_functional": 1.0,
+      "security_rate": 0.95,
+      "states": {
+        "F+S+": 11,
+        "F-S+": 8,
+        "F-S-": 1
+      },
+      "tfor": {
+        "denominator": 15,
+        "numerator": 4,
+        "rate": 0.26666666666666666
+      },
+      "trajectories": 20,
+      "visible_joint_rate": 0.75
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.75,
+          "pass": 0.75,
+          "safe": 0.75,
+          "secure": 1.0
+        },
+        "3": {
+          "joint": 0.75,
+          "pass": 0.75,
+          "safe": 0.75,
+          "secure": 1.0
+        },
+        "5": {
+          "joint": 0.75,
+          "pass": 0.75,
+          "safe": 0.75,
+          "secure": 1.0
+        }
+      },
+      "benchmark": "codeguardplus",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 38.25,
+          "total": 765.0
+        },
+        "input_tokens": {
+          "mean": 746.2,
+          "total": 14924.0
+        },
+        "model_calls": {
+          "mean": 1.25,
+          "total": 25.0
+        },
+        "output_tokens": {
+          "mean": 210.5,
+          "total": 4210.0
+        },
+        "visible_test_executions": {
+          "mean": 2.5,
+          "total": 50.0
+        }
+      },
+      "functional_rate": 0.75,
+      "joint_rate": 0.75,
+      "mean_first_visible_pass_round": 0.25,
+      "method": "B6",
+      "model": "qwen36-27b",
+      "safe_mean": 0.75,
+      "security_given_functional": 1.0,
+      "security_rate": 1,
+      "states": {
+        "F+S+": 15,
+        "F-S+": 5
+      },
+      "tfor": {
+        "denominator": 20,
+        "numerator": 5,
+        "rate": 0.25
+      },
+      "trajectories": 20,
+      "visible_joint_rate": 1.0
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.5,
+          "pass": 0.5,
+          "safe": 0.5,
+          "secure": 0.95
+        },
+        "3": {
+          "joint": 0.5,
+          "pass": 0.5,
+          "safe": 0.5,
+          "secure": 1.0
+        },
+        "5": {
+          "joint": 0.5,
+          "pass": 0.5,
+          "safe": 0.5,
+          "secure": 1.0
+        }
+      },
+      "benchmark": "codeguardplus",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 161.05,
+          "total": 3221.0
+        },
+        "input_tokens": {
+          "mean": 895.9,
+          "total": 17918.0
+        },
+        "model_calls": {
+          "mean": 1.95,
+          "total": 39.0
+        },
+        "output_tokens": {
+          "mean": 335.1,
+          "total": 6702.0
+        },
+        "visible_test_executions": {
+          "mean": 3.9,
+          "total": 78.0
+        }
+      },
+      "functional_rate": 0.5,
+      "joint_rate": 0.5,
+      "mean_first_visible_pass_round": 0.5,
+      "method": "M",
+      "model": "qwen36-27b",
+      "safe_mean": 0.5,
+      "security_given_functional": 1.0,
+      "security_rate": 0.95,
+      "states": {
+        "F+S+": 10,
+        "F-S+": 9,
+        "F-S-": 1
+      },
+      "tfor": {
+        "denominator": 14,
+        "numerator": 4,
+        "rate": 0.2857142857142857
+      },
+      "trajectories": 20,
+      "visible_joint_rate": 0.7
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.8,
+          "pass": 1.0,
+          "safe": 0.8,
+          "secure": 0.8
+        },
+        "3": {
+          "joint": 0.8625,
+          "pass": 1.0,
+          "safe": 0.8,
+          "secure": 0.8625
+        },
+        "5": {
+          "joint": 0.875,
+          "pass": 1.0,
+          "safe": 0.8,
+          "secure": 0.875
+        }
+      },
+      "benchmark": "cweval",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 0.0,
+          "total": 0.0
+        },
+        "input_tokens": {
+          "mean": 193.25,
+          "total": 7730.0
+        },
+        "model_calls": {
+          "mean": 1.0,
+          "total": 40.0
+        },
+        "output_tokens": {
+          "mean": 229.125,
+          "total": 9165.0
+        },
+        "visible_test_executions": {
+          "mean": 4.0,
+          "total": 160.0
+        }
+      },
+      "functional_rate": 1,
+      "joint_rate": 0.8,
+      "mean_first_visible_pass_round": 0,
+      "method": "B0",
+      "model": "deepseek-v4-flash",
+      "safe_mean": 0.8,
+      "security_given_functional": 0.8,
+      "security_rate": 0.8,
+      "states": {
+        "F+S+": 32,
+        "F+S-": 8
+      },
+      "tfor": {
+        "denominator": 31,
+        "numerator": 5,
+        "rate": 0.16129032258064516
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 0.775
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.975,
+          "pass": 0.975,
+          "safe": 0.975,
+          "secure": 1.0
+        },
+        "3": {
+          "joint": 1.0,
+          "pass": 1.0,
+          "safe": 0.975,
+          "secure": 1.0
+        },
+        "5": {
+          "joint": 1.0,
+          "pass": 1.0,
+          "safe": 0.975,
+          "secure": 1.0
+        }
+      },
+      "benchmark": "cweval",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 0.0,
+          "total": 0.0
+        },
+        "input_tokens": {
+          "mean": 216.25,
+          "total": 8650.0
+        },
+        "model_calls": {
+          "mean": 1.0,
+          "total": 40.0
+        },
+        "output_tokens": {
+          "mean": 339.9,
+          "total": 13596.0
+        },
+        "visible_test_executions": {
+          "mean": 4.0,
+          "total": 160.0
+        }
+      },
+      "functional_rate": 0.975,
+      "joint_rate": 0.975,
+      "mean_first_visible_pass_round": 0,
+      "method": "B1",
+      "model": "deepseek-v4-flash",
+      "safe_mean": 0.975,
+      "security_given_functional": 1.0,
+      "security_rate": 1,
+      "states": {
+        "F+S+": 39,
+        "F-S+": 1
+      },
+      "tfor": {
+        "denominator": 32,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 0.8
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.75,
+          "pass": 1.0,
+          "safe": 0.75,
+          "secure": 0.75
+        },
+        "3": {
+          "joint": 0.75,
+          "pass": 1.0,
+          "safe": 0.75,
+          "secure": 0.75
+        },
+        "5": {
+          "joint": 0.75,
+          "pass": 1.0,
+          "safe": 0.75,
+          "secure": 0.75
+        }
+      },
+      "benchmark": "cweval",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 0.0,
+          "total": 0.0
+        },
+        "input_tokens": {
+          "mean": 475.625,
+          "total": 19025.0
+        },
+        "model_calls": {
+          "mean": 1.0,
+          "total": 40.0
+        },
+        "output_tokens": {
+          "mean": 205.575,
+          "total": 8223.0
+        },
+        "visible_test_executions": {
+          "mean": 4.0,
+          "total": 160.0
+        }
+      },
+      "functional_rate": 1,
+      "joint_rate": 0.75,
+      "mean_first_visible_pass_round": 0,
+      "method": "B2",
+      "model": "deepseek-v4-flash",
+      "safe_mean": 0.75,
+      "security_given_functional": 0.75,
+      "security_rate": 0.75,
+      "states": {
+        "F+S+": 30,
+        "F+S-": 10
+      },
+      "tfor": {
+        "denominator": 35,
+        "numerator": 5,
+        "rate": 0.14285714285714285
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 0.875
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.875,
+          "pass": 1.0,
+          "safe": 0.875,
+          "secure": 0.875
+        },
+        "3": {
+          "joint": 0.875,
+          "pass": 1.0,
+          "safe": 0.875,
+          "secure": 0.875
+        },
+        "5": {
+          "joint": 0.875,
+          "pass": 1.0,
+          "safe": 0.875,
+          "secure": 0.875
+        }
+      },
+      "benchmark": "cweval",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 0.0,
+          "total": 0.0
+        },
+        "input_tokens": {
+          "mean": 639.5,
+          "total": 25580.0
+        },
+        "model_calls": {
+          "mean": 1.0,
+          "total": 40.0
+        },
+        "output_tokens": {
+          "mean": 266.525,
+          "total": 10661.0
+        },
+        "visible_test_executions": {
+          "mean": 4.0,
+          "total": 160.0
+        }
+      },
+      "functional_rate": 1,
+      "joint_rate": 0.875,
+      "mean_first_visible_pass_round": 0,
+      "method": "B3",
+      "model": "deepseek-v4-flash",
+      "safe_mean": 0.875,
+      "security_given_functional": 0.875,
+      "security_rate": 0.875,
+      "states": {
+        "F+S+": 35,
+        "F+S-": 5
+      },
+      "tfor": {
+        "denominator": 40,
+        "numerator": 5,
+        "rate": 0.125
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 1.0
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.8,
+          "pass": 1.0,
+          "safe": 0.8,
+          "secure": 0.8
+        },
+        "3": {
+          "joint": 0.8625,
+          "pass": 1.0,
+          "safe": 0.8,
+          "secure": 0.8625
+        },
+        "5": {
+          "joint": 0.875,
+          "pass": 1.0,
+          "safe": 0.8,
+          "secure": 0.875
+        }
+      },
+      "benchmark": "cweval",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 31.925,
+          "total": 1277.0
+        },
+        "input_tokens": {
+          "mean": 330.575,
+          "total": 13223.0
+        },
+        "model_calls": {
+          "mean": 1.225,
+          "total": 49.0
+        },
+        "output_tokens": {
+          "mean": 286.1,
+          "total": 11444.0
+        },
+        "visible_test_executions": {
+          "mean": 4.9,
+          "total": 196.0
+        }
+      },
+      "functional_rate": 1,
+      "joint_rate": 0.8,
+      "mean_first_visible_pass_round": 0.225,
+      "method": "B4",
+      "model": "deepseek-v4-flash",
+      "safe_mean": 0.8,
+      "security_given_functional": 0.8,
+      "security_rate": 0.8,
+      "states": {
+        "F+S+": 32,
+        "F+S-": 8
+      },
+      "tfor": {
+        "denominator": 40,
+        "numerator": 8,
+        "rate": 0.2
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 1.0
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.8,
+          "pass": 1.0,
+          "safe": 0.8,
+          "secure": 0.8
+        },
+        "3": {
+          "joint": 0.8625,
+          "pass": 1.0,
+          "safe": 0.8,
+          "secure": 0.8625
+        },
+        "5": {
+          "joint": 0.875,
+          "pass": 1.0,
+          "safe": 0.8,
+          "secure": 0.875
+        }
+      },
+      "benchmark": "cweval",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 22.55,
+          "total": 902.0
+        },
+        "input_tokens": {
+          "mean": 321.5,
+          "total": 12860.0
+        },
+        "model_calls": {
+          "mean": 1.225,
+          "total": 49.0
+        },
+        "output_tokens": {
+          "mean": 286.1,
+          "total": 11444.0
+        },
+        "visible_test_executions": {
+          "mean": 4.9,
+          "total": 196.0
+        }
+      },
+      "functional_rate": 1,
+      "joint_rate": 0.8,
+      "mean_first_visible_pass_round": 0.225,
+      "method": "B5",
+      "model": "deepseek-v4-flash",
+      "safe_mean": 0.8,
+      "security_given_functional": 0.8,
+      "security_rate": 0.8,
+      "states": {
+        "F+S+": 32,
+        "F+S-": 8
+      },
+      "tfor": {
+        "denominator": 40,
+        "numerator": 8,
+        "rate": 0.2
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 1.0
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.875,
+          "pass": 1.0,
+          "safe": 0.875,
+          "secure": 0.875
+        },
+        "3": {
+          "joint": 0.875,
+          "pass": 1.0,
+          "safe": 0.875,
+          "secure": 0.875
+        },
+        "5": {
+          "joint": 0.875,
+          "pass": 1.0,
+          "safe": 0.875,
+          "secure": 0.875
+        }
+      },
+      "benchmark": "cweval",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 0.0,
+          "total": 0.0
+        },
+        "input_tokens": {
+          "mean": 639.5,
+          "total": 25580.0
+        },
+        "model_calls": {
+          "mean": 1.0,
+          "total": 40.0
+        },
+        "output_tokens": {
+          "mean": 266.525,
+          "total": 10661.0
+        },
+        "visible_test_executions": {
+          "mean": 4.0,
+          "total": 160.0
+        }
+      },
+      "functional_rate": 1,
+      "joint_rate": 0.875,
+      "mean_first_visible_pass_round": 0,
+      "method": "B6",
+      "model": "deepseek-v4-flash",
+      "safe_mean": 0.875,
+      "security_given_functional": 0.875,
+      "security_rate": 0.875,
+      "states": {
+        "F+S+": 35,
+        "F+S-": 5
+      },
+      "tfor": {
+        "denominator": 40,
+        "numerator": 5,
+        "rate": 0.125
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 1.0
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.8,
+          "pass": 1.0,
+          "safe": 0.8,
+          "secure": 0.8
+        },
+        "3": {
+          "joint": 0.8625,
+          "pass": 1.0,
+          "safe": 0.8,
+          "secure": 0.8625
+        },
+        "5": {
+          "joint": 0.875,
+          "pass": 1.0,
+          "safe": 0.8,
+          "secure": 0.875
+        }
+      },
+      "benchmark": "cweval",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 43.675,
+          "total": 1747.0
+        },
+        "input_tokens": {
+          "mean": 342.225,
+          "total": 13689.0
+        },
+        "model_calls": {
+          "mean": 1.225,
+          "total": 49.0
+        },
+        "output_tokens": {
+          "mean": 287.925,
+          "total": 11517.0
+        },
+        "visible_test_executions": {
+          "mean": 4.9,
+          "total": 196.0
+        }
+      },
+      "functional_rate": 1,
+      "joint_rate": 0.8,
+      "mean_first_visible_pass_round": 0.225,
+      "method": "M",
+      "model": "deepseek-v4-flash",
+      "safe_mean": 0.8,
+      "security_given_functional": 0.8,
+      "security_rate": 0.8,
+      "states": {
+        "F+S+": 32,
+        "F+S-": 8
+      },
+      "tfor": {
+        "denominator": 40,
+        "numerator": 8,
+        "rate": 0.2
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 1.0
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.95,
+          "pass": 0.975,
+          "safe": 0.9594385167199536,
+          "secure": 0.975
+        },
+        "3": {
+          "joint": 1.0,
+          "pass": 1.0,
+          "safe": 0.9594385167199536,
+          "secure": 1.0
+        },
+        "5": {
+          "joint": 1.0,
+          "pass": 1.0,
+          "safe": 0.9594385167199536,
+          "secure": 1.0
+        }
+      },
+      "benchmark": "cweval",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 0.0,
+          "total": 0.0
+        },
+        "input_tokens": {
+          "mean": 197.125,
+          "total": 7885.0
+        },
+        "model_calls": {
+          "mean": 1.0,
+          "total": 40.0
+        },
+        "output_tokens": {
+          "mean": 250.65,
+          "total": 10026.0
+        },
+        "visible_test_executions": {
+          "mean": 4.0,
+          "total": 160.0
+        }
+      },
+      "functional_rate": 0.975,
+      "joint_rate": 0.95,
+      "mean_first_visible_pass_round": 0,
+      "method": "B0",
+      "model": "qwen25-coder-14b",
+      "safe_mean": 0.9594385167199536,
+      "security_given_functional": 0.9743589743589743,
+      "security_rate": 0.975,
+      "states": {
+        "F+S+": 38,
+        "F+S-": 1,
+        "F-S+": 1
+      },
+      "tfor": {
+        "denominator": 33,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 0.825
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 1.0,
+          "pass": 1.0,
+          "safe": 1.0,
+          "secure": 1.0
+        },
+        "3": {
+          "joint": 1.0,
+          "pass": 1.0,
+          "safe": 1.0,
+          "secure": 1.0
+        },
+        "5": {
+          "joint": 1.0,
+          "pass": 1.0,
+          "safe": 1.0,
+          "secure": 1.0
+        }
+      },
+      "benchmark": "cweval",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 0.0,
+          "total": 0.0
+        },
+        "input_tokens": {
+          "mean": 221.125,
+          "total": 8845.0
+        },
+        "model_calls": {
+          "mean": 1.0,
+          "total": 40.0
+        },
+        "output_tokens": {
+          "mean": 262.925,
+          "total": 10517.0
+        },
+        "visible_test_executions": {
+          "mean": 4.0,
+          "total": 160.0
+        }
+      },
+      "functional_rate": 1,
+      "joint_rate": 1,
+      "mean_first_visible_pass_round": 0,
+      "method": "B1",
+      "model": "qwen25-coder-14b",
+      "safe_mean": 1.0,
+      "security_given_functional": 1.0,
+      "security_rate": 1,
+      "states": {
+        "F+S+": 40
+      },
+      "tfor": {
+        "denominator": 35,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 0.875
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.65,
+          "pass": 0.9,
+          "safe": 0.6877540668798146,
+          "secure": 0.75
+        },
+        "3": {
+          "joint": 0.7,
+          "pass": 0.95,
+          "safe": 0.6877540668798146,
+          "secure": 0.75
+        },
+        "5": {
+          "joint": 0.75,
+          "pass": 1.0,
+          "safe": 0.6877540668798146,
+          "secure": 0.75
+        }
+      },
+      "benchmark": "cweval",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 0.0,
+          "total": 0.0
+        },
+        "input_tokens": {
+          "mean": 470.0,
+          "total": 18800.0
+        },
+        "model_calls": {
+          "mean": 1.0,
+          "total": 40.0
+        },
+        "output_tokens": {
+          "mean": 226.8,
+          "total": 9072.0
+        },
+        "visible_test_executions": {
+          "mean": 4.0,
+          "total": 160.0
+        }
+      },
+      "functional_rate": 0.9,
+      "joint_rate": 0.65,
+      "mean_first_visible_pass_round": 0,
+      "method": "B2",
+      "model": "qwen25-coder-14b",
+      "safe_mean": 0.6877540668798146,
+      "security_given_functional": 0.7222222222222222,
+      "security_rate": 0.75,
+      "states": {
+        "F+S+": 26,
+        "F+S-": 10,
+        "F-S+": 4
+      },
+      "tfor": {
+        "denominator": 30,
+        "numerator": 4,
+        "rate": 0.13333333333333333
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 0.75
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.725,
+          "pass": 0.875,
+          "safe": 0.7721925835997682,
+          "secure": 0.85
+        },
+        "3": {
+          "joint": 0.75,
+          "pass": 0.875,
+          "safe": 0.7721925835997682,
+          "secure": 0.875
+        },
+        "5": {
+          "joint": 0.75,
+          "pass": 0.875,
+          "safe": 0.7721925835997682,
+          "secure": 0.875
+        }
+      },
+      "benchmark": "cweval",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 0.0,
+          "total": 0.0
+        },
+        "input_tokens": {
+          "mean": 629.0,
+          "total": 25160.0
+        },
+        "model_calls": {
+          "mean": 1.0,
+          "total": 40.0
+        },
+        "output_tokens": {
+          "mean": 247.775,
+          "total": 9911.0
+        },
+        "visible_test_executions": {
+          "mean": 4.0,
+          "total": 160.0
+        }
+      },
+      "functional_rate": 0.875,
+      "joint_rate": 0.725,
+      "mean_first_visible_pass_round": 0,
+      "method": "B3",
+      "model": "qwen25-coder-14b",
+      "safe_mean": 0.7721925835997682,
+      "security_given_functional": 0.8285714285714286,
+      "security_rate": 0.85,
+      "states": {
+        "F+S+": 29,
+        "F+S-": 6,
+        "F-S+": 5
+      },
+      "tfor": {
+        "denominator": 40,
+        "numerator": 11,
+        "rate": 0.275
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 1.0
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.975,
+          "pass": 0.975,
+          "safe": 0.9844385167199536,
+          "secure": 1.0
+        },
+        "3": {
+          "joint": 1.0,
+          "pass": 1.0,
+          "safe": 0.9844385167199536,
+          "secure": 1.0
+        },
+        "5": {
+          "joint": 1.0,
+          "pass": 1.0,
+          "safe": 0.9844385167199536,
+          "secure": 1.0
+        }
+      },
+      "benchmark": "cweval",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 20.025,
+          "total": 801.0
+        },
+        "input_tokens": {
+          "mean": 311.15,
+          "total": 12446.0
+        },
+        "model_calls": {
+          "mean": 1.175,
+          "total": 47.0
+        },
+        "output_tokens": {
+          "mean": 307.525,
+          "total": 12301.0
+        },
+        "visible_test_executions": {
+          "mean": 4.7,
+          "total": 188.0
+        }
+      },
+      "functional_rate": 0.975,
+      "joint_rate": 0.975,
+      "mean_first_visible_pass_round": 0.175,
+      "method": "B4",
+      "model": "qwen25-coder-14b",
+      "safe_mean": 0.9844385167199536,
+      "security_given_functional": 1.0,
+      "security_rate": 1,
+      "states": {
+        "F+S+": 39,
+        "F-S+": 1
+      },
+      "tfor": {
+        "denominator": 40,
+        "numerator": 1,
+        "rate": 0.025
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 1.0
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.95,
+          "pass": 0.975,
+          "safe": 0.9594385167199536,
+          "secure": 0.975
+        },
+        "3": {
+          "joint": 1.0,
+          "pass": 1.0,
+          "safe": 0.9594385167199536,
+          "secure": 1.0
+        },
+        "5": {
+          "joint": 1.0,
+          "pass": 1.0,
+          "safe": 0.9594385167199536,
+          "secure": 1.0
+        }
+      },
+      "benchmark": "cweval",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 17.7,
+          "total": 708.0
+        },
+        "input_tokens": {
+          "mean": 308.825,
+          "total": 12353.0
+        },
+        "model_calls": {
+          "mean": 1.175,
+          "total": 47.0
+        },
+        "output_tokens": {
+          "mean": 307.875,
+          "total": 12315.0
+        },
+        "visible_test_executions": {
+          "mean": 4.7,
+          "total": 188.0
+        }
+      },
+      "functional_rate": 0.975,
+      "joint_rate": 0.95,
+      "mean_first_visible_pass_round": 0.175,
+      "method": "B5",
+      "model": "qwen25-coder-14b",
+      "safe_mean": 0.9594385167199536,
+      "security_given_functional": 0.9743589743589743,
+      "security_rate": 0.975,
+      "states": {
+        "F+S+": 38,
+        "F+S-": 1,
+        "F-S+": 1
+      },
+      "tfor": {
+        "denominator": 40,
+        "numerator": 2,
+        "rate": 0.05
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 1.0
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.725,
+          "pass": 0.875,
+          "safe": 0.7721925835997682,
+          "secure": 0.85
+        },
+        "3": {
+          "joint": 0.75,
+          "pass": 0.875,
+          "safe": 0.7721925835997682,
+          "secure": 0.875
+        },
+        "5": {
+          "joint": 0.75,
+          "pass": 0.875,
+          "safe": 0.7721925835997682,
+          "secure": 0.875
+        }
+      },
+      "benchmark": "cweval",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 0.0,
+          "total": 0.0
+        },
+        "input_tokens": {
+          "mean": 629.0,
+          "total": 25160.0
+        },
+        "model_calls": {
+          "mean": 1.0,
+          "total": 40.0
+        },
+        "output_tokens": {
+          "mean": 247.775,
+          "total": 9911.0
+        },
+        "visible_test_executions": {
+          "mean": 4.0,
+          "total": 160.0
+        }
+      },
+      "functional_rate": 0.875,
+      "joint_rate": 0.725,
+      "mean_first_visible_pass_round": 0,
+      "method": "B6",
+      "model": "qwen25-coder-14b",
+      "safe_mean": 0.7721925835997682,
+      "security_given_functional": 0.8285714285714286,
+      "security_rate": 0.85,
+      "states": {
+        "F+S+": 29,
+        "F+S-": 6,
+        "F-S+": 5
+      },
+      "tfor": {
+        "denominator": 40,
+        "numerator": 11,
+        "rate": 0.275
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 1.0
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.95,
+          "pass": 0.975,
+          "safe": 0.9594385167199536,
+          "secure": 0.975
+        },
+        "3": {
+          "joint": 1.0,
+          "pass": 1.0,
+          "safe": 0.9594385167199536,
+          "secure": 1.0
+        },
+        "5": {
+          "joint": 1.0,
+          "pass": 1.0,
+          "safe": 0.9594385167199536,
+          "secure": 1.0
+        }
+      },
+      "benchmark": "cweval",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 28.525,
+          "total": 1141.0
+        },
+        "input_tokens": {
+          "mean": 319.65,
+          "total": 12786.0
+        },
+        "model_calls": {
+          "mean": 1.175,
+          "total": 47.0
+        },
+        "output_tokens": {
+          "mean": 338.0,
+          "total": 13520.0
+        },
+        "visible_test_executions": {
+          "mean": 4.7,
+          "total": 188.0
+        }
+      },
+      "functional_rate": 0.975,
+      "joint_rate": 0.95,
+      "mean_first_visible_pass_round": 0.175,
+      "method": "M",
+      "model": "qwen25-coder-14b",
+      "safe_mean": 0.9594385167199536,
+      "security_given_functional": 0.9743589743589743,
+      "security_rate": 0.975,
+      "states": {
+        "F+S+": 38,
+        "F+S-": 1,
+        "F-S+": 1
+      },
+      "tfor": {
+        "denominator": 40,
+        "numerator": 2,
+        "rate": 0.05
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 1.0
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.5,
+          "pass": 0.625,
+          "safe": 0.5943851671995364,
+          "secure": 0.75
+        },
+        "3": {
+          "joint": 0.5,
+          "pass": 0.625,
+          "safe": 0.5943851671995364,
+          "secure": 0.75
+        },
+        "5": {
+          "joint": 0.5,
+          "pass": 0.625,
+          "safe": 0.5943851671995364,
+          "secure": 0.75
+        }
+      },
+      "benchmark": "cweval",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 0.0,
+          "total": 0.0
+        },
+        "input_tokens": {
+          "mean": 197.125,
+          "total": 7885.0
+        },
+        "model_calls": {
+          "mean": 1.0,
+          "total": 40.0
+        },
+        "output_tokens": {
+          "mean": 205.075,
+          "total": 8203.0
+        },
+        "visible_test_executions": {
+          "mean": 4.0,
+          "total": 160.0
+        }
+      },
+      "functional_rate": 0.625,
+      "joint_rate": 0.5,
+      "mean_first_visible_pass_round": 0,
+      "method": "B0",
+      "model": "qwen25-coder-7b",
+      "safe_mean": 0.5943851671995364,
+      "security_given_functional": 0.8,
+      "security_rate": 0.75,
+      "states": {
+        "F+S+": 20,
+        "F+S-": 5,
+        "F-S+": 10,
+        "F-S-": 5
+      },
+      "tfor": {
+        "denominator": 25,
+        "numerator": 5,
+        "rate": 0.2
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 0.625
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.6,
+          "pass": 0.725,
+          "safe": 0.6943851671995364,
+          "secure": 0.85
+        },
+        "3": {
+          "joint": 0.625,
+          "pass": 0.75,
+          "safe": 0.6943851671995364,
+          "secure": 0.875
+        },
+        "5": {
+          "joint": 0.625,
+          "pass": 0.75,
+          "safe": 0.6943851671995364,
+          "secure": 0.875
+        }
+      },
+      "benchmark": "cweval",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 0.0,
+          "total": 0.0
+        },
+        "input_tokens": {
+          "mean": 221.125,
+          "total": 8845.0
+        },
+        "model_calls": {
+          "mean": 1.0,
+          "total": 40.0
+        },
+        "output_tokens": {
+          "mean": 217.925,
+          "total": 8717.0
+        },
+        "visible_test_executions": {
+          "mean": 4.0,
+          "total": 160.0
+        }
+      },
+      "functional_rate": 0.725,
+      "joint_rate": 0.6,
+      "mean_first_visible_pass_round": 0,
+      "method": "B1",
+      "model": "qwen25-coder-7b",
+      "safe_mean": 0.6943851671995364,
+      "security_given_functional": 0.8275862068965517,
+      "security_rate": 0.85,
+      "states": {
+        "F+S+": 24,
+        "F+S-": 5,
+        "F-S+": 10,
+        "F-S-": 1
+      },
+      "tfor": {
+        "denominator": 24,
+        "numerator": 4,
+        "rate": 0.16666666666666666
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 0.6
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.375,
+          "pass": 0.85,
+          "safe": 0.375,
+          "secure": 0.4
+        },
+        "3": {
+          "joint": 0.375,
+          "pass": 0.875,
+          "safe": 0.375,
+          "secure": 0.45
+        },
+        "5": {
+          "joint": 0.375,
+          "pass": 0.875,
+          "safe": 0.375,
+          "secure": 0.5
+        }
+      },
+      "benchmark": "cweval",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 0.0,
+          "total": 0.0
+        },
+        "input_tokens": {
+          "mean": 470.0,
+          "total": 18800.0
+        },
+        "model_calls": {
+          "mean": 1.0,
+          "total": 40.0
+        },
+        "output_tokens": {
+          "mean": 217.0,
+          "total": 8680.0
+        },
+        "visible_test_executions": {
+          "mean": 4.0,
+          "total": 160.0
+        }
+      },
+      "functional_rate": 0.85,
+      "joint_rate": 0.375,
+      "mean_first_visible_pass_round": 0,
+      "method": "B2",
+      "model": "qwen25-coder-7b",
+      "safe_mean": 0.375,
+      "security_given_functional": 0.4411764705882353,
+      "security_rate": 0.4,
+      "states": {
+        "F+S+": 15,
+        "F+S-": 19,
+        "F-S+": 1,
+        "F-S-": 5
+      },
+      "tfor": {
+        "denominator": 22,
+        "numerator": 7,
+        "rate": 0.3181818181818182
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 0.55
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.825,
+          "pass": 0.975,
+          "safe": 0.825,
+          "secure": 0.825
+        },
+        "3": {
+          "joint": 0.875,
+          "pass": 1.0,
+          "safe": 0.825,
+          "secure": 0.875
+        },
+        "5": {
+          "joint": 0.875,
+          "pass": 1.0,
+          "safe": 0.825,
+          "secure": 0.875
+        }
+      },
+      "benchmark": "cweval",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 0.0,
+          "total": 0.0
+        },
+        "input_tokens": {
+          "mean": 629.0,
+          "total": 25160.0
+        },
+        "model_calls": {
+          "mean": 1.0,
+          "total": 40.0
+        },
+        "output_tokens": {
+          "mean": 211.8,
+          "total": 8472.0
+        },
+        "visible_test_executions": {
+          "mean": 4.0,
+          "total": 160.0
+        }
+      },
+      "functional_rate": 0.975,
+      "joint_rate": 0.825,
+      "mean_first_visible_pass_round": 0,
+      "method": "B3",
+      "model": "qwen25-coder-7b",
+      "safe_mean": 0.825,
+      "security_given_functional": 0.8461538461538461,
+      "security_rate": 0.825,
+      "states": {
+        "F+S+": 33,
+        "F+S-": 6,
+        "F-S-": 1
+      },
+      "tfor": {
+        "denominator": 37,
+        "numerator": 4,
+        "rate": 0.10810810810810811
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 0.925
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.525,
+          "pass": 0.625,
+          "safe": 0.5721925835997682,
+          "secure": 0.65
+        },
+        "3": {
+          "joint": 0.575,
+          "pass": 0.7,
+          "safe": 0.5721925835997682,
+          "secure": 0.7
+        },
+        "5": {
+          "joint": 0.625,
+          "pass": 0.75,
+          "safe": 0.5721925835997682,
+          "secure": 0.75
+        }
+      },
+      "benchmark": "cweval",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 230.225,
+          "total": 9209.0
+        },
+        "input_tokens": {
+          "mean": 938.8,
+          "total": 37552.0
+        },
+        "model_calls": {
+          "mean": 1.725,
+          "total": 69.0
+        },
+        "output_tokens": {
+          "mean": 383.8,
+          "total": 15352.0
+        },
+        "visible_test_executions": {
+          "mean": 6.9,
+          "total": 276.0
+        }
+      },
+      "functional_rate": 0.625,
+      "joint_rate": 0.525,
+      "mean_first_visible_pass_round": 0.3,
+      "method": "B4",
+      "model": "qwen25-coder-7b",
+      "safe_mean": 0.5721925835997682,
+      "security_given_functional": 0.84,
+      "security_rate": 0.65,
+      "states": {
+        "F+S+": 21,
+        "F+S-": 4,
+        "F-S+": 5,
+        "F-S-": 10
+      },
+      "tfor": {
+        "denominator": 30,
+        "numerator": 9,
+        "rate": 0.3
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 0.75
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.55,
+          "pass": 0.7,
+          "safe": 0.5971925835997682,
+          "secure": 0.675
+        },
+        "3": {
+          "joint": 0.65,
+          "pass": 0.8125,
+          "safe": 0.5971925835997682,
+          "secure": 0.775
+        },
+        "5": {
+          "joint": 0.75,
+          "pass": 0.875,
+          "safe": 0.5971925835997682,
+          "secure": 0.875
+        }
+      },
+      "benchmark": "cweval",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 95.875,
+          "total": 3835.0
+        },
+        "input_tokens": {
+          "mean": 637.925,
+          "total": 25517.0
+        },
+        "model_calls": {
+          "mean": 1.575,
+          "total": 63.0
+        },
+        "output_tokens": {
+          "mean": 350.925,
+          "total": 14037.0
+        },
+        "visible_test_executions": {
+          "mean": 6.3,
+          "total": 252.0
+        }
+      },
+      "functional_rate": 0.7,
+      "joint_rate": 0.55,
+      "mean_first_visible_pass_round": 0.2727272727272727,
+      "method": "B5",
+      "model": "qwen25-coder-7b",
+      "safe_mean": 0.5971925835997682,
+      "security_given_functional": 0.7857142857142857,
+      "security_rate": 0.675,
+      "states": {
+        "F+S+": 22,
+        "F+S-": 6,
+        "F-S+": 5,
+        "F-S-": 7
+      },
+      "tfor": {
+        "denominator": 33,
+        "numerator": 11,
+        "rate": 0.3333333333333333
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 0.825
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.825,
+          "pass": 0.975,
+          "safe": 0.825,
+          "secure": 0.825
+        },
+        "3": {
+          "joint": 0.875,
+          "pass": 1.0,
+          "safe": 0.825,
+          "secure": 0.875
+        },
+        "5": {
+          "joint": 0.875,
+          "pass": 1.0,
+          "safe": 0.825,
+          "secure": 0.875
+        }
+      },
+      "benchmark": "cweval",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 44.7,
+          "total": 1788.0
+        },
+        "input_tokens": {
+          "mean": 835.675,
+          "total": 33427.0
+        },
+        "model_calls": {
+          "mean": 1.15,
+          "total": 46.0
+        },
+        "output_tokens": {
+          "mean": 255.425,
+          "total": 10217.0
+        },
+        "visible_test_executions": {
+          "mean": 4.6,
+          "total": 184.0
+        }
+      },
+      "functional_rate": 0.975,
+      "joint_rate": 0.825,
+      "mean_first_visible_pass_round": 0,
+      "method": "B6",
+      "model": "qwen25-coder-7b",
+      "safe_mean": 0.825,
+      "security_given_functional": 0.8461538461538461,
+      "security_rate": 0.825,
+      "states": {
+        "F+S+": 33,
+        "F+S-": 6,
+        "F-S-": 1
+      },
+      "tfor": {
+        "denominator": 37,
+        "numerator": 4,
+        "rate": 0.10810810810810811
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 0.925
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.575,
+          "pass": 0.7,
+          "safe": 0.6316311003197218,
+          "secure": 0.775
+        },
+        "3": {
+          "joint": 0.725,
+          "pass": 0.8125,
+          "safe": 0.6316311003197218,
+          "secure": 0.9
+        },
+        "5": {
+          "joint": 0.875,
+          "pass": 0.875,
+          "safe": 0.6316311003197218,
+          "secure": 1.0
+        }
+      },
+      "benchmark": "cweval",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 197.5,
+          "total": 7900.0
+        },
+        "input_tokens": {
+          "mean": 825.375,
+          "total": 33015.0
+        },
+        "model_calls": {
+          "mean": 1.625,
+          "total": 65.0
+        },
+        "output_tokens": {
+          "mean": 368.7,
+          "total": 14748.0
+        },
+        "visible_test_executions": {
+          "mean": 6.5,
+          "total": 260.0
+        }
+      },
+      "functional_rate": 0.7,
+      "joint_rate": 0.575,
+      "mean_first_visible_pass_round": 0.16666666666666666,
+      "method": "M",
+      "model": "qwen25-coder-7b",
+      "safe_mean": 0.6316311003197218,
+      "security_given_functional": 0.8214285714285714,
+      "security_rate": 0.775,
+      "states": {
+        "F+S+": 23,
+        "F+S-": 5,
+        "F-S+": 8,
+        "F-S-": 4
+      },
+      "tfor": {
+        "denominator": 30,
+        "numerator": 7,
+        "rate": 0.23333333333333334
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 0.75
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.65,
+          "pass": 0.8,
+          "safe": 0.65,
+          "secure": 0.65
+        },
+        "3": {
+          "joint": 0.7,
+          "pass": 0.8625,
+          "safe": 0.65,
+          "secure": 0.7
+        },
+        "5": {
+          "joint": 0.75,
+          "pass": 0.875,
+          "safe": 0.65,
+          "secure": 0.75
+        }
+      },
+      "benchmark": "cweval",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 0.0,
+          "total": 0.0
+        },
+        "input_tokens": {
+          "mean": 212.75,
+          "total": 8510.0
+        },
+        "model_calls": {
+          "mean": 1.0,
+          "total": 40.0
+        },
+        "output_tokens": {
+          "mean": 290.05,
+          "total": 11602.0
+        },
+        "visible_test_executions": {
+          "mean": 4.0,
+          "total": 160.0
+        }
+      },
+      "functional_rate": 0.8,
+      "joint_rate": 0.65,
+      "mean_first_visible_pass_round": 0,
+      "method": "B0",
+      "model": "qwen36-27b",
+      "safe_mean": 0.65,
+      "security_given_functional": 0.8125,
+      "security_rate": 0.65,
+      "states": {
+        "F+S+": 26,
+        "F+S-": 6,
+        "F-S-": 8
+      },
+      "tfor": {
+        "denominator": 27,
+        "numerator": 1,
+        "rate": 0.037037037037037035
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 0.675
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.95,
+          "pass": 0.95,
+          "safe": 0.95,
+          "secure": 0.95
+        },
+        "3": {
+          "joint": 1.0,
+          "pass": 1.0,
+          "safe": 0.95,
+          "secure": 1.0
+        },
+        "5": {
+          "joint": 1.0,
+          "pass": 1.0,
+          "safe": 0.95,
+          "secure": 1.0
+        }
+      },
+      "benchmark": "cweval",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 0.0,
+          "total": 0.0
+        },
+        "input_tokens": {
+          "mean": 236.75,
+          "total": 9470.0
+        },
+        "model_calls": {
+          "mean": 1.0,
+          "total": 40.0
+        },
+        "output_tokens": {
+          "mean": 324.875,
+          "total": 12995.0
+        },
+        "visible_test_executions": {
+          "mean": 4.0,
+          "total": 160.0
+        }
+      },
+      "functional_rate": 0.95,
+      "joint_rate": 0.95,
+      "mean_first_visible_pass_round": 0,
+      "method": "B1",
+      "model": "qwen36-27b",
+      "safe_mean": 0.95,
+      "security_given_functional": 1.0,
+      "security_rate": 0.95,
+      "states": {
+        "F+S+": 38,
+        "F-S-": 2
+      },
+      "tfor": {
+        "denominator": 35,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 0.875
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 1.0,
+          "pass": 1.0,
+          "safe": 1.0,
+          "secure": 1.0
+        },
+        "3": {
+          "joint": 1.0,
+          "pass": 1.0,
+          "safe": 1.0,
+          "secure": 1.0
+        },
+        "5": {
+          "joint": 1.0,
+          "pass": 1.0,
+          "safe": 1.0,
+          "secure": 1.0
+        }
+      },
+      "benchmark": "cweval",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 0.0,
+          "total": 0.0
+        },
+        "input_tokens": {
+          "mean": 499.75,
+          "total": 19990.0
+        },
+        "model_calls": {
+          "mean": 1.0,
+          "total": 40.0
+        },
+        "output_tokens": {
+          "mean": 261.175,
+          "total": 10447.0
+        },
+        "visible_test_executions": {
+          "mean": 4.0,
+          "total": 160.0
+        }
+      },
+      "functional_rate": 1,
+      "joint_rate": 1,
+      "mean_first_visible_pass_round": 0,
+      "method": "B2",
+      "model": "qwen36-27b",
+      "safe_mean": 1.0,
+      "security_given_functional": 1.0,
+      "security_rate": 1,
+      "states": {
+        "F+S+": 40
+      },
+      "tfor": {
+        "denominator": 40,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 1.0
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.875,
+          "pass": 0.975,
+          "safe": 0.875,
+          "secure": 0.9
+        },
+        "3": {
+          "joint": 0.95,
+          "pass": 1.0,
+          "safe": 0.875,
+          "secure": 0.95
+        },
+        "5": {
+          "joint": 1.0,
+          "pass": 1.0,
+          "safe": 0.875,
+          "secure": 1.0
+        }
+      },
+      "benchmark": "cweval",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 0.0,
+          "total": 0.0
+        },
+        "input_tokens": {
+          "mean": 666.625,
+          "total": 26665.0
+        },
+        "model_calls": {
+          "mean": 1.0,
+          "total": 40.0
+        },
+        "output_tokens": {
+          "mean": 348.0,
+          "total": 13920.0
+        },
+        "visible_test_executions": {
+          "mean": 4.0,
+          "total": 160.0
+        }
+      },
+      "functional_rate": 0.975,
+      "joint_rate": 0.875,
+      "mean_first_visible_pass_round": 0,
+      "method": "B3",
+      "model": "qwen36-27b",
+      "safe_mean": 0.875,
+      "security_given_functional": 0.8974358974358975,
+      "security_rate": 0.9,
+      "states": {
+        "F+S+": 35,
+        "F+S-": 4,
+        "F-S+": 1
+      },
+      "tfor": {
+        "denominator": 39,
+        "numerator": 4,
+        "rate": 0.10256410256410256
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 0.975
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.85,
+          "pass": 1.0,
+          "safe": 0.85,
+          "secure": 0.85
+        },
+        "3": {
+          "joint": 0.875,
+          "pass": 1.0,
+          "safe": 0.85,
+          "secure": 0.875
+        },
+        "5": {
+          "joint": 0.875,
+          "pass": 1.0,
+          "safe": 0.85,
+          "secure": 0.875
+        }
+      },
+      "benchmark": "cweval",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 136.0,
+          "total": 5440.0
+        },
+        "input_tokens": {
+          "mean": 715.725,
+          "total": 28629.0
+        },
+        "model_calls": {
+          "mean": 1.45,
+          "total": 58.0
+        },
+        "output_tokens": {
+          "mean": 429.275,
+          "total": 17171.0
+        },
+        "visible_test_executions": {
+          "mean": 5.8,
+          "total": 232.0
+        }
+      },
+      "functional_rate": 1,
+      "joint_rate": 0.85,
+      "mean_first_visible_pass_round": 0.45,
+      "method": "B4",
+      "model": "qwen36-27b",
+      "safe_mean": 0.85,
+      "security_given_functional": 0.85,
+      "security_rate": 0.85,
+      "states": {
+        "F+S+": 34,
+        "F+S-": 6
+      },
+      "tfor": {
+        "denominator": 40,
+        "numerator": 6,
+        "rate": 0.15
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 1.0
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.85,
+          "pass": 1.0,
+          "safe": 0.85,
+          "secure": 0.85
+        },
+        "3": {
+          "joint": 0.875,
+          "pass": 1.0,
+          "safe": 0.85,
+          "secure": 0.875
+        },
+        "5": {
+          "joint": 0.875,
+          "pass": 1.0,
+          "safe": 0.85,
+          "secure": 0.875
+        }
+      },
+      "benchmark": "cweval",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 53.2,
+          "total": 2128.0
+        },
+        "input_tokens": {
+          "mean": 589.225,
+          "total": 23569.0
+        },
+        "model_calls": {
+          "mean": 1.45,
+          "total": 58.0
+        },
+        "output_tokens": {
+          "mean": 431.175,
+          "total": 17247.0
+        },
+        "visible_test_executions": {
+          "mean": 5.8,
+          "total": 232.0
+        }
+      },
+      "functional_rate": 1,
+      "joint_rate": 0.85,
+      "mean_first_visible_pass_round": 0.45,
+      "method": "B5",
+      "model": "qwen36-27b",
+      "safe_mean": 0.85,
+      "security_given_functional": 0.85,
+      "security_rate": 0.85,
+      "states": {
+        "F+S+": 34,
+        "F+S-": 6
+      },
+      "tfor": {
+        "denominator": 40,
+        "numerator": 6,
+        "rate": 0.15
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 1.0
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.875,
+          "pass": 0.975,
+          "safe": 0.875,
+          "secure": 0.9
+        },
+        "3": {
+          "joint": 0.95,
+          "pass": 1.0,
+          "safe": 0.875,
+          "secure": 0.95
+        },
+        "5": {
+          "joint": 1.0,
+          "pass": 1.0,
+          "safe": 0.875,
+          "secure": 1.0
+        }
+      },
+      "benchmark": "cweval",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 10.55,
+          "total": 422.0
+        },
+        "input_tokens": {
+          "mean": 765.45,
+          "total": 30618.0
+        },
+        "model_calls": {
+          "mean": 1.05,
+          "total": 42.0
+        },
+        "output_tokens": {
+          "mean": 381.425,
+          "total": 15257.0
+        },
+        "visible_test_executions": {
+          "mean": 4.2,
+          "total": 168.0
+        }
+      },
+      "functional_rate": 0.975,
+      "joint_rate": 0.875,
+      "mean_first_visible_pass_round": 0,
+      "method": "B6",
+      "model": "qwen36-27b",
+      "safe_mean": 0.875,
+      "security_given_functional": 0.8974358974358975,
+      "security_rate": 0.9,
+      "states": {
+        "F+S+": 35,
+        "F+S-": 4,
+        "F-S+": 1
+      },
+      "tfor": {
+        "denominator": 39,
+        "numerator": 4,
+        "rate": 0.10256410256410256
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 0.975
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.85,
+          "pass": 1.0,
+          "safe": 0.85,
+          "secure": 0.85
+        },
+        "3": {
+          "joint": 0.875,
+          "pass": 1.0,
+          "safe": 0.85,
+          "secure": 0.875
+        },
+        "5": {
+          "joint": 0.875,
+          "pass": 1.0,
+          "safe": 0.85,
+          "secure": 0.875
+        }
+      },
+      "benchmark": "cweval",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 124.3,
+          "total": 4972.0
+        },
+        "input_tokens": {
+          "mean": 686.75,
+          "total": 27470.0
+        },
+        "model_calls": {
+          "mean": 1.45,
+          "total": 58.0
+        },
+        "output_tokens": {
+          "mean": 428.875,
+          "total": 17155.0
+        },
+        "visible_test_executions": {
+          "mean": 5.8,
+          "total": 232.0
+        }
+      },
+      "functional_rate": 1,
+      "joint_rate": 0.85,
+      "mean_first_visible_pass_round": 0.45,
+      "method": "M",
+      "model": "qwen36-27b",
+      "safe_mean": 0.85,
+      "security_given_functional": 0.85,
+      "security_rate": 0.85,
+      "states": {
+        "F+S+": 34,
+        "F+S-": 6
+      },
+      "tfor": {
+        "denominator": 40,
+        "numerator": 6,
+        "rate": 0.15
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 1.0
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.375,
+          "pass": 0.5,
+          "safe": 0.375,
+          "secure": 0.575
+        },
+        "3": {
+          "joint": 0.375,
+          "pass": 0.5,
+          "safe": 0.375,
+          "secure": 0.625
+        },
+        "5": {
+          "joint": 0.375,
+          "pass": 0.5,
+          "safe": 0.375,
+          "secure": 0.625
+        }
+      },
+      "benchmark": "sallm",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 0.0,
+          "total": 0.0
+        },
+        "input_tokens": {
+          "mean": 181.875,
+          "total": 7275.0
+        },
+        "model_calls": {
+          "mean": 1.0,
+          "total": 40.0
+        },
+        "output_tokens": {
+          "mean": 372.125,
+          "total": 14885.0
+        },
+        "visible_test_executions": {
+          "mean": 2.0,
+          "total": 80.0
+        }
+      },
+      "functional_rate": 0.5,
+      "joint_rate": 0.375,
+      "mean_first_visible_pass_round": 0,
+      "method": "B0",
+      "model": "deepseek-v4-flash",
+      "safe_mean": 0.375,
+      "security_given_functional": 0.75,
+      "security_rate": 0.575,
+      "states": {
+        "F+S+": 15,
+        "F+S-": 5,
+        "F-S+": 8,
+        "F-S-": 12
+      },
+      "tfor": {
+        "denominator": 15,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 0.375
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.45,
+          "pass": 0.55,
+          "safe": 0.45,
+          "secure": 0.525
+        },
+        "3": {
+          "joint": 0.5,
+          "pass": 0.625,
+          "safe": 0.45,
+          "secure": 0.575
+        },
+        "5": {
+          "joint": 0.5,
+          "pass": 0.625,
+          "safe": 0.45,
+          "secure": 0.625
+        }
+      },
+      "benchmark": "sallm",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 0.0,
+          "total": 0.0
+        },
+        "input_tokens": {
+          "mean": 199.875,
+          "total": 7995.0
+        },
+        "model_calls": {
+          "mean": 1.0,
+          "total": 40.0
+        },
+        "output_tokens": {
+          "mean": 412.95,
+          "total": 16518.0
+        },
+        "visible_test_executions": {
+          "mean": 2.0,
+          "total": 80.0
+        }
+      },
+      "functional_rate": 0.55,
+      "joint_rate": 0.45,
+      "mean_first_visible_pass_round": 0,
+      "method": "B1",
+      "model": "deepseek-v4-flash",
+      "safe_mean": 0.45,
+      "security_given_functional": 0.8181818181818182,
+      "security_rate": 0.525,
+      "states": {
+        "F+S+": 18,
+        "F+S-": 4,
+        "F-S+": 3,
+        "F-S-": 15
+      },
+      "tfor": {
+        "denominator": 18,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 0.45
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.525,
+          "pass": 0.65,
+          "safe": 0.525,
+          "secure": 0.65
+        },
+        "3": {
+          "joint": 0.575,
+          "pass": 0.7,
+          "safe": 0.525,
+          "secure": 0.7
+        },
+        "5": {
+          "joint": 0.625,
+          "pass": 0.75,
+          "safe": 0.525,
+          "secure": 0.75
+        }
+      },
+      "benchmark": "sallm",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 0.0,
+          "total": 0.0
+        },
+        "input_tokens": {
+          "mean": 385.625,
+          "total": 15425.0
+        },
+        "model_calls": {
+          "mean": 1.0,
+          "total": 40.0
+        },
+        "output_tokens": {
+          "mean": 232.55,
+          "total": 9302.0
+        },
+        "visible_test_executions": {
+          "mean": 2.0,
+          "total": 80.0
+        }
+      },
+      "functional_rate": 0.65,
+      "joint_rate": 0.525,
+      "mean_first_visible_pass_round": 0,
+      "method": "B2",
+      "model": "deepseek-v4-flash",
+      "safe_mean": 0.525,
+      "security_given_functional": 0.8076923076923077,
+      "security_rate": 0.65,
+      "states": {
+        "F+S+": 21,
+        "F+S-": 5,
+        "F-S+": 5,
+        "F-S-": 9
+      },
+      "tfor": {
+        "denominator": 21,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 0.525
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.7,
+          "pass": 0.7,
+          "safe": 0.7,
+          "secure": 0.775
+        },
+        "3": {
+          "joint": 0.875,
+          "pass": 0.875,
+          "safe": 0.7,
+          "secure": 0.875
+        },
+        "5": {
+          "joint": 0.875,
+          "pass": 0.875,
+          "safe": 0.7,
+          "secure": 0.875
+        }
+      },
+      "benchmark": "sallm",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 0.0,
+          "total": 0.0
+        },
+        "input_tokens": {
+          "mean": 497.0,
+          "total": 19880.0
+        },
+        "model_calls": {
+          "mean": 1.0,
+          "total": 40.0
+        },
+        "output_tokens": {
+          "mean": 232.375,
+          "total": 9295.0
+        },
+        "visible_test_executions": {
+          "mean": 2.0,
+          "total": 80.0
+        }
+      },
+      "functional_rate": 0.7,
+      "joint_rate": 0.7,
+      "mean_first_visible_pass_round": 0,
+      "method": "B3",
+      "model": "deepseek-v4-flash",
+      "safe_mean": 0.7,
+      "security_given_functional": 1.0,
+      "security_rate": 0.775,
+      "states": {
+        "F+S+": 28,
+        "F-S+": 3,
+        "F-S-": 9
+      },
+      "tfor": {
+        "denominator": 29,
+        "numerator": 1,
+        "rate": 0.034482758620689655
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 0.725
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.75,
+          "pass": 0.75,
+          "safe": 0.75,
+          "secure": 0.9
+        },
+        "3": {
+          "joint": 0.8625,
+          "pass": 0.8625,
+          "safe": 0.75,
+          "secure": 0.9875
+        },
+        "5": {
+          "joint": 0.875,
+          "pass": 0.875,
+          "safe": 0.75,
+          "secure": 1.0
+        }
+      },
+      "benchmark": "sallm",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 204.625,
+          "total": 8185.0
+        },
+        "input_tokens": {
+          "mean": 1049.75,
+          "total": 41990.0
+        },
+        "model_calls": {
+          "mean": 1.975,
+          "total": 79.0
+        },
+        "output_tokens": {
+          "mean": 593.0,
+          "total": 23720.0
+        },
+        "visible_test_executions": {
+          "mean": 3.95,
+          "total": 158.0
+        }
+      },
+      "functional_rate": 0.75,
+      "joint_rate": 0.75,
+      "mean_first_visible_pass_round": 0.6333333333333333,
+      "method": "B4",
+      "model": "deepseek-v4-flash",
+      "safe_mean": 0.75,
+      "security_given_functional": 1.0,
+      "security_rate": 0.9,
+      "states": {
+        "F+S+": 30,
+        "F-S+": 6,
+        "F-S-": 4
+      },
+      "tfor": {
+        "denominator": 30,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 0.75
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.825,
+          "pass": 0.825,
+          "safe": 0.825,
+          "secure": 0.95
+        },
+        "3": {
+          "joint": 0.95,
+          "pass": 0.95,
+          "safe": 0.825,
+          "secure": 1.0
+        },
+        "5": {
+          "joint": 1.0,
+          "pass": 1.0,
+          "safe": 0.825,
+          "secure": 1.0
+        }
+      },
+      "benchmark": "sallm",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 133.5,
+          "total": 5340.0
+        },
+        "input_tokens": {
+          "mean": 924.5,
+          "total": 36980.0
+        },
+        "model_calls": {
+          "mean": 1.9,
+          "total": 76.0
+        },
+        "output_tokens": {
+          "mean": 594.6,
+          "total": 23784.0
+        },
+        "visible_test_executions": {
+          "mean": 3.8,
+          "total": 152.0
+        }
+      },
+      "functional_rate": 0.825,
+      "joint_rate": 0.825,
+      "mean_first_visible_pass_round": 0.6666666666666666,
+      "method": "B5",
+      "model": "deepseek-v4-flash",
+      "safe_mean": 0.825,
+      "security_given_functional": 1.0,
+      "security_rate": 0.95,
+      "states": {
+        "F+S+": 33,
+        "F-S+": 5,
+        "F-S-": 2
+      },
+      "tfor": {
+        "denominator": 33,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 0.825
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.875,
+          "pass": 0.875,
+          "safe": 0.875,
+          "secure": 0.9
+        },
+        "3": {
+          "joint": 1.0,
+          "pass": 1.0,
+          "safe": 0.875,
+          "secure": 1.0
+        },
+        "5": {
+          "joint": 1.0,
+          "pass": 1.0,
+          "safe": 0.875,
+          "secure": 1.0
+        }
+      },
+      "benchmark": "sallm",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 154.9,
+          "total": 6196.0
+        },
+        "input_tokens": {
+          "mean": 1055.225,
+          "total": 42209.0
+        },
+        "model_calls": {
+          "mean": 1.475,
+          "total": 59.0
+        },
+        "output_tokens": {
+          "mean": 318.075,
+          "total": 12723.0
+        },
+        "visible_test_executions": {
+          "mean": 2.95,
+          "total": 118.0
+        }
+      },
+      "functional_rate": 0.875,
+      "joint_rate": 0.875,
+      "mean_first_visible_pass_round": 0.3055555555555556,
+      "method": "B6",
+      "model": "deepseek-v4-flash",
+      "safe_mean": 0.875,
+      "security_given_functional": 1.0,
+      "security_rate": 0.9,
+      "states": {
+        "F+S+": 35,
+        "F-S+": 1,
+        "F-S-": 4
+      },
+      "tfor": {
+        "denominator": 36,
+        "numerator": 1,
+        "rate": 0.027777777777777776
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 0.9
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.775,
+          "pass": 0.775,
+          "safe": 0.775,
+          "secure": 0.9
+        },
+        "3": {
+          "joint": 0.9375,
+          "pass": 0.9375,
+          "safe": 0.775,
+          "secure": 0.95
+        },
+        "5": {
+          "joint": 1.0,
+          "pass": 1.0,
+          "safe": 0.775,
+          "secure": 1.0
+        }
+      },
+      "benchmark": "sallm",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 275.225,
+          "total": 11009.0
+        },
+        "input_tokens": {
+          "mean": 1168.3,
+          "total": 46732.0
+        },
+        "model_calls": {
+          "mean": 2.0,
+          "total": 80.0
+        },
+        "output_tokens": {
+          "mean": 618.875,
+          "total": 24755.0
+        },
+        "visible_test_executions": {
+          "mean": 4.0,
+          "total": 160.0
+        }
+      },
+      "functional_rate": 0.775,
+      "joint_rate": 0.775,
+      "mean_first_visible_pass_round": 0.7096774193548387,
+      "method": "M",
+      "model": "deepseek-v4-flash",
+      "safe_mean": 0.775,
+      "security_given_functional": 1.0,
+      "security_rate": 0.9,
+      "states": {
+        "F+S+": 31,
+        "F-S+": 5,
+        "F-S-": 4
+      },
+      "tfor": {
+        "denominator": 31,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 0.775
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.375,
+          "pass": 0.4,
+          "safe": 0.375,
+          "secure": 0.625
+        },
+        "3": {
+          "joint": 0.375,
+          "pass": 0.45,
+          "safe": 0.375,
+          "secure": 0.625
+        },
+        "5": {
+          "joint": 0.375,
+          "pass": 0.5,
+          "safe": 0.375,
+          "secure": 0.625
+        }
+      },
+      "benchmark": "sallm",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 0.0,
+          "total": 0.0
+        },
+        "input_tokens": {
+          "mean": 185.875,
+          "total": 7435.0
+        },
+        "model_calls": {
+          "mean": 1.0,
+          "total": 40.0
+        },
+        "output_tokens": {
+          "mean": 249.525,
+          "total": 9981.0
+        },
+        "visible_test_executions": {
+          "mean": 2.0,
+          "total": 80.0
+        }
+      },
+      "functional_rate": 0.4,
+      "joint_rate": 0.375,
+      "mean_first_visible_pass_round": 0,
+      "method": "B0",
+      "model": "qwen25-coder-14b",
+      "safe_mean": 0.375,
+      "security_given_functional": 0.9375,
+      "security_rate": 0.625,
+      "states": {
+        "F+S+": 15,
+        "F+S-": 1,
+        "F-S+": 10,
+        "F-S-": 14
+      },
+      "tfor": {
+        "denominator": 15,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 0.375
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.35,
+          "pass": 0.375,
+          "safe": 0.35,
+          "secure": 0.6
+        },
+        "3": {
+          "joint": 0.375,
+          "pass": 0.375,
+          "safe": 0.35,
+          "secure": 0.625
+        },
+        "5": {
+          "joint": 0.375,
+          "pass": 0.375,
+          "safe": 0.35,
+          "secure": 0.625
+        }
+      },
+      "benchmark": "sallm",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 0.0,
+          "total": 0.0
+        },
+        "input_tokens": {
+          "mean": 204.875,
+          "total": 8195.0
+        },
+        "model_calls": {
+          "mean": 1.0,
+          "total": 40.0
+        },
+        "output_tokens": {
+          "mean": 263.9,
+          "total": 10556.0
+        },
+        "visible_test_executions": {
+          "mean": 2.0,
+          "total": 80.0
+        }
+      },
+      "functional_rate": 0.375,
+      "joint_rate": 0.35,
+      "mean_first_visible_pass_round": 0,
+      "method": "B1",
+      "model": "qwen25-coder-14b",
+      "safe_mean": 0.35,
+      "security_given_functional": 0.9333333333333333,
+      "security_rate": 0.6,
+      "states": {
+        "F+S+": 14,
+        "F+S-": 1,
+        "F-S+": 10,
+        "F-S-": 15
+      },
+      "tfor": {
+        "denominator": 14,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 0.35
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.475,
+          "pass": 0.5,
+          "safe": 0.475,
+          "secure": 0.6
+        },
+        "3": {
+          "joint": 0.5,
+          "pass": 0.575,
+          "safe": 0.475,
+          "secure": 0.625
+        },
+        "5": {
+          "joint": 0.5,
+          "pass": 0.625,
+          "safe": 0.475,
+          "secure": 0.625
+        }
+      },
+      "benchmark": "sallm",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 0.0,
+          "total": 0.0
+        },
+        "input_tokens": {
+          "mean": 386.375,
+          "total": 15455.0
+        },
+        "model_calls": {
+          "mean": 1.0,
+          "total": 40.0
+        },
+        "output_tokens": {
+          "mean": 271.325,
+          "total": 10853.0
+        },
+        "visible_test_executions": {
+          "mean": 2.0,
+          "total": 80.0
+        }
+      },
+      "functional_rate": 0.5,
+      "joint_rate": 0.475,
+      "mean_first_visible_pass_round": 0,
+      "method": "B2",
+      "model": "qwen25-coder-14b",
+      "safe_mean": 0.475,
+      "security_given_functional": 0.95,
+      "security_rate": 0.6,
+      "states": {
+        "F+S+": 19,
+        "F+S-": 1,
+        "F-S+": 5,
+        "F-S-": 15
+      },
+      "tfor": {
+        "denominator": 19,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 0.475
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.5,
+          "pass": 0.575,
+          "safe": 0.5,
+          "secure": 0.65
+        },
+        "3": {
+          "joint": 0.575,
+          "pass": 0.625,
+          "safe": 0.5,
+          "secure": 0.7
+        },
+        "5": {
+          "joint": 0.625,
+          "pass": 0.625,
+          "safe": 0.5,
+          "secure": 0.75
+        }
+      },
+      "benchmark": "sallm",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 0.0,
+          "total": 0.0
+        },
+        "input_tokens": {
+          "mean": 494.75,
+          "total": 19790.0
+        },
+        "model_calls": {
+          "mean": 1.0,
+          "total": 40.0
+        },
+        "output_tokens": {
+          "mean": 208.725,
+          "total": 8349.0
+        },
+        "visible_test_executions": {
+          "mean": 2.0,
+          "total": 80.0
+        }
+      },
+      "functional_rate": 0.575,
+      "joint_rate": 0.5,
+      "mean_first_visible_pass_round": 0,
+      "method": "B3",
+      "model": "qwen25-coder-14b",
+      "safe_mean": 0.5,
+      "security_given_functional": 0.8695652173913043,
+      "security_rate": 0.65,
+      "states": {
+        "F+S+": 20,
+        "F+S-": 3,
+        "F-S+": 6,
+        "F-S-": 11
+      },
+      "tfor": {
+        "denominator": 20,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 0.5
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.475,
+          "pass": 0.475,
+          "safe": 0.475,
+          "secure": 0.725
+        },
+        "3": {
+          "joint": 0.5,
+          "pass": 0.5,
+          "safe": 0.475,
+          "secure": 0.75
+        },
+        "5": {
+          "joint": 0.5,
+          "pass": 0.5,
+          "safe": 0.475,
+          "secure": 0.75
+        }
+      },
+      "benchmark": "sallm",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 250.7,
+          "total": 10028.0
+        },
+        "input_tokens": {
+          "mean": 1310.875,
+          "total": 52435.0
+        },
+        "model_calls": {
+          "mean": 2.175,
+          "total": 87.0
+        },
+        "output_tokens": {
+          "mean": 616.4,
+          "total": 24656.0
+        },
+        "visible_test_executions": {
+          "mean": 4.35,
+          "total": 174.0
+        }
+      },
+      "functional_rate": 0.475,
+      "joint_rate": 0.475,
+      "mean_first_visible_pass_round": 0.2631578947368421,
+      "method": "B4",
+      "model": "qwen25-coder-14b",
+      "safe_mean": 0.475,
+      "security_given_functional": 1.0,
+      "security_rate": 0.725,
+      "states": {
+        "F+S+": 19,
+        "F-S+": 10,
+        "F-S-": 11
+      },
+      "tfor": {
+        "denominator": 19,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 0.475
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.45,
+          "pass": 0.475,
+          "safe": 0.45,
+          "secure": 0.725
+        },
+        "3": {
+          "joint": 0.5,
+          "pass": 0.5,
+          "safe": 0.45,
+          "secure": 0.75
+        },
+        "5": {
+          "joint": 0.5,
+          "pass": 0.5,
+          "safe": 0.45,
+          "secure": 0.75
+        }
+      },
+      "benchmark": "sallm",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 172.275,
+          "total": 6891.0
+        },
+        "input_tokens": {
+          "mean": 1248.825,
+          "total": 49953.0
+        },
+        "model_calls": {
+          "mean": 2.225,
+          "total": 89.0
+        },
+        "output_tokens": {
+          "mean": 642.575,
+          "total": 25703.0
+        },
+        "visible_test_executions": {
+          "mean": 4.45,
+          "total": 178.0
+        }
+      },
+      "functional_rate": 0.475,
+      "joint_rate": 0.45,
+      "mean_first_visible_pass_round": 0.2777777777777778,
+      "method": "B5",
+      "model": "qwen25-coder-14b",
+      "safe_mean": 0.45,
+      "security_given_functional": 0.9473684210526315,
+      "security_rate": 0.725,
+      "states": {
+        "F+S+": 18,
+        "F+S-": 1,
+        "F-S+": 11,
+        "F-S-": 10
+      },
+      "tfor": {
+        "denominator": 18,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 0.45
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.55,
+          "pass": 0.6,
+          "safe": 0.55,
+          "secure": 0.7
+        },
+        "3": {
+          "joint": 0.625,
+          "pass": 0.625,
+          "safe": 0.55,
+          "secure": 0.75
+        },
+        "5": {
+          "joint": 0.625,
+          "pass": 0.625,
+          "safe": 0.55,
+          "secure": 0.75
+        }
+      },
+      "benchmark": "sallm",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 283.3,
+          "total": 11332.0
+        },
+        "input_tokens": {
+          "mean": 1735.45,
+          "total": 69418.0
+        },
+        "model_calls": {
+          "mean": 2.0,
+          "total": 80.0
+        },
+        "output_tokens": {
+          "mean": 437.9,
+          "total": 17516.0
+        },
+        "visible_test_executions": {
+          "mean": 4.0,
+          "total": 160.0
+        }
+      },
+      "functional_rate": 0.6,
+      "joint_rate": 0.55,
+      "mean_first_visible_pass_round": 0.18181818181818182,
+      "method": "B6",
+      "model": "qwen25-coder-14b",
+      "safe_mean": 0.55,
+      "security_given_functional": 0.9166666666666666,
+      "security_rate": 0.7,
+      "states": {
+        "F+S+": 22,
+        "F+S-": 2,
+        "F-S+": 6,
+        "F-S-": 10
+      },
+      "tfor": {
+        "denominator": 22,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 0.55
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.425,
+          "pass": 0.425,
+          "safe": 0.425,
+          "secure": 0.7
+        },
+        "3": {
+          "joint": 0.4875,
+          "pass": 0.4875,
+          "safe": 0.425,
+          "secure": 0.75
+        },
+        "5": {
+          "joint": 0.5,
+          "pass": 0.5,
+          "safe": 0.425,
+          "secure": 0.75
+        }
+      },
+      "benchmark": "sallm",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 327.525,
+          "total": 13101.0
+        },
+        "input_tokens": {
+          "mean": 1461.625,
+          "total": 58465.0
+        },
+        "model_calls": {
+          "mean": 2.2,
+          "total": 88.0
+        },
+        "output_tokens": {
+          "mean": 640.4,
+          "total": 25616.0
+        },
+        "visible_test_executions": {
+          "mean": 4.4,
+          "total": 176.0
+        }
+      },
+      "functional_rate": 0.425,
+      "joint_rate": 0.425,
+      "mean_first_visible_pass_round": 0.11764705882352941,
+      "method": "M",
+      "model": "qwen25-coder-14b",
+      "safe_mean": 0.425,
+      "security_given_functional": 1.0,
+      "security_rate": 0.7,
+      "states": {
+        "F+S+": 17,
+        "F-S+": 11,
+        "F-S-": 12
+      },
+      "tfor": {
+        "denominator": 17,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 0.425
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.3,
+          "pass": 0.45,
+          "safe": 0.3,
+          "secure": 0.65
+        },
+        "3": {
+          "joint": 0.3625,
+          "pass": 0.5,
+          "safe": 0.3,
+          "secure": 0.7375
+        },
+        "5": {
+          "joint": 0.375,
+          "pass": 0.5,
+          "safe": 0.3,
+          "secure": 0.75
+        }
+      },
+      "benchmark": "sallm",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 0.0,
+          "total": 0.0
+        },
+        "input_tokens": {
+          "mean": 185.875,
+          "total": 7435.0
+        },
+        "model_calls": {
+          "mean": 1.0,
+          "total": 40.0
+        },
+        "output_tokens": {
+          "mean": 147.5,
+          "total": 5900.0
+        },
+        "visible_test_executions": {
+          "mean": 2.0,
+          "total": 80.0
+        }
+      },
+      "functional_rate": 0.45,
+      "joint_rate": 0.3,
+      "mean_first_visible_pass_round": 0,
+      "method": "B0",
+      "model": "qwen25-coder-7b",
+      "safe_mean": 0.3,
+      "security_given_functional": 0.6666666666666666,
+      "security_rate": 0.65,
+      "states": {
+        "F+S+": 12,
+        "F+S-": 6,
+        "F-S+": 14,
+        "F-S-": 8
+      },
+      "tfor": {
+        "denominator": 12,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 0.3
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.3,
+          "pass": 0.425,
+          "safe": 0.3,
+          "secure": 0.625
+        },
+        "3": {
+          "joint": 0.4,
+          "pass": 0.525,
+          "safe": 0.3,
+          "secure": 0.7
+        },
+        "5": {
+          "joint": 0.5,
+          "pass": 0.625,
+          "safe": 0.3,
+          "secure": 0.75
+        }
+      },
+      "benchmark": "sallm",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 0.0,
+          "total": 0.0
+        },
+        "input_tokens": {
+          "mean": 204.875,
+          "total": 8195.0
+        },
+        "model_calls": {
+          "mean": 1.0,
+          "total": 40.0
+        },
+        "output_tokens": {
+          "mean": 152.7,
+          "total": 6108.0
+        },
+        "visible_test_executions": {
+          "mean": 2.0,
+          "total": 80.0
+        }
+      },
+      "functional_rate": 0.425,
+      "joint_rate": 0.3,
+      "mean_first_visible_pass_round": 0,
+      "method": "B1",
+      "model": "qwen25-coder-7b",
+      "safe_mean": 0.3,
+      "security_given_functional": 0.7058823529411765,
+      "security_rate": 0.625,
+      "states": {
+        "F+S+": 12,
+        "F+S-": 5,
+        "F-S+": 13,
+        "F-S-": 10
+      },
+      "tfor": {
+        "denominator": 12,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 0.3
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.5,
+          "pass": 0.575,
+          "safe": 0.5,
+          "secure": 0.75
+        },
+        "3": {
+          "joint": 0.575,
+          "pass": 0.625,
+          "safe": 0.5,
+          "secure": 0.825
+        },
+        "5": {
+          "joint": 0.625,
+          "pass": 0.625,
+          "safe": 0.5,
+          "secure": 0.875
+        }
+      },
+      "benchmark": "sallm",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 0.0,
+          "total": 0.0
+        },
+        "input_tokens": {
+          "mean": 386.375,
+          "total": 15455.0
+        },
+        "model_calls": {
+          "mean": 1.0,
+          "total": 40.0
+        },
+        "output_tokens": {
+          "mean": 166.2,
+          "total": 6648.0
+        },
+        "visible_test_executions": {
+          "mean": 2.0,
+          "total": 80.0
+        }
+      },
+      "functional_rate": 0.575,
+      "joint_rate": 0.5,
+      "mean_first_visible_pass_round": 0,
+      "method": "B2",
+      "model": "qwen25-coder-7b",
+      "safe_mean": 0.5,
+      "security_given_functional": 0.8695652173913043,
+      "security_rate": 0.75,
+      "states": {
+        "F+S+": 20,
+        "F+S-": 3,
+        "F-S+": 10,
+        "F-S-": 7
+      },
+      "tfor": {
+        "denominator": 20,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 0.5
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.575,
+          "pass": 0.675,
+          "safe": 0.575,
+          "secure": 0.75
+        },
+        "3": {
+          "joint": 0.625,
+          "pass": 0.75,
+          "safe": 0.575,
+          "secure": 0.75
+        },
+        "5": {
+          "joint": 0.625,
+          "pass": 0.75,
+          "safe": 0.575,
+          "secure": 0.75
+        }
+      },
+      "benchmark": "sallm",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 0.0,
+          "total": 0.0
+        },
+        "input_tokens": {
+          "mean": 494.75,
+          "total": 19790.0
+        },
+        "model_calls": {
+          "mean": 1.0,
+          "total": 40.0
+        },
+        "output_tokens": {
+          "mean": 161.325,
+          "total": 6453.0
+        },
+        "visible_test_executions": {
+          "mean": 2.0,
+          "total": 80.0
+        }
+      },
+      "functional_rate": 0.675,
+      "joint_rate": 0.575,
+      "mean_first_visible_pass_round": 0,
+      "method": "B3",
+      "model": "qwen25-coder-7b",
+      "safe_mean": 0.575,
+      "security_given_functional": 0.8518518518518519,
+      "security_rate": 0.75,
+      "states": {
+        "F+S+": 23,
+        "F+S-": 4,
+        "F-S+": 7,
+        "F-S-": 6
+      },
+      "tfor": {
+        "denominator": 23,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 0.575
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.45,
+          "pass": 0.6,
+          "safe": 0.45,
+          "secure": 0.7
+        },
+        "3": {
+          "joint": 0.5,
+          "pass": 0.625,
+          "safe": 0.45,
+          "secure": 0.75
+        },
+        "5": {
+          "joint": 0.5,
+          "pass": 0.625,
+          "safe": 0.45,
+          "secure": 0.75
+        }
+      },
+      "benchmark": "sallm",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 235.05,
+          "total": 9402.0
+        },
+        "input_tokens": {
+          "mean": 1112.225,
+          "total": 44489.0
+        },
+        "model_calls": {
+          "mean": 2.35,
+          "total": 94.0
+        },
+        "output_tokens": {
+          "mean": 349.85,
+          "total": 13994.0
+        },
+        "visible_test_executions": {
+          "mean": 4.7,
+          "total": 188.0
+        }
+      },
+      "functional_rate": 0.6,
+      "joint_rate": 0.45,
+      "mean_first_visible_pass_round": 0.5555555555555556,
+      "method": "B4",
+      "model": "qwen25-coder-7b",
+      "safe_mean": 0.45,
+      "security_given_functional": 0.75,
+      "security_rate": 0.7,
+      "states": {
+        "F+S+": 18,
+        "F+S-": 6,
+        "F-S+": 10,
+        "F-S-": 6
+      },
+      "tfor": {
+        "denominator": 18,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 0.45
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.45,
+          "pass": 0.6,
+          "safe": 0.45,
+          "secure": 0.7
+        },
+        "3": {
+          "joint": 0.5,
+          "pass": 0.625,
+          "safe": 0.45,
+          "secure": 0.75
+        },
+        "5": {
+          "joint": 0.5,
+          "pass": 0.625,
+          "safe": 0.45,
+          "secure": 0.75
+        }
+      },
+      "benchmark": "sallm",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 188.7,
+          "total": 7548.0
+        },
+        "input_tokens": {
+          "mean": 1043.25,
+          "total": 41730.0
+        },
+        "model_calls": {
+          "mean": 2.35,
+          "total": 94.0
+        },
+        "output_tokens": {
+          "mean": 349.3,
+          "total": 13972.0
+        },
+        "visible_test_executions": {
+          "mean": 4.7,
+          "total": 188.0
+        }
+      },
+      "functional_rate": 0.6,
+      "joint_rate": 0.45,
+      "mean_first_visible_pass_round": 0.5555555555555556,
+      "method": "B5",
+      "model": "qwen25-coder-7b",
+      "safe_mean": 0.45,
+      "security_given_functional": 0.75,
+      "security_rate": 0.7,
+      "states": {
+        "F+S+": 18,
+        "F+S-": 6,
+        "F-S+": 10,
+        "F-S-": 6
+      },
+      "tfor": {
+        "denominator": 18,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 0.45
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.575,
+          "pass": 0.675,
+          "safe": 0.575,
+          "secure": 0.75
+        },
+        "3": {
+          "joint": 0.625,
+          "pass": 0.75,
+          "safe": 0.575,
+          "secure": 0.75
+        },
+        "5": {
+          "joint": 0.625,
+          "pass": 0.75,
+          "safe": 0.575,
+          "secure": 0.75
+        }
+      },
+      "benchmark": "sallm",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 201.15,
+          "total": 8046.0
+        },
+        "input_tokens": {
+          "mean": 1452.275,
+          "total": 58091.0
+        },
+        "model_calls": {
+          "mean": 1.85,
+          "total": 74.0
+        },
+        "output_tokens": {
+          "mean": 326.65,
+          "total": 13066.0
+        },
+        "visible_test_executions": {
+          "mean": 3.7,
+          "total": 148.0
+        }
+      },
+      "functional_rate": 0.675,
+      "joint_rate": 0.575,
+      "mean_first_visible_pass_round": 0,
+      "method": "B6",
+      "model": "qwen25-coder-7b",
+      "safe_mean": 0.575,
+      "security_given_functional": 0.8518518518518519,
+      "security_rate": 0.75,
+      "states": {
+        "F+S+": 23,
+        "F+S-": 4,
+        "F-S+": 7,
+        "F-S-": 6
+      },
+      "tfor": {
+        "denominator": 23,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 0.575
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.4,
+          "pass": 0.55,
+          "safe": 0.4,
+          "secure": 0.65
+        },
+        "3": {
+          "joint": 0.525,
+          "pass": 0.65,
+          "safe": 0.4,
+          "secure": 0.7375
+        },
+        "5": {
+          "joint": 0.625,
+          "pass": 0.75,
+          "safe": 0.4,
+          "secure": 0.75
+        }
+      },
+      "benchmark": "sallm",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 306.05,
+          "total": 12242.0
+        },
+        "input_tokens": {
+          "mean": 1224.35,
+          "total": 48974.0
+        },
+        "model_calls": {
+          "mean": 2.325,
+          "total": 93.0
+        },
+        "output_tokens": {
+          "mean": 399.95,
+          "total": 15998.0
+        },
+        "visible_test_executions": {
+          "mean": 4.65,
+          "total": 186.0
+        }
+      },
+      "functional_rate": 0.55,
+      "joint_rate": 0.4,
+      "mean_first_visible_pass_round": 0.3125,
+      "method": "M",
+      "model": "qwen25-coder-7b",
+      "safe_mean": 0.4,
+      "security_given_functional": 0.7272727272727273,
+      "security_rate": 0.65,
+      "states": {
+        "F+S+": 16,
+        "F+S-": 6,
+        "F-S+": 10,
+        "F-S-": 8
+      },
+      "tfor": {
+        "denominator": 16,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 0.4
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.65,
+          "pass": 0.775,
+          "safe": 0.65,
+          "secure": 0.775
+        },
+        "3": {
+          "joint": 0.7,
+          "pass": 0.825,
+          "safe": 0.65,
+          "secure": 0.825
+        },
+        "5": {
+          "joint": 0.75,
+          "pass": 0.875,
+          "safe": 0.65,
+          "secure": 0.875
+        }
+      },
+      "benchmark": "sallm",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 0.0,
+          "total": 0.0
+        },
+        "input_tokens": {
+          "mean": 198.625,
+          "total": 7945.0
+        },
+        "model_calls": {
+          "mean": 1.0,
+          "total": 40.0
+        },
+        "output_tokens": {
+          "mean": 286.325,
+          "total": 11453.0
+        },
+        "visible_test_executions": {
+          "mean": 2.0,
+          "total": 80.0
+        }
+      },
+      "functional_rate": 0.775,
+      "joint_rate": 0.65,
+      "mean_first_visible_pass_round": 0,
+      "method": "B0",
+      "model": "qwen36-27b",
+      "safe_mean": 0.65,
+      "security_given_functional": 0.8387096774193549,
+      "security_rate": 0.775,
+      "states": {
+        "F+S+": 26,
+        "F+S-": 5,
+        "F-S+": 5,
+        "F-S-": 4
+      },
+      "tfor": {
+        "denominator": 26,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 0.65
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.725,
+          "pass": 0.8,
+          "safe": 0.725,
+          "secure": 0.775
+        },
+        "3": {
+          "joint": 0.8625,
+          "pass": 0.9875,
+          "safe": 0.725,
+          "secure": 0.8625
+        },
+        "5": {
+          "joint": 0.875,
+          "pass": 1.0,
+          "safe": 0.725,
+          "secure": 0.875
+        }
+      },
+      "benchmark": "sallm",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 0.0,
+          "total": 0.0
+        },
+        "input_tokens": {
+          "mean": 217.625,
+          "total": 8705.0
+        },
+        "model_calls": {
+          "mean": 1.0,
+          "total": 40.0
+        },
+        "output_tokens": {
+          "mean": 404.05,
+          "total": 16162.0
+        },
+        "visible_test_executions": {
+          "mean": 2.0,
+          "total": 80.0
+        }
+      },
+      "functional_rate": 0.8,
+      "joint_rate": 0.725,
+      "mean_first_visible_pass_round": 0,
+      "method": "B1",
+      "model": "qwen36-27b",
+      "safe_mean": 0.725,
+      "security_given_functional": 0.90625,
+      "security_rate": 0.775,
+      "states": {
+        "F+S+": 29,
+        "F+S-": 3,
+        "F-S+": 2,
+        "F-S-": 6
+      },
+      "tfor": {
+        "denominator": 29,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 0.725
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.75,
+          "pass": 0.775,
+          "safe": 0.75,
+          "secure": 0.75
+        },
+        "3": {
+          "joint": 0.8625,
+          "pass": 0.9375,
+          "safe": 0.75,
+          "secure": 0.8625
+        },
+        "5": {
+          "joint": 0.875,
+          "pass": 1.0,
+          "safe": 0.75,
+          "secure": 0.875
+        }
+      },
+      "benchmark": "sallm",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 0.0,
+          "total": 0.0
+        },
+        "input_tokens": {
+          "mean": 410.125,
+          "total": 16405.0
+        },
+        "model_calls": {
+          "mean": 1.0,
+          "total": 40.0
+        },
+        "output_tokens": {
+          "mean": 377.475,
+          "total": 15099.0
+        },
+        "visible_test_executions": {
+          "mean": 2.0,
+          "total": 80.0
+        }
+      },
+      "functional_rate": 0.775,
+      "joint_rate": 0.75,
+      "mean_first_visible_pass_round": 0,
+      "method": "B2",
+      "model": "qwen36-27b",
+      "safe_mean": 0.75,
+      "security_given_functional": 0.967741935483871,
+      "security_rate": 0.75,
+      "states": {
+        "F+S+": 30,
+        "F+S-": 1,
+        "F-S-": 9
+      },
+      "tfor": {
+        "denominator": 30,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 0.75
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.825,
+          "pass": 0.825,
+          "safe": 0.825,
+          "secure": 0.95
+        },
+        "3": {
+          "joint": 0.95,
+          "pass": 0.95,
+          "safe": 0.825,
+          "secure": 1.0
+        },
+        "5": {
+          "joint": 1.0,
+          "pass": 1.0,
+          "safe": 0.825,
+          "secure": 1.0
+        }
+      },
+      "benchmark": "sallm",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 0.0,
+          "total": 0.0
+        },
+        "input_tokens": {
+          "mean": 527.5,
+          "total": 21100.0
+        },
+        "model_calls": {
+          "mean": 1.0,
+          "total": 40.0
+        },
+        "output_tokens": {
+          "mean": 293.6,
+          "total": 11744.0
+        },
+        "visible_test_executions": {
+          "mean": 2.0,
+          "total": 80.0
+        }
+      },
+      "functional_rate": 0.825,
+      "joint_rate": 0.825,
+      "mean_first_visible_pass_round": 0,
+      "method": "B3",
+      "model": "qwen36-27b",
+      "safe_mean": 0.825,
+      "security_given_functional": 1.0,
+      "security_rate": 0.95,
+      "states": {
+        "F+S+": 33,
+        "F-S+": 5,
+        "F-S-": 2
+      },
+      "tfor": {
+        "denominator": 37,
+        "numerator": 4,
+        "rate": 0.10810810810810811
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 0.925
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.825,
+          "pass": 0.925,
+          "safe": 0.825,
+          "secure": 0.9
+        },
+        "3": {
+          "joint": 0.9375,
+          "pass": 0.9875,
+          "safe": 0.825,
+          "secure": 0.95
+        },
+        "5": {
+          "joint": 1.0,
+          "pass": 1.0,
+          "safe": 0.825,
+          "secure": 1.0
+        }
+      },
+      "benchmark": "sallm",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 90.2,
+          "total": 3608.0
+        },
+        "input_tokens": {
+          "mean": 679.975,
+          "total": 27199.0
+        },
+        "model_calls": {
+          "mean": 1.55,
+          "total": 62.0
+        },
+        "output_tokens": {
+          "mean": 474.625,
+          "total": 18985.0
+        },
+        "visible_test_executions": {
+          "mean": 3.1,
+          "total": 124.0
+        }
+      },
+      "functional_rate": 0.925,
+      "joint_rate": 0.825,
+      "mean_first_visible_pass_round": 0.24242424242424243,
+      "method": "B4",
+      "model": "qwen36-27b",
+      "safe_mean": 0.825,
+      "security_given_functional": 0.8918918918918919,
+      "security_rate": 0.9,
+      "states": {
+        "F+S+": 33,
+        "F+S-": 4,
+        "F-S+": 3
+      },
+      "tfor": {
+        "denominator": 33,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 0.825
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.825,
+          "pass": 0.925,
+          "safe": 0.825,
+          "secure": 0.9
+        },
+        "3": {
+          "joint": 0.9375,
+          "pass": 0.9875,
+          "safe": 0.825,
+          "secure": 0.95
+        },
+        "5": {
+          "joint": 1.0,
+          "pass": 1.0,
+          "safe": 0.825,
+          "secure": 1.0
+        }
+      },
+      "benchmark": "sallm",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 77.6,
+          "total": 3104.0
+        },
+        "input_tokens": {
+          "mean": 667.375,
+          "total": 26695.0
+        },
+        "model_calls": {
+          "mean": 1.55,
+          "total": 62.0
+        },
+        "output_tokens": {
+          "mean": 474.15,
+          "total": 18966.0
+        },
+        "visible_test_executions": {
+          "mean": 3.1,
+          "total": 124.0
+        }
+      },
+      "functional_rate": 0.925,
+      "joint_rate": 0.825,
+      "mean_first_visible_pass_round": 0.24242424242424243,
+      "method": "B5",
+      "model": "qwen36-27b",
+      "safe_mean": 0.825,
+      "security_given_functional": 0.8918918918918919,
+      "security_rate": 0.9,
+      "states": {
+        "F+S+": 33,
+        "F+S-": 4,
+        "F-S+": 3
+      },
+      "tfor": {
+        "denominator": 33,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 0.825
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.875,
+          "pass": 0.875,
+          "safe": 0.875,
+          "secure": 1.0
+        },
+        "3": {
+          "joint": 0.95,
+          "pass": 0.95,
+          "safe": 0.875,
+          "secure": 1.0
+        },
+        "5": {
+          "joint": 1.0,
+          "pass": 1.0,
+          "safe": 0.875,
+          "secure": 1.0
+        }
+      },
+      "benchmark": "sallm",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 26.65,
+          "total": 1066.0
+        },
+        "input_tokens": {
+          "mean": 639.5,
+          "total": 25580.0
+        },
+        "model_calls": {
+          "mean": 1.1,
+          "total": 44.0
+        },
+        "output_tokens": {
+          "mean": 322.0,
+          "total": 12880.0
+        },
+        "visible_test_executions": {
+          "mean": 2.2,
+          "total": 88.0
+        }
+      },
+      "functional_rate": 0.875,
+      "joint_rate": 0.875,
+      "mean_first_visible_pass_round": 0.05128205128205128,
+      "method": "B6",
+      "model": "qwen36-27b",
+      "safe_mean": 0.875,
+      "security_given_functional": 1.0,
+      "security_rate": 1,
+      "states": {
+        "F+S+": 35,
+        "F-S+": 5
+      },
+      "tfor": {
+        "denominator": 39,
+        "numerator": 4,
+        "rate": 0.10256410256410256
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 0.975
+    },
+    {
+      "at_k": {
+        "1": {
+          "joint": 0.85,
+          "pass": 0.925,
+          "safe": 0.85,
+          "secure": 0.925
+        },
+        "3": {
+          "joint": 0.975,
+          "pass": 0.9875,
+          "safe": 0.85,
+          "secure": 0.9875
+        },
+        "5": {
+          "joint": 1.0,
+          "pass": 1.0,
+          "safe": 0.85,
+          "secure": 1.0
+        }
+      },
+      "benchmark": "sallm",
+      "cost": {
+        "feedback_tokens": {
+          "mean": 117.45,
+          "total": 4698.0
+        },
+        "input_tokens": {
+          "mean": 718.3,
+          "total": 28732.0
+        },
+        "model_calls": {
+          "mean": 1.55,
+          "total": 62.0
+        },
+        "output_tokens": {
+          "mean": 478.0,
+          "total": 19120.0
+        },
+        "visible_test_executions": {
+          "mean": 3.1,
+          "total": 124.0
+        }
+      },
+      "functional_rate": 0.925,
+      "joint_rate": 0.85,
+      "mean_first_visible_pass_round": 0.29411764705882354,
+      "method": "M",
+      "model": "qwen36-27b",
+      "safe_mean": 0.85,
+      "security_given_functional": 0.918918918918919,
+      "security_rate": 0.925,
+      "states": {
+        "F+S+": 34,
+        "F+S-": 3,
+        "F-S+": 3
+      },
+      "tfor": {
+        "denominator": 34,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "trajectories": 40,
+      "visible_joint_rate": 0.85
+    }
+  ],
+  "benchmark_count": 3,
+  "complete": true,
+  "created_at_utc": "2026-08-08T22:40:25.140954+00:00",
+  "formal_results_use": true,
+  "inference_unit": "task",
+  "interpretation_boundary": "Expansion tasks were selected and semantically qualified without B0--B6/M or G8 outcome filtering; repeated trajectories are not treated as independent task samples.",
+  "method_count": 8,
+  "model_count": 4,
+  "paired_joint_comparisons": [
+    {
+      "bootstrap_replicates": 10000,
+      "ci95_high": 0.15,
+      "ci95_low": -6.938893903907229e-19,
+      "control": "B0",
+      "feedback_trigger_count": 0,
+      "function_regression_count": 12,
+      "joint_regression_per_trigger": null,
+      "losses": 8,
+      "mean_call_delta": 0,
+      "mean_delta": 0.06999999999999999,
+      "mean_feedback_token_delta": 0,
+      "repair_per_trigger": null,
+      "security_only_repair_count": 15,
+      "security_regression_count": 8,
+      "state_transitions": {
+        "0->0": 158,
+        "0->1": 36,
+        "1->0": 8,
+        "1->1": 198
+      },
+      "task_clusters": 20,
+      "ties": 356,
+      "treatment": "B1",
+      "wins": 36
+    },
+    {
+      "bootstrap_replicates": 10000,
+      "ci95_high": 0.1575,
+      "ci95_low": -0.017499999999999998,
+      "control": "B0",
+      "feedback_trigger_count": 0,
+      "function_regression_count": 14,
+      "joint_regression_per_trigger": null,
+      "losses": 27,
+      "mean_call_delta": 0,
+      "mean_delta": 0.07250000000000001,
+      "mean_feedback_token_delta": 0,
+      "repair_per_trigger": null,
+      "security_only_repair_count": 11,
+      "security_regression_count": 35,
+      "state_transitions": {
+        "0->0": 138,
+        "0->1": 56,
+        "1->0": 27,
+        "1->1": 179
+      },
+      "task_clusters": 20,
+      "ties": 317,
+      "treatment": "B2",
+      "wins": 56
+    },
+    {
+      "bootstrap_replicates": 10000,
+      "ci95_high": 0.2675,
+      "ci95_low": 0.075,
+      "control": "B0",
+      "feedback_trigger_count": 0,
+      "function_regression_count": 14,
+      "joint_regression_per_trigger": null,
+      "losses": 17,
+      "mean_call_delta": 0,
+      "mean_delta": 0.17,
+      "mean_feedback_token_delta": 0,
+      "repair_per_trigger": null,
+      "security_only_repair_count": 18,
+      "security_regression_count": 19,
+      "state_transitions": {
+        "0->0": 109,
+        "0->1": 85,
+        "1->0": 17,
+        "1->1": 189
+      },
+      "task_clusters": 20,
+      "ties": 298,
+      "treatment": "B3",
+      "wins": 85
+    },
+    {
+      "bootstrap_replicates": 10000,
+      "ci95_high": 0.2275,
+      "ci95_low": 0.075,
+      "control": "B0",
+      "feedback_trigger_count": 184,
+      "function_regression_count": 5,
+      "joint_regression_per_trigger": 0.0,
+      "losses": 0,
+      "mean_call_delta": 0.7575,
+      "mean_delta": 0.1475,
+      "mean_feedback_token_delta": 150.675,
+      "repair_per_trigger": 0.32065217391304346,
+      "security_only_repair_count": 11,
+      "security_regression_count": 6,
+      "state_transitions": {
+        "0->0": 135,
+        "0->1": 59,
+        "1->0": 0,
+        "1->1": 206
+      },
+      "task_clusters": 20,
+      "ties": 341,
+      "treatment": "B4",
+      "wins": 59
+    },
+    {
+      "bootstrap_replicates": 10000,
+      "ci95_high": 0.2325,
+      "ci95_low": 0.0775,
+      "control": "B0",
+      "feedback_trigger_count": 184,
+      "function_regression_count": 0,
+      "joint_regression_per_trigger": 0.0,
+      "losses": 0,
+      "mean_call_delta": 0.7375,
+      "mean_delta": 0.1525,
+      "mean_feedback_token_delta": 101.045,
+      "repair_per_trigger": 0.33152173913043476,
+      "security_only_repair_count": 11,
+      "security_regression_count": 6,
+      "state_transitions": {
+        "0->0": 133,
+        "0->1": 61,
+        "1->0": 0,
+        "1->1": 206
+      },
+      "task_clusters": 20,
+      "ties": 339,
+      "treatment": "B5",
+      "wins": 61
+    },
+    {
+      "bootstrap_replicates": 10000,
+      "ci95_high": 0.1925,
+      "ci95_low": 0.0725,
+      "control": "B0",
+      "feedback_trigger_count": 184,
+      "function_regression_count": 0,
+      "joint_regression_per_trigger": 0.0,
+      "losses": 0,
+      "mean_call_delta": 0.7575,
+      "mean_delta": 0.13,
+      "mean_feedback_token_delta": 182.2525,
+      "repair_per_trigger": 0.2826086956521739,
+      "security_only_repair_count": 11,
+      "security_regression_count": 7,
+      "state_transitions": {
+        "0->0": 142,
+        "0->1": 52,
+        "1->0": 0,
+        "1->1": 206
+      },
+      "task_clusters": 20,
+      "ties": 348,
+      "treatment": "M",
+      "wins": 52
+    },
+    {
+      "bootstrap_replicates": 10000,
+      "ci95_high": 0.1525,
+      "ci95_low": 0.0225,
+      "control": "B3",
+      "feedback_trigger_count": 81,
+      "function_regression_count": 0,
+      "joint_regression_per_trigger": 0.0,
+      "losses": 0,
+      "mean_call_delta": 0.3425,
+      "mean_delta": 0.08,
+      "mean_feedback_token_delta": 87.1,
+      "repair_per_trigger": 0.3950617283950617,
+      "security_only_repair_count": 12,
+      "security_regression_count": 0,
+      "state_transitions": {
+        "0->0": 94,
+        "0->1": 32,
+        "1->0": 0,
+        "1->1": 274
+      },
+      "task_clusters": 20,
+      "ties": 368,
+      "treatment": "B6",
+      "wins": 32
+    },
+    {
+      "bootstrap_replicates": 10000,
+      "ci95_high": 0.02,
+      "ci95_low": -0.055,
+      "control": "B4",
+      "feedback_trigger_count": 184,
+      "function_regression_count": 15,
+      "joint_regression_per_trigger": 0.08152173913043478,
+      "losses": 15,
+      "mean_call_delta": 0,
+      "mean_delta": -0.0175,
+      "mean_feedback_token_delta": 31.5775,
+      "repair_per_trigger": 0.043478260869565216,
+      "security_only_repair_count": 2,
+      "security_regression_count": 15,
+      "state_transitions": {
+        "0->0": 127,
+        "0->1": 8,
+        "1->0": 15,
+        "1->1": 250
+      },
+      "task_clusters": 20,
+      "ties": 377,
+      "treatment": "M",
+      "wins": 8
+    },
+    {
+      "bootstrap_replicates": 10000,
+      "ci95_high": 0.012499999999999999,
+      "ci95_low": -0.0625,
+      "control": "B5",
+      "feedback_trigger_count": 184,
+      "function_regression_count": 16,
+      "joint_regression_per_trigger": 0.08695652173913043,
+      "losses": 16,
+      "mean_call_delta": 0.02,
+      "mean_delta": -0.0225,
+      "mean_feedback_token_delta": 81.2075,
+      "repair_per_trigger": 0.03804347826086957,
+      "security_only_repair_count": 3,
+      "security_regression_count": 13,
+      "state_transitions": {
+        "0->0": 126,
+        "0->1": 7,
+        "1->0": 16,
+        "1->1": 251
+      },
+      "task_clusters": 20,
+      "ties": 377,
+      "treatment": "M",
+      "wins": 7
+    }
+  ],
+  "report_id": "paper-expansion-full-v1",
+  "runs": [
+    {
+      "benchmark": "cweval",
+      "manifest": {
+        "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-7b/run_manifest.json",
+        "sha256": "1c68f6fd4294d3e3757813cbf3fe598738484f5c5fbb9ea115fc992edcb3e792",
+        "size_bytes": 4056
+      },
+      "methods": 8,
+      "model": "qwen25-coder-7b",
+      "provider": "local",
+      "repeats": 5,
+      "tasks": 8,
+      "trajectories": 320
+    },
+    {
+      "benchmark": "cweval",
+      "manifest": {
+        "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-14b/run_manifest.json",
+        "sha256": "03617676a92716aab867db52627b280f274aa73433c8d4a702d9233df334a004",
+        "size_bytes": 4069
+      },
+      "methods": 8,
+      "model": "qwen25-coder-14b",
+      "provider": "local",
+      "repeats": 5,
+      "tasks": 8,
+      "trajectories": 320
+    },
+    {
+      "benchmark": "cweval",
+      "manifest": {
+        "path": "artifacts/paper-expansion-full-v1/cweval/qwen36-27b/run_manifest.json",
+        "sha256": "847594af06844ce84ccb2885860a1f9b83ef347badd5907fbc25848c737abc21",
+        "size_bytes": 3989
+      },
+      "methods": 8,
+      "model": "qwen36-27b",
+      "provider": "local",
+      "repeats": 5,
+      "tasks": 8,
+      "trajectories": 320
+    },
+    {
+      "benchmark": "cweval",
+      "manifest": {
+        "path": "artifacts/paper-expansion-full-v1/cweval/deepseek-v4-flash/run_manifest.json",
+        "sha256": "a264d418933f07b4449848fcb98b9ffb0f9980958e4f4c9f45057cfe20997534",
+        "size_bytes": 3899
+      },
+      "methods": 8,
+      "model": "deepseek-v4-flash",
+      "provider": "deepseek",
+      "repeats": 5,
+      "tasks": 8,
+      "trajectories": 320
+    },
+    {
+      "benchmark": "sallm",
+      "manifest": {
+        "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-7b/run_manifest.json",
+        "sha256": "0b35f49c040d402fd37d02564abf9d5025216ea4982b51d568794b6e38812e62",
+        "size_bytes": 5213
+      },
+      "methods": 8,
+      "model": "qwen25-coder-7b",
+      "provider": "local",
+      "repeats": 5,
+      "tasks": 8,
+      "trajectories": 320
+    },
+    {
+      "benchmark": "sallm",
+      "manifest": {
+        "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-14b/run_manifest.json",
+        "sha256": "e11647e8a33c7d8bbdace15b32afb7edb69e7423e289d59f852983161ba6b8f9",
+        "size_bytes": 5226
+      },
+      "methods": 8,
+      "model": "qwen25-coder-14b",
+      "provider": "local",
+      "repeats": 5,
+      "tasks": 8,
+      "trajectories": 320
+    },
+    {
+      "benchmark": "sallm",
+      "manifest": {
+        "path": "artifacts/paper-expansion-full-v1/sallm/qwen36-27b/run_manifest.json",
+        "sha256": "9c9124341483075188cea7f277d403f1a79ce15fbd7f52f269dc10e71a4f129b",
+        "size_bytes": 5146
+      },
+      "methods": 8,
+      "model": "qwen36-27b",
+      "provider": "local",
+      "repeats": 5,
+      "tasks": 8,
+      "trajectories": 320
+    },
+    {
+      "benchmark": "sallm",
+      "manifest": {
+        "path": "artifacts/paper-expansion-full-v1/sallm/deepseek-v4-flash/run_manifest.json",
+        "sha256": "976e789b02ad79c210f4a43819edb2c482f04ca82cba826c216ebebfe6d1138d",
+        "size_bytes": 4865
+      },
+      "methods": 8,
+      "model": "deepseek-v4-flash",
+      "provider": "deepseek",
+      "repeats": 5,
+      "tasks": 8,
+      "trajectories": 320
+    },
+    {
+      "benchmark": "codeguardplus",
+      "manifest": {
+        "path": "artifacts/paper-expansion-full-v1/codeguardplus/qwen25-coder-7b/run_manifest.json",
+        "sha256": "03b8124282ffcc48cb20e70d71ca3d976872060b21ca45b5ae0d22748e74c705",
+        "size_bytes": 24834
+      },
+      "methods": 8,
+      "model": "qwen25-coder-7b",
+      "provider": "local",
+      "repeats": 5,
+      "tasks": 4,
+      "trajectories": 160
+    },
+    {
+      "benchmark": "codeguardplus",
+      "manifest": {
+        "path": "artifacts/paper-expansion-full-v1/codeguardplus/qwen25-coder-14b/run_manifest.json",
+        "sha256": "babc2cdfc5dd4edfe58206a4302913d7be1f73dbe9aa6029d10bde5b5444362b",
+        "size_bytes": 24843
+      },
+      "methods": 8,
+      "model": "qwen25-coder-14b",
+      "provider": "local",
+      "repeats": 5,
+      "tasks": 4,
+      "trajectories": 160
+    },
+    {
+      "benchmark": "codeguardplus",
+      "manifest": {
+        "path": "artifacts/paper-expansion-full-v1/codeguardplus/qwen36-27b/run_manifest.json",
+        "sha256": "241aea582f9d75b3d24e08e5651eb011c38da7c5995630bcddb95d0bc022c3aa",
+        "size_bytes": 24787
+      },
+      "methods": 8,
+      "model": "qwen36-27b",
+      "provider": "local",
+      "repeats": 5,
+      "tasks": 4,
+      "trajectories": 160
+    },
+    {
+      "benchmark": "codeguardplus",
+      "manifest": {
+        "path": "artifacts/paper-expansion-full-v1/codeguardplus/deepseek-v4-flash/run_manifest.json",
+        "sha256": "65b4cd61d28f001d7099be73b4f9f1e384f61af90461c67341e5c9d321892de7",
+        "size_bytes": 24578
+      },
+      "methods": 8,
+      "model": "deepseek-v4-flash",
+      "provider": "deepseek",
+      "repeats": 5,
+      "tasks": 4,
+      "trajectories": 160
+    }
+  ],
+  "schema_version": 1,
+  "shared_initial_candidate_checks": 1600,
+  "task_instance_count": 20,
+  "trajectory_count": 3200
+}

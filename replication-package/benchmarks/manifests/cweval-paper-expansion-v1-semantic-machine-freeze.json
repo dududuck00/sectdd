@@ -1,0 +1,53 @@
+{
+  "candidate_task_count": 9,
+  "complete": true,
+  "formal_results_use": false,
+  "freeze_id": "cweval-paper-expansion-v1-semantic-machine",
+  "independent_human_review_complete": false,
+  "inputs": {
+    "oracle_manifest": {
+      "path": "oracles/cweval_py/paper_expansion_v1/manifest.json",
+      "sha256": "0d258f84fdfc3549152e4469dd697692afaa59f6971e1d378915beb9d5b5ba3f",
+      "size_bytes": 40062
+    },
+    "review_report": {
+      "path": "artifacts/paper-expansion-v1/cweval/semantic-review/report.json",
+      "sha256": "e468b1e0405a85351a1bcca6d6148b09348aa62a5b98cd66f2d5d1f1d3881e27",
+      "size_bytes": 79802
+    }
+  },
+  "method_outcomes_read": false,
+  "outputs": {
+    "hidden_projection": {
+      "path": "configs/oracles/cweval_py_paper_expansion_v1_semantic_machine_hidden.json",
+      "sha256": "4d405b5bd5b8f63e90ee5abb919ce7287458c7e130db55393ecd14ef91b7fedb",
+      "size_bytes": 16676
+    },
+    "semantic_manifest": {
+      "path": "oracles/cweval_py/paper_expansion_v1/semantic_machine_manifest.json",
+      "sha256": "027aa778afa14ea61538bd1acb174ccc99e958d5e578f08d9515a720d24e5f13",
+      "size_bytes": 35630
+    },
+    "visible_projection": {
+      "path": "configs/oracles/cweval_py_paper_expansion_v1_semantic_machine_visible.json",
+      "sha256": "b04fa755568bf62d79410bcbf2d0f4abf47fd691922cc82c5d3ceb1cc6565ea4",
+      "size_bytes": 16294
+    }
+  },
+  "qualified_task_count": 8,
+  "qualified_tasks": [
+    "cwe_095_0",
+    "cwe_329_0",
+    "cwe_347_0",
+    "cwe_377_0",
+    "cwe_760_0",
+    "cwe_918_0",
+    "cwe_918_1",
+    "cwe_943_0"
+  ],
+  "rejected_task_count": 1,
+  "rejected_tasks": [
+    "cwe_400_0"
+  ],
+  "schema_version": 1
+}

@@ -1,0 +1,22 @@
+{
+  "experiment": "security-feedback-v1",
+  "benchmarks": ["cweval", "sallm", "codeguardplus"],
+  "models": {
+    "qwen25-coder-7b": "<MODEL_ROOT>/Qwen/Qwen2.5-Coder-7B-Instruct",
+    "qwen25-coder-14b": "<MODEL_ROOT>/Qwen/Qwen2.5-Coder-14B-Instruct"
+  },
+  "seeds": [151001,151021,151051,151057,151091],
+  "methods": ["functional_only", "functional_security"],
+  "initial_root": "artifacts/paper-expansion-full-v1",
+  "output": "artifacts/security-feedback-v1",
+  "revisions": 2,
+  "temperature": 0.2,
+  "max_completion_tokens": 3072,
+  "feedback_tokens": 600,
+  "channel_tokens": 280,
+  "max_cases_per_channel": 2,
+  "failure_tail_lines": 12,
+  "context_tokens": 32768,
+  "bootstrap_replicates": 10000,
+  "bootstrap_seed": 20260912
+}

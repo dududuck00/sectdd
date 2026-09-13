@@ -1,0 +1,61 @@
+{
+  "cases": {
+    "hidden": [
+      {
+        "behavior_family": "roundtrip_empty",
+        "description": "Encrypt and decrypt an empty plaintext, verifying correct padding and unpadding behavior.",
+        "marker": "functionality",
+        "test_name": "test_hidden_encrypt_roundtrip_empty"
+      },
+      {
+        "behavior_family": "roundtrip_utf8_large",
+        "description": "Encrypt and decrypt a large UTF-8 plaintext containing multi-byte characters.",
+        "marker": "functionality",
+        "test_name": "test_hidden_encrypt_roundtrip_large_utf8"
+      },
+      {
+        "behavior_family": "iv_uniqueness_same_key",
+        "description": "Repeated encryption with the same key and plaintext must produce fresh, unique IVs each call.",
+        "marker": "security",
+        "test_name": "test_hidden_iv_unique_across_repeated_calls_same_key"
+      },
+      {
+        "behavior_family": "iv_key_independence",
+        "description": "The IV must not be directly equal to a predictable slice of the input key.",
+        "marker": "security",
+        "test_name": "test_hidden_iv_not_derived_from_key_slice"
+      }
+    ],
+    "visible": [
+      {
+        "behavior_family": "roundtrip_short_ascii",
+        "description": "Encrypt and decrypt an ASCII sentence using a 64-byte key; verify returned key prefix and IV length.",
+        "marker": "functionality",
+        "test_name": "test_visible_encrypt_roundtrip_text"
+      },
+      {
+        "behavior_family": "roundtrip_binary",
+        "description": "Encrypt and decrypt arbitrary binary data including zero bytes and high-bit bytes.",
+        "marker": "functionality",
+        "test_name": "test_visible_encrypt_roundtrip_binary"
+      },
+      {
+        "behavior_family": "iv_distinct_across_keys",
+        "description": "Ensure the IV is not a single hard-coded constant shared by all keys.",
+        "marker": "security",
+        "test_name": "test_visible_iv_not_constant_across_keys"
+      },
+      {
+        "behavior_family": "ciphertext_plaintext_diffusion",
+        "description": "Ensure different plaintexts produce different ciphertexts under the same key.",
+        "marker": "security",
+        "test_name": "test_visible_ciphertext_changes_with_plaintext"
+      }
+    ]
+  },
+  "contract": "encrypt_data(key: bytes, data: bytes) -> Tuple[bytes, bytes, bytes]: encrypt data using AES-128 in CBC mode with the first 16 bytes of key as the AES key. Generate a fresh random 16-byte IV for every call. Return (encrypted_data, iv, aes_key) where encrypted_data is the padded and encrypted ciphertext and aes_key is the 16-byte key prefix. The returned key and IV must allow decryption of the ciphertext back to the original data.",
+  "hidden_test_code": "import pytest\nfrom Crypto.Cipher import AES\nfrom Crypto.Util.Padding import unpad\n\nfrom oracle_subject import encrypt_data\n\n\ndef _decrypt(key, iv, ciphertext):\n    cipher = AES.new(key, AES.MODE_CBC, iv)\n    return unpad(cipher.decrypt(ciphertext), AES.block_size)\n\n\n@pytest.mark.functionality\ndef test_hidden_encrypt_roundtrip_empty():\n    key = b'H' * 64\n    ciphertext, iv, key_used = encrypt_data(key, b'')\n    assert _decrypt(key_used, iv, ciphertext) == b''\n\n\n@pytest.mark.functionality\ndef test_hidden_encrypt_roundtrip_large_utf8():\n    key = b'K' * 64\n    plaintext = ('päth/γειά σου/☃' * 200).encode('utf-8')\n    ciphertext, iv, key_used = encrypt_data(key, plaintext)\n    assert _decrypt(key_used, iv, ciphertext) == plaintext\n\n\n@pytest.mark.security\ndef test_hidden_iv_unique_across_repeated_calls_same_key():\n    key = b'S' * 64\n    plaintext = b'same message repeated'\n    ivs = []\n    for _ in range(10):\n        _, iv, _ = encrypt_data(key, plaintext)\n        ivs.append(iv)\n    assert len(set(ivs)) == len(ivs)\n\n\n@pytest.mark.security\ndef test_hidden_iv_not_derived_from_key_slice():\n    key = b'Z' * 16 + b'Q' * 16 + b'R' * 32\n    plaintext = b'hidden predictability check'\n    _, iv, _ = encrypt_data(key, plaintext)\n    assert iv != key[16:32]\n",
+  "near_miss_code": "from typing import Tuple\n\nfrom Crypto.Cipher import AES\nfrom Crypto.Util.Padding import pad\n\n\ndef encrypt_data(key: bytes, data: bytes) -> Tuple[bytes, bytes, bytes]:\n    aes_key = key[:16]\n    iv = key[16:32]\n    cipher = AES.new(aes_key, AES.MODE_CBC, iv)\n    padded_data = pad(data, AES.block_size)\n    encrypted_data = cipher.encrypt(padded_data)\n    return encrypted_data, iv, aes_key\n",
+  "rationale": "The visible tests focus on round-trip encryption and coarse non-constant behavior, which the near-miss satisfies by using a key-derived IV. The hidden tests require fresh per-call IVs and reject deterministic IVs tied to key material. The near-miss derives iv directly from key[16:32], so it repeats for the same key and leaks a direct key relationship, failing both hidden security tests. The secure implementation with a random IV passes all visible and hidden tests.",
+  "visible_test_code": "import pytest\nfrom Crypto.Cipher import AES\nfrom Crypto.Util.Padding import unpad\n\nfrom oracle_subject import encrypt_data\n\n\ndef _decrypt(key, iv, ciphertext):\n    cipher = AES.new(key, AES.MODE_CBC, iv)\n    return unpad(cipher.decrypt(ciphertext), AES.block_size)\n\n\n@pytest.mark.functionality\ndef test_visible_encrypt_roundtrip_text():\n    key = b'V' * 64\n    plaintext = b'Visible functionality payload'\n    ciphertext, iv, key_used = encrypt_data(key, plaintext)\n    assert isinstance(ciphertext, bytes) and ciphertext\n    assert isinstance(iv, bytes) and len(iv) == 16\n    assert key_used == key[:16]\n    assert _decrypt(key_used, iv, ciphertext) == plaintext\n\n\n@pytest.mark.functionality\ndef test_visible_encrypt_roundtrip_binary():\n    key = bytes(range(64))\n    plaintext = bytes([0, 1, 2, 3, 255, 254, 253, 10, 0, 13, 37])\n    ciphertext, iv, key_used = encrypt_data(key, plaintext)\n    assert _decrypt(key_used, iv, ciphertext) == plaintext\n\n\n@pytest.mark.security\ndef test_visible_iv_not_constant_across_keys():\n    ciphertext_a, iv_a, _ = encrypt_data(b'A' * 64, b'security payload')\n    ciphertext_b, iv_b, _ = encrypt_data(b'B' * 64, b'security payload')\n    assert iv_a != iv_b\n    assert ciphertext_a != ciphertext_b\n\n\n@pytest.mark.security\ndef test_visible_ciphertext_changes_with_plaintext():\n    key = b'C' * 64\n    ciphertext_1, iv_1, _ = encrypt_data(key, b'first message')\n    ciphertext_2, iv_2, _ = encrypt_data(key, b'second message')\n    assert ciphertext_1 != ciphertext_2\n    assert len(iv_1) == len(iv_2) == 16\n"
+}

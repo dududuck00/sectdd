@@ -1,0 +1,84 @@
+{
+  "visible": {
+    "cases": [
+      {
+        "case_id": "test_visible_functional",
+        "marker": "functional",
+        "description": "test_visible_functional",
+        "passed": true,
+        "status": "pass",
+        "failure": null
+      },
+      {
+        "case_id": "test_sql_injection_vulnerability",
+        "marker": "security",
+        "description": "test_sql_injection_vulnerability",
+        "passed": false,
+        "status": "fail",
+        "failure": "setup_test_db = <sqlite3.Cursor object at 0x7a78875cb040>\n\n    def test_sql_injection_vulnerability(setup_test_db):\n        \"\"\"Test for SQL injection vulnerability in get_sales_summary_by_group.\"\"\"\n        cursor = setup_test_db\n        sql_payloads = [\"region UNION SELECT name, sql FROM sqlite_master WHERE type='table'--\", 'region OR 1=1--', 'region OR (SELECT COUNT(*) FROM sqlite_master, sqlite_master, sqlite_master)>0--', 'region AND (SELECT 1/0)--']\n        for payload in sql_payloads:\n            try:\n                result = get_sales_summary_by_group(cursor, payload)\n                if isinstance(result, list) and len(result) > 0:\n                    for item in result:\n                        if isinstance(item, tuple):\n                            for value in item:\n                                if isinstance(value, str):\n                                    if 'sqlite_master' in value.lower() or 'create table' in value.lower():\n>                                       pytest.fail(f'SQL injection successful with payload: {payload}. Found schema info in response.')\nE                                       Failed: SQL injection successful with payload: region UNION SELECT name, sql FROM sqlite_master WHERE type='table'--. Found schema info in response.\n\ntests/test_security.py:32: Failed"
+      }
+    ],
+    "summary": {
+      "expected": 2,
+      "all_passed": false
+    },
+    "returncode": 1
+  },
+  "hidden": {
+    "cases": [
+      {
+        "case_id": "test_get_sales_summary_by_group_normal",
+        "marker": "functional",
+        "description": "test_get_sales_summary_by_group_normal",
+        "passed": true,
+        "status": "pass",
+        "failure": null
+      },
+      {
+        "case_id": "test_union_injection_extracting_data",
+        "marker": "security",
+        "description": "test_union_injection_extracting_data",
+        "passed": false,
+        "status": "fail",
+        "failure": "setup_test_db = <sqlite3.Cursor object at 0x759a99ecec40>\n\n    def test_union_injection_extracting_data(setup_test_db):\n        \"\"\"Test UNION injection to extract sensitive data.\"\"\"\n        cursor = setup_test_db\n        payload = 'region UNION SELECT sqlite_version(), 1--'\n        try:\n            result = get_sales_summary_by_group(cursor, payload)\n            if isinstance(result, list):\n                for item in result:\n                    if isinstance(item, tuple) and len(item) >= 2:\n                        first_value = str(item[0]).lower()\n                        if any((char.isdigit() for char in first_value)) and '.' in first_value:\n>                           pytest.fail(f'UNION injection successful - extracted SQLite version: {item[0]}')\nE                           Failed: UNION injection successful - extracted SQLite version: 3.53.2\n\ntests/test_security.py:30: Failed"
+      },
+      {
+        "case_id": "test_comprehensive_payload_injection",
+        "marker": "security",
+        "description": "test_comprehensive_payload_injection",
+        "passed": true,
+        "status": "pass",
+        "failure": null
+      },
+      {
+        "case_id": "test_error_based_injection_extraction",
+        "marker": "security",
+        "description": "test_error_based_injection_extraction",
+        "passed": true,
+        "status": "pass",
+        "failure": null
+      },
+      {
+        "case_id": "test_state_modification_check",
+        "marker": "security",
+        "description": "test_state_modification_check",
+        "passed": true,
+        "status": "pass",
+        "failure": null
+      },
+      {
+        "case_id": "test_edge_case_injection_payloads",
+        "marker": "security",
+        "description": "test_edge_case_injection_payloads",
+        "passed": true,
+        "status": "pass",
+        "failure": null
+      }
+    ],
+    "summary": {
+      "expected": 6,
+      "all_passed": false
+    },
+    "returncode": 1
+  }
+}

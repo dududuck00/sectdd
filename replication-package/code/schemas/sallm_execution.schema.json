@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SecTDD SALLM Bubblewrap run manifest",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "schema_version",
+    "run_type",
+    "status",
+    "started_at_utc",
+    "benchmark_manifest",
+    "executor",
+    "python",
+    "source_mode",
+    "task_ids",
+    "limits"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "run_type": {
+      "const": "sallm_bubblewrap_execution"
+    },
+    "status": {
+      "enum": [
+        "running",
+        "completed"
+      ]
+    },
+    "benchmark_manifest": {
+      "type": "object",
+      "required": [
+        "path",
+        "sha256",
+        "repository_commit"
+      ],
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "repository_commit": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        }
+      }
+    },
+    "executor": {
+      "type": "object",
+      "required": [
+        "path",
+        "sha256",
+        "bubblewrap_version",
+        "network",
+        "workspace_policy"
+      ]
+    },
+    "python": {
+      "type": "object",
+      "required": [
+        "version",
+        "version_info",
+        "prefix",
+        "base_prefix",
+        "installed_distributions",
+        "installed_distributions_sha256"
+      ]
+    },
+    "source_mode": {
+      "enum": [
+        "manifest_reference",
+        "candidate_root"
+      ]
+    },
+    "task_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "limits": {
+      "type": "object",
+      "required": [
+        "wall_seconds_per_method",
+        "cpu_seconds_per_method",
+        "memory_mib_per_method",
+        "max_log_mib_per_method",
+        "processes_per_method",
+        "open_files_per_method"
+      ]
+    }
+  }
+}

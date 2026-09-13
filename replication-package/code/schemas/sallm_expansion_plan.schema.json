@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SecTDD SALLM expansion candidate plan",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "plan_id",
+    "status",
+    "formal_experiment_ready",
+    "selection_policy",
+    "qualification_gates",
+    "inputs",
+    "summary",
+    "tasks",
+    "selected_candidates",
+    "reserve_candidates"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "plan_id": {
+      "const": "sallm-expansion-candidates-v1"
+    },
+    "status": {
+      "const": "secure_reference_generation_ready"
+    },
+    "formal_experiment_ready": {
+      "const": false
+    },
+    "tasks": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    },
+    "selected_candidates": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/candidate"
+      }
+    },
+    "reserve_candidates": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/candidate"
+      }
+    }
+  },
+  "$defs": {
+    "candidate": {
+      "type": "object",
+      "required": [
+        "task_id",
+        "cwe",
+        "selection_state",
+        "selection_reason",
+        "source",
+        "tests",
+        "execution_cost",
+        "reference_audit"
+      ],
+      "properties": {
+        "task_id": {
+          "type": "string"
+        },
+        "cwe": {
+          "type": "string",
+          "pattern": "^CWE-[0-9]+$"
+        },
+        "selection_state": {
+          "enum": [
+            "selected",
+            "reserve"
+          ]
+        },
+        "selection_reason": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

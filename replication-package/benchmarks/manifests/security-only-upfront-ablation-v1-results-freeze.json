@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "freeze_id": "security-only-upfront-ablation-v1-results",
+  "complete": true,
+  "formal_results_use": true,
+  "post_primary_addendum": true,
+  "inputs": {
+    "analysis_program": {
+      "path": "tools/analyze_security_only_upfront_ablation_v1.py",
+      "sha256": "3cae57c65e30a9bcefcfa142a2c9e19eb61075a6fa6911ec6d7ce5fffd541871",
+      "size_bytes": 32975
+    },
+    "input_freeze": {
+      "path": "benchmarks/manifests/security-only-upfront-ablation-v1-input-freeze.json",
+      "sha256": "7f3a7d51fc09b9784e3c2bffcfd233b0d6b11cbbf8ce75a50fa92d873b83f270",
+      "size_bytes": 5564
+    },
+    "qwen25_checkpoint_relocation": {
+      "path": "benchmarks/manifests/security-only-upfront-ablation-v1-checkpoint-relocation.json",
+      "sha256": "d70c6ce51c6fa1a5969c7369a949c9d25ef437c4a5bf043fd2db54635b35706e",
+      "size_bytes": 2549
+    },
+    "qwen36_checkpoint_relocation": {
+      "path": "benchmarks/manifests/security-only-upfront-ablation-v1-qwen36-checkpoint-relocation.json",
+      "sha256": "e5c186c8229bd35765693421a931c6a7f76ae128c357329b93ef5d88568f8662",
+      "size_bytes": 1872
+    },
+    "prior_paper_evidence_freeze": {
+      "path": "benchmarks/manifests/paper-evidence-v4-results-freeze.json",
+      "sha256": "bbb9965863c67ecb2d343a7e57a11f8de18aef0c0a152b65614007bb5efe2b7b",
+      "size_bytes": 1894
+    }
+  },
+  "outputs": {
+    "accounting_audit": {
+      "path": "artifacts/reports/security-only-upfront-ablation-v1-accounting-audit.json",
+      "sha256": "ac73452c668331d21a0e5f616133331e6cd76766110299e97d12252481eaf961",
+      "size_bytes": 11633
+    },
+    "json_report": {
+      "path": "artifacts/reports/security-only-upfront-ablation-v1.json",
+      "sha256": "f32b3cb6f8c70e893fb585c4cf956d3319b2b036ba345b3a809f4d1643b02c52",
+      "size_bytes": 141605
+    },
+    "markdown_report": {
+      "path": "docs/security-only-upfront-ablation-v1-results.md",
+      "sha256": "bef2874e9b05e34c952598f3b41d1845560ce94a65187eceb158f899d5ebc097",
+      "size_bytes": 4066
+    }
+  },
+  "new_b7_trajectory_count": 240,
+  "factorial_trajectory_count": 960
+}

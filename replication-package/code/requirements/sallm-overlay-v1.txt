@@ -1,0 +1,6 @@
+# Dependencies imported by SALLM source/tests but omitted from the benchmark's
+# per-task requirement files. Versions are frozen by the audit overlay.
+lxml==6.1.1
+PyJWT==2.13.0
+paramiko==4.0.0
+Django==5.2.7

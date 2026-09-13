@@ -1,0 +1,29 @@
+\documentclass[acmsmall,screen,anonymous]{acmart}
+\setcopyright{none}
+\settopmatter{printacmref=false}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\begin{document}
+\pagestyle{plain}
+\begin{center}\large Supporting Results and Analyses\end{center}
+This document accompanies the replication package and provides the aggregate and per-task values underlying the result figures, initial-state analyses, and case-level evidence. Pass@1, Secure@1, and Secure-Pass@1 measure passing all hidden functional tests, all hidden security tests, and both, respectively. In candidate-state notation, F and S denote functional and security outcomes; joint repairs and regressions refer to transitions into and out of passing both.
+\input{generated/fixed-call-numeric-table}
+\input{generated/external-numeric-table}
+\input{generated/external-task-numeric-table}
+\input{generated/representation-supplementary}
+\input{generated/security-feedback-supplementary}
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/fixed-call-effects.pdf}
+\caption{Fixed two-revision experiment, 200 paired initial candidates per branch. (a) Pass@1, Secure@1, and Secure-Pass@1; the dashed line marks initial Secure-Pass@1 (45\%). (b) Five planned Secure-Pass@1 differences; all Holm-adjusted $p=1$. Observed ties do not establish population equivalence. Complete rates, tokens and contrasts are in the supplementary numeric tables.}
+\Description{Left: three metric markers per branch. Right: five effect estimates around a zero reference, with no significant adjusted contrast.}
+\label{fig:fixed-calls}
+\end{figure}
+\input{generated/feedback-mechanism-supplementary}
+\begin{table}[t]
+\caption{Paired feedback transitions over shared initial candidates. Task--rep. cells are repeated observations, not independent inference units. Repair denotes hidden joint failure $\rightarrow$ success; Trig. denotes at least one revision; J.Reg./F.Reg. denote hidden joint/function regression; Sec.-only denotes $F^+S^-\rightarrow F^+S^+$.}
+\label{tab:feedback}
+\centering
+\input{generated/feedback-events-table}
+\end{table}
+\end{document}

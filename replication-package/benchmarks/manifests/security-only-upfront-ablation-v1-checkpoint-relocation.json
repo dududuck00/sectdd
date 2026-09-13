@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "correction_id": "security-only-upfront-ablation-v1-checkpoint-relocation",
+  "created_at_utc": "2026-08-29T16:07:30+00:00",
+  "reason": "The identical Qwen2.5-Coder checkpoints were moved before any B7 response was generated.",
+  "results_observed_before_correction": false,
+  "protocol_changed": false,
+  "tasks_methods_seeds_budgets_oracles_changed": false,
+  "original_frozen_config_sha256": {
+    "sallm": "5ba4dea031413fdf8a6152a7b5074ce5116d2683fb604616b0ca7a5789901fc5",
+    "codeguardplus": "34e20a733c095a584109fcee8d32ff23d447c2509b1a3ae962c68f2075acfca8"
+  },
+  "relocated_config_sha256": {
+    "sallm": "6936fe03c33ace53551f2ababce9e033d9efc8cf40c2f47c259c44c8d15aa371",
+    "codeguardplus": "b5b8787df5deb18b24dc5e916e169808e20f0470fb242498394aa2f108d63250"
+  },
+  "path_relocations": {
+    "qwen25-coder-7b": {
+      "from": "<MODEL_ROOT>/Qwen2.5-Coder-7B-Instruct",
+      "to": "<MODEL_ROOT>/Qwen/Qwen2.5-Coder-7B-Instruct"
+    },
+    "qwen25-coder-14b": {
+      "from": "<MODEL_ROOT>/Qwen2.5-Coder-14B-Instruct",
+      "to": "<MODEL_ROOT>/Qwen/Qwen2.5-Coder-14B-Instruct"
+    },
+    "deepseek-tokenizer-proxy": {
+      "from": "<MODEL_ROOT>/Qwen2.5-Coder-14B-Instruct",
+      "to": "<MODEL_ROOT>/Qwen/Qwen2.5-Coder-14B-Instruct"
+    }
+  },
+  "checkpoint_identity_sha256": {
+    "qwen25-coder-7b": {
+      "config.json": "c0242402ad6a13b331ea320feea8c7e3776ffb7a4eff0757b9cd667e116d9a28",
+      "generation_config.json": "1a628a5775bc69cde01c6749a531150ca4d3189652c618a174f7077923acf3b1",
+      "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+      "tokenizer_config.json": "959e7f1d9a1b7641a6d6ce05ca97b75c7894fcb66cbe5a040406458fb1128ee4",
+      "model.safetensors.index.json": "998a078123ffc97763690de7f2a677eb89168af5eaf8a5e12e6bc24d18e25bdb"
+    },
+    "qwen25-coder-14b": {
+      "config.json": "9051fe83840dcd3a0f7e9f5b3372fc3927419eb56983273eac2dc635a5da7eae",
+      "generation_config.json": "fdaccbcb02f3e1e7914ccb0f69ebe899071ffd27cf825166d823163e156870f2",
+      "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+      "tokenizer_config.json": "959e7f1d9a1b7641a6d6ce05ca97b75c7894fcb66cbe5a040406458fb1128ee4",
+      "model.safetensors.index.json": "425811015c8708208c9efc04c4cfae250c7927a1b04c99dda5a9121caf4bf77a"
+    }
+  },
+  "identity_check": "All listed hashes match the corresponding model_freeze hashes in the completed balanced-primary run manifests."
+}

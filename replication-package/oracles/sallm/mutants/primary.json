@@ -1,0 +1,111 @@
+{
+  "mutation_set_id": "sallm-paper-expansion-v1-primary",
+  "schema_version": 1,
+  "task_count": 8,
+  "tasks": {
+    "Assertion_CodeQL_codeql_cwe020_1.py": {
+      "candidate": {
+        "path": "oracles/sallm_paper_expansion_v1/mutants/primary/Assertion_CodeQL_codeql_cwe020_1.py",
+        "sha256": "ab27dccbe7343e908144d0aebcde3e66576e8511a981b2f6f60b1dabb24da12a",
+        "size_bytes": 340
+      },
+      "mutation_operator": "revert secure repair to benchmark vulnerable reference",
+      "provenance": {
+        "path": "third_party/SALLM/Dataset/Assertion/CodeQL/codeql_cwe020_1.py",
+        "sha256": "ab27dccbe7343e908144d0aebcde3e66576e8511a981b2f6f60b1dabb24da12a",
+        "size_bytes": 340
+      }
+    },
+    "Assertion_CodeQL_codeql_cwe730_0.py": {
+      "candidate": {
+        "path": "oracles/sallm_paper_expansion_v1/mutants/primary/Assertion_CodeQL_codeql_cwe730_0.py",
+        "sha256": "6563bb5934b2f05e2ca4f50f5b073f36a2c03e3b80d84f470554ba1c660ddfba",
+        "size_bytes": 447
+      },
+      "mutation_operator": "revert secure repair to benchmark vulnerable reference",
+      "provenance": {
+        "path": "third_party/SALLM/Dataset/Assertion/CodeQL/codeql_cwe730_0.py",
+        "sha256": "6563bb5934b2f05e2ca4f50f5b073f36a2c03e3b80d84f470554ba1c660ddfba",
+        "size_bytes": 447
+      }
+    },
+    "Assertion_SonarSource_SS_cwe079_0.py": {
+      "candidate": {
+        "path": "oracles/sallm_paper_expansion_v1/mutants/primary/Assertion_SonarSource_SS_cwe079_0.py",
+        "sha256": "29d034bd9270cd4f649a11f66fbdd73086ddeaee5d08cf8a9e2c6b0487cd08d2",
+        "size_bytes": 481
+      },
+      "mutation_operator": "revert secure repair to benchmark vulnerable reference",
+      "provenance": {
+        "path": "third_party/SALLM/Dataset/Assertion/SonarSource/SS_cwe079_0.py",
+        "sha256": "29d034bd9270cd4f649a11f66fbdd73086ddeaee5d08cf8a9e2c6b0487cd08d2",
+        "size_bytes": 481
+      }
+    },
+    "Assertion_SonarSource_SS_cwe827_0.py": {
+      "candidate": {
+        "path": "oracles/sallm_paper_expansion_v1/mutants/primary/Assertion_SonarSource_SS_cwe827_0.py",
+        "sha256": "71628c0c59a0e4600818b0e6ec2a912d1db9b422c34750d115067e52ed2a53a8",
+        "size_bytes": 364
+      },
+      "mutation_operator": "revert secure repair to benchmark vulnerable reference",
+      "provenance": {
+        "path": "third_party/SALLM/Dataset/Assertion/SonarSource/SS_cwe827_0.py",
+        "sha256": "71628c0c59a0e4600818b0e6ec2a912d1db9b422c34750d115067e52ed2a53a8",
+        "size_bytes": 364
+      }
+    },
+    "Tainted_Author_A_cwe078_0.py": {
+      "candidate": {
+        "path": "oracles/sallm_paper_expansion_v1/mutants/primary/Tainted_Author_A_cwe078_0.py",
+        "sha256": "337cb2194ea15b43b38b694443710985e304ec6fbd5bc5d2c9a7ec43f36561dd",
+        "size_bytes": 286
+      },
+      "mutation_operator": "revert secure repair to benchmark vulnerable reference",
+      "provenance": {
+        "path": "third_party/SALLM/Dataset/Tainted/Author/A_cwe078_0.py",
+        "sha256": "337cb2194ea15b43b38b694443710985e304ec6fbd5bc5d2c9a7ec43f36561dd",
+        "size_bytes": 286
+      }
+    },
+    "Tainted_Author_A_cwe089_1.py": {
+      "candidate": {
+        "path": "oracles/sallm_paper_expansion_v1/mutants/primary/Tainted_Author_A_cwe089_1.py",
+        "sha256": "0a4446daa925a45752fd33b1562ae6e696853b755611ac9d76e8a48f8f064740",
+        "size_bytes": 604
+      },
+      "mutation_operator": "revert secure repair to benchmark vulnerable reference",
+      "provenance": {
+        "path": "third_party/SALLM/Dataset/Tainted/Author/A_cwe089_1.py",
+        "sha256": "0a4446daa925a45752fd33b1562ae6e696853b755611ac9d76e8a48f8f064740",
+        "size_bytes": 604
+      }
+    },
+    "Tainted_CodeQL_codeql_cwe643_0.py": {
+      "candidate": {
+        "path": "oracles/sallm_paper_expansion_v1/mutants/primary/Tainted_CodeQL_codeql_cwe643_0.py",
+        "sha256": "99cadc89c3cb1d81584f04896eaf5147468698a6ba769abfeb139cb3c45688e9",
+        "size_bytes": 576
+      },
+      "mutation_operator": "revert secure repair to benchmark vulnerable reference",
+      "provenance": {
+        "path": "third_party/SALLM/Dataset/Tainted/CodeQL/codeql_cwe643_0.py",
+        "sha256": "99cadc89c3cb1d81584f04896eaf5147468698a6ba769abfeb139cb3c45688e9",
+        "size_bytes": 576
+      }
+    },
+    "Tainted_SecurityEval_SE_cwe094_1.py": {
+      "candidate": {
+        "path": "oracles/sallm_paper_expansion_v1/mutants/primary/Tainted_SecurityEval_SE_cwe094_1.py",
+        "sha256": "fa23f19ddeeef357d3787924da2b382d398990b30c2a12e1986068254645a014",
+        "size_bytes": 321
+      },
+      "mutation_operator": "revert secure repair to benchmark vulnerable reference",
+      "provenance": {
+        "path": "third_party/SALLM/Dataset/Tainted/SecurityEval/SE_cwe094_1.py",
+        "sha256": "fa23f19ddeeef357d3787924da2b382d398990b30c2a12e1986068254645a014",
+        "size_bytes": 321
+      }
+    }
+  }
+}

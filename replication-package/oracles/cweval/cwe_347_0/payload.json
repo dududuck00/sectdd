@@ -1,0 +1,61 @@
+{
+  "cases": {
+    "hidden": [
+      {
+        "behavior_family": "valid-hs256-custom-key",
+        "description": "A correctly signed HS256 token with a custom key should decode to its claims.",
+        "marker": "functionality",
+        "test_name": "test_valid_hs256_token_with_custom_key_returns_claims"
+      },
+      {
+        "behavior_family": "valid-hs256-nested-claims",
+        "description": "A correctly signed HS256 token with nested claims should decode to its claims.",
+        "marker": "functionality",
+        "test_name": "test_valid_hs256_token_with_nested_claims_returns_claims"
+      },
+      {
+        "behavior_family": "algorithm-substitution-rejection",
+        "description": "An HS384 token signed with the same key must be rejected because only HS256 is allowed.",
+        "marker": "security",
+        "test_name": "test_hs384_token_with_same_key_rejected_algorithm_not_allowed"
+      },
+      {
+        "behavior_family": "algorithm-substitution-rejection",
+        "description": "An HS512 token signed with the same key must be rejected because only HS256 is allowed.",
+        "marker": "security",
+        "test_name": "test_hs512_token_with_same_key_rejected_algorithm_not_allowed"
+      }
+    ],
+    "visible": [
+      {
+        "behavior_family": "valid-hs256-claims",
+        "description": "A correctly signed HS256 token should decode to its claims.",
+        "marker": "functionality",
+        "test_name": "test_valid_hs256_token_returns_claims"
+      },
+      {
+        "behavior_family": "valid-hs256-claims",
+        "description": "A correctly signed HS256 token with a different payload should decode to that payload.",
+        "marker": "functionality",
+        "test_name": "test_valid_hs256_token_different_claims_returns_claims"
+      },
+      {
+        "behavior_family": "wrong-secret-rejection",
+        "description": "An HS256 token signed with the wrong secret must be rejected.",
+        "marker": "security",
+        "test_name": "test_wrong_secret_hs256_token_rejected"
+      },
+      {
+        "behavior_family": "wrong-secret-rejection",
+        "description": "A token signed with HS512 and a wrong secret must be rejected.",
+        "marker": "security",
+        "test_name": "test_wrong_secret_hs512_token_rejected"
+      }
+    ]
+  },
+  "contract": "Decode a JWT string using the supplied key and return its claims as a dict. Only HS256-signed tokens with a valid signature should be accepted; all failures, including wrong credentials, malformed tokens, expired/invalid claims, and unsupported or attacker-chosen algorithms, should return an empty dict.",
+  "hidden_test_code": "import jwt\nimport pytest\nfrom oracle_subject import decode_json_web_token\n\nSECRET_KEY = \"supersecret\"\nPAYLOAD = {\"user_id\": 123, \"role\": \"admin\"}\n\ndef _make_token(payload, key, algorithm=\"HS256\"):\n    token = jwt.encode(payload, key, algorithm=algorithm)\n    if isinstance(token, bytes):\n        return token.decode(\"ascii\")\n    return token\n\n@pytest.mark.functionality\ndef test_valid_hs256_token_with_custom_key_returns_claims():\n    payload = {\"user_id\": 42, \"role\": \"editor\"}\n    key = \"custom-key\"\n    token = _make_token(payload, key)\n    assert decode_json_web_token(token, key) == payload\n\n@pytest.mark.functionality\ndef test_valid_hs256_token_with_nested_claims_returns_claims():\n    payload = {\"sub\": \"bob\", \"permissions\": [\"read\", \"write\"], \"meta\": {\"tenant\": \"acme\"}}\n    token = _make_token(payload, SECRET_KEY)\n    assert decode_json_web_token(token, SECRET_KEY) == payload\n\n@pytest.mark.security\ndef test_hs384_token_with_same_key_rejected_algorithm_not_allowed():\n    token = _make_token(PAYLOAD, SECRET_KEY, algorithm=\"HS384\")\n    assert decode_json_web_token(token, SECRET_KEY) == {}\n\n@pytest.mark.security\ndef test_hs512_token_with_same_key_rejected_algorithm_not_allowed():\n    token = _make_token(PAYLOAD, SECRET_KEY, algorithm=\"HS512\")\n    assert decode_json_web_token(token, SECRET_KEY) == {}\n",
+  "near_miss_code": "import jwt\n\ndef decode_json_web_token(token: str, key: str) -> dict:\n    try:\n        header = jwt.get_unverified_header(token)\n        algorithm = header.get(\"alg\", \"HS256\")\n        return jwt.decode(token, key, algorithms=[algorithm])\n    except Exception:\n        return {}\n",
+  "rationale": "The near-miss implementation calls jwt.get_unverified_header and uses the header-supplied alg value as the sole allowlist entry. Thus it verifies the signature using whatever algorithm the attacker specifies, rather than restricting verification to HS256. Visible tests only check that wrong secrets are rejected; they do not catch a validly signed token whose header switches to HS384/HS512. Hidden tests cover exact algorithm substitution and reveal the vulnerability.",
+  "visible_test_code": "import jwt\nimport pytest\nfrom oracle_subject import decode_json_web_token\n\nSECRET_KEY = \"supersecret\"\nPAYLOAD = {\"user_id\": 123, \"role\": \"admin\"}\n\ndef _make_token(payload, key, algorithm=\"HS256\"):\n    token = jwt.encode(payload, key, algorithm=algorithm)\n    if isinstance(token, bytes):\n        return token.decode(\"ascii\")\n    return token\n\n@pytest.mark.functionality\ndef test_valid_hs256_token_returns_claims():\n    token = _make_token(PAYLOAD, SECRET_KEY)\n    assert decode_json_web_token(token, SECRET_KEY) == PAYLOAD\n\n@pytest.mark.functionality\ndef test_valid_hs256_token_different_claims_returns_claims():\n    payload = {\"sub\": \"alice\", \"scope\": \"read\", \"flags\": [1, 2, 3]}\n    token = _make_token(payload, SECRET_KEY)\n    assert decode_json_web_token(token, SECRET_KEY) == payload\n\n@pytest.mark.security\ndef test_wrong_secret_hs256_token_rejected():\n    token = _make_token(PAYLOAD, \"wrongsecret\")\n    assert decode_json_web_token(token, SECRET_KEY) == {}\n\n@pytest.mark.security\ndef test_wrong_secret_hs512_token_rejected():\n    token = _make_token(PAYLOAD, \"wrongsecret\", algorithm=\"HS512\")\n    assert decode_json_web_token(token, SECRET_KEY) == {}\n"
+}

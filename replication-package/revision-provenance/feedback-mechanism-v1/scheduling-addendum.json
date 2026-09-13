@@ -1,0 +1,18 @@
+{
+  "model": "qwen25-coder-14b",
+  "reason": "batch throughput on the same GPU",
+  "workers": 12,
+  "excluded_current_benchmark": "cweval",
+  "scheduled_trajectories": 360,
+  "inference_protocol_changed": false,
+  "previous_attempt": "Threaded lazy transformers initialization failed; finally resumed original client; successful existing records retained.",
+  "final_batch": {
+    "workers": 12,
+    "reserved_tasks": [
+      "cwe_918_1",
+      "cwe_943_0"
+    ],
+    "scheduled_trajectories": 60,
+    "inference_protocol_changed": false
+  }
+}

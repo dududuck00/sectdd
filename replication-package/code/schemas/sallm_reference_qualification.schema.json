@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SecTDD SALLM reference-oracle qualification",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "manifest_type",
+    "qualification_level",
+    "formal_experiment_ready",
+    "remaining_gate",
+    "policy",
+    "inputs",
+    "summary",
+    "tasks"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "manifest_type": {
+      "const": "sallm_reference_oracle_qualification"
+    },
+    "qualification_level": {
+      "const": "reference_oracle_candidate"
+    },
+    "formal_experiment_ready": {
+      "const": false
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "task_count",
+        "candidate_count",
+        "excluded_count",
+        "candidate_cwe_count",
+        "reason_counts"
+      ]
+    },
+    "tasks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "task_id",
+          "cwe",
+          "decision",
+          "reason_code",
+          "evidence"
+        ],
+        "properties": {
+          "task_id": {
+            "type": "string"
+          },
+          "cwe": {
+            "type": "string",
+            "pattern": "^CWE-[0-9]+$"
+          },
+          "decision": {
+            "enum": [
+              "candidate",
+              "excluded"
+            ]
+          },
+          "reason_code": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

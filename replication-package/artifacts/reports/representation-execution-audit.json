@@ -1,0 +1,15 @@
+{
+  "complete": true,
+  "trajectories": 480,
+  "raw_generation_records": 480,
+  "identical_archived_response_reuse_verified": true,
+  "quarantined_infrastructure_records": 80,
+  "remaining_detected_infrastructure_errors": 0,
+  "syntax_error_candidates_retained": [
+    "artifacts/representation-v1/trajectories/qwen25-coder-7b/prose_both/cwe-117__0-py/seed_151057/trajectory.json"
+  ],
+  "completion_cap_candidates_retained": [],
+  "prompt_token_counter_mismatches": [],
+  "max_prompt_tokens": 666,
+  "hidden_feedback_used": false
+}

@@ -1,0 +1,106 @@
+{
+  "codeguardplus": {
+    "after": {
+      "hidden": {
+        "path": "configs/oracles/codeguardplus_paper_expansion_v1_semantic_machine_hidden.json",
+        "sha256": "6dc32ad559b4ea516ec4c3ace67533501b03c97051e8261306582afa9bd9c8e8",
+        "size_bytes": 5681
+      },
+      "visible": {
+        "path": "configs/oracles/codeguardplus_paper_expansion_v1_semantic_machine_visible.json",
+        "sha256": "66609191b1595a887ad1610d99c55cf1f6da2b1df1f2c4b38a897224effcf470",
+        "size_bytes": 5614
+      }
+    },
+    "before": {
+      "hidden": {
+        "path": "configs/oracles/codeguardplus_paper_expansion_v1_semantic_machine_hidden.json",
+        "sha256": "bd370d961eb6ebda0824c3b323013a2db1d48403f7100949671119355f2cdb2a",
+        "size_bytes": 3337
+      },
+      "visible": {
+        "path": "configs/oracles/codeguardplus_paper_expansion_v1_semantic_machine_visible.json",
+        "sha256": "345ec62df7862d8d0b4ce42a51c6f10fd60462eeaef4221604daaab3020eed82",
+        "size_bytes": 3311
+      }
+    },
+    "prompts": {
+      "cwe-022/0-py": {
+        "path": "configs/prompts/codeguardplus_paper_expansion_full_v1/cwe-022__0-py.py",
+        "sha256": "40eb346f615bec8950f2e02c2e399db3298f28a90778d131786158f1ae272109",
+        "size_bytes": 302
+      },
+      "cwe-079/1-py": {
+        "path": "configs/prompts/codeguardplus_paper_expansion_full_v1/cwe-079__1-py.py",
+        "sha256": "707a3e96bcda29cb4a5d9ad81d97568206f237aad0036a29316aa74b4393e7ce",
+        "size_bytes": 557
+      },
+      "cwe-117/0-py": {
+        "path": "configs/prompts/codeguardplus_paper_expansion_full_v1/cwe-117__0-py.py",
+        "sha256": "4f344294895ea5e86da253e4ee81ae152e6ad9671192eadc973779d99bcbc14a",
+        "size_bytes": 248
+      },
+      "cwe-312/0-py": {
+        "path": "configs/prompts/codeguardplus_paper_expansion_full_v1/cwe-312__0-py.py",
+        "sha256": "3c9a154543b0d31ef4b605e8b31b6d536b01c104405db970e5c7e9c8f77a3a4a",
+        "size_bytes": 272
+      }
+    }
+  },
+  "correction_id": "paper-expansion-full-v1-runtime-input-correction",
+  "created_at_utc": "2026-08-08T04:51:34.464996+00:00",
+  "input_freeze": {
+    "after": {
+      "path": "benchmarks/manifests/paper-expansion-full-v1-input-freeze.json",
+      "sha256": "0044494d2821ba233e2b3e46f819268c198a4014cc7da4d55c70f4cb701f7b09",
+      "size_bytes": 3820
+    },
+    "before": {
+      "path": "benchmarks/manifests/paper-expansion-full-v1-input-freeze.json",
+      "sha256": "d4938a734a00ff4415b6d68e452e8172fb9273be203a2e74d6181e23c80c2e9d",
+      "size_bytes": 3484
+    }
+  },
+  "invalidated_scope": "qwen36-27b partial trajectories created before explicit thinking disablement",
+  "sallm": {
+    "after": {
+      "hidden": {
+        "path": "configs/oracles/sallm_paper_expansion_v1_semantic_machine_hidden.json",
+        "sha256": "056c64a87eb61a4a7921b954262a96aebd1d84794f6dd794a01af29d6c1f50fa",
+        "size_bytes": 12803
+      },
+      "visible": {
+        "path": "configs/oracles/sallm_paper_expansion_v1_semantic_machine_visible.json",
+        "sha256": "651e47f6afe81c82f9fa2f849f6fabc627b41ae0840e0ddeba892d070650112f",
+        "size_bytes": 12731
+      }
+    },
+    "before": {
+      "hidden": {
+        "path": "configs/oracles/sallm_paper_expansion_v1_semantic_machine_hidden.json",
+        "sha256": "bb883f9871a03ac20419c3612ff732322ffbd01422a3c2b74a7c6edd28250ca1",
+        "size_bytes": 12580
+      },
+      "visible": {
+        "path": "configs/oracles/sallm_paper_expansion_v1_semantic_machine_visible.json",
+        "sha256": "0247fcca71b155035928db12a5d82eb68f7c3a837860304683290823bf333394",
+        "size_bytes": 12507
+      }
+    },
+    "overlays": {
+      "hidden": {
+        "path": "configs/benchmarks/sallm_paper_expansion_v1_semantic_machine_hidden.json",
+        "sha256": "3f52bcdf385a84f3054306dd6b9c236d4bef6743deadad976809c07d0b2dbcbb",
+        "size_bytes": 9826
+      },
+      "visible": {
+        "path": "configs/benchmarks/sallm_paper_expansion_v1_semantic_machine_visible.json",
+        "sha256": "6d74450d36b7c923cee28afe0ea6b740720fb6edbac7674ec534416ce52ba69c",
+        "size_bytes": 9836
+      }
+    }
+  },
+  "schema_version": 1,
+  "selection_or_method_outcomes_changed": false,
+  "task_test_method_seed_budget_membership_changed": false
+}

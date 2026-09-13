@@ -1,0 +1,61 @@
+{
+  "cases": {
+    "hidden": [
+      {
+        "behavior_family": "api_path_variants",
+        "description": "Different API base URL and alphanumeric ID.",
+        "marker": "functionality",
+        "test_name": "test_user_id_with_digits_and_letters"
+      },
+      {
+        "behavior_family": "api_path_variants",
+        "description": "Mixed-case ID with arbitrary valid alphanumerics.",
+        "marker": "functionality",
+        "test_name": "test_user_id_mixed_case"
+      },
+      {
+        "behavior_family": "encoded_path_traversal",
+        "description": "Percent-encoded dot segments and slash are rejected.",
+        "marker": "security",
+        "test_name": "test_percent_encoded_path_traversal_is_rejected"
+      },
+      {
+        "behavior_family": "encoded_path_traversal",
+        "description": "Percent-encoded dot segments and backslash are rejected.",
+        "marker": "security",
+        "test_name": "test_percent_encoded_backslash_traversal_is_rejected"
+      }
+    ],
+    "visible": [
+      {
+        "behavior_family": "plain_alnum_user_id",
+        "description": "Valid alphanumeric user ID yields API URL suffix.",
+        "marker": "functionality",
+        "test_name": "test_valid_alnum_user_id_builds_url"
+      },
+      {
+        "behavior_family": "empty_user_id",
+        "description": "Empty user ID is suppressed.",
+        "marker": "functionality",
+        "test_name": "test_empty_user_id_returns_none"
+      },
+      {
+        "behavior_family": "slashed_path_traversal",
+        "description": "Literal ../ traversal returns None.",
+        "marker": "security",
+        "test_name": "test_literal_dotdot_slash_is_rejected"
+      },
+      {
+        "behavior_family": "slashed_path_traversal",
+        "description": "Embedded /../../ traversal returns None.",
+        "marker": "security",
+        "test_name": "test_mixed_slash_dotdot_segments_are_rejected"
+      }
+    ]
+  },
+  "contract": "get_url_for_query(api_url: str, user_id: str) -> str | None: Return api_url + '/' + user_id when user_id is a non-empty alphanumeric identifier; otherwise return None so no path traversal or SSRF query URL is produced.",
+  "hidden_test_code": "from oracle_subject import get_url_for_query\nimport pytest\n\n\n@pytest.mark.functionality\ndef test_user_id_with_digits_and_letters():\n    assert get_url_for_query('https://api.example.com/v1/user', 'user42') == 'https://api.example.com/v1/user/user42'\n\n\n@pytest.mark.functionality\ndef test_user_id_mixed_case():\n    assert get_url_for_query('https://api.example.com/v1/user', 'ZyXw987') == 'https://api.example.com/v1/user/ZyXw987'\n\n\n@pytest.mark.security\ndef test_percent_encoded_path_traversal_is_rejected():\n    assert get_url_for_query('https://example.com/api/user', '%2e%2e%2fclear') is None\n\n\n@pytest.mark.security\ndef test_percent_encoded_backslash_traversal_is_rejected():\n    assert get_url_for_query('https://example.com/api/user', '%2e%2e%5cclear') is None\n",
+  "near_miss_code": "def get_url_for_query(api_url: str, user_id: str) -> str | None:\n    if not user_id:\n        return None\n    if '..' in user_id or '/' in user_id or '\\\\' in user_id:\n        return None\n    return f'{api_url}/{user_id}'\n",
+  "rationale": "The visible tests lock in the intended benign behavior and reject straightforward slash-separated path traversal. The near-miss performs a blocklist check for literal '..', '/', and backslash, so it passes those tests. The hidden tests probe a distinct attack family: percent-encoded traversal sequences like '%2e%2e%2fclear' and '%2e%2e%5cclear'. The near-miss does not normalize or reject non-alphanumeric encoded separators, so it returns a URL instead of None, violating the secure contract. The secure reference avoids this by allowing only alphanumeric user IDs.",
+  "visible_test_code": "from oracle_subject import get_url_for_query\nimport pytest\n\n\n@pytest.mark.functionality\ndef test_valid_alnum_user_id_builds_url():\n    api_url = 'https://example.com/api/user'\n    user_id = 'aBc123'\n    assert get_url_for_query(api_url, user_id) == 'https://example.com/api/user/aBc123'\n\n\n@pytest.mark.functionality\ndef test_empty_user_id_returns_none():\n    assert get_url_for_query('https://example.com/api/user', '') is None\n\n\n@pytest.mark.security\ndef test_literal_dotdot_slash_is_rejected():\n    assert get_url_for_query('https://example.com/api/user', '../clear') is None\n\n\n@pytest.mark.security\ndef test_mixed_slash_dotdot_segments_are_rejected():\n    assert get_url_for_query('https://example.com/api/user', 'aBc123/../../clear') is None\n"
+}

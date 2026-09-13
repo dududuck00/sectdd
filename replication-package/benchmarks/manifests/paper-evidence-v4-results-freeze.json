@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "freeze_id": "paper-evidence-v4-results",
+  "created_at_utc": "2026-08-08T22:40:44.296092+00:00",
+  "complete": true,
+  "formal_results_use": false,
+  "summary": {
+    "legacy_tasks": 31,
+    "expansion_tasks": 20,
+    "combined_tasks": 51,
+    "legacy_trajectories": 2705,
+    "expansion_trajectories": 3200,
+    "combined_trajectories": 5905,
+    "distinct_cwe_count": 24,
+    "tasks_by_benchmark": {
+      "CWEval": 17,
+      "CodeGuard+": 15,
+      "SALLM": 19
+    },
+    "major_model_families": [
+      "Qwen",
+      "DeepSeek"
+    ],
+    "named_model_configurations": [
+      "deepseek-v4-flash",
+      "qwen25-coder-14b",
+      "qwen25-coder-7b",
+      "qwen3-32b",
+      "qwen36-27b"
+    ]
+  },
+  "inputs": {
+    "legacy_31": {
+      "path": "benchmarks/manifests/paper-evidence-v3-results-freeze.json",
+      "sha256": "aa885c3030fc43361926097c12b19f5f0ce6211276d566e869ad8d86e31fb5f9",
+      "size_bytes": 4174
+    },
+    "balanced_expansion_20": {
+      "path": "benchmarks/manifests/paper-expansion-full-v1-results-freeze.json",
+      "sha256": "822732910e32fefb6b20860f19408243498db0c2a80caaae21b80eed6231512b",
+      "size_bytes": 3533
+    }
+  },
+  "outputs": {
+    "report": {
+      "path": "artifacts/reports/unified-paper-evidence-v4.json",
+      "sha256": "0610764f2af3c57380e38139d1da4688000e297f3f3c706d9f855bba119ba42d",
+      "size_bytes": 91840
+    },
+    "markdown": {
+      "path": "docs/unified-paper-evidence-v4.md",
+      "sha256": "06a27673c455df56b7618dce95a4b01d98a5e32471f379c3c7e3015319859df8",
+      "size_bytes": 1433
+    }
+  },
+  "interpretation_boundary": "The balanced 20-task, four-model, eight-method matrix is the primary confirmatory evidence. The combined 51-task/5,905-trajectory view is unbalanced and mixes legacy machine-qualified evidence, so it is used only for coverage and robustness; task is the inference unit."
+}

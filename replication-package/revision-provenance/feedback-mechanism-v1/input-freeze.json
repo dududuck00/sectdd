@@ -1,0 +1,1647 @@
+{
+  "config": {
+    "experiment": "feedback-mechanism-v1",
+    "timing": "post-primary; frozen before new revision calls",
+    "benchmarks": [
+      "cweval",
+      "sallm",
+      "codeguardplus"
+    ],
+    "models": {
+      "qwen25-coder-7b": "<MODEL_ROOT>/Qwen/Qwen2.5-Coder-7B-Instruct",
+      "qwen25-coder-14b": "<MODEL_ROOT>/Qwen/Qwen2.5-Coder-14B-Instruct"
+    },
+    "seeds": [
+      151001,
+      151021,
+      151051,
+      151057,
+      151091
+    ],
+    "initial_root": "artifacts/paper-expansion-full-v1",
+    "output": "artifacts/feedback-mechanism-v1",
+    "revisions": 2,
+    "temperature": 0.2,
+    "max_completion_tokens": 3072,
+    "feedback_tokens": 600,
+    "context_tokens": 32768
+  },
+  "files": {
+    "configs/experiments/feedback_mechanism_v1.json": "3b0979ff8a30344f758d477d7afca47caabcb15027e3efeabadf59856bc7ccd5",
+    "tools/run_feedback_mechanism_v1.py": "a9101da2f8c642a8c558d1fbb2e61a5499875598784b2c8881ce949113c96188",
+    "sectdd/feedback_mechanism.py": "b89aa179dbd1440c7f695d5ce125f51174c365675df401f2815e1696bc4a2e8d",
+    "docs/feedback-mechanism-v1-protocol.md": "a85ec8a3995bf2599f75a1bdca8f91bc9d7131241e00bdf465c75adabd47a001",
+    "sectdd/orchestrator.py": "b20112a8403ba24406ac5338524d4841f311b231cc4a0ee3a1a44ee7974d2c7c",
+    "sectdd/formal_orchestrator.py": "060feb0229e202e13602ec63fb4eef848e87c1ed8c59f3b5ff02c7f2538702a9",
+    "sectdd/sallm_formal_orchestrator.py": "eba227427fecc2151478fb72eab4abe17e21f62a8dde18129c8aa258efd192c0",
+    "sectdd/codeguardplus_formal_orchestrator.py": "9d4e74ac62d650a09dc73e2f78928d3ca52c54f9ebd374eb0c0c659534e5236a",
+    "configs/oracles/cweval_py_paper_expansion_v1_semantic_machine_visible.json": "b04fa755568bf62d79410bcbf2d0f4abf47fd691922cc82c5d3ceb1cc6565ea4",
+    "configs/oracles/cweval_py_paper_expansion_v1_semantic_machine_hidden.json": "4d405b5bd5b8f63e90ee5abb919ce7287458c7e130db55393ecd14ef91b7fedb",
+    "configs/oracles/sallm_paper_expansion_v1_semantic_machine_visible.json": "651e47f6afe81c82f9fa2f849f6fabc627b41ae0840e0ddeba892d070650112f",
+    "configs/oracles/sallm_paper_expansion_v1_semantic_machine_hidden.json": "056c64a87eb61a4a7921b954262a96aebd1d84794f6dd794a01af29d6c1f50fa",
+    "configs/oracles/codeguardplus_paper_expansion_v1_semantic_machine_visible.json": "66609191b1595a887ad1610d99c55cf1f6da2b1df1f2c4b38a897224effcf470",
+    "configs/oracles/codeguardplus_paper_expansion_v1_semantic_machine_hidden.json": "6dc32ad559b4ea516ec4c3ace67533501b03c97051e8261306582afa9bd9c8e8"
+  },
+  "initials": [
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-7b",
+      "task": "cwe_095_0",
+      "seed": 151001,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-7b/trajectories/B0/cwe_095_0/seed_151001/trajectory.json",
+      "sha256": "3246394174b3adc82798821d0181111af55ce7238c6332ed1c4cb6b468835cec"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-7b",
+      "task": "cwe_095_0",
+      "seed": 151021,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-7b/trajectories/B0/cwe_095_0/seed_151021/trajectory.json",
+      "sha256": "06ed5cd07cae6bed5b914b24dd8e833e2e202660d5f72bcba5a924e8238d9356"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-7b",
+      "task": "cwe_095_0",
+      "seed": 151051,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-7b/trajectories/B0/cwe_095_0/seed_151051/trajectory.json",
+      "sha256": "690e1bbb78839e8d03d3614f24a5a5e913534959722c9a49acac4ef7d82f4dea"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-7b",
+      "task": "cwe_095_0",
+      "seed": 151057,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-7b/trajectories/B0/cwe_095_0/seed_151057/trajectory.json",
+      "sha256": "cb639c0b9fb9bcb949cf81b961526b009263feb7c20ef3f0e003666b0f618274"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-7b",
+      "task": "cwe_095_0",
+      "seed": 151091,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-7b/trajectories/B0/cwe_095_0/seed_151091/trajectory.json",
+      "sha256": "b2d39ed7c55f5ff40035d969b02ec1a034a3b3847ef15ff25629fb9a792de83f"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-7b",
+      "task": "cwe_329_0",
+      "seed": 151001,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-7b/trajectories/B0/cwe_329_0/seed_151001/trajectory.json",
+      "sha256": "8e71c3d4c7bfcd2ccafd5d1135b307ebe3ef03f91a05f671b1a444b82554dac4"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-7b",
+      "task": "cwe_329_0",
+      "seed": 151021,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-7b/trajectories/B0/cwe_329_0/seed_151021/trajectory.json",
+      "sha256": "3d7a2e5c3478641e79bfab89ac3ff968f3a322115273956d21c5ec058eea5b4e"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-7b",
+      "task": "cwe_329_0",
+      "seed": 151051,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-7b/trajectories/B0/cwe_329_0/seed_151051/trajectory.json",
+      "sha256": "6fb46a84d7089373d66392225a9c82c734a61e9f7b5d30d1db9aa26e52fbbc90"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-7b",
+      "task": "cwe_329_0",
+      "seed": 151057,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-7b/trajectories/B0/cwe_329_0/seed_151057/trajectory.json",
+      "sha256": "8eda246f3d005febc3cc5ad6f3a2bf7554c30ec347d6170fd25fd7923501d264"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-7b",
+      "task": "cwe_329_0",
+      "seed": 151091,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-7b/trajectories/B0/cwe_329_0/seed_151091/trajectory.json",
+      "sha256": "4c1128462a40ff4e02a607cf491ef5c71096110ddf2dddb2052257331fcb1c79"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-7b",
+      "task": "cwe_347_0",
+      "seed": 151001,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-7b/trajectories/B0/cwe_347_0/seed_151001/trajectory.json",
+      "sha256": "0e0aed426bbca417d73027d4ff8364dee0737a1ee773d7fb9079647269ea6af9"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-7b",
+      "task": "cwe_347_0",
+      "seed": 151021,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-7b/trajectories/B0/cwe_347_0/seed_151021/trajectory.json",
+      "sha256": "892098e279ab5d45a1e78517bdccf3db0983abe674836ac427875c6cd2848047"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-7b",
+      "task": "cwe_347_0",
+      "seed": 151051,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-7b/trajectories/B0/cwe_347_0/seed_151051/trajectory.json",
+      "sha256": "4a88541e4eecd2bb647b474de96a4cdb9af803fca3400d80234a20154b4a01b5"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-7b",
+      "task": "cwe_347_0",
+      "seed": 151057,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-7b/trajectories/B0/cwe_347_0/seed_151057/trajectory.json",
+      "sha256": "05b3db0a94364560dd31f0b1ce22cb336f7519a780345791f980c672fa235771"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-7b",
+      "task": "cwe_347_0",
+      "seed": 151091,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-7b/trajectories/B0/cwe_347_0/seed_151091/trajectory.json",
+      "sha256": "3df560accce86e33c655ca0ec43635ab21af46235e43923da96db0b5d6d7d2c6"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-7b",
+      "task": "cwe_377_0",
+      "seed": 151001,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-7b/trajectories/B0/cwe_377_0/seed_151001/trajectory.json",
+      "sha256": "a54693fb253aab2a281dc9ddf67633cc4042a7b70d2e8b3f1d122172c9289def"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-7b",
+      "task": "cwe_377_0",
+      "seed": 151021,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-7b/trajectories/B0/cwe_377_0/seed_151021/trajectory.json",
+      "sha256": "a43bd725b2e542963736345fc4e6c147d60855b0ad11e5e47abec3fad42d0f4c"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-7b",
+      "task": "cwe_377_0",
+      "seed": 151051,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-7b/trajectories/B0/cwe_377_0/seed_151051/trajectory.json",
+      "sha256": "36815f090dd531d2b12e2516469861c52d2ee37d240db545cfbd794261e30d89"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-7b",
+      "task": "cwe_377_0",
+      "seed": 151057,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-7b/trajectories/B0/cwe_377_0/seed_151057/trajectory.json",
+      "sha256": "6de29900582f8a8bb79f692de9a16f9063a5a91623cdf8747f77a53942314a31"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-7b",
+      "task": "cwe_377_0",
+      "seed": 151091,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-7b/trajectories/B0/cwe_377_0/seed_151091/trajectory.json",
+      "sha256": "6002b4a313e209c4019740aa4b5456780d5d698575b5b14bcea2e3e83c405275"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-7b",
+      "task": "cwe_760_0",
+      "seed": 151001,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-7b/trajectories/B0/cwe_760_0/seed_151001/trajectory.json",
+      "sha256": "f5557947144509ec7ac474aa87894e5fe239f0276c0e49d6cf1fdb3fe8faaf68"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-7b",
+      "task": "cwe_760_0",
+      "seed": 151021,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-7b/trajectories/B0/cwe_760_0/seed_151021/trajectory.json",
+      "sha256": "cdd2eefa1419cb009b38037114cd2cfa19b872640406b52a6737ba6c50583040"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-7b",
+      "task": "cwe_760_0",
+      "seed": 151051,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-7b/trajectories/B0/cwe_760_0/seed_151051/trajectory.json",
+      "sha256": "ad1a12366dac2e2823d14d8f6b51f7a0a0510c0c034a0ed23a69ee5e9fae52a9"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-7b",
+      "task": "cwe_760_0",
+      "seed": 151057,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-7b/trajectories/B0/cwe_760_0/seed_151057/trajectory.json",
+      "sha256": "bc9e79245dda437491c10506509e16f0a8835cbedde9fc88f6e532ebdb397334"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-7b",
+      "task": "cwe_760_0",
+      "seed": 151091,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-7b/trajectories/B0/cwe_760_0/seed_151091/trajectory.json",
+      "sha256": "8b2453b0aa84b3d774d6dbf0b04afc5348d57d20c7d494daaf856c51ed3bde31"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-7b",
+      "task": "cwe_918_0",
+      "seed": 151001,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-7b/trajectories/B0/cwe_918_0/seed_151001/trajectory.json",
+      "sha256": "43701e6cfc25ab45d0622978bda65448bee5a4a4a27756cf941e1eefa5c86ed7"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-7b",
+      "task": "cwe_918_0",
+      "seed": 151021,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-7b/trajectories/B0/cwe_918_0/seed_151021/trajectory.json",
+      "sha256": "f3004bc8d05b73ac1289eceb404ecf2c54a3e4a3197c52d784840247ac6fbdff"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-7b",
+      "task": "cwe_918_0",
+      "seed": 151051,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-7b/trajectories/B0/cwe_918_0/seed_151051/trajectory.json",
+      "sha256": "76dff50fb354ec0d69933ebd614142ec75f585dd94bcc626b6d4b32d8a8f0439"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-7b",
+      "task": "cwe_918_0",
+      "seed": 151057,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-7b/trajectories/B0/cwe_918_0/seed_151057/trajectory.json",
+      "sha256": "a36b1d9a81ccd89c7f56bfff569773034e3c5d377806a87b25cd84f677d42051"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-7b",
+      "task": "cwe_918_0",
+      "seed": 151091,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-7b/trajectories/B0/cwe_918_0/seed_151091/trajectory.json",
+      "sha256": "496f2760ff1d368c0333f197788de5cbf04d395a9d1372a1452f088bd701bace"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-7b",
+      "task": "cwe_918_1",
+      "seed": 151001,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-7b/trajectories/B0/cwe_918_1/seed_151001/trajectory.json",
+      "sha256": "69dc13d2f3d70ed3bb862e97280727894c35d2cf7df7f322ba36871ba8e261fd"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-7b",
+      "task": "cwe_918_1",
+      "seed": 151021,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-7b/trajectories/B0/cwe_918_1/seed_151021/trajectory.json",
+      "sha256": "590960739386f4a4837c2c5c5613708bee772018499b172151d8dc296ed7447c"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-7b",
+      "task": "cwe_918_1",
+      "seed": 151051,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-7b/trajectories/B0/cwe_918_1/seed_151051/trajectory.json",
+      "sha256": "0247f080fb70f441977a687bd763ed3839b6efaf4e3fd522dfde32bcda1aa41d"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-7b",
+      "task": "cwe_918_1",
+      "seed": 151057,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-7b/trajectories/B0/cwe_918_1/seed_151057/trajectory.json",
+      "sha256": "40866e883e4acbe7aeba7b884c352295f4f27ce3f7499854072066198af2f768"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-7b",
+      "task": "cwe_918_1",
+      "seed": 151091,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-7b/trajectories/B0/cwe_918_1/seed_151091/trajectory.json",
+      "sha256": "3fb7bbb63a40629c48b42ddd912bf9d2ec03bc825845989c54c710f866f42fde"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-7b",
+      "task": "cwe_943_0",
+      "seed": 151001,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-7b/trajectories/B0/cwe_943_0/seed_151001/trajectory.json",
+      "sha256": "1a5db508393af41dfa21b36298358705d5920500f0698018e2321b96d95b4221"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-7b",
+      "task": "cwe_943_0",
+      "seed": 151021,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-7b/trajectories/B0/cwe_943_0/seed_151021/trajectory.json",
+      "sha256": "0ff23f111f7975d785605fdc9f6eac98321220b30ec74b2808dbfcadddae89ba"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-7b",
+      "task": "cwe_943_0",
+      "seed": 151051,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-7b/trajectories/B0/cwe_943_0/seed_151051/trajectory.json",
+      "sha256": "6565434bc4c5aa6f045562eb130e28b8375b93659dd697cae684dd5f08e5d8a2"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-7b",
+      "task": "cwe_943_0",
+      "seed": 151057,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-7b/trajectories/B0/cwe_943_0/seed_151057/trajectory.json",
+      "sha256": "f2263c4b97ce21315dac19ccb86ce54d8615b0b5dc89878bde4ef2fa0fbd8841"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-7b",
+      "task": "cwe_943_0",
+      "seed": 151091,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-7b/trajectories/B0/cwe_943_0/seed_151091/trajectory.json",
+      "sha256": "ffce7dd71e02ae44d4982985b52cbeab153dff584ecb74f86ba978320eb65c7e"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-14b",
+      "task": "cwe_095_0",
+      "seed": 151001,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-14b/trajectories/B0/cwe_095_0/seed_151001/trajectory.json",
+      "sha256": "5285ab1a4ab0f2e78017b6f74a15b37a189dd615e203617577bae7fa7cd2f0a4"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-14b",
+      "task": "cwe_095_0",
+      "seed": 151021,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-14b/trajectories/B0/cwe_095_0/seed_151021/trajectory.json",
+      "sha256": "7cda11302079cb096d8b19bbfb072b3ea5f0a34ecca4a602c9223c988aa3a51a"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-14b",
+      "task": "cwe_095_0",
+      "seed": 151051,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-14b/trajectories/B0/cwe_095_0/seed_151051/trajectory.json",
+      "sha256": "f6223a5fc33bedbf55c7df10d2951d6a29ec9424e522da24d713e79a53faf07c"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-14b",
+      "task": "cwe_095_0",
+      "seed": 151057,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-14b/trajectories/B0/cwe_095_0/seed_151057/trajectory.json",
+      "sha256": "96bf889e502869fb65c4cd10b3a0e5b6d6edb98a5d0ca416e9faedcd885f138f"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-14b",
+      "task": "cwe_095_0",
+      "seed": 151091,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-14b/trajectories/B0/cwe_095_0/seed_151091/trajectory.json",
+      "sha256": "e493f9f3b7e57bdc36533cc425d0c4069d700b3012d34d8e6e5b884acab2d2bf"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-14b",
+      "task": "cwe_329_0",
+      "seed": 151001,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-14b/trajectories/B0/cwe_329_0/seed_151001/trajectory.json",
+      "sha256": "8f77d1c0cea01af2afb74983efb07624860039992bc89c5edf094193a6437883"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-14b",
+      "task": "cwe_329_0",
+      "seed": 151021,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-14b/trajectories/B0/cwe_329_0/seed_151021/trajectory.json",
+      "sha256": "4710b1405a8b9307d2306151d47d1b2500ab76b87282c9920055e049cb3d4f32"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-14b",
+      "task": "cwe_329_0",
+      "seed": 151051,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-14b/trajectories/B0/cwe_329_0/seed_151051/trajectory.json",
+      "sha256": "f10f9f1c49dc800268b787f9af0de302a1f29de5862f70a75180ea0f2d23fd97"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-14b",
+      "task": "cwe_329_0",
+      "seed": 151057,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-14b/trajectories/B0/cwe_329_0/seed_151057/trajectory.json",
+      "sha256": "be4eefcfe7ebb2010d600a6c544801cde9a8fb55c48e94f0d536a162a13d2cb2"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-14b",
+      "task": "cwe_329_0",
+      "seed": 151091,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-14b/trajectories/B0/cwe_329_0/seed_151091/trajectory.json",
+      "sha256": "10cbba79f252129e18cef6f660559c5ca047e8bffa3feb9f231eb54dcd30b9d8"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-14b",
+      "task": "cwe_347_0",
+      "seed": 151001,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-14b/trajectories/B0/cwe_347_0/seed_151001/trajectory.json",
+      "sha256": "bdc0ad0e93c9b78ea95e1d13a32633e964b7760662628e0e71465e99f595104d"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-14b",
+      "task": "cwe_347_0",
+      "seed": 151021,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-14b/trajectories/B0/cwe_347_0/seed_151021/trajectory.json",
+      "sha256": "1027ec8eb8d4f9ba88a718c18c32b9401ec555fa933f53475c2c7f505d46d9d1"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-14b",
+      "task": "cwe_347_0",
+      "seed": 151051,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-14b/trajectories/B0/cwe_347_0/seed_151051/trajectory.json",
+      "sha256": "8d2197a9125ca016759ae749596b0672269c311924db780ac8ae7f150849c519"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-14b",
+      "task": "cwe_347_0",
+      "seed": 151057,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-14b/trajectories/B0/cwe_347_0/seed_151057/trajectory.json",
+      "sha256": "07bb5202079547d71d145dfc0fc89d023c2126174e7c87f4717362f019430ab4"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-14b",
+      "task": "cwe_347_0",
+      "seed": 151091,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-14b/trajectories/B0/cwe_347_0/seed_151091/trajectory.json",
+      "sha256": "01f98030e8fdc4fa3d81ed859d54028be6ed288bb27b578742c6131775849b53"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-14b",
+      "task": "cwe_377_0",
+      "seed": 151001,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-14b/trajectories/B0/cwe_377_0/seed_151001/trajectory.json",
+      "sha256": "46bbf1c93c1916e5c797ae9f31c7edfbe53be797cfe378bcced918ca19588323"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-14b",
+      "task": "cwe_377_0",
+      "seed": 151021,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-14b/trajectories/B0/cwe_377_0/seed_151021/trajectory.json",
+      "sha256": "d97aeedcaf6e62358d773b7d50f5ecabd86c327a0e7c3765b6a4c21486e28909"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-14b",
+      "task": "cwe_377_0",
+      "seed": 151051,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-14b/trajectories/B0/cwe_377_0/seed_151051/trajectory.json",
+      "sha256": "918f77dd49b37ba04b67d08d62ada42aa227d0c8a1ef87dc525cf5edcae0528f"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-14b",
+      "task": "cwe_377_0",
+      "seed": 151057,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-14b/trajectories/B0/cwe_377_0/seed_151057/trajectory.json",
+      "sha256": "3cfbb06d18cc72226523ae64cd082de251fc6fd0be2e777c7c300a7a9a45212e"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-14b",
+      "task": "cwe_377_0",
+      "seed": 151091,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-14b/trajectories/B0/cwe_377_0/seed_151091/trajectory.json",
+      "sha256": "0e052e64b9e5d4aa8bdbc6ade49e7f0b5c5502a7899c005ba23857eb55e5fed9"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-14b",
+      "task": "cwe_760_0",
+      "seed": 151001,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-14b/trajectories/B0/cwe_760_0/seed_151001/trajectory.json",
+      "sha256": "bb73aa4f3e78a21e77678755d354118e50444dd36bc6b3714b1f78b553d5d979"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-14b",
+      "task": "cwe_760_0",
+      "seed": 151021,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-14b/trajectories/B0/cwe_760_0/seed_151021/trajectory.json",
+      "sha256": "78326bdee797b696079dfaa3fbe4c0da315a39ef0023cdd23f7425fe1c878ae2"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-14b",
+      "task": "cwe_760_0",
+      "seed": 151051,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-14b/trajectories/B0/cwe_760_0/seed_151051/trajectory.json",
+      "sha256": "db1cd6c0d92ba7dade2f00969ba30f1702b57cb768b60c920a6ff3c51e3ea354"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-14b",
+      "task": "cwe_760_0",
+      "seed": 151057,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-14b/trajectories/B0/cwe_760_0/seed_151057/trajectory.json",
+      "sha256": "eb342b21703218432f9e422a7b43c49bbb4300d112da873846f0f5006b1c7bbf"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-14b",
+      "task": "cwe_760_0",
+      "seed": 151091,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-14b/trajectories/B0/cwe_760_0/seed_151091/trajectory.json",
+      "sha256": "8b7adfa6b7d5fe4d0af333fb8e6544d0f9f94328034426a4135d8ba40fdbd650"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-14b",
+      "task": "cwe_918_0",
+      "seed": 151001,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-14b/trajectories/B0/cwe_918_0/seed_151001/trajectory.json",
+      "sha256": "176d8840a2748b6286d5256322e9222c1c2e2f1083712f4aa75e598d3ff0d251"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-14b",
+      "task": "cwe_918_0",
+      "seed": 151021,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-14b/trajectories/B0/cwe_918_0/seed_151021/trajectory.json",
+      "sha256": "634faa5d7811964fc9bccb6e9d6c2779b5a649743ad4d058be92f4911b2f15f7"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-14b",
+      "task": "cwe_918_0",
+      "seed": 151051,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-14b/trajectories/B0/cwe_918_0/seed_151051/trajectory.json",
+      "sha256": "007cc2b239c9a6fbaf7ec31522a39619fc6d7b5effb0d86e688811038f435de6"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-14b",
+      "task": "cwe_918_0",
+      "seed": 151057,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-14b/trajectories/B0/cwe_918_0/seed_151057/trajectory.json",
+      "sha256": "e050d2bb83143a37018e5809cd3f4228587f7697f4fe21c2a0d949c488154a6d"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-14b",
+      "task": "cwe_918_0",
+      "seed": 151091,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-14b/trajectories/B0/cwe_918_0/seed_151091/trajectory.json",
+      "sha256": "ddca68b0e7bd74a5144c88f226ef33c98f7edb5c738341f595ecbb15283d0176"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-14b",
+      "task": "cwe_918_1",
+      "seed": 151001,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-14b/trajectories/B0/cwe_918_1/seed_151001/trajectory.json",
+      "sha256": "cc04957cc3625ef10c0c3e7123859c6c2c2c53df8b4e1c6a47d7b315c9dec1f5"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-14b",
+      "task": "cwe_918_1",
+      "seed": 151021,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-14b/trajectories/B0/cwe_918_1/seed_151021/trajectory.json",
+      "sha256": "e4845f38c067736e0ff3c3087d0392dddc2707486563493831846835746ec0b8"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-14b",
+      "task": "cwe_918_1",
+      "seed": 151051,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-14b/trajectories/B0/cwe_918_1/seed_151051/trajectory.json",
+      "sha256": "89505180ee210608fef4c2b6c75706d9abd989036caf0d0e7825b83461b8d4c1"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-14b",
+      "task": "cwe_918_1",
+      "seed": 151057,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-14b/trajectories/B0/cwe_918_1/seed_151057/trajectory.json",
+      "sha256": "355e878b91baf78d1866288f1593a6ba154f7646cbd96a5a9ce3093b127d7abe"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-14b",
+      "task": "cwe_918_1",
+      "seed": 151091,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-14b/trajectories/B0/cwe_918_1/seed_151091/trajectory.json",
+      "sha256": "a106271088a1cb9f2ddeef5c26d649e7b1b5263937603c8f6ff16da71758e12c"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-14b",
+      "task": "cwe_943_0",
+      "seed": 151001,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-14b/trajectories/B0/cwe_943_0/seed_151001/trajectory.json",
+      "sha256": "3624c174f6901cf501de70fc7cc94cc3ebf97e51c5933f672b2e08706bdf06bf"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-14b",
+      "task": "cwe_943_0",
+      "seed": 151021,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-14b/trajectories/B0/cwe_943_0/seed_151021/trajectory.json",
+      "sha256": "d01e7c75c43526d23dfd73cbc5a48847824a063ff0302f03e46f434221934a1c"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-14b",
+      "task": "cwe_943_0",
+      "seed": 151051,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-14b/trajectories/B0/cwe_943_0/seed_151051/trajectory.json",
+      "sha256": "e6408c021db6e18c6b5dd70a45ee7908558b5860c2328bcab6dec01ba8f5ab36"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-14b",
+      "task": "cwe_943_0",
+      "seed": 151057,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-14b/trajectories/B0/cwe_943_0/seed_151057/trajectory.json",
+      "sha256": "a1206dab9dff891bab44f25f03ec99878ee439074915f8303b91e19f8d73e000"
+    },
+    {
+      "benchmark": "cweval",
+      "model": "qwen25-coder-14b",
+      "task": "cwe_943_0",
+      "seed": 151091,
+      "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-14b/trajectories/B0/cwe_943_0/seed_151091/trajectory.json",
+      "sha256": "417e2cba77e2c6db28374321080dc6dd4e58d9e28dbfe75113b667de096a2c8d"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-7b",
+      "task": "Assertion_CodeQL_codeql_cwe020_1.py",
+      "seed": 151001,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-7b/trajectories/B0/Assertion_CodeQL_codeql_cwe020_1.py/seed_151001/trajectory.json",
+      "sha256": "ff08e255822f5417949789edd38eceb829d407f378c2b6f607d160b2adef8da8"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-7b",
+      "task": "Assertion_CodeQL_codeql_cwe020_1.py",
+      "seed": 151021,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-7b/trajectories/B0/Assertion_CodeQL_codeql_cwe020_1.py/seed_151021/trajectory.json",
+      "sha256": "55f2bb8bc83b4587050efa6789a5effbd932c8f3e2e8f34cf868a6b8e1e5b05f"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-7b",
+      "task": "Assertion_CodeQL_codeql_cwe020_1.py",
+      "seed": 151051,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-7b/trajectories/B0/Assertion_CodeQL_codeql_cwe020_1.py/seed_151051/trajectory.json",
+      "sha256": "484aecca5c8a3a9d36e5a87e98f4684a36fe80fcd23b4b9987d11e2ff92594be"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-7b",
+      "task": "Assertion_CodeQL_codeql_cwe020_1.py",
+      "seed": 151057,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-7b/trajectories/B0/Assertion_CodeQL_codeql_cwe020_1.py/seed_151057/trajectory.json",
+      "sha256": "bb8fe22998a36da354be84d7a457dda4d3f2087854792885957b9facf6b63e56"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-7b",
+      "task": "Assertion_CodeQL_codeql_cwe020_1.py",
+      "seed": 151091,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-7b/trajectories/B0/Assertion_CodeQL_codeql_cwe020_1.py/seed_151091/trajectory.json",
+      "sha256": "2027436ca8d8a4f203a7200bdb8cb1ab18caa27240891795e789c63c1a79eee9"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-7b",
+      "task": "Assertion_SonarSource_SS_cwe079_0.py",
+      "seed": 151001,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-7b/trajectories/B0/Assertion_SonarSource_SS_cwe079_0.py/seed_151001/trajectory.json",
+      "sha256": "9ecf375fe568a052c6aaef4957f0a11abdecb2fbf6404e1753ead6048d091680"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-7b",
+      "task": "Assertion_SonarSource_SS_cwe079_0.py",
+      "seed": 151021,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-7b/trajectories/B0/Assertion_SonarSource_SS_cwe079_0.py/seed_151021/trajectory.json",
+      "sha256": "c692af6cbb3fe524e4456afb93be16f6bc74790acef697413ac3efe440f687cd"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-7b",
+      "task": "Assertion_SonarSource_SS_cwe079_0.py",
+      "seed": 151051,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-7b/trajectories/B0/Assertion_SonarSource_SS_cwe079_0.py/seed_151051/trajectory.json",
+      "sha256": "d2adf5d23fff3bc7e6cfcf8293c4c7dee1313d816f0e3f24acbe2bffd94ac152"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-7b",
+      "task": "Assertion_SonarSource_SS_cwe079_0.py",
+      "seed": 151057,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-7b/trajectories/B0/Assertion_SonarSource_SS_cwe079_0.py/seed_151057/trajectory.json",
+      "sha256": "68d04574b76f3b056f0f612e1c3d5a0203d395de6c2e73db306ef382a77bd808"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-7b",
+      "task": "Assertion_SonarSource_SS_cwe079_0.py",
+      "seed": 151091,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-7b/trajectories/B0/Assertion_SonarSource_SS_cwe079_0.py/seed_151091/trajectory.json",
+      "sha256": "ab9c353c047c1e0431c3003d72b558ee49abef07ad15cfbc896e4dd13a3fc269"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-7b",
+      "task": "Assertion_SonarSource_SS_cwe094_0.py",
+      "seed": 151001,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-7b/trajectories/B0/Assertion_SonarSource_SS_cwe094_0.py/seed_151001/trajectory.json",
+      "sha256": "2fbd9a75c1ed2fb45c5e9b8df0d21abed8a9fedb3e4991ed2cdbc19cff05d2b6"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-7b",
+      "task": "Assertion_SonarSource_SS_cwe094_0.py",
+      "seed": 151021,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-7b/trajectories/B0/Assertion_SonarSource_SS_cwe094_0.py/seed_151021/trajectory.json",
+      "sha256": "e2364abf3ed62de5c4910813c587e570e745b49ba8b3a0f1f3c258c04e972f99"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-7b",
+      "task": "Assertion_SonarSource_SS_cwe094_0.py",
+      "seed": 151051,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-7b/trajectories/B0/Assertion_SonarSource_SS_cwe094_0.py/seed_151051/trajectory.json",
+      "sha256": "f46e42e85bc48c5a02c4d1bc1632e49b7e093dfc7c9f53e5770326aa8c15ea01"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-7b",
+      "task": "Assertion_SonarSource_SS_cwe094_0.py",
+      "seed": 151057,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-7b/trajectories/B0/Assertion_SonarSource_SS_cwe094_0.py/seed_151057/trajectory.json",
+      "sha256": "00140c1073fafe47949904b4d47dcbd20bae1282e34033e4e64343e1176322cc"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-7b",
+      "task": "Assertion_SonarSource_SS_cwe094_0.py",
+      "seed": 151091,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-7b/trajectories/B0/Assertion_SonarSource_SS_cwe094_0.py/seed_151091/trajectory.json",
+      "sha256": "7a0692173c807083340614a14ce321a5e0b18117d642ab6805f60b88bee14ecd"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-7b",
+      "task": "Assertion_SonarSource_SS_cwe827_0.py",
+      "seed": 151001,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-7b/trajectories/B0/Assertion_SonarSource_SS_cwe827_0.py/seed_151001/trajectory.json",
+      "sha256": "74c6c3aa567c7abdd4e28ad2147a2168c096557a351b7e0965c35dd5ddc01cbb"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-7b",
+      "task": "Assertion_SonarSource_SS_cwe827_0.py",
+      "seed": 151021,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-7b/trajectories/B0/Assertion_SonarSource_SS_cwe827_0.py/seed_151021/trajectory.json",
+      "sha256": "62d8aa2a8cd37194c0dc1e265b54e20e69629aa62f09932745cdccf53e5d94ec"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-7b",
+      "task": "Assertion_SonarSource_SS_cwe827_0.py",
+      "seed": 151051,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-7b/trajectories/B0/Assertion_SonarSource_SS_cwe827_0.py/seed_151051/trajectory.json",
+      "sha256": "202493d7c9d17bf1987130e1ced69f730c299b27371ef608173236332a97bf0b"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-7b",
+      "task": "Assertion_SonarSource_SS_cwe827_0.py",
+      "seed": 151057,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-7b/trajectories/B0/Assertion_SonarSource_SS_cwe827_0.py/seed_151057/trajectory.json",
+      "sha256": "bd1c74309b27c020408f5e1a389610a9f41d08eeadac660ba0eb7eebca83fef4"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-7b",
+      "task": "Assertion_SonarSource_SS_cwe827_0.py",
+      "seed": 151091,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-7b/trajectories/B0/Assertion_SonarSource_SS_cwe827_0.py/seed_151091/trajectory.json",
+      "sha256": "daf15037220816fab8a88bd29ab03d4bd558b68350a7fa4ba98f33ab4e5318fa"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-7b",
+      "task": "Tainted_Author_A_cwe078_0.py",
+      "seed": 151001,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-7b/trajectories/B0/Tainted_Author_A_cwe078_0.py/seed_151001/trajectory.json",
+      "sha256": "95c4a6df18216a6adbf7889ddb52000e2a336a22943490fd185169bd4b6af009"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-7b",
+      "task": "Tainted_Author_A_cwe078_0.py",
+      "seed": 151021,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-7b/trajectories/B0/Tainted_Author_A_cwe078_0.py/seed_151021/trajectory.json",
+      "sha256": "2ad2b7f92a5d8f0ad2b8ec424151af64659af4a701f3d2b7ca51402d6251f2a9"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-7b",
+      "task": "Tainted_Author_A_cwe078_0.py",
+      "seed": 151051,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-7b/trajectories/B0/Tainted_Author_A_cwe078_0.py/seed_151051/trajectory.json",
+      "sha256": "0895b6a5183b892308b94d1ac1d1045c96caccba7dfaec7a040d5a64c978503d"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-7b",
+      "task": "Tainted_Author_A_cwe078_0.py",
+      "seed": 151057,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-7b/trajectories/B0/Tainted_Author_A_cwe078_0.py/seed_151057/trajectory.json",
+      "sha256": "31d8d49a2617e0d6f6a545605d083975f91faf974239dcf51f2dc5fdc9af1387"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-7b",
+      "task": "Tainted_Author_A_cwe078_0.py",
+      "seed": 151091,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-7b/trajectories/B0/Tainted_Author_A_cwe078_0.py/seed_151091/trajectory.json",
+      "sha256": "9d051ee8d39fc8b4ee0a8be819f72a29601c62a91e30f25f7d7ecec4db782e94"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-7b",
+      "task": "Tainted_Author_A_cwe089_1.py",
+      "seed": 151001,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-7b/trajectories/B0/Tainted_Author_A_cwe089_1.py/seed_151001/trajectory.json",
+      "sha256": "355197403f8432136e6a645f07454cfdb528f962c6526db1b74234fcad980973"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-7b",
+      "task": "Tainted_Author_A_cwe089_1.py",
+      "seed": 151021,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-7b/trajectories/B0/Tainted_Author_A_cwe089_1.py/seed_151021/trajectory.json",
+      "sha256": "5cbf1489a8d258ae1463da1e4058fff9de310752486efa7fdf8996e4894e3d8f"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-7b",
+      "task": "Tainted_Author_A_cwe089_1.py",
+      "seed": 151051,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-7b/trajectories/B0/Tainted_Author_A_cwe089_1.py/seed_151051/trajectory.json",
+      "sha256": "173982f8d8990f12719991bddc8a5dd6a1e2c92e615d15210484d0cc9bd95771"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-7b",
+      "task": "Tainted_Author_A_cwe089_1.py",
+      "seed": 151057,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-7b/trajectories/B0/Tainted_Author_A_cwe089_1.py/seed_151057/trajectory.json",
+      "sha256": "af8ba18121a78bd1b565a7e6bb07a7ecec80f89c32af5e9a758e16ba3328bfe5"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-7b",
+      "task": "Tainted_Author_A_cwe089_1.py",
+      "seed": 151091,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-7b/trajectories/B0/Tainted_Author_A_cwe089_1.py/seed_151091/trajectory.json",
+      "sha256": "d6c5591f36c6dcbbdeda016ff9eb572cfe32a44bad43fd5e8b3b014fcba46744"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-7b",
+      "task": "Tainted_CodeQL_codeql_cwe079_0.py",
+      "seed": 151001,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-7b/trajectories/B0/Tainted_CodeQL_codeql_cwe079_0.py/seed_151001/trajectory.json",
+      "sha256": "7c3964c7f9865a9303cb2e06fd809b269ac6d33a11e565919c632781f005da51"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-7b",
+      "task": "Tainted_CodeQL_codeql_cwe079_0.py",
+      "seed": 151021,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-7b/trajectories/B0/Tainted_CodeQL_codeql_cwe079_0.py/seed_151021/trajectory.json",
+      "sha256": "bdee0fb05943e3dac04d4d926cad373cda3b4865414c9064300b0329b22f15f7"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-7b",
+      "task": "Tainted_CodeQL_codeql_cwe079_0.py",
+      "seed": 151051,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-7b/trajectories/B0/Tainted_CodeQL_codeql_cwe079_0.py/seed_151051/trajectory.json",
+      "sha256": "abf5e74edb1da8b4ccce4263cadd15c2e4d73c507a7503c317328572386afdc1"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-7b",
+      "task": "Tainted_CodeQL_codeql_cwe079_0.py",
+      "seed": 151057,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-7b/trajectories/B0/Tainted_CodeQL_codeql_cwe079_0.py/seed_151057/trajectory.json",
+      "sha256": "49eeadaa70213377f7348030b97cdd5d884cc919f52f5bbb3e073e95df61b491"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-7b",
+      "task": "Tainted_CodeQL_codeql_cwe079_0.py",
+      "seed": 151091,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-7b/trajectories/B0/Tainted_CodeQL_codeql_cwe079_0.py/seed_151091/trajectory.json",
+      "sha256": "6592046f4409f8e5c952fd4aede1f0137ea6bb63291e381095b8dfff286c38c8"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-7b",
+      "task": "Tainted_StackOverflow_SO_cwe094_4.py",
+      "seed": 151001,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-7b/trajectories/B0/Tainted_StackOverflow_SO_cwe094_4.py/seed_151001/trajectory.json",
+      "sha256": "b79003af753a9a0bedc73b21a06148ddaf7f833d979c3148dfdc590b6072703f"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-7b",
+      "task": "Tainted_StackOverflow_SO_cwe094_4.py",
+      "seed": 151021,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-7b/trajectories/B0/Tainted_StackOverflow_SO_cwe094_4.py/seed_151021/trajectory.json",
+      "sha256": "10a7a0941f7a5fd47f5abc647142796086c09388c755f5773e94faa919650419"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-7b",
+      "task": "Tainted_StackOverflow_SO_cwe094_4.py",
+      "seed": 151051,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-7b/trajectories/B0/Tainted_StackOverflow_SO_cwe094_4.py/seed_151051/trajectory.json",
+      "sha256": "652bc12f841c52f9c423d97e9d06c04fed688d3badf5d8a423cdbfb0b3c443bc"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-7b",
+      "task": "Tainted_StackOverflow_SO_cwe094_4.py",
+      "seed": 151057,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-7b/trajectories/B0/Tainted_StackOverflow_SO_cwe094_4.py/seed_151057/trajectory.json",
+      "sha256": "b3b4083b2fc04228c16a7c0878419acf3622ca0e47731f421bc4fc5d49fa1973"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-7b",
+      "task": "Tainted_StackOverflow_SO_cwe094_4.py",
+      "seed": 151091,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-7b/trajectories/B0/Tainted_StackOverflow_SO_cwe094_4.py/seed_151091/trajectory.json",
+      "sha256": "64e5cf6fc350f525d0bec5fa3063aba661e5f6a1d0d6332708897a12255d4cda"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-14b",
+      "task": "Assertion_CodeQL_codeql_cwe020_1.py",
+      "seed": 151001,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-14b/trajectories/B0/Assertion_CodeQL_codeql_cwe020_1.py/seed_151001/trajectory.json",
+      "sha256": "78b7ead6cd12e7dcad715bcb950df324a3850dd89eb9bce214ff8fbb3a004732"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-14b",
+      "task": "Assertion_CodeQL_codeql_cwe020_1.py",
+      "seed": 151021,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-14b/trajectories/B0/Assertion_CodeQL_codeql_cwe020_1.py/seed_151021/trajectory.json",
+      "sha256": "c70896ac7da88eb6101c43a3a9756dba9636f99390e167766def16e5fc0e5d45"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-14b",
+      "task": "Assertion_CodeQL_codeql_cwe020_1.py",
+      "seed": 151051,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-14b/trajectories/B0/Assertion_CodeQL_codeql_cwe020_1.py/seed_151051/trajectory.json",
+      "sha256": "459be125aba9e10eb99212997d5f3f7059df7d22f51915e02821fd9b11c6a040"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-14b",
+      "task": "Assertion_CodeQL_codeql_cwe020_1.py",
+      "seed": 151057,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-14b/trajectories/B0/Assertion_CodeQL_codeql_cwe020_1.py/seed_151057/trajectory.json",
+      "sha256": "6b59258e0f6e20416d7ecb7339f8795020c567de85c73ffc0b6c2348cb6781fe"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-14b",
+      "task": "Assertion_CodeQL_codeql_cwe020_1.py",
+      "seed": 151091,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-14b/trajectories/B0/Assertion_CodeQL_codeql_cwe020_1.py/seed_151091/trajectory.json",
+      "sha256": "3ba4af2afda0a029f72c691ce57043614f2125a4d495ec3b4d6436288da30fa5"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-14b",
+      "task": "Assertion_SonarSource_SS_cwe079_0.py",
+      "seed": 151001,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-14b/trajectories/B0/Assertion_SonarSource_SS_cwe079_0.py/seed_151001/trajectory.json",
+      "sha256": "313b5b0e3de538fec15f07b7605833dcd470cce8ded56323c8188cdda494a46c"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-14b",
+      "task": "Assertion_SonarSource_SS_cwe079_0.py",
+      "seed": 151021,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-14b/trajectories/B0/Assertion_SonarSource_SS_cwe079_0.py/seed_151021/trajectory.json",
+      "sha256": "5a6245cce0a5e24fbcd1eaa350bcc7e3ac7abbfc38dea8f30e3f92421d2f46db"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-14b",
+      "task": "Assertion_SonarSource_SS_cwe079_0.py",
+      "seed": 151051,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-14b/trajectories/B0/Assertion_SonarSource_SS_cwe079_0.py/seed_151051/trajectory.json",
+      "sha256": "3911ab6fbd5d1fd06ac8d7e110a3aeaf8b58b0b44038f9dd018b6fde0256336a"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-14b",
+      "task": "Assertion_SonarSource_SS_cwe079_0.py",
+      "seed": 151057,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-14b/trajectories/B0/Assertion_SonarSource_SS_cwe079_0.py/seed_151057/trajectory.json",
+      "sha256": "023cc16d5b2b2c0099adbe80ea6f2856fe218ec92c28663ca3100ca3120faa80"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-14b",
+      "task": "Assertion_SonarSource_SS_cwe079_0.py",
+      "seed": 151091,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-14b/trajectories/B0/Assertion_SonarSource_SS_cwe079_0.py/seed_151091/trajectory.json",
+      "sha256": "2fc13cea91dff3ab2344f4164a3beacb5e4f117775fbd2307d931a0359ac0961"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-14b",
+      "task": "Assertion_SonarSource_SS_cwe094_0.py",
+      "seed": 151001,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-14b/trajectories/B0/Assertion_SonarSource_SS_cwe094_0.py/seed_151001/trajectory.json",
+      "sha256": "b4222b361d39b97633e3ad310e2a2337b5c449f485354dd2153b38e3334a5878"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-14b",
+      "task": "Assertion_SonarSource_SS_cwe094_0.py",
+      "seed": 151021,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-14b/trajectories/B0/Assertion_SonarSource_SS_cwe094_0.py/seed_151021/trajectory.json",
+      "sha256": "e6c0abc4770e5aeaf6b5473fa85b95f3a51639a9b0bb9ce7f4ba3f16f1eb5b9e"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-14b",
+      "task": "Assertion_SonarSource_SS_cwe094_0.py",
+      "seed": 151051,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-14b/trajectories/B0/Assertion_SonarSource_SS_cwe094_0.py/seed_151051/trajectory.json",
+      "sha256": "b02268e3094b0ba0c40070cc67fa2ef2dd42af6117ad47cdb639344680db9baf"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-14b",
+      "task": "Assertion_SonarSource_SS_cwe094_0.py",
+      "seed": 151057,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-14b/trajectories/B0/Assertion_SonarSource_SS_cwe094_0.py/seed_151057/trajectory.json",
+      "sha256": "5283975194a412fda01d9dec5f2ac6f767c16383b73cb17a3a7caf0d0a64e85d"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-14b",
+      "task": "Assertion_SonarSource_SS_cwe094_0.py",
+      "seed": 151091,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-14b/trajectories/B0/Assertion_SonarSource_SS_cwe094_0.py/seed_151091/trajectory.json",
+      "sha256": "ce25dee93e198df00ffa8e33aff299abeb19d32ba966daa03efc7d43959dd768"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-14b",
+      "task": "Assertion_SonarSource_SS_cwe827_0.py",
+      "seed": 151001,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-14b/trajectories/B0/Assertion_SonarSource_SS_cwe827_0.py/seed_151001/trajectory.json",
+      "sha256": "98bb4c6d0b1678a9bc574e330a3f6723b7e08cbd6b9595a686889afdb23e5d60"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-14b",
+      "task": "Assertion_SonarSource_SS_cwe827_0.py",
+      "seed": 151021,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-14b/trajectories/B0/Assertion_SonarSource_SS_cwe827_0.py/seed_151021/trajectory.json",
+      "sha256": "505316ce6ce0866f9dc0dd9e1266de491bc24f6b8810d52d65d8c956572a4b17"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-14b",
+      "task": "Assertion_SonarSource_SS_cwe827_0.py",
+      "seed": 151051,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-14b/trajectories/B0/Assertion_SonarSource_SS_cwe827_0.py/seed_151051/trajectory.json",
+      "sha256": "8197b2acd9f635b0e2add5178e388defef12b3be423371fa1ade55bf7d3ffae0"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-14b",
+      "task": "Assertion_SonarSource_SS_cwe827_0.py",
+      "seed": 151057,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-14b/trajectories/B0/Assertion_SonarSource_SS_cwe827_0.py/seed_151057/trajectory.json",
+      "sha256": "962ee8b90277fe159231233cf03dfbfb94690dd491b83afcb148dc39f73c1f9e"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-14b",
+      "task": "Assertion_SonarSource_SS_cwe827_0.py",
+      "seed": 151091,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-14b/trajectories/B0/Assertion_SonarSource_SS_cwe827_0.py/seed_151091/trajectory.json",
+      "sha256": "4fd0a3d23f5507fd9838dbf0d787b6960f1f01ff0240facab0d639fbf3445ee3"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-14b",
+      "task": "Tainted_Author_A_cwe078_0.py",
+      "seed": 151001,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-14b/trajectories/B0/Tainted_Author_A_cwe078_0.py/seed_151001/trajectory.json",
+      "sha256": "06202c91cffe4db87ab8b47b655b870753cb88bc18afa55a5395adac828350ab"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-14b",
+      "task": "Tainted_Author_A_cwe078_0.py",
+      "seed": 151021,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-14b/trajectories/B0/Tainted_Author_A_cwe078_0.py/seed_151021/trajectory.json",
+      "sha256": "675c4fc94ece39fe02b0710d6fc571294720b7a0c1579a044cd1ec106fdfcfb2"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-14b",
+      "task": "Tainted_Author_A_cwe078_0.py",
+      "seed": 151051,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-14b/trajectories/B0/Tainted_Author_A_cwe078_0.py/seed_151051/trajectory.json",
+      "sha256": "a82439a98da1eb29eb8faf9e0b9e21bb2dca6dac1fddaeae7ca127599b20ea4a"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-14b",
+      "task": "Tainted_Author_A_cwe078_0.py",
+      "seed": 151057,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-14b/trajectories/B0/Tainted_Author_A_cwe078_0.py/seed_151057/trajectory.json",
+      "sha256": "ab96df73b6b8f1d2711d24069f2e7d58c035ab6a0bfde1c7957398f62ee7fc16"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-14b",
+      "task": "Tainted_Author_A_cwe078_0.py",
+      "seed": 151091,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-14b/trajectories/B0/Tainted_Author_A_cwe078_0.py/seed_151091/trajectory.json",
+      "sha256": "b177f4c8c1055d4455ec50cca4c511d3d808b854409bcb6416cd3e12912e0622"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-14b",
+      "task": "Tainted_Author_A_cwe089_1.py",
+      "seed": 151001,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-14b/trajectories/B0/Tainted_Author_A_cwe089_1.py/seed_151001/trajectory.json",
+      "sha256": "32f1063d22134f2ef8ed50b8d03aed15ce4fc28dfab13e16340526ae20c22a73"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-14b",
+      "task": "Tainted_Author_A_cwe089_1.py",
+      "seed": 151021,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-14b/trajectories/B0/Tainted_Author_A_cwe089_1.py/seed_151021/trajectory.json",
+      "sha256": "5355529cde412d4378efd08df496765b1760576fcd88ccf81eaf9424c6c0c853"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-14b",
+      "task": "Tainted_Author_A_cwe089_1.py",
+      "seed": 151051,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-14b/trajectories/B0/Tainted_Author_A_cwe089_1.py/seed_151051/trajectory.json",
+      "sha256": "5d98ba5e0893637ce84c7b2a02d2a1de0d39265d91c53ac7c9f4c09dc852dc44"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-14b",
+      "task": "Tainted_Author_A_cwe089_1.py",
+      "seed": 151057,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-14b/trajectories/B0/Tainted_Author_A_cwe089_1.py/seed_151057/trajectory.json",
+      "sha256": "719c9f68cdfdb9ec4126e8d33489b9fd0a9930fb71d1f2bdff08650e118c9804"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-14b",
+      "task": "Tainted_Author_A_cwe089_1.py",
+      "seed": 151091,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-14b/trajectories/B0/Tainted_Author_A_cwe089_1.py/seed_151091/trajectory.json",
+      "sha256": "d237fc52bd944e81272329b01d811b572682876b53be8997e79172db2d7c7dc1"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-14b",
+      "task": "Tainted_CodeQL_codeql_cwe079_0.py",
+      "seed": 151001,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-14b/trajectories/B0/Tainted_CodeQL_codeql_cwe079_0.py/seed_151001/trajectory.json",
+      "sha256": "4d9c94967ae572db5e324eb74324d004ccc776d628bb23b6d931f0167453c382"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-14b",
+      "task": "Tainted_CodeQL_codeql_cwe079_0.py",
+      "seed": 151021,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-14b/trajectories/B0/Tainted_CodeQL_codeql_cwe079_0.py/seed_151021/trajectory.json",
+      "sha256": "d8f40d70b2d27b32c3cf1b6db2bad9ccd029eb1d3870fed6d497668bd7a2743d"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-14b",
+      "task": "Tainted_CodeQL_codeql_cwe079_0.py",
+      "seed": 151051,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-14b/trajectories/B0/Tainted_CodeQL_codeql_cwe079_0.py/seed_151051/trajectory.json",
+      "sha256": "a1e294b30df00c1ff64b89a2846672b6c1e2e445ea3c95fff4a0094d77b1a261"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-14b",
+      "task": "Tainted_CodeQL_codeql_cwe079_0.py",
+      "seed": 151057,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-14b/trajectories/B0/Tainted_CodeQL_codeql_cwe079_0.py/seed_151057/trajectory.json",
+      "sha256": "bbf17512a3f61c81e2aa6fc9d072bf8ea138f7b753e41a5672ee03ec021b602a"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-14b",
+      "task": "Tainted_CodeQL_codeql_cwe079_0.py",
+      "seed": 151091,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-14b/trajectories/B0/Tainted_CodeQL_codeql_cwe079_0.py/seed_151091/trajectory.json",
+      "sha256": "ed69160aadcbffe493aa6a91def76b91b5eeb032814568339e7d55cbfd564007"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-14b",
+      "task": "Tainted_StackOverflow_SO_cwe094_4.py",
+      "seed": 151001,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-14b/trajectories/B0/Tainted_StackOverflow_SO_cwe094_4.py/seed_151001/trajectory.json",
+      "sha256": "60e6e23e8961690a4fb3367fd96743aaec67064cec18c6229c372eb4ec019ec9"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-14b",
+      "task": "Tainted_StackOverflow_SO_cwe094_4.py",
+      "seed": 151021,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-14b/trajectories/B0/Tainted_StackOverflow_SO_cwe094_4.py/seed_151021/trajectory.json",
+      "sha256": "426ee20ad87cc2e25cfa9d39783a9ea2526454475d2eee85d7a216d92e288f89"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-14b",
+      "task": "Tainted_StackOverflow_SO_cwe094_4.py",
+      "seed": 151051,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-14b/trajectories/B0/Tainted_StackOverflow_SO_cwe094_4.py/seed_151051/trajectory.json",
+      "sha256": "401d8d1c7fb397ed17902007ba3e1986de160d7ddaecca1c482142746996f588"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-14b",
+      "task": "Tainted_StackOverflow_SO_cwe094_4.py",
+      "seed": 151057,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-14b/trajectories/B0/Tainted_StackOverflow_SO_cwe094_4.py/seed_151057/trajectory.json",
+      "sha256": "d1462c0e9bbec5db769270b5a327172643c10d456f0bc8f896a2d100b0c72a6a"
+    },
+    {
+      "benchmark": "sallm",
+      "model": "qwen25-coder-14b",
+      "task": "Tainted_StackOverflow_SO_cwe094_4.py",
+      "seed": 151091,
+      "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-14b/trajectories/B0/Tainted_StackOverflow_SO_cwe094_4.py/seed_151091/trajectory.json",
+      "sha256": "e30380eaf8a109d9c509dcd800d5d405baea7ac62a90202bdfb62b3c98e9cf03"
+    },
+    {
+      "benchmark": "codeguardplus",
+      "model": "qwen25-coder-7b",
+      "task": "cwe-022/0-py",
+      "seed": 151001,
+      "path": "artifacts/paper-expansion-full-v1/codeguardplus/qwen25-coder-7b/trajectories/B0/cwe-022__0-py/seed_151001/trajectory.json",
+      "sha256": "8450b51bb0a146d2dc3a44dab6ea25349a2e87befa9a3c58331e6f696248947a"
+    },
+    {
+      "benchmark": "codeguardplus",
+      "model": "qwen25-coder-7b",
+      "task": "cwe-022/0-py",
+      "seed": 151021,
+      "path": "artifacts/paper-expansion-full-v1/codeguardplus/qwen25-coder-7b/trajectories/B0/cwe-022__0-py/seed_151021/trajectory.json",
+      "sha256": "6216375fb2e0e366ae1c25b8cb8e47f0fc6bd51d95819f2407a4b2b1d92325da"
+    },
+    {
+      "benchmark": "codeguardplus",
+      "model": "qwen25-coder-7b",
+      "task": "cwe-022/0-py",
+      "seed": 151051,
+      "path": "artifacts/paper-expansion-full-v1/codeguardplus/qwen25-coder-7b/trajectories/B0/cwe-022__0-py/seed_151051/trajectory.json",
+      "sha256": "674d9a22e48a8900ced8093e1162013205280f9e6ff6123c37133b0dead50eb9"
+    },
+    {
+      "benchmark": "codeguardplus",
+      "model": "qwen25-coder-7b",
+      "task": "cwe-022/0-py",
+      "seed": 151057,
+      "path": "artifacts/paper-expansion-full-v1/codeguardplus/qwen25-coder-7b/trajectories/B0/cwe-022__0-py/seed_151057/trajectory.json",
+      "sha256": "25b141986827105b8ad51eda2653f7042d60d521d6bc5d64621ea529c80d4a1c"
+    },
+    {
+      "benchmark": "codeguardplus",
+      "model": "qwen25-coder-7b",
+      "task": "cwe-022/0-py",
+      "seed": 151091,
+      "path": "artifacts/paper-expansion-full-v1/codeguardplus/qwen25-coder-7b/trajectories/B0/cwe-022__0-py/seed_151091/trajectory.json",
+      "sha256": "9ba61795507f01d0eac26379d2f6cef85f98a41935dfbe350e470888e8661a82"
+    },
+    {
+      "benchmark": "codeguardplus",
+      "model": "qwen25-coder-7b",
+      "task": "cwe-079/1-py",
+      "seed": 151001,
+      "path": "artifacts/paper-expansion-full-v1/codeguardplus/qwen25-coder-7b/trajectories/B0/cwe-079__1-py/seed_151001/trajectory.json",
+      "sha256": "f3cfad159ed88cdae33df5c87a63817863f46fb7bbc53c56a5c4d9574cf11238"
+    },
+    {
+      "benchmark": "codeguardplus",
+      "model": "qwen25-coder-7b",
+      "task": "cwe-079/1-py",
+      "seed": 151021,
+      "path": "artifacts/paper-expansion-full-v1/codeguardplus/qwen25-coder-7b/trajectories/B0/cwe-079__1-py/seed_151021/trajectory.json",
+      "sha256": "8e2cfa74f71a68de23a6b7f8fee62a3603a75e176c2e144bbaecac3ffcda3589"
+    },
+    {
+      "benchmark": "codeguardplus",
+      "model": "qwen25-coder-7b",
+      "task": "cwe-079/1-py",
+      "seed": 151051,
+      "path": "artifacts/paper-expansion-full-v1/codeguardplus/qwen25-coder-7b/trajectories/B0/cwe-079__1-py/seed_151051/trajectory.json",
+      "sha256": "416c00f54d83bdfbedac2577f05984292e20103403fd662a5373ea7bd6e7fdd9"
+    },
+    {
+      "benchmark": "codeguardplus",
+      "model": "qwen25-coder-7b",
+      "task": "cwe-079/1-py",
+      "seed": 151057,
+      "path": "artifacts/paper-expansion-full-v1/codeguardplus/qwen25-coder-7b/trajectories/B0/cwe-079__1-py/seed_151057/trajectory.json",
+      "sha256": "ac407bdacd911b79654160258b0696b2940a745fcbd8eb36722f6a5a94b2ec24"
+    },
+    {
+      "benchmark": "codeguardplus",
+      "model": "qwen25-coder-7b",
+      "task": "cwe-079/1-py",
+      "seed": 151091,
+      "path": "artifacts/paper-expansion-full-v1/codeguardplus/qwen25-coder-7b/trajectories/B0/cwe-079__1-py/seed_151091/trajectory.json",
+      "sha256": "49ed6a0043c4741d2e2f8bafb904cc42ae89bc98233789838acada593441d5b8"
+    },
+    {
+      "benchmark": "codeguardplus",
+      "model": "qwen25-coder-7b",
+      "task": "cwe-117/0-py",
+      "seed": 151001,
+      "path": "artifacts/paper-expansion-full-v1/codeguardplus/qwen25-coder-7b/trajectories/B0/cwe-117__0-py/seed_151001/trajectory.json",
+      "sha256": "6a1ba321f267a9ee2b92eddb7445265fabc942b3d11fb5c75081194b006b9883"
+    },
+    {
+      "benchmark": "codeguardplus",
+      "model": "qwen25-coder-7b",
+      "task": "cwe-117/0-py",
+      "seed": 151021,
+      "path": "artifacts/paper-expansion-full-v1/codeguardplus/qwen25-coder-7b/trajectories/B0/cwe-117__0-py/seed_151021/trajectory.json",
+      "sha256": "3d8283c45f50b510088ac75fc42dd07bc20612825af14b43e2e6ca3b20715b18"
+    },
+    {
+      "benchmark": "codeguardplus",
+      "model": "qwen25-coder-7b",
+      "task": "cwe-117/0-py",
+      "seed": 151051,
+      "path": "artifacts/paper-expansion-full-v1/codeguardplus/qwen25-coder-7b/trajectories/B0/cwe-117__0-py/seed_151051/trajectory.json",
+      "sha256": "37291a0c13fee92cbdac8b7d47696f215f00bcb14bac0007fdf3e6c7e29f3bef"
+    },
+    {
+      "benchmark": "codeguardplus",
+      "model": "qwen25-coder-7b",
+      "task": "cwe-117/0-py",
+      "seed": 151057,
+      "path": "artifacts/paper-expansion-full-v1/codeguardplus/qwen25-coder-7b/trajectories/B0/cwe-117__0-py/seed_151057/trajectory.json",
+      "sha256": "2c9e3aeb6d7adb26b2a6d873481dfcba25857f95087310006db3c9e16855c6e8"
+    },
+    {
+      "benchmark": "codeguardplus",
+      "model": "qwen25-coder-7b",
+      "task": "cwe-117/0-py",
+      "seed": 151091,
+      "path": "artifacts/paper-expansion-full-v1/codeguardplus/qwen25-coder-7b/trajectories/B0/cwe-117__0-py/seed_151091/trajectory.json",
+      "sha256": "beb7286cff683aeafb15c61c51d6db51bc79fdff776d74a7f2e23f854d409b31"
+    },
+    {
+      "benchmark": "codeguardplus",
+      "model": "qwen25-coder-7b",
+      "task": "cwe-312/0-py",
+      "seed": 151001,
+      "path": "artifacts/paper-expansion-full-v1/codeguardplus/qwen25-coder-7b/trajectories/B0/cwe-312__0-py/seed_151001/trajectory.json",
+      "sha256": "1b41b7e74db0c5b490fe86e23b259f61bdd940b11b6fe2aa06a19501e1c895ce"
+    },
+    {
+      "benchmark": "codeguardplus",
+      "model": "qwen25-coder-7b",
+      "task": "cwe-312/0-py",
+      "seed": 151021,
+      "path": "artifacts/paper-expansion-full-v1/codeguardplus/qwen25-coder-7b/trajectories/B0/cwe-312__0-py/seed_151021/trajectory.json",
+      "sha256": "991dd302ca8b61a4f16b1a50c52b7ab3b58b01dd9abb0e395418cee57e6cb7c6"
+    },
+    {
+      "benchmark": "codeguardplus",
+      "model": "qwen25-coder-7b",
+      "task": "cwe-312/0-py",
+      "seed": 151051,
+      "path": "artifacts/paper-expansion-full-v1/codeguardplus/qwen25-coder-7b/trajectories/B0/cwe-312__0-py/seed_151051/trajectory.json",
+      "sha256": "7a2a4d3b2817ae050188dbf7b2506341fe641a6d1588e3a7a4f360e0965c5837"
+    },
+    {
+      "benchmark": "codeguardplus",
+      "model": "qwen25-coder-7b",
+      "task": "cwe-312/0-py",
+      "seed": 151057,
+      "path": "artifacts/paper-expansion-full-v1/codeguardplus/qwen25-coder-7b/trajectories/B0/cwe-312__0-py/seed_151057/trajectory.json",
+      "sha256": "f17eeed3a4bc6095a6c7e3581794e034e0085254f3950d3a82900f2d95d50545"
+    },
+    {
+      "benchmark": "codeguardplus",
+      "model": "qwen25-coder-7b",
+      "task": "cwe-312/0-py",
+      "seed": 151091,
+      "path": "artifacts/paper-expansion-full-v1/codeguardplus/qwen25-coder-7b/trajectories/B0/cwe-312__0-py/seed_151091/trajectory.json",
+      "sha256": "78db31a76c3325f2a2be883cb671e4a58e6f6473d3a66375da65cf48f62b386e"
+    },
+    {
+      "benchmark": "codeguardplus",
+      "model": "qwen25-coder-14b",
+      "task": "cwe-022/0-py",
+      "seed": 151001,
+      "path": "artifacts/paper-expansion-full-v1/codeguardplus/qwen25-coder-14b/trajectories/B0/cwe-022__0-py/seed_151001/trajectory.json",
+      "sha256": "f686cc2908544fe9db96e680fe8760ea1dc504dcb1f25d302bfab7d7342ce9f4"
+    },
+    {
+      "benchmark": "codeguardplus",
+      "model": "qwen25-coder-14b",
+      "task": "cwe-022/0-py",
+      "seed": 151021,
+      "path": "artifacts/paper-expansion-full-v1/codeguardplus/qwen25-coder-14b/trajectories/B0/cwe-022__0-py/seed_151021/trajectory.json",
+      "sha256": "4602071b73ce1f01e66c81218f7a91dba0f162b5c5cdef3359c1b4d6db59c434"
+    },
+    {
+      "benchmark": "codeguardplus",
+      "model": "qwen25-coder-14b",
+      "task": "cwe-022/0-py",
+      "seed": 151051,
+      "path": "artifacts/paper-expansion-full-v1/codeguardplus/qwen25-coder-14b/trajectories/B0/cwe-022__0-py/seed_151051/trajectory.json",
+      "sha256": "869af63929404e2ea6367e88a380223804be3103af4122f3583ebba81a56c542"
+    },
+    {
+      "benchmark": "codeguardplus",
+      "model": "qwen25-coder-14b",
+      "task": "cwe-022/0-py",
+      "seed": 151057,
+      "path": "artifacts/paper-expansion-full-v1/codeguardplus/qwen25-coder-14b/trajectories/B0/cwe-022__0-py/seed_151057/trajectory.json",
+      "sha256": "153d85865d311e2f7a1834cc93a8ec779ed6e9c23ea9eecbbf4af4d402ff5b04"
+    },
+    {
+      "benchmark": "codeguardplus",
+      "model": "qwen25-coder-14b",
+      "task": "cwe-022/0-py",
+      "seed": 151091,
+      "path": "artifacts/paper-expansion-full-v1/codeguardplus/qwen25-coder-14b/trajectories/B0/cwe-022__0-py/seed_151091/trajectory.json",
+      "sha256": "3551d4f259634bdf0a976043142fd8b6d5a7bb78378c14b0b1f5e825eec7e3a9"
+    },
+    {
+      "benchmark": "codeguardplus",
+      "model": "qwen25-coder-14b",
+      "task": "cwe-079/1-py",
+      "seed": 151001,
+      "path": "artifacts/paper-expansion-full-v1/codeguardplus/qwen25-coder-14b/trajectories/B0/cwe-079__1-py/seed_151001/trajectory.json",
+      "sha256": "f13eb08e1bac227be7edfd814bbf0e734914ea84e71b03c47fd26cc6e272113e"
+    },
+    {
+      "benchmark": "codeguardplus",
+      "model": "qwen25-coder-14b",
+      "task": "cwe-079/1-py",
+      "seed": 151021,
+      "path": "artifacts/paper-expansion-full-v1/codeguardplus/qwen25-coder-14b/trajectories/B0/cwe-079__1-py/seed_151021/trajectory.json",
+      "sha256": "f614e560a8d262703deaf9e711439375f2d29b32d8c1abc82b8346f845da0c2b"
+    },
+    {
+      "benchmark": "codeguardplus",
+      "model": "qwen25-coder-14b",
+      "task": "cwe-079/1-py",
+      "seed": 151051,
+      "path": "artifacts/paper-expansion-full-v1/codeguardplus/qwen25-coder-14b/trajectories/B0/cwe-079__1-py/seed_151051/trajectory.json",
+      "sha256": "9fe3700e484387ed08200ab175b1789fbb508c7c1cb754ad68f6e1d71ddfd973"
+    },
+    {
+      "benchmark": "codeguardplus",
+      "model": "qwen25-coder-14b",
+      "task": "cwe-079/1-py",
+      "seed": 151057,
+      "path": "artifacts/paper-expansion-full-v1/codeguardplus/qwen25-coder-14b/trajectories/B0/cwe-079__1-py/seed_151057/trajectory.json",
+      "sha256": "dd4e9a661cf31dee6034561739b01c075cae009997b98e6858091a66e5fb17b4"
+    },
+    {
+      "benchmark": "codeguardplus",
+      "model": "qwen25-coder-14b",
+      "task": "cwe-079/1-py",
+      "seed": 151091,
+      "path": "artifacts/paper-expansion-full-v1/codeguardplus/qwen25-coder-14b/trajectories/B0/cwe-079__1-py/seed_151091/trajectory.json",
+      "sha256": "53b9ea150a4f303be9558241c0a131886a6de2e73c4fd222795fee5b1841cc39"
+    },
+    {
+      "benchmark": "codeguardplus",
+      "model": "qwen25-coder-14b",
+      "task": "cwe-117/0-py",
+      "seed": 151001,
+      "path": "artifacts/paper-expansion-full-v1/codeguardplus/qwen25-coder-14b/trajectories/B0/cwe-117__0-py/seed_151001/trajectory.json",
+      "sha256": "8f3b9fbce7ee048affab4399bd4f880305e1376409ffc110bf2eeb87c89718a9"
+    },
+    {
+      "benchmark": "codeguardplus",
+      "model": "qwen25-coder-14b",
+      "task": "cwe-117/0-py",
+      "seed": 151021,
+      "path": "artifacts/paper-expansion-full-v1/codeguardplus/qwen25-coder-14b/trajectories/B0/cwe-117__0-py/seed_151021/trajectory.json",
+      "sha256": "048604c892a0e6fa137d0889218a3531406e18225ac4b1eed727db9cecb43323"
+    },
+    {
+      "benchmark": "codeguardplus",
+      "model": "qwen25-coder-14b",
+      "task": "cwe-117/0-py",
+      "seed": 151051,
+      "path": "artifacts/paper-expansion-full-v1/codeguardplus/qwen25-coder-14b/trajectories/B0/cwe-117__0-py/seed_151051/trajectory.json",
+      "sha256": "6e99b9bae01e64146f1a20d532cb20255df8c7d06c964c2e2f8b4fd1650e8051"
+    },
+    {
+      "benchmark": "codeguardplus",
+      "model": "qwen25-coder-14b",
+      "task": "cwe-117/0-py",
+      "seed": 151057,
+      "path": "artifacts/paper-expansion-full-v1/codeguardplus/qwen25-coder-14b/trajectories/B0/cwe-117__0-py/seed_151057/trajectory.json",
+      "sha256": "122a4f8ffcba243ba7f4d28564d06da2e41ba03c14e8d1f82209d8dc45ae697a"
+    },
+    {
+      "benchmark": "codeguardplus",
+      "model": "qwen25-coder-14b",
+      "task": "cwe-117/0-py",
+      "seed": 151091,
+      "path": "artifacts/paper-expansion-full-v1/codeguardplus/qwen25-coder-14b/trajectories/B0/cwe-117__0-py/seed_151091/trajectory.json",
+      "sha256": "79e997e1f1aa372c7dfe96a665681d2018753a1cd416d8e0429eb35c0191e03e"
+    },
+    {
+      "benchmark": "codeguardplus",
+      "model": "qwen25-coder-14b",
+      "task": "cwe-312/0-py",
+      "seed": 151001,
+      "path": "artifacts/paper-expansion-full-v1/codeguardplus/qwen25-coder-14b/trajectories/B0/cwe-312__0-py/seed_151001/trajectory.json",
+      "sha256": "d74c667908d950162a313c852aa8f07a11d2903a02b3aaa92e3df223aae52c33"
+    },
+    {
+      "benchmark": "codeguardplus",
+      "model": "qwen25-coder-14b",
+      "task": "cwe-312/0-py",
+      "seed": 151021,
+      "path": "artifacts/paper-expansion-full-v1/codeguardplus/qwen25-coder-14b/trajectories/B0/cwe-312__0-py/seed_151021/trajectory.json",
+      "sha256": "d4aa54b125547a0983da8b0af43f99447b36da43fd36cddd86b4fe0685149436"
+    },
+    {
+      "benchmark": "codeguardplus",
+      "model": "qwen25-coder-14b",
+      "task": "cwe-312/0-py",
+      "seed": 151051,
+      "path": "artifacts/paper-expansion-full-v1/codeguardplus/qwen25-coder-14b/trajectories/B0/cwe-312__0-py/seed_151051/trajectory.json",
+      "sha256": "0ffafdfb4aee034639bbd0b6f204c309a8ea333b89423e4eff12cee78293dce7"
+    },
+    {
+      "benchmark": "codeguardplus",
+      "model": "qwen25-coder-14b",
+      "task": "cwe-312/0-py",
+      "seed": 151057,
+      "path": "artifacts/paper-expansion-full-v1/codeguardplus/qwen25-coder-14b/trajectories/B0/cwe-312__0-py/seed_151057/trajectory.json",
+      "sha256": "052fcc3f487c0e91b2d83ec8d854d129ebe1672584df37cacf29ae1921be9667"
+    },
+    {
+      "benchmark": "codeguardplus",
+      "model": "qwen25-coder-14b",
+      "task": "cwe-312/0-py",
+      "seed": 151091,
+      "path": "artifacts/paper-expansion-full-v1/codeguardplus/qwen25-coder-14b/trajectories/B0/cwe-312__0-py/seed_151091/trajectory.json",
+      "sha256": "424f6bba6ab94aa29dc1805eb5d15635a6971e2cbcc7ca62705b0a252aa00f52"
+    }
+  ]
+}

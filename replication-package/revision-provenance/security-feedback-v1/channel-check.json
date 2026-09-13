@@ -1,0 +1,6 @@
+{
+  "initial_states": 200,
+  "functional_channel_preserved": true,
+  "security_observation_invariance": true,
+  "max_initial_feedback_tokens": 578
+}

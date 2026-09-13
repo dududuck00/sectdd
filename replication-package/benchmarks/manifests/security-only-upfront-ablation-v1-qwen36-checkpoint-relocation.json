@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "correction_id": "security-only-upfront-ablation-v1-qwen36-checkpoint-relocation",
+  "created_at_utc": "2026-08-30T04:06:32Z",
+  "reason": "The Qwen3.6-27B checkpoint is being re-downloaded to a new storage location before any Qwen3.6 B7 response is generated.",
+  "other_model_b7_results_observed_before_relocation": true,
+  "qwen36_b7_results_observed_before_relocation": false,
+  "protocol_changed": false,
+  "tasks_methods_seeds_budgets_oracles_changed": false,
+  "original_config_sha256": {
+    "sallm": "6936fe03c33ace53551f2ababce9e033d9efc8cf40c2f47c259c44c8d15aa371",
+    "codeguardplus": "b5b8787df5deb18b24dc5e916e169808e20f0470fb242498394aa2f108d63250"
+  },
+  "relocated_config_sha256": {
+    "sallm": "6716752873261b7e8b66bbce39ed4365dd6354c7c879fbf494a1aeea10eafb2b",
+    "codeguardplus": "896124cca5bc82d8c8bb6e51cdaeba9ed0f1b388ed9dbe3dccd35115fd1eb136"
+  },
+  "path_relocations": {
+    "qwen36-27b": {
+      "from": "<MODEL_ROOT>/Qwen3.6/Qwen3.6-27B",
+      "to": "<MODEL_ROOT>/Qwen/Qwen3.6-27B"
+    }
+  },
+  "checkpoint_identity_sha256": {
+    "qwen36-27b": {
+      "config.json": "69db4eb7196bc8190813231b3018ca05d8c2e3abc7b1af19d55c157af44a9d9c",
+      "generation_config.json": "e70c136c1b78ddc1fb0905bac8e733a4dc448d4f852a5dd75143fffc70be550e",
+      "tokenizer.json": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+      "tokenizer_config.json": "5186f0defcd7f232382c7f0aebcd2252d073bb921ab240e407b7ae8745d2b29b",
+      "model.safetensors.index.json": "a8ad2c26fb707ff8c245806315b03e3b4b74595528492423af5dae0ce39b4d9b"
+    }
+  },
+  "identity_source": "Completed balanced-primary qwen36-27b run manifests for SALLM and CodeGuard+.",
+  "enforcement": "Generation is blocked until every indexed shard is present, no shard has an aria2 sidecar, and all listed identity hashes match."
+}

@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "freeze_id": "paper-evidence-v3-results",
+  "created_at_utc": "2026-08-05T18:01:55.794317+00:00",
+  "complete": true,
+  "formal_results_use": false,
+  "summary": {
+    "benchmarks": 3,
+    "major_model_families": 2,
+    "benchmark_model_conditions": 9,
+    "trajectories": 2705,
+    "case_studies": 5
+  },
+  "inputs": {
+    "source_reports": [
+      {
+        "path": "artifacts/reports/main-internal-main-003-corrected.json",
+        "sha256": "125a38d34d4ce14996618664166e62fcb16e77207fd814b1f10fa5a2a10f9516",
+        "size_bytes": 94116
+      },
+      {
+        "path": "artifacts/reports/sallm-main-main-002.json",
+        "sha256": "15065de7def7ee7d159adc340ce872e568b2fc115dd920ca62bb8f59f97caadd",
+        "size_bytes": 26154
+      },
+      {
+        "path": "artifacts/deepseek-external-confirmatory-v1/sallm-report.json",
+        "sha256": "d7bf906da3965698a56848d6d02e8a062c05966b9e942c21ed351922ace33bb8",
+        "size_bytes": 8797
+      },
+      {
+        "path": "artifacts/codeguardplus-breadth-confirmatory-v1/report.json",
+        "sha256": "d0e5736f168b98e34bc0d8ea37b0b1d999437322402b4ce59428fb8ee1d1328a",
+        "size_bytes": 21730
+      }
+    ],
+    "run_manifests": [
+      {
+        "path": "artifacts/main_internal/qwen25-coder-7b-main-002/run_manifest.json",
+        "sha256": "1d367effe05a7db5b4b316e987a6aeb65ab93c97f4b9ad2b2f7e92ed085e54cd",
+        "size_bytes": 2619
+      },
+      {
+        "path": "artifacts/main_internal/qwen25-coder-14b-main-003-corrected/run_manifest.json",
+        "sha256": "c0a1cede68e8b73cb8a55158e57b998708576daa57753fb1c0cab1713b15c751",
+        "size_bytes": 3975
+      },
+      {
+        "path": "artifacts/main_internal/qwen3-32b-main-002/run_manifest.json",
+        "sha256": "c0748ed0dbd2463439123275ae8f4d8582e29af6ce563affd247a73c1a4d9e6f",
+        "size_bytes": 3821
+      },
+      {
+        "path": "artifacts/sallm_formal_main/qwen25-coder-7b-main-002/run_manifest.json",
+        "sha256": "7bad871c4bf0a2fe1b93722b9f50e230043f067c4bccc8a9ad37650da4355a64",
+        "size_bytes": 5639
+      },
+      {
+        "path": "artifacts/sallm_formal_main/qwen25-coder-14b-main-002/run_manifest.json",
+        "sha256": "fb3de897b5ca1ae781b8fcf2600edf82f1dcbe6eeb85ae4ef892a396d64dd192",
+        "size_bytes": 5655
+      },
+      {
+        "path": "artifacts/sallm_formal_main/qwen36-27b-main-002/run_manifest.json",
+        "sha256": "81b63e1826081ebbc3b496138d09857fda9c37bf9de90f15cb63610614d939a0",
+        "size_bytes": 5557
+      },
+      {
+        "path": "artifacts/deepseek-external-confirmatory-v1/sallm/run_manifest.json",
+        "sha256": "0654d87a49fa85f920a06e285cd6eadd84eb4536c53b22df343908ad61adb5c0",
+        "size_bytes": 5432
+      },
+      {
+        "path": "artifacts/codeguardplus-breadth-confirmatory-v1/qwen25-coder-14b/run_manifest.json",
+        "sha256": "bbc7feeaa8c864f4e70b00cf2c92eb9c5adc64bcd811e32bc99d498dc35134af",
+        "size_bytes": 49054
+      },
+      {
+        "path": "artifacts/codeguardplus-breadth-confirmatory-v1/deepseek-v4-flash/run_manifest.json",
+        "sha256": "d92aa95e9a406d1cdcb3abfe6755689f4b4347b2587770730d1d6c4a8073e42c",
+        "size_bytes": 48796
+      }
+    ]
+  },
+  "outputs": {
+    "report": {
+      "path": "artifacts/reports/unified-paper-evidence-v3.json",
+      "sha256": "6f69a693852af44b8c2e539a1a2404e84aafcd344ba225c8a77f25600a7314cc",
+      "size_bytes": 63979
+    },
+    "unified_markdown": {
+      "path": "docs/unified-paper-evidence-v3.md",
+      "sha256": "d2c20f6d87c97571c3ae126c9ed5728c09b2b1aab910505c44cbc44846673568",
+      "size_bytes": 7434
+    },
+    "paper_draft": {
+      "path": "docs/paper-results-and-validity-draft-v2.md",
+      "sha256": "f44e177a56130a1f236f3278e77c96cd88fb742cceb7cb31683f8e8926dcc3ba",
+      "size_bytes": 7287
+    },
+    "case_studies": {
+      "path": "docs/paper-case-studies-v2.md",
+      "sha256": "dce0058f5d9bbece85187d73bf7c7fd587c2b417fcaf612dda463d0dc2db6f9f",
+      "size_bytes": 5592
+    }
+  },
+  "interpretation_boundary": "Paper-facing synthesis of mixed internal, machine-qualified, and technical-confirmatory evidence; formal_results_use=false."
+}

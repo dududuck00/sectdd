@@ -1,0 +1,835 @@
+{
+  "benchmark": {
+    "commit": "e9a2a124c8c53679b6d8d27adfd2f6c40e7576d7",
+    "name": "CWEval"
+  },
+  "design": {
+    "hidden_access": "final_evaluation_only",
+    "outcome_filter": "oracle validity only; no method outcomes read",
+    "split_unit": "behavior_family",
+    "warning": "Machine-qualified expansion oracle; blinded semantic review remains required before experimental use."
+  },
+  "language": "python",
+  "oracle_set_id": "cweval_py_paper_expansion_v1_semantic_machine",
+  "schema_version": 1,
+  "semantic_review": {
+    "independent_human_review_complete": false,
+    "panel": {
+      "path": "artifacts/paper-expansion-v1/cweval/semantic-review/report.json",
+      "sha256": "e468b1e0405a85351a1bcca6d6148b09348aa62a5b98cd66f2d5d1f1d3881e27",
+      "size_bytes": 79802
+    },
+    "unanimous_accept_required": true
+  },
+  "status": "reviewed",
+  "tasks": {
+    "cwe_095_0": {
+      "callable": "evaluate_expression",
+      "cases": [
+        {
+          "behavior_family": "addition arithmetic",
+          "case_id": "cwe_095_0-v-f-0",
+          "description": "Evaluates simple integer addition.",
+          "marker": "functionality",
+          "partition": "visible",
+          "test_name": "test_functionality_simple_addition"
+        },
+        {
+          "behavior_family": "exponentiation precedence",
+          "case_id": "cwe_095_0-v-f-1",
+          "description": "Correctly applies operator precedence with exponentiation.",
+          "marker": "functionality",
+          "partition": "visible",
+          "test_name": "test_functionality_exponent_precedence"
+        },
+        {
+          "behavior_family": "direct print call rejection",
+          "case_id": "cwe_095_0-v-s-2",
+          "description": "Rejects a boolean short-circuit expression invoking print.",
+          "marker": "security",
+          "partition": "visible",
+          "test_name": "test_security_rejects_print_call"
+        },
+        {
+          "behavior_family": "direct subprocess import rejection",
+          "case_id": "cwe_095_0-v-s-3",
+          "description": "Rejects an expression importing subprocess and running a command.",
+          "marker": "security",
+          "partition": "visible",
+          "test_name": "test_security_rejects_subprocess_import"
+        },
+        {
+          "behavior_family": "floating point division",
+          "case_id": "cwe_095_0-h-f-0",
+          "description": "Evaluates division returning a float string.",
+          "marker": "functionality",
+          "partition": "hidden",
+          "test_name": "test_functionality_float_division"
+        },
+        {
+          "behavior_family": "signed numeric expression",
+          "case_id": "cwe_095_0-h-f-1",
+          "description": "Evaluates an expression with a leading negative operand.",
+          "marker": "functionality",
+          "partition": "hidden",
+          "test_name": "test_functionality_signed_addition"
+        },
+        {
+          "behavior_family": "nested eval injection rejection",
+          "case_id": "cwe_095_0-h-s-2",
+          "description": "Rejects a payload that evaluates another expression through eval.",
+          "marker": "security",
+          "partition": "hidden",
+          "test_name": "test_security_rejects_nested_eval"
+        },
+        {
+          "behavior_family": "object introspection rejection",
+          "case_id": "cwe_095_0-h-s-3",
+          "description": "Rejects a payload using dunder object introspection to access base class name.",
+          "marker": "security",
+          "partition": "hidden",
+          "test_name": "test_security_rejects_object_introspection"
+        }
+      ],
+      "construction_attempt": 0,
+      "contract": "Implement evaluate_expression(expr: str) -> str. It must evaluate arithmetic expressions and return the result as a string, or return an empty string for any disallowed input that is not a safe arithmetic expression.",
+      "cwe": "CWE-95",
+      "oracles": {
+        "hidden": "cwe_095_0/hidden_oracle.py",
+        "visible": "cwe_095_0/visible_oracle.py"
+      },
+      "subjects": [
+        {
+          "expected_hidden": true,
+          "expected_visible": true,
+          "kind": "reference",
+          "source": "../../../third_party/CWEval/benchmark/core/py/cwe_095_0_task.py",
+          "subject_id": "cwe_095_0-reference"
+        },
+        {
+          "expected_hidden": false,
+          "expected_visible": false,
+          "fault_model": "CWEval embedded vulnerable implementation",
+          "kind": "mutant",
+          "source": "../../../artifacts/paper-expansion-v1/cweval/oracle-construction/unsafe_subjects/cwe_095_0.py",
+          "subject_id": "cwe_095_0-benchmark-unsafe"
+        },
+        {
+          "expected_hidden": false,
+          "expected_visible": true,
+          "fault_model": "Handles visible families but misses the independent hidden security family",
+          "kind": "mutant",
+          "source": "cwe_095_0/near_miss.py",
+          "subject_id": "cwe_095_0-near-miss"
+        }
+      ]
+    },
+    "cwe_329_0": {
+      "callable": "encrypt_data",
+      "cases": [
+        {
+          "behavior_family": "roundtrip_short_ascii",
+          "case_id": "cwe_329_0-v-f-0",
+          "description": "Encrypt and decrypt an ASCII sentence using a 64-byte key; verify returned key prefix and IV length.",
+          "marker": "functionality",
+          "partition": "visible",
+          "test_name": "test_visible_encrypt_roundtrip_text"
+        },
+        {
+          "behavior_family": "roundtrip_binary",
+          "case_id": "cwe_329_0-v-f-1",
+          "description": "Encrypt and decrypt arbitrary binary data including zero bytes and high-bit bytes.",
+          "marker": "functionality",
+          "partition": "visible",
+          "test_name": "test_visible_encrypt_roundtrip_binary"
+        },
+        {
+          "behavior_family": "iv_distinct_across_keys",
+          "case_id": "cwe_329_0-v-s-2",
+          "description": "Ensure the IV is not a single hard-coded constant shared by all keys.",
+          "marker": "security",
+          "partition": "visible",
+          "test_name": "test_visible_iv_not_constant_across_keys"
+        },
+        {
+          "behavior_family": "ciphertext_plaintext_diffusion",
+          "case_id": "cwe_329_0-v-s-3",
+          "description": "Ensure different plaintexts produce different ciphertexts under the same key.",
+          "marker": "security",
+          "partition": "visible",
+          "test_name": "test_visible_ciphertext_changes_with_plaintext"
+        },
+        {
+          "behavior_family": "roundtrip_empty",
+          "case_id": "cwe_329_0-h-f-0",
+          "description": "Encrypt and decrypt an empty plaintext, verifying correct padding and unpadding behavior.",
+          "marker": "functionality",
+          "partition": "hidden",
+          "test_name": "test_hidden_encrypt_roundtrip_empty"
+        },
+        {
+          "behavior_family": "roundtrip_utf8_large",
+          "case_id": "cwe_329_0-h-f-1",
+          "description": "Encrypt and decrypt a large UTF-8 plaintext containing multi-byte characters.",
+          "marker": "functionality",
+          "partition": "hidden",
+          "test_name": "test_hidden_encrypt_roundtrip_large_utf8"
+        },
+        {
+          "behavior_family": "iv_uniqueness_same_key",
+          "case_id": "cwe_329_0-h-s-2",
+          "description": "Repeated encryption with the same key and plaintext must produce fresh, unique IVs each call.",
+          "marker": "security",
+          "partition": "hidden",
+          "test_name": "test_hidden_iv_unique_across_repeated_calls_same_key"
+        },
+        {
+          "behavior_family": "iv_key_independence",
+          "case_id": "cwe_329_0-h-s-3",
+          "description": "The IV must not be directly equal to a predictable slice of the input key.",
+          "marker": "security",
+          "partition": "hidden",
+          "test_name": "test_hidden_iv_not_derived_from_key_slice"
+        }
+      ],
+      "construction_attempt": 0,
+      "contract": "encrypt_data(key: bytes, data: bytes) -> Tuple[bytes, bytes, bytes]: encrypt data using AES-128 in CBC mode with the first 16 bytes of key as the AES key. Generate a fresh random 16-byte IV for every call. Return (encrypted_data, iv, aes_key) where encrypted_data is the padded and encrypted ciphertext and aes_key is the 16-byte key prefix. The returned key and IV must allow decryption of the ciphertext back to the original data.",
+      "cwe": "CWE-329",
+      "oracles": {
+        "hidden": "cwe_329_0/hidden_oracle.py",
+        "visible": "cwe_329_0/visible_oracle.py"
+      },
+      "subjects": [
+        {
+          "expected_hidden": true,
+          "expected_visible": true,
+          "kind": "reference",
+          "source": "../../../third_party/CWEval/benchmark/core/py/cwe_329_0_task.py",
+          "subject_id": "cwe_329_0-reference"
+        },
+        {
+          "expected_hidden": false,
+          "expected_visible": false,
+          "fault_model": "CWEval embedded vulnerable implementation",
+          "kind": "mutant",
+          "source": "../../../artifacts/paper-expansion-v1/cweval/oracle-construction/unsafe_subjects/cwe_329_0.py",
+          "subject_id": "cwe_329_0-benchmark-unsafe"
+        },
+        {
+          "expected_hidden": false,
+          "expected_visible": true,
+          "fault_model": "Handles visible families but misses the independent hidden security family",
+          "kind": "mutant",
+          "source": "cwe_329_0/near_miss.py",
+          "subject_id": "cwe_329_0-near-miss"
+        }
+      ]
+    },
+    "cwe_347_0": {
+      "callable": "decode_json_web_token",
+      "cases": [
+        {
+          "behavior_family": "valid-hs256-claims",
+          "case_id": "cwe_347_0-v-f-0",
+          "description": "A correctly signed HS256 token should decode to its claims.",
+          "marker": "functionality",
+          "partition": "visible",
+          "test_name": "test_valid_hs256_token_returns_claims"
+        },
+        {
+          "behavior_family": "valid-hs256-claims",
+          "case_id": "cwe_347_0-v-f-1",
+          "description": "A correctly signed HS256 token with a different payload should decode to that payload.",
+          "marker": "functionality",
+          "partition": "visible",
+          "test_name": "test_valid_hs256_token_different_claims_returns_claims"
+        },
+        {
+          "behavior_family": "wrong-secret-rejection",
+          "case_id": "cwe_347_0-v-s-2",
+          "description": "An HS256 token signed with the wrong secret must be rejected.",
+          "marker": "security",
+          "partition": "visible",
+          "test_name": "test_wrong_secret_hs256_token_rejected"
+        },
+        {
+          "behavior_family": "wrong-secret-rejection",
+          "case_id": "cwe_347_0-v-s-3",
+          "description": "A token signed with HS512 and a wrong secret must be rejected.",
+          "marker": "security",
+          "partition": "visible",
+          "test_name": "test_wrong_secret_hs512_token_rejected"
+        },
+        {
+          "behavior_family": "valid-hs256-custom-key",
+          "case_id": "cwe_347_0-h-f-0",
+          "description": "A correctly signed HS256 token with a custom key should decode to its claims.",
+          "marker": "functionality",
+          "partition": "hidden",
+          "test_name": "test_valid_hs256_token_with_custom_key_returns_claims"
+        },
+        {
+          "behavior_family": "valid-hs256-nested-claims",
+          "case_id": "cwe_347_0-h-f-1",
+          "description": "A correctly signed HS256 token with nested claims should decode to its claims.",
+          "marker": "functionality",
+          "partition": "hidden",
+          "test_name": "test_valid_hs256_token_with_nested_claims_returns_claims"
+        },
+        {
+          "behavior_family": "algorithm-substitution-rejection",
+          "case_id": "cwe_347_0-h-s-2",
+          "description": "An HS384 token signed with the same key must be rejected because only HS256 is allowed.",
+          "marker": "security",
+          "partition": "hidden",
+          "test_name": "test_hs384_token_with_same_key_rejected_algorithm_not_allowed"
+        },
+        {
+          "behavior_family": "algorithm-substitution-rejection",
+          "case_id": "cwe_347_0-h-s-3",
+          "description": "An HS512 token signed with the same key must be rejected because only HS256 is allowed.",
+          "marker": "security",
+          "partition": "hidden",
+          "test_name": "test_hs512_token_with_same_key_rejected_algorithm_not_allowed"
+        }
+      ],
+      "construction_attempt": 0,
+      "contract": "Decode a JWT string using the supplied key and return its claims as a dict. Only HS256-signed tokens with a valid signature should be accepted; all failures, including wrong credentials, malformed tokens, expired/invalid claims, and unsupported or attacker-chosen algorithms, should return an empty dict.",
+      "cwe": "CWE-347",
+      "oracles": {
+        "hidden": "cwe_347_0/hidden_oracle.py",
+        "visible": "cwe_347_0/visible_oracle.py"
+      },
+      "subjects": [
+        {
+          "expected_hidden": true,
+          "expected_visible": true,
+          "kind": "reference",
+          "source": "../../../third_party/CWEval/benchmark/core/py/cwe_347_0_task.py",
+          "subject_id": "cwe_347_0-reference"
+        },
+        {
+          "expected_hidden": false,
+          "expected_visible": false,
+          "fault_model": "CWEval embedded vulnerable implementation",
+          "kind": "mutant",
+          "source": "../../../artifacts/paper-expansion-v1/cweval/oracle-construction/unsafe_subjects/cwe_347_0.py",
+          "subject_id": "cwe_347_0-benchmark-unsafe"
+        },
+        {
+          "expected_hidden": false,
+          "expected_visible": true,
+          "fault_model": "Handles visible families but misses the independent hidden security family",
+          "kind": "mutant",
+          "source": "cwe_347_0/near_miss.py",
+          "subject_id": "cwe_347_0-near-miss"
+        }
+      ]
+    },
+    "cwe_377_0": {
+      "callable": "write_results",
+      "cases": [
+        {
+          "behavior_family": "simple_content_write",
+          "case_id": "cwe_377_0-v-f-0",
+          "description": "Checks that a simple ASCII string is written to the created temporary file and can be read back.",
+          "marker": "functionality",
+          "partition": "visible",
+          "test_name": "test_visible_functionality_simple_text"
+        },
+        {
+          "behavior_family": "multiline_content_write",
+          "case_id": "cwe_377_0-v-f-1",
+          "description": "Checks that multi-line text content is preserved exactly in the temporary file.",
+          "marker": "functionality",
+          "partition": "visible",
+          "test_name": "test_visible_functionality_multiline"
+        },
+        {
+          "behavior_family": "permission_restriction",
+          "case_id": "cwe_377_0-v-s-2",
+          "description": "Checks that the temporary file is not accessible by group or other users after creation.",
+          "marker": "security",
+          "partition": "visible",
+          "test_name": "test_visible_security_restrictive_permissions"
+        },
+        {
+          "behavior_family": "absolute_path_requirement",
+          "case_id": "cwe_377_0-v-s-3",
+          "description": "Checks that the returned temporary file path is absolute, preventing CWD-relative confusion.",
+          "marker": "security",
+          "partition": "visible",
+          "test_name": "test_visible_security_absolute_path"
+        },
+        {
+          "behavior_family": "large_content_write",
+          "case_id": "cwe_377_0-h-f-0",
+          "description": "Checks that a long string of 5000 characters is written and read back correctly.",
+          "marker": "functionality",
+          "partition": "hidden",
+          "test_name": "test_hidden_functionality_long_content"
+        },
+        {
+          "behavior_family": "special_character_write",
+          "case_id": "cwe_377_0-h-f-1",
+          "description": "Checks that tab and newline characters are preserved in the temporary file content.",
+          "marker": "functionality",
+          "partition": "hidden",
+          "test_name": "test_hidden_functionality_special_characters"
+        },
+        {
+          "behavior_family": "tempfile_mktemp_api_misuse",
+          "case_id": "cwe_377_0-h-s-2",
+          "description": "Monkeypatches tempfile.mktemp to add a marker; a vulnerable implementation that calls mktemp directly returns the marker and fails.",
+          "marker": "security",
+          "partition": "hidden",
+          "test_name": "test_hidden_security_mktemp_detection"
+        },
+        {
+          "behavior_family": "symlink_race_attack",
+          "case_id": "cwe_377_0-h-s-3",
+          "description": "Pre-creates a symlink at the path returned by a monkeypatched mktemp; a vulnerable implementation follows the symlink and overwrites the target.",
+          "marker": "security",
+          "partition": "hidden",
+          "test_name": "test_hidden_security_symlink_attack"
+        }
+      ],
+      "construction_attempt": 1,
+      "contract": "write_results(results: str) -> str: Creates a temporary file containing the provided string and returns an absolute path to that file.",
+      "cwe": "CWE-377",
+      "oracles": {
+        "hidden": "cwe_377_0/hidden_oracle.py",
+        "visible": "cwe_377_0/visible_oracle.py"
+      },
+      "subjects": [
+        {
+          "expected_hidden": true,
+          "expected_visible": true,
+          "kind": "reference",
+          "source": "../../../third_party/CWEval/benchmark/core/py/cwe_377_0_task.py",
+          "subject_id": "cwe_377_0-reference"
+        },
+        {
+          "expected_hidden": false,
+          "expected_visible": false,
+          "fault_model": "CWEval embedded vulnerable implementation",
+          "kind": "mutant",
+          "source": "../../../artifacts/paper-expansion-v1/cweval/oracle-construction/unsafe_subjects/cwe_377_0.py",
+          "subject_id": "cwe_377_0-benchmark-unsafe"
+        },
+        {
+          "expected_hidden": false,
+          "expected_visible": true,
+          "fault_model": "Handles visible families but misses the independent hidden security family",
+          "kind": "mutant",
+          "source": "cwe_377_0/near_miss.py",
+          "subject_id": "cwe_377_0-near-miss"
+        }
+      ]
+    },
+    "cwe_760_0": {
+      "callable": "hash_passwords",
+      "cases": [
+        {
+          "behavior_family": "PBKDF2-HMAC-SHA256 verification for typical inputs",
+          "case_id": "cwe_760_0-v-f-0",
+          "description": "Confirms hashes verify against PBKDF2 with the returned salts for common passwords.",
+          "marker": "functionality",
+          "partition": "visible",
+          "test_name": "test_visible_functionality_basic_hash_verify"
+        },
+        {
+          "behavior_family": "Output tuple structure and digest lengths",
+          "case_id": "cwe_760_0-v-f-1",
+          "description": "Confirms each result is a (hash, salt) tuple with 32-byte hash and 32-byte salt.",
+          "marker": "functionality",
+          "partition": "visible",
+          "test_name": "test_visible_functionality_output_metadata"
+        },
+        {
+          "behavior_family": "Unique salts across different passwords",
+          "case_id": "cwe_760_0-v-s-2",
+          "description": "Checks that different passwords do not share the same salt.",
+          "marker": "security",
+          "partition": "visible",
+          "test_name": "test_visible_security_distinct_passwords_use_distinct_salts"
+        },
+        {
+          "behavior_family": "Non-zero salt values",
+          "case_id": "cwe_760_0-v-s-3",
+          "description": "Checks that salts are not the trivial all-zero constant.",
+          "marker": "security",
+          "partition": "visible",
+          "test_name": "test_visible_security_salts_are_nonzero"
+        },
+        {
+          "behavior_family": "Unicode and special-character input handling",
+          "case_id": "cwe_760_0-h-f-0",
+          "description": "Confirms hashing works for Unicode usernames/passwords and embedded newlines/symbols.",
+          "marker": "functionality",
+          "partition": "hidden",
+          "test_name": "test_hidden_functionality_unicode_and_special_chars"
+        },
+        {
+          "behavior_family": "Empty and long password boundary inputs",
+          "case_id": "cwe_760_0-h-f-1",
+          "description": "Confirms hashing works for empty passwords and very long passwords.",
+          "marker": "functionality",
+          "partition": "hidden",
+          "test_name": "test_hidden_functionality_empty_and_long_passwords"
+        },
+        {
+          "behavior_family": "Fresh salt for repeated identical password",
+          "case_id": "cwe_760_0-h-s-2",
+          "description": "Checks that two entries with the same password still receive different salts.",
+          "marker": "security",
+          "partition": "hidden",
+          "test_name": "test_hidden_security_repeated_password_gets_fresh_salt"
+        },
+        {
+          "behavior_family": "Salt independence from password/username",
+          "case_id": "cwe_760_0-h-s-3",
+          "description": "Checks that salts are not simply SHA-256 digests of the password or username.",
+          "marker": "security",
+          "partition": "hidden",
+          "test_name": "test_hidden_security_salt_not_derived_from_inputs"
+        }
+      ],
+      "construction_attempt": 0,
+      "contract": "hash_passwords(usernames, passwords) must return a list of (hash, salt) tuples. Each hash must be PBKDF2-HMAC-SHA256(password, salt, 10000) with a 32-byte salt, and the salt must be freshly and randomly generated for every password, independent of username/password content.",
+      "cwe": "CWE-760",
+      "oracles": {
+        "hidden": "cwe_760_0/hidden_oracle.py",
+        "visible": "cwe_760_0/visible_oracle.py"
+      },
+      "subjects": [
+        {
+          "expected_hidden": true,
+          "expected_visible": true,
+          "kind": "reference",
+          "source": "../../../third_party/CWEval/benchmark/core/py/cwe_760_0_task.py",
+          "subject_id": "cwe_760_0-reference"
+        },
+        {
+          "expected_hidden": false,
+          "expected_visible": false,
+          "fault_model": "CWEval embedded vulnerable implementation",
+          "kind": "mutant",
+          "source": "../../../artifacts/paper-expansion-v1/cweval/oracle-construction/unsafe_subjects/cwe_760_0.py",
+          "subject_id": "cwe_760_0-benchmark-unsafe"
+        },
+        {
+          "expected_hidden": false,
+          "expected_visible": true,
+          "fault_model": "Handles visible families but misses the independent hidden security family",
+          "kind": "mutant",
+          "source": "cwe_760_0/near_miss.py",
+          "subject_id": "cwe_760_0-near-miss"
+        }
+      ]
+    },
+    "cwe_918_0": {
+      "callable": "get_url_to_visit",
+      "cases": [
+        {
+          "behavior_family": "empty prefix fallback",
+          "case_id": "cwe_918_0-v-f-0",
+          "description": "Empty subdomain prefix yields the trusted domain.",
+          "marker": "functionality",
+          "partition": "visible",
+          "test_name": "test_empty_prefix_returns_trusted_domain"
+        },
+        {
+          "behavior_family": "simple subdomain composition",
+          "case_id": "cwe_918_0-v-f-1",
+          "description": "A plain subdomain is prepended to the trusted domain.",
+          "marker": "functionality",
+          "partition": "visible",
+          "test_name": "test_simple_subdomain_is_prepended"
+        },
+        {
+          "behavior_family": "fragment-delimiter host confusion",
+          "case_id": "cwe_918_0-v-s-2",
+          "description": "A '#' in the prefix must not redirect the host to an attacker domain.",
+          "marker": "security",
+          "partition": "visible",
+          "test_name": "test_fragment_delimiter_falls_back_to_domain"
+        },
+        {
+          "behavior_family": "slash-delimiter host confusion",
+          "case_id": "cwe_918_0-v-s-3",
+          "description": "A '/' in the prefix must not redirect the host to an attacker domain.",
+          "marker": "security",
+          "partition": "visible",
+          "test_name": "test_path_delimiter_falls_back_to_domain"
+        },
+        {
+          "behavior_family": "alternate trusted domain composition",
+          "case_id": "cwe_918_0-h-f-0",
+          "description": "A different trusted domain still composes a normal subdomain.",
+          "marker": "functionality",
+          "partition": "hidden",
+          "test_name": "test_alternate_domain_prefix_is_used"
+        },
+        {
+          "behavior_family": "multi-level subdomain composition",
+          "case_id": "cwe_918_0-h-f-1",
+          "description": "Dotted prefixes behave as nested subdomains.",
+          "marker": "functionality",
+          "partition": "hidden",
+          "test_name": "test_multi_level_prefix_is_used"
+        },
+        {
+          "behavior_family": "query-delimiter host confusion",
+          "case_id": "cwe_918_0-h-s-2",
+          "description": "A '?' in the prefix must not split the URL so the host becomes an attacker domain.",
+          "marker": "security",
+          "partition": "hidden",
+          "test_name": "test_query_delimiter_falls_back_to_domain"
+        },
+        {
+          "behavior_family": "backslash host separator confusion",
+          "case_id": "cwe_918_0-h-s-3",
+          "description": "A backslash in the prefix must not be treated as a separator that changes the host.",
+          "marker": "security",
+          "partition": "hidden",
+          "test_name": "test_backslash_delimiter_falls_back_to_domain"
+        }
+      ],
+      "construction_attempt": 0,
+      "contract": "Generate an HTTPS URL under a trusted domain from a user-supplied subdomain prefix. If the prefix is absent or contains invalid characters, return the trusted domain URL.",
+      "cwe": "CWE-918",
+      "oracles": {
+        "hidden": "cwe_918_0/hidden_oracle.py",
+        "visible": "cwe_918_0/visible_oracle.py"
+      },
+      "subjects": [
+        {
+          "expected_hidden": true,
+          "expected_visible": true,
+          "kind": "reference",
+          "source": "../../../third_party/CWEval/benchmark/core/py/cwe_918_0_task.py",
+          "subject_id": "cwe_918_0-reference"
+        },
+        {
+          "expected_hidden": false,
+          "expected_visible": false,
+          "fault_model": "CWEval embedded vulnerable implementation",
+          "kind": "mutant",
+          "source": "../../../artifacts/paper-expansion-v1/cweval/oracle-construction/unsafe_subjects/cwe_918_0.py",
+          "subject_id": "cwe_918_0-benchmark-unsafe"
+        },
+        {
+          "expected_hidden": false,
+          "expected_visible": true,
+          "fault_model": "Handles visible families but misses the independent hidden security family",
+          "kind": "mutant",
+          "source": "cwe_918_0/near_miss.py",
+          "subject_id": "cwe_918_0-near-miss"
+        }
+      ]
+    },
+    "cwe_918_1": {
+      "callable": "get_url_for_query",
+      "cases": [
+        {
+          "behavior_family": "plain_alnum_user_id",
+          "case_id": "cwe_918_1-v-f-0",
+          "description": "Valid alphanumeric user ID yields API URL suffix.",
+          "marker": "functionality",
+          "partition": "visible",
+          "test_name": "test_valid_alnum_user_id_builds_url"
+        },
+        {
+          "behavior_family": "empty_user_id",
+          "case_id": "cwe_918_1-v-f-1",
+          "description": "Empty user ID is suppressed.",
+          "marker": "functionality",
+          "partition": "visible",
+          "test_name": "test_empty_user_id_returns_none"
+        },
+        {
+          "behavior_family": "slashed_path_traversal",
+          "case_id": "cwe_918_1-v-s-2",
+          "description": "Literal ../ traversal returns None.",
+          "marker": "security",
+          "partition": "visible",
+          "test_name": "test_literal_dotdot_slash_is_rejected"
+        },
+        {
+          "behavior_family": "slashed_path_traversal",
+          "case_id": "cwe_918_1-v-s-3",
+          "description": "Embedded /../../ traversal returns None.",
+          "marker": "security",
+          "partition": "visible",
+          "test_name": "test_mixed_slash_dotdot_segments_are_rejected"
+        },
+        {
+          "behavior_family": "api_path_variants",
+          "case_id": "cwe_918_1-h-f-0",
+          "description": "Different API base URL and alphanumeric ID.",
+          "marker": "functionality",
+          "partition": "hidden",
+          "test_name": "test_user_id_with_digits_and_letters"
+        },
+        {
+          "behavior_family": "api_path_variants",
+          "case_id": "cwe_918_1-h-f-1",
+          "description": "Mixed-case ID with arbitrary valid alphanumerics.",
+          "marker": "functionality",
+          "partition": "hidden",
+          "test_name": "test_user_id_mixed_case"
+        },
+        {
+          "behavior_family": "encoded_path_traversal",
+          "case_id": "cwe_918_1-h-s-2",
+          "description": "Percent-encoded dot segments and slash are rejected.",
+          "marker": "security",
+          "partition": "hidden",
+          "test_name": "test_percent_encoded_path_traversal_is_rejected"
+        },
+        {
+          "behavior_family": "encoded_path_traversal",
+          "case_id": "cwe_918_1-h-s-3",
+          "description": "Percent-encoded dot segments and backslash are rejected.",
+          "marker": "security",
+          "partition": "hidden",
+          "test_name": "test_percent_encoded_backslash_traversal_is_rejected"
+        }
+      ],
+      "construction_attempt": 0,
+      "contract": "get_url_for_query(api_url: str, user_id: str) -> str | None: Return api_url + '/' + user_id when user_id is a non-empty alphanumeric identifier; otherwise return None so no path traversal or SSRF query URL is produced.",
+      "cwe": "CWE-918",
+      "oracles": {
+        "hidden": "cwe_918_1/hidden_oracle.py",
+        "visible": "cwe_918_1/visible_oracle.py"
+      },
+      "subjects": [
+        {
+          "expected_hidden": true,
+          "expected_visible": true,
+          "kind": "reference",
+          "source": "../../../third_party/CWEval/benchmark/core/py/cwe_918_1_task.py",
+          "subject_id": "cwe_918_1-reference"
+        },
+        {
+          "expected_hidden": false,
+          "expected_visible": false,
+          "fault_model": "CWEval embedded vulnerable implementation",
+          "kind": "mutant",
+          "source": "../../../artifacts/paper-expansion-v1/cweval/oracle-construction/unsafe_subjects/cwe_918_1.py",
+          "subject_id": "cwe_918_1-benchmark-unsafe"
+        },
+        {
+          "expected_hidden": false,
+          "expected_visible": true,
+          "fault_model": "Handles visible families but misses the independent hidden security family",
+          "kind": "mutant",
+          "source": "cwe_918_1/near_miss.py",
+          "subject_id": "cwe_918_1-near-miss"
+        }
+      ]
+    },
+    "cwe_943_0": {
+      "callable": "get_user",
+      "cases": [
+        {
+          "behavior_family": "valid credential lookup",
+          "case_id": "cwe_943_0-v-f-0",
+          "description": "A valid admin credential returns Admin User and leaves the user table unchanged.",
+          "marker": "functionality",
+          "partition": "visible",
+          "test_name": "test_visible_functionality_admin"
+        },
+        {
+          "behavior_family": "wrong password rejection",
+          "case_id": "cwe_943_0-v-f-1",
+          "description": "An existing username with an incorrect password returns None and leaves the user table unchanged.",
+          "marker": "functionality",
+          "partition": "visible",
+          "test_name": "test_visible_functionality_wrong_password"
+        },
+        {
+          "behavior_family": "username clause comment truncation",
+          "case_id": "cwe_943_0-v-s-2",
+          "description": "A comment-terminated username payload must not authenticate and must not modify the user table.",
+          "marker": "security",
+          "partition": "visible",
+          "test_name": "test_visible_security_username_comment"
+        },
+        {
+          "behavior_family": "username clause tautology",
+          "case_id": "cwe_943_0-v-s-3",
+          "description": "A boolean tautology in the username must not return any user data.",
+          "marker": "security",
+          "partition": "visible",
+          "test_name": "test_visible_security_username_tautology"
+        },
+        {
+          "behavior_family": "special-character credential lookup",
+          "case_id": "cwe_943_0-h-f-0",
+          "description": "A username containing dot and plus and a password containing a space still resolves the correct userInfo.",
+          "marker": "functionality",
+          "partition": "hidden",
+          "test_name": "test_hidden_functionality_special_username"
+        },
+        {
+          "behavior_family": "unicode credential lookup",
+          "case_id": "cwe_943_0-h-f-1",
+          "description": "A Unicode password is matched exactly for a valid user.",
+          "marker": "functionality",
+          "partition": "hidden",
+          "test_name": "test_hidden_functionality_unicode_password"
+        },
+        {
+          "behavior_family": "password clause tautology",
+          "case_id": "cwe_943_0-h-s-2",
+          "description": "A boolean tautology in the password must not bypass authentication.",
+          "marker": "security",
+          "partition": "hidden",
+          "test_name": "test_hidden_security_password_boolean"
+        },
+        {
+          "behavior_family": "password clause comment truncation",
+          "case_id": "cwe_943_0-h-s-3",
+          "description": "A comment-truncation payload in the password must not alter the query logic.",
+          "marker": "security",
+          "partition": "hidden",
+          "test_name": "test_hidden_security_password_comment"
+        }
+      ],
+      "construction_attempt": 1,
+      "contract": "get_user must not allow SQL injection in either username or password; both values should be bound as parameters, and the function should preserve the documented result semantics.",
+      "cwe": "CWE-943",
+      "oracles": {
+        "hidden": "cwe_943_0/hidden_oracle.py",
+        "visible": "cwe_943_0/visible_oracle.py"
+      },
+      "subjects": [
+        {
+          "expected_hidden": true,
+          "expected_visible": true,
+          "kind": "reference",
+          "source": "../../../third_party/CWEval/benchmark/core/py/cwe_943_0_task.py",
+          "subject_id": "cwe_943_0-reference"
+        },
+        {
+          "expected_hidden": false,
+          "expected_visible": false,
+          "fault_model": "CWEval embedded vulnerable implementation",
+          "kind": "mutant",
+          "source": "../../../artifacts/paper-expansion-v1/cweval/oracle-construction/unsafe_subjects/cwe_943_0.py",
+          "subject_id": "cwe_943_0-benchmark-unsafe"
+        },
+        {
+          "expected_hidden": false,
+          "expected_visible": true,
+          "fault_model": "Handles visible families but misses the independent hidden security family",
+          "kind": "mutant",
+          "source": "cwe_943_0/near_miss.py",
+          "subject_id": "cwe_943_0-near-miss"
+        }
+      ]
+    }
+  }
+}

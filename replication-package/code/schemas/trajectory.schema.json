@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SecTDD trajectory",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "task",
+    "model",
+    "method",
+    "generation_seed",
+    "rounds",
+    "stop_reason",
+    "budget_usage",
+    "final_visible",
+    "final_hidden",
+    "hidden_leak_audit"
+  ],
+  "properties": {
+    "schema_version": {"const": 1},
+    "task": {"type": "string"},
+    "model": {"type": "string"},
+    "method": {"type": "string"},
+    "generation_seed": {"type": "integer"},
+    "rounds": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "round",
+          "request_seed",
+          "messages",
+          "response",
+          "usage",
+          "visible_result"
+        ]
+      }
+    },
+    "stop_reason": {"type": "string"},
+    "budget_usage": {
+      "type": "object",
+      "required": [
+        "model_calls",
+        "visible_test_executions",
+        "feedback_chars"
+      ],
+      "properties": {
+        "model_calls": {"type": "integer", "minimum": 1},
+        "visible_test_executions": {"type": "integer", "minimum": 0},
+        "feedback_chars": {"type": "integer", "minimum": 0}
+      }
+    },
+    "final_visible": {"type": "object"},
+    "final_hidden": {"type": "object"},
+    "hidden_leak_audit": {
+      "type": "object",
+      "required": ["leaked_case_ids", "passed"],
+      "properties": {
+        "leaked_case_ids": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "passed": {"type": "boolean"}
+      }
+    }
+  }
+}

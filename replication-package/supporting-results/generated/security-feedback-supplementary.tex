@@ -1,0 +1,74 @@
+\clearpage
+\begin{table}[ht]
+\caption{Security-feedback ablation by model. Each branch has 100 initial candidates per model and two revisions.}
+\centering\small
+\begin{tabular}{llrrr}
+\toprule
+Model & Feedback & Pass@1 (\%) & Secure@1 (\%) & \textbf{Secure-Pass@1} (\%) \\
+\midrule
+7B & Functional only & 58.0 & 61.0 & 45.0 \\
+7B & Functional + security & 53.0 & 59.0 & 44.0 \\
+14B & Functional only & 68.0 & 69.0 & 58.0 \\
+14B & Functional + security & 68.0 & 74.0 & 63.0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+\begin{table}[ht]
+\caption{Security-feedback ablation by task. Each branch has ten model--seed observations per task. Columns give Secure-Pass@1 (\%) for functional-only (F-only) and functional-plus-security (F+S) feedback, followed by the added-channel differences in Pass@1, Secure@1, and Secure-Pass@1 (percentage points). Full rates are in the accompanying CSV.}
+\centering\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lrrrrr}
+\toprule
+Task & \shortstack{Secure-Pass@1\\F-only} & \shortstack{Secure-Pass@1\\F+S} & \shortstack{$\Delta$\\Pass@1} & \shortstack{$\Delta$\\Secure@1} & \shortstack{$\Delta$\\Secure-Pass@1} \\
+\midrule
+CG+/cwe-022/0-py & 0 & 40 & -10 & 50 & 40 \\
+CG+/cwe-079/1-py & 90 & 100 & 10 & 0 & 10 \\
+CG+/cwe-117/0-py & 0 & 0 & 0 & 0 & 0 \\
+CG+/cwe-312/0-py & 0 & 0 & 0 & 0 & 0 \\
+CW/cwe\_095\_0 & 40 & 40 & 0 & -10 & 0 \\
+CW/cwe\_329\_0 & 60 & 60 & 0 & 0 & 0 \\
+CW/cwe\_347\_0 & 100 & 100 & 0 & 0 & 0 \\
+CW/cwe\_377\_0 & 100 & 100 & 0 & 0 & 0 \\
+CW/cwe\_760\_0 & 100 & 90 & -10 & -10 & -10 \\
+CW/cwe\_918\_0 & 50 & 50 & 0 & 0 & 0 \\
+CW/cwe\_918\_1 & 40 & 40 & 0 & 0 & 0 \\
+CW/cwe\_943\_0 & 100 & 100 & 0 & 0 & 0 \\
+SA/CodeQL\_codeql\_cwe020\_1 & 10 & 10 & 0 & 0 & 0 \\
+SA/SonarSource\_SS\_cwe079\_0 & 50 & 30 & -20 & -20 & -20 \\
+SA/SonarSource\_SS\_cwe094\_0 & 90 & 90 & 0 & 0 & 0 \\
+SA/SonarSource\_SS\_cwe827\_0 & 100 & 100 & 0 & 0 & 0 \\
+SA/Author\_A\_cwe078\_0 & 0 & 0 & 0 & 0 & 0 \\
+SA/Author\_A\_cwe089\_1 & 100 & 100 & 0 & 0 & 0 \\
+SA/CodeQL\_codeql\_cwe079\_0 & 0 & 0 & 0 & 0 & 0 \\
+SA/StackOverflow\_SO\_cwe094\_4 & 0 & 20 & -20 & 20 & 20 \\
+\bottomrule
+\end{tabular}
+\end{table}
+\begin{table}[ht]
+\caption{Initial-to-final hidden states in the security-feedback ablation. Each column contains 200 candidates.}
+\centering\small
+\begin{tabular}{lrr}
+\toprule
+Transition & Functional only & Functional + security \\
+\midrule
+\texttt{F+S+} $\rightarrow$ \texttt{F+S+} & 90 & 89 \\
+\texttt{F+S+} $\rightarrow$ \texttt{F-S-} & 0 & 1 \\
+\texttt{F+S-} $\rightarrow$ \texttt{F+S+} & 0 & 3 \\
+\texttt{F+S-} $\rightarrow$ \texttt{F+S-} & 18 & 13 \\
+\texttt{F+S-} $\rightarrow$ \texttt{F-S-} & 0 & 2 \\
+\texttt{F-S+} $\rightarrow$ \texttt{F+S+} & 9 & 8 \\
+\texttt{F-S+} $\rightarrow$ \texttt{F-S+} & 27 & 25 \\
+\texttt{F-S+} $\rightarrow$ \texttt{F-S-} & 4 & 7 \\
+\texttt{F-S-} $\rightarrow$ \texttt{F+S+} & 4 & 7 \\
+\texttt{F-S-} $\rightarrow$ \texttt{F+S-} & 5 & 1 \\
+\texttt{F-S-} $\rightarrow$ \texttt{F-S+} & 0 & 1 \\
+\texttt{F-S-} $\rightarrow$ \texttt{F-S-} & 43 & 43 \\
+\bottomrule
+\end{tabular}
+\end{table}
+\clearpage
+\paragraph{Feedback and generation costs.}
+Across two revisions, functional-only feedback uses a mean of 1,333.4 prompt tokens, 504.3 completion tokens, and 168.8 delivered feedback tokens per trajectory. Functional-plus-security feedback uses 1,495.5, 517.0, and 270.1 tokens, respectively. Functional channels are truncated in 10 and eight of 400 messages; security channels are truncated in 16 of 400 combined messages. No generation reaches the 3,072-token output cap. Both branches receive the same functional channel at the initial state; subsequent messages reflect their own revised candidates.
+
+\paragraph{Candidate-load failures.}
+Six visible or hidden evaluations fail during candidate loading. Their responses remain in the grid. Functional feedback reports the visible load error and security feedback reports that tests did not run; final uncollectable candidates fail all three endpoints. The artifact preserves the execution correction, original sources, and generated responses. Hidden results never enter revision messages.

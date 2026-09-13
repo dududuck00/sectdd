@@ -1,0 +1,402 @@
+{
+  "config": {
+    "experiment": "seccodebench-external-v1",
+    "release": "v2.2.0",
+    "tasks": [
+      {
+        "task": "SSTIFlaskRenderTemplateString",
+        "project": "third_party/sec-code-bench-2.2.0/docker/model/python/python_bench/ssti_render_template_string/user_profile_service_repo",
+        "prompt": "third_party/sec-code-bench-2.2.0/datasets/benchmark/python/prompts/2_1_0/SSTIFlaskRenderTemplateString.en-US",
+        "params": {
+          "user_profile_service.py": "src/user_profile_service/user_profile_service.py"
+        },
+        "tests": {
+          "test_security.py": "264a7cd27d85a872f8cc3b0ef471fd1cbf0f9df7bea2e88a0cdec50342e71f5a",
+          "test_functional.py": "be7fd4c612db1176b0757df7dd94671a90775944e8f503926f9cd09f47cf61f5"
+        },
+        "target": "src/user_profile_service/user_profile_service.py",
+        "visible_security_tests": [
+          "test_ssti_subprocess_popen"
+        ],
+        "hidden_security_tests": [
+          "test_ssti_os_wrap_close",
+          "test_ssti_warnings_catch_warnings",
+          "test_ssti_os_popen",
+          "test_ssti_eval",
+          "test_ssti_exec"
+        ],
+        "visible_functional_tests": 1,
+        "source_partition_directory": "oracles/seccodebench_external_v1/SSTIFlaskRenderTemplateString"
+      },
+      {
+        "task": "DeserializationPyYAML",
+        "project": "third_party/sec-code-bench-2.2.0/docker/model/python/python_bench/deserialization_yaml_load/workspace_state_manager_repo",
+        "prompt": "third_party/sec-code-bench-2.2.0/datasets/benchmark/python/prompts/2_1_0/DeserializationPyYAML.en-US",
+        "params": {
+          "workspace_state_manager.py": "src/workspace_state_manager/workspace_state_manager.py"
+        },
+        "tests": {
+          "test_security.py": "e072641a8e6030a46800db5eb514d01a84f212498fa6f86e851a6729e4428665",
+          "test_functional.py": "0c6844a7f26c7daf30bd544936c6a1bea7e3d2060f5a7f9d16b2e185f91ffd86"
+        },
+        "target": "src/workspace_state_manager/workspace_state_manager.py",
+        "visible_security_tests": [
+          "test_deserialization_vulnerability_yaml_load"
+        ],
+        "hidden_security_tests": [
+          "test_deserialization_vulnerability_with_network_call",
+          "test_deserialization_vulnerability_subprocess_execution",
+          "test_deserialization_with_python_module_constructor"
+        ],
+        "visible_functional_tests": 1,
+        "source_partition_directory": "oracles/seccodebench_external_v1/DeserializationPyYAML"
+      },
+      {
+        "task": "SQLInjectionSQLite3",
+        "project": "third_party/sec-code-bench-2.2.0/docker/model/python/python_bench/sql_injection_sqlite3_cursor_execute/sales_reports_repo",
+        "prompt": "third_party/sec-code-bench-2.2.0/datasets/benchmark/python/prompts/2_1_0/SQLInjectionSQLite3.en-US",
+        "params": {
+          "db.py": "src/sales_reports/db.py"
+        },
+        "tests": {
+          "test_security.py": "1975c1d059d868217c6a2393698ad25ca2c14da7ed92249bccce3c4147b3ed79",
+          "test_functional.py": "3c89a2534812ad097e29d1f36a94f45f7f9817aaf7ffde7b5205ef4f814e3b34"
+        },
+        "target": "src/sales_reports/sales_reports.py",
+        "visible_security_tests": [
+          "test_sql_injection_vulnerability"
+        ],
+        "hidden_security_tests": [
+          "test_union_injection_extracting_data",
+          "test_comprehensive_payload_injection",
+          "test_error_based_injection_extraction",
+          "test_state_modification_check",
+          "test_edge_case_injection_payloads"
+        ],
+        "visible_functional_tests": 1,
+        "source_partition_directory": "oracles/seccodebench_external_v1/SQLInjectionSQLite3"
+      },
+      {
+        "task": "CommandInjectionSubprocessRun",
+        "project": "third_party/sec-code-bench-2.2.0/docker/model/python/python_bench/command_injection_subprocess_run/ssh_login_history_repo",
+        "prompt": "third_party/sec-code-bench-2.2.0/datasets/benchmark/python/prompts/2_1_0/CommandInjectionSubprocessRun.en-US",
+        "params": {
+          "ssh_login_history.py": "src/ssh_login_history/ssh_login_history.py"
+        },
+        "tests": {
+          "test_security.py": "19b4b53b194d973b2ff1062e8043b6c673a29aec8aeb80bf136313f71cf472fe",
+          "test_functional.py": "de9bbb201960e70ed890f769576898d95428874eb34d8e8d1ecc95261a1c7774"
+        },
+        "target": "src/ssh_login_history/ssh_login_history.py",
+        "visible_security_tests": [
+          "test_command_injection_file_creation"
+        ],
+        "hidden_security_tests": [
+          "test_command_injection_command_separators",
+          "test_command_injection_file_reading",
+          "test_command_injection_special_characters"
+        ],
+        "visible_functional_tests": 1,
+        "source_partition_directory": "oracles/seccodebench_external_v1/CommandInjectionSubprocessRun"
+      },
+      {
+        "task": "SSTIJinja2Template",
+        "project": "third_party/sec-code-bench-2.2.0/docker/model/python/python_bench/ssti_jinja2_template_render/profile_renderer_repo",
+        "prompt": "third_party/sec-code-bench-2.2.0/datasets/benchmark/python/prompts/2_1_0/SSTIJinja2Template.en-US",
+        "params": {
+          "profile_renderer.py": "src/profile_renderer/profile_renderer.py"
+        },
+        "tests": {
+          "test_security.py": "0e587d9e17302f7b865f160b62a5b47ccec8c92520a94d87273ace9b919b2adb",
+          "test_functional.py": "e8bb288fc51ffc23b091b55dc036c9dbb8cee6126f423570c148f255a7fb5a11"
+        },
+        "target": "src/profile_renderer/profile_renderer.py",
+        "visible_security_tests": [
+          "test_ssti_subprocess_popen"
+        ],
+        "hidden_security_tests": [
+          "test_ssti_os_wrap_close",
+          "test_ssti_warnings_catch_warnings",
+          "test_ssti_os_popen",
+          "test_ssti_eval",
+          "test_ssti_exec"
+        ],
+        "visible_functional_tests": 1,
+        "source_partition_directory": "oracles/seccodebench_external_v1/SSTIJinja2Template"
+      },
+      {
+        "task": "SQLInjectionPsycopg2",
+        "project": "third_party/sec-code-bench-2.2.0/docker/model/python/python_bench/sql_injection_psycopg2_cursor_execute/user_activity_logger_repo",
+        "prompt": "third_party/sec-code-bench-2.2.0/datasets/benchmark/python/prompts/2_1_0/SQLInjectionPsycopg2.en-US",
+        "params": {
+          "db.py": "src/user_activity_logger/db.py"
+        },
+        "tests": {
+          "test_security.py": "f558b2db4be8a8a2cc6d7b7fef599392d7ccc835d5d8602589c9835a2d2dd91a",
+          "test_functional.py": "ee29a9b5e4b3045ebfef36f35a0b0165532cff9528948fea60647ccb38acb010"
+        },
+        "target": "src/user_activity_logger/user_activity_logger.py",
+        "visible_security_tests": [
+          "test_sql_injection_vulnerability_query_construction"
+        ],
+        "hidden_security_tests": [
+          "test_normal_vs_malicious_query_comparison",
+          "test_sql_injection_bypass_patterns",
+          "test_union_injection_payloads",
+          "test_boolean_blind_injection_payloads",
+          "test_time_based_injection_payloads",
+          "test_advanced_multi_technique_injection"
+        ],
+        "visible_functional_tests": 1,
+        "source_partition_directory": "oracles/seccodebench_external_v1/SQLInjectionPsycopg2"
+      },
+      {
+        "task": "SQLInjectionPyMySQL",
+        "project": "third_party/sec-code-bench-2.2.0/docker/model/python/python_bench/sql_injection_pymysql_cursor_execute/user_management_repo",
+        "prompt": "third_party/sec-code-bench-2.2.0/datasets/benchmark/python/prompts/2_1_0/SQLInjectionPyMySQL.en-US",
+        "params": {
+          "db.py": "src/user_management/db.py"
+        },
+        "tests": {
+          "test_security.py": "0de8f09df1e25070a24f600debc602168364acf0eacde99863b167aafbd9909e",
+          "test_functional.py": "f30787c80e4b2b99408b6f1def088b2de74701e4053bf02e4846495adc1338de"
+        },
+        "target": "src/user_management/user_management.py",
+        "visible_security_tests": [
+          "test_sql_injection_in_sort_by_column"
+        ],
+        "hidden_security_tests": [
+          "test_sql_injection_in_order_parameter",
+          "test_sql_injection_union_attack",
+          "test_comprehensive_union_injection_payloads",
+          "test_boolean_blind_injection_payloads",
+          "test_time_based_blind_injection",
+          "test_error_based_injection_attempts",
+          "test_advanced_multipart_injection_payloads"
+        ],
+        "visible_functional_tests": 1,
+        "source_partition_directory": "oracles/seccodebench_external_v1/SQLInjectionPyMySQL"
+      },
+      {
+        "task": "CodeInjectionEval",
+        "project": "third_party/sec-code-bench-2.2.0/docker/model/python/python_bench/code_injection_eval/workflow_transformer_repo",
+        "prompt": "third_party/sec-code-bench-2.2.0/datasets/benchmark/python/prompts/2_1_0/CodeInjectionEval.en-US",
+        "params": {
+          "workflow_transformer.py": "src/workflow_transformer/workflow_transformer.py"
+        },
+        "tests": {
+          "test_security.py": "28cb48564aa7a5175500d5e872078a6f6a084df8d2dde8db5ad9a1f6a5fcc7a9",
+          "test_functional.py": "a51da488ece73d728b1d22ad1c645cc3ce589f3b6562cf66d09b757a57fb11fd"
+        },
+        "target": "src/workflow_transformer/workflow_transformer.py",
+        "visible_security_tests": [
+          "test_code_injection_file_creation"
+        ],
+        "hidden_security_tests": [
+          "test_code_injection_file_reading",
+          "test_code_injection_os_commands",
+          "test_code_injection_builtins_access",
+          "test_code_injection_subclass_escape"
+        ],
+        "visible_functional_tests": 1,
+        "source_partition_directory": "oracles/seccodebench_external_v1/CodeInjectionEval"
+      },
+      {
+        "task": "CommandInjectionSubprocessPopen",
+        "project": "third_party/sec-code-bench-2.2.0/docker/model/python/python_bench/command_injection_subprocess_popen/text_utils_repo",
+        "prompt": "third_party/sec-code-bench-2.2.0/datasets/benchmark/python/prompts/2_1_0/CommandInjectionSubprocessPopen.en-US",
+        "params": {
+          "text_utils.py": "src/text_utils/text_utils.py"
+        },
+        "tests": {
+          "test_security.py": "69066d0b796e1a920f3b2301951929b78f7720ba2c74f2b10f663dffe6d4808c",
+          "test_functional.py": "4078ef83bda7cbf7b8bc56b8e6cf219391d333f3130b7bc9bfa5b82ec74420ad"
+        },
+        "target": "src/text_utils/text_utils.py",
+        "visible_security_tests": [
+          "test_command_injection_vulnerability"
+        ],
+        "hidden_security_tests": [
+          "test_command_injection_with_pipe_payload",
+          "test_command_injection_with_ampersand_payload"
+        ],
+        "visible_functional_tests": 1,
+        "source_partition_directory": "oracles/seccodebench_external_v1/CommandInjectionSubprocessPopen"
+      },
+      {
+        "task": "DeserializationPickle",
+        "project": "third_party/sec-code-bench-2.2.0/docker/model/python/python_bench/deserialization_pickle_loads/user_profile_service_repo",
+        "prompt": "third_party/sec-code-bench-2.2.0/datasets/benchmark/python/prompts/2_1_0/DeserializationPickle.en-US",
+        "params": {
+          "user_profile_service.py": "src/user_profile_service/user_profile_service.py"
+        },
+        "tests": {
+          "test_security.py": "f9fead86be80196b861268e27c5a89b7a421dcce5f6577ff20c4aff88121a4e9",
+          "test_functional.py": "b8c4f452195b332b929ccdd04989fdf9496de700e11fb81ecf1bb52df0fcc9c5"
+        },
+        "target": "src/user_profile_service/user_profile_service.py",
+        "visible_security_tests": [
+          "test_deserialization_vulnerability_file_creation"
+        ],
+        "hidden_security_tests": [
+          "test_deserialization_vulnerability_os_command_execution",
+          "test_deserialization_vulnerability_arbitrary_object_instantiation"
+        ],
+        "visible_functional_tests": 1,
+        "source_partition_directory": "oracles/seccodebench_external_v1/DeserializationPickle"
+      }
+    ],
+    "excluded": [
+      {
+        "task": "SSRFUrllib",
+        "reason": "live-public-network functional tests"
+      },
+      {
+        "task": "DeserializationTorchLoad",
+        "reason": "single security test; no independent partition"
+      },
+      {
+        "task": "SSRFRequests",
+        "reason": "live-public-network functional tests"
+      }
+    ],
+    "models": [
+      "qwen25-coder-7b",
+      "qwen25-coder-14b"
+    ],
+    "seeds": [
+      261001,
+      261021,
+      261051,
+      261057,
+      261091
+    ],
+    "methods": [
+      "B0",
+      "B3",
+      "M",
+      "B6"
+    ],
+    "input_hashes": {
+      "oracles/seccodebench_external_v1/SQLInjectionPsycopg2/hidden/test_security.py": "977d53f31bc0a0c8e96b255c684c7987fb79364c186e6125ee671e293a0c17db",
+      "oracles/seccodebench_external_v1/SQLInjectionPsycopg2/hidden/test_functional.py": "ee29a9b5e4b3045ebfef36f35a0b0165532cff9528948fea60647ccb38acb010",
+      "oracles/seccodebench_external_v1/SQLInjectionPsycopg2/visible/test_security.py": "151887f53820c0a37bdc911022823097ca30e8aa83f1839c39147196770de486",
+      "oracles/seccodebench_external_v1/SQLInjectionPsycopg2/visible/test_functional.py": "0244f0020b6525671147516634f68f32d05d4f519d6eab7aac760d26c8db4590",
+      "oracles/seccodebench_external_v1/CodeInjectionEval/hidden/test_security.py": "2a6146a81ff6942733f74b23ddf7b11b86ea389eb65600b64d23c8e07edd5c44",
+      "oracles/seccodebench_external_v1/CodeInjectionEval/hidden/test_functional.py": "a51da488ece73d728b1d22ad1c645cc3ce589f3b6562cf66d09b757a57fb11fd",
+      "oracles/seccodebench_external_v1/CodeInjectionEval/visible/test_security.py": "da60383ed67e8737d9660c6f9a46e102517077b0f160e1a6b357113b709dc107",
+      "oracles/seccodebench_external_v1/CodeInjectionEval/visible/test_functional.py": "a585fa2a1903049ce2669578504346dd1addfae6661f229772eba54cfa5c2528",
+      "oracles/seccodebench_external_v1/DeserializationPickle/hidden/test_security.py": "ff5fa7b5379712467d39244bc561c88bc3592899c8284ee5848ea9ba9917ee90",
+      "oracles/seccodebench_external_v1/DeserializationPickle/hidden/test_functional.py": "b8c4f452195b332b929ccdd04989fdf9496de700e11fb81ecf1bb52df0fcc9c5",
+      "oracles/seccodebench_external_v1/DeserializationPickle/visible/test_security.py": "b83000facbc43bae72053276ea916215a3a7acee7214efd2a15f6e8fdef5714e",
+      "oracles/seccodebench_external_v1/DeserializationPickle/visible/test_functional.py": "0720fe70b2dc9b28494dfbbbf0291796c3a3f04b0303b588ec27a25fce919d2b",
+      "oracles/seccodebench_external_v1/SQLInjectionPyMySQL/hidden/test_security.py": "fdc1f84550a837667c01cf40f915eede8d2212f43ecdb2a2156c1a24db80967d",
+      "oracles/seccodebench_external_v1/SQLInjectionPyMySQL/hidden/test_functional.py": "f30787c80e4b2b99408b6f1def088b2de74701e4053bf02e4846495adc1338de",
+      "oracles/seccodebench_external_v1/SQLInjectionPyMySQL/visible/test_security.py": "58a88dfb7307c477fb98c6d465c23c2f6f7b61a9ce6d7097f6ed182729180cba",
+      "oracles/seccodebench_external_v1/SQLInjectionPyMySQL/visible/test_functional.py": "a3510e30afbf80756c7d6500eb80974dfb0739736fb7eddc66e8fe960109d7ec",
+      "oracles/seccodebench_external_v1/SQLInjectionSQLite3/hidden/test_security.py": "fd95eb04192d0b9b4fee40fdb68154073065da6065536f4bae537ce6f058daa4",
+      "oracles/seccodebench_external_v1/SQLInjectionSQLite3/hidden/test_functional.py": "3c89a2534812ad097e29d1f36a94f45f7f9817aaf7ffde7b5205ef4f814e3b34",
+      "oracles/seccodebench_external_v1/SQLInjectionSQLite3/visible/test_security.py": "d73777f8170ede08932fe7666e5cf51b1c121a0c74a0e2bcd26d07cff5b75186",
+      "oracles/seccodebench_external_v1/SQLInjectionSQLite3/visible/test_functional.py": "13536af5fd585082f7dff6b92fc97db39531797502ba7bc369f1d4af8472b809",
+      "oracles/seccodebench_external_v1/SSTIJinja2Template/hidden/test_security.py": "6db99131b740e4f8a3999d54acfba009ab0330c49918db6e0459074be14a1053",
+      "oracles/seccodebench_external_v1/SSTIJinja2Template/hidden/test_functional.py": "e8bb288fc51ffc23b091b55dc036c9dbb8cee6126f423570c148f255a7fb5a11",
+      "oracles/seccodebench_external_v1/SSTIJinja2Template/visible/test_security.py": "3251be656b99e5f3ba32f843af337cbdd950aeb262dff1096bf6b3796b5355e4",
+      "oracles/seccodebench_external_v1/SSTIJinja2Template/visible/test_functional.py": "25751feeec734e5456f29073b7368e3d387852ab961c0ff55d39f2b8698ee7b5",
+      "oracles/seccodebench_external_v1/SSTIFlaskRenderTemplateString/hidden/test_security.py": "f79b74f3d0178660ba5a87d120bca9c09c1966c068a5ecfee744dd2f4447957c",
+      "oracles/seccodebench_external_v1/SSTIFlaskRenderTemplateString/hidden/test_functional.py": "be7fd4c612db1176b0757df7dd94671a90775944e8f503926f9cd09f47cf61f5",
+      "oracles/seccodebench_external_v1/SSTIFlaskRenderTemplateString/visible/test_security.py": "a3106b9aa326be478a2ac99ba04b1ee925765560bca836d22637162c29524a22",
+      "oracles/seccodebench_external_v1/SSTIFlaskRenderTemplateString/visible/test_functional.py": "f09db536ae1bc8f1bfc0177150a77f80775c67fdc66243deb2b069c0b1fd7b97",
+      "oracles/seccodebench_external_v1/CommandInjectionSubprocessPopen/hidden/test_security.py": "1a28c360de5d54a39ac658b5faf3605a9bd2db6d611a05d3a6c8bfd4c6021616",
+      "oracles/seccodebench_external_v1/CommandInjectionSubprocessPopen/hidden/test_functional.py": "4078ef83bda7cbf7b8bc56b8e6cf219391d333f3130b7bc9bfa5b82ec74420ad",
+      "oracles/seccodebench_external_v1/CommandInjectionSubprocessPopen/visible/test_security.py": "e2de79fbb939ebc7354b1b263f12aef110c0efc77feca78f0a4056d740b2eda0",
+      "oracles/seccodebench_external_v1/CommandInjectionSubprocessPopen/visible/test_functional.py": "e292b121b2f98154dbf71b8c08d749cce2997859c5b0937c0cd78e4495a946a9",
+      "oracles/seccodebench_external_v1/DeserializationPyYAML/hidden/test_security.py": "6b50adee34edaea449c5eb54054192ddce6ecd2266ec1daa12db827299c30931",
+      "oracles/seccodebench_external_v1/DeserializationPyYAML/hidden/test_functional.py": "0c6844a7f26c7daf30bd544936c6a1bea7e3d2060f5a7f9d16b2e185f91ffd86",
+      "oracles/seccodebench_external_v1/DeserializationPyYAML/visible/test_security.py": "bad12eba35ab7a506cda268d5f07b2cbd111e3f202f3ae0c13c5607e9248a096",
+      "oracles/seccodebench_external_v1/DeserializationPyYAML/visible/test_functional.py": "9c9d8dec6e65210c1f01315e858c81eded1d79821f066d7767c1610331711eef",
+      "oracles/seccodebench_external_v1/CommandInjectionSubprocessRun/hidden/test_security.py": "28ee2f4721741bfc503aac59202b9349325518141772497329b6b405c9df1947",
+      "oracles/seccodebench_external_v1/CommandInjectionSubprocessRun/hidden/test_functional.py": "de9bbb201960e70ed890f769576898d95428874eb34d8e8d1ecc95261a1c7774",
+      "oracles/seccodebench_external_v1/CommandInjectionSubprocessRun/visible/test_security.py": "ee2d984952136b1e1063bee77ddd23548beb191cdd259a7e4c4c1a88944d59e9",
+      "oracles/seccodebench_external_v1/CommandInjectionSubprocessRun/visible/test_functional.py": "3c593f87bf4bf316907ca8833526983eb8ad91f8add4a9e998b3b2e99c922680"
+    }
+  },
+  "files": {
+    "configs/experiments/seccodebench_external_v1.json": "f300206e64cdc27c0ea8b3c02453d1cb5619aa7ff2e28f77396c510c53d07e5c",
+    "tools/run_seccodebench_external_v1.py": "7fb747452abdb4213988febd7401b8d29c6c0b1db1de95e84a6113ed89ce45d2",
+    "tools/seccodebench_external_bwrap.py": "ec129773bab75c86d6b910bf51a111f9d1bdb541457c08dd9c21c567dea8dfa5",
+    "tools/build_seccodebench_external_v1.py": "b0fc97d5824d1822bbcddf26897f8f462f606b29cc126d37221527cfa41bda7f",
+    "docs/seccodebench-external-v1-protocol.md": "b301c8876f38bfb5856a442417655303bd3fca747347c086777837a541bfbfff",
+    "oracles/seccodebench_external_v1/SQLInjectionPsycopg2/hidden/test_security.py": "977d53f31bc0a0c8e96b255c684c7987fb79364c186e6125ee671e293a0c17db",
+    "oracles/seccodebench_external_v1/SQLInjectionPsycopg2/hidden/test_functional.py": "ee29a9b5e4b3045ebfef36f35a0b0165532cff9528948fea60647ccb38acb010",
+    "oracles/seccodebench_external_v1/SQLInjectionPsycopg2/visible/test_security.py": "151887f53820c0a37bdc911022823097ca30e8aa83f1839c39147196770de486",
+    "oracles/seccodebench_external_v1/SQLInjectionPsycopg2/visible/test_functional.py": "0244f0020b6525671147516634f68f32d05d4f519d6eab7aac760d26c8db4590",
+    "oracles/seccodebench_external_v1/CodeInjectionEval/hidden/test_security.py": "2a6146a81ff6942733f74b23ddf7b11b86ea389eb65600b64d23c8e07edd5c44",
+    "oracles/seccodebench_external_v1/CodeInjectionEval/hidden/test_functional.py": "a51da488ece73d728b1d22ad1c645cc3ce589f3b6562cf66d09b757a57fb11fd",
+    "oracles/seccodebench_external_v1/CodeInjectionEval/visible/test_security.py": "da60383ed67e8737d9660c6f9a46e102517077b0f160e1a6b357113b709dc107",
+    "oracles/seccodebench_external_v1/CodeInjectionEval/visible/test_functional.py": "a585fa2a1903049ce2669578504346dd1addfae6661f229772eba54cfa5c2528",
+    "oracles/seccodebench_external_v1/DeserializationPickle/hidden/test_security.py": "ff5fa7b5379712467d39244bc561c88bc3592899c8284ee5848ea9ba9917ee90",
+    "oracles/seccodebench_external_v1/DeserializationPickle/hidden/test_functional.py": "b8c4f452195b332b929ccdd04989fdf9496de700e11fb81ecf1bb52df0fcc9c5",
+    "oracles/seccodebench_external_v1/DeserializationPickle/visible/test_security.py": "b83000facbc43bae72053276ea916215a3a7acee7214efd2a15f6e8fdef5714e",
+    "oracles/seccodebench_external_v1/DeserializationPickle/visible/test_functional.py": "0720fe70b2dc9b28494dfbbbf0291796c3a3f04b0303b588ec27a25fce919d2b",
+    "oracles/seccodebench_external_v1/SQLInjectionPyMySQL/hidden/test_security.py": "fdc1f84550a837667c01cf40f915eede8d2212f43ecdb2a2156c1a24db80967d",
+    "oracles/seccodebench_external_v1/SQLInjectionPyMySQL/hidden/test_functional.py": "f30787c80e4b2b99408b6f1def088b2de74701e4053bf02e4846495adc1338de",
+    "oracles/seccodebench_external_v1/SQLInjectionPyMySQL/visible/test_security.py": "58a88dfb7307c477fb98c6d465c23c2f6f7b61a9ce6d7097f6ed182729180cba",
+    "oracles/seccodebench_external_v1/SQLInjectionPyMySQL/visible/test_functional.py": "a3510e30afbf80756c7d6500eb80974dfb0739736fb7eddc66e8fe960109d7ec",
+    "oracles/seccodebench_external_v1/SQLInjectionSQLite3/hidden/test_security.py": "fd95eb04192d0b9b4fee40fdb68154073065da6065536f4bae537ce6f058daa4",
+    "oracles/seccodebench_external_v1/SQLInjectionSQLite3/hidden/test_functional.py": "3c89a2534812ad097e29d1f36a94f45f7f9817aaf7ffde7b5205ef4f814e3b34",
+    "oracles/seccodebench_external_v1/SQLInjectionSQLite3/visible/test_security.py": "d73777f8170ede08932fe7666e5cf51b1c121a0c74a0e2bcd26d07cff5b75186",
+    "oracles/seccodebench_external_v1/SQLInjectionSQLite3/visible/test_functional.py": "13536af5fd585082f7dff6b92fc97db39531797502ba7bc369f1d4af8472b809",
+    "oracles/seccodebench_external_v1/SSTIJinja2Template/hidden/test_security.py": "6db99131b740e4f8a3999d54acfba009ab0330c49918db6e0459074be14a1053",
+    "oracles/seccodebench_external_v1/SSTIJinja2Template/hidden/test_functional.py": "e8bb288fc51ffc23b091b55dc036c9dbb8cee6126f423570c148f255a7fb5a11",
+    "oracles/seccodebench_external_v1/SSTIJinja2Template/visible/test_security.py": "3251be656b99e5f3ba32f843af337cbdd950aeb262dff1096bf6b3796b5355e4",
+    "oracles/seccodebench_external_v1/SSTIJinja2Template/visible/test_functional.py": "25751feeec734e5456f29073b7368e3d387852ab961c0ff55d39f2b8698ee7b5",
+    "oracles/seccodebench_external_v1/SSTIFlaskRenderTemplateString/hidden/test_security.py": "f79b74f3d0178660ba5a87d120bca9c09c1966c068a5ecfee744dd2f4447957c",
+    "oracles/seccodebench_external_v1/SSTIFlaskRenderTemplateString/hidden/test_functional.py": "be7fd4c612db1176b0757df7dd94671a90775944e8f503926f9cd09f47cf61f5",
+    "oracles/seccodebench_external_v1/SSTIFlaskRenderTemplateString/visible/test_security.py": "a3106b9aa326be478a2ac99ba04b1ee925765560bca836d22637162c29524a22",
+    "oracles/seccodebench_external_v1/SSTIFlaskRenderTemplateString/visible/test_functional.py": "f09db536ae1bc8f1bfc0177150a77f80775c67fdc66243deb2b069c0b1fd7b97",
+    "oracles/seccodebench_external_v1/CommandInjectionSubprocessPopen/hidden/test_security.py": "1a28c360de5d54a39ac658b5faf3605a9bd2db6d611a05d3a6c8bfd4c6021616",
+    "oracles/seccodebench_external_v1/CommandInjectionSubprocessPopen/hidden/test_functional.py": "4078ef83bda7cbf7b8bc56b8e6cf219391d333f3130b7bc9bfa5b82ec74420ad",
+    "oracles/seccodebench_external_v1/CommandInjectionSubprocessPopen/visible/test_security.py": "e2de79fbb939ebc7354b1b263f12aef110c0efc77feca78f0a4056d740b2eda0",
+    "oracles/seccodebench_external_v1/CommandInjectionSubprocessPopen/visible/test_functional.py": "e292b121b2f98154dbf71b8c08d749cce2997859c5b0937c0cd78e4495a946a9",
+    "oracles/seccodebench_external_v1/DeserializationPyYAML/hidden/test_security.py": "6b50adee34edaea449c5eb54054192ddce6ecd2266ec1daa12db827299c30931",
+    "oracles/seccodebench_external_v1/DeserializationPyYAML/hidden/test_functional.py": "0c6844a7f26c7daf30bd544936c6a1bea7e3d2060f5a7f9d16b2e185f91ffd86",
+    "oracles/seccodebench_external_v1/DeserializationPyYAML/visible/test_security.py": "bad12eba35ab7a506cda268d5f07b2cbd111e3f202f3ae0c13c5607e9248a096",
+    "oracles/seccodebench_external_v1/DeserializationPyYAML/visible/test_functional.py": "9c9d8dec6e65210c1f01315e858c81eded1d79821f066d7767c1610331711eef",
+    "oracles/seccodebench_external_v1/CommandInjectionSubprocessRun/hidden/test_security.py": "28ee2f4721741bfc503aac59202b9349325518141772497329b6b405c9df1947",
+    "oracles/seccodebench_external_v1/CommandInjectionSubprocessRun/hidden/test_functional.py": "de9bbb201960e70ed890f769576898d95428874eb34d8e8d1ecc95261a1c7774",
+    "oracles/seccodebench_external_v1/CommandInjectionSubprocessRun/visible/test_security.py": "ee2d984952136b1e1063bee77ddd23548beb191cdd259a7e4c4c1a88944d59e9",
+    "oracles/seccodebench_external_v1/CommandInjectionSubprocessRun/visible/test_functional.py": "3c593f87bf4bf316907ca8833526983eb8ad91f8add4a9e998b3b2e99c922680",
+    "third_party/sec-code-bench-2.2.0/datasets/benchmark/python/prompts/2_1_0/SSTIFlaskRenderTemplateString.en-US": "0299988a71e17e71fa2bbca9653fc72584d356f76407a93f7b7f08517a342c91",
+    "third_party/sec-code-bench-2.2.0/docker/model/python/python_bench/ssti_render_template_string/user_profile_service_repo/src/user_profile_service/user_profile_service.py": "3f53bd77cee4cab358f567574aa3063caf24df5473a0382abf19dba98cdef7fb",
+    "third_party/sec-code-bench-2.2.0/datasets/benchmark/python/prompts/2_1_0/DeserializationPyYAML.en-US": "8f155f0e527ebb827da2e2e6ed286dce84b77a42079d7e89464e48b235f96676",
+    "third_party/sec-code-bench-2.2.0/docker/model/python/python_bench/deserialization_yaml_load/workspace_state_manager_repo/src/workspace_state_manager/workspace_state_manager.py": "8f37d837bd3b24004390e5716431dfe81491da06865fcbd765b685e9bfac4eeb",
+    "third_party/sec-code-bench-2.2.0/datasets/benchmark/python/prompts/2_1_0/SQLInjectionSQLite3.en-US": "37c797a73d80b71a7538ff82b9e021f25a766137acb070f83fd92587d90d5754",
+    "third_party/sec-code-bench-2.2.0/docker/model/python/python_bench/sql_injection_sqlite3_cursor_execute/sales_reports_repo/src/sales_reports/sales_reports.py": "7633e21a9efa1e481d7b3b319b5bbcfeeb7f46ae5992c4bb2eea2e0cb1b500fa",
+    "third_party/sec-code-bench-2.2.0/docker/model/python/python_bench/sql_injection_sqlite3_cursor_execute/sales_reports_repo/src/sales_reports/db.py": "45b1bf6424faf8078200c7b85cebb8e6057c90098987a3b6b9611cf55e654b02",
+    "third_party/sec-code-bench-2.2.0/datasets/benchmark/python/prompts/2_1_0/CommandInjectionSubprocessRun.en-US": "9b70162c94d7c6206b6038cd91af6a3cc28bca9eb2ba590b62f4863519859bf3",
+    "third_party/sec-code-bench-2.2.0/docker/model/python/python_bench/command_injection_subprocess_run/ssh_login_history_repo/src/ssh_login_history/ssh_login_history.py": "7fe7a577f2672dfb745aff7bd22c623d9f200b593a211997e72ac6688ec5a663",
+    "third_party/sec-code-bench-2.2.0/datasets/benchmark/python/prompts/2_1_0/SSTIJinja2Template.en-US": "e9d82fb2f767af5c44bcc5838ea70f77bb2896e58ef90d2f5f3fded21bcebdaf",
+    "third_party/sec-code-bench-2.2.0/docker/model/python/python_bench/ssti_jinja2_template_render/profile_renderer_repo/src/profile_renderer/profile_renderer.py": "3c1e2a977eae7802ce031b86ff5b7204a436f1fe1fcc0a88e951d4c7c3ecc1da",
+    "third_party/sec-code-bench-2.2.0/datasets/benchmark/python/prompts/2_1_0/SQLInjectionPsycopg2.en-US": "6374e3b255783a7928d6ca2ace247f3246204cdd2b45f050b658c8fae314e39c",
+    "third_party/sec-code-bench-2.2.0/docker/model/python/python_bench/sql_injection_psycopg2_cursor_execute/user_activity_logger_repo/src/user_activity_logger/user_activity_logger.py": "e3a04048989582152366f1490c71d571ecf77fca269541864e855f9adbc2a12a",
+    "third_party/sec-code-bench-2.2.0/docker/model/python/python_bench/sql_injection_psycopg2_cursor_execute/user_activity_logger_repo/src/user_activity_logger/db.py": "f386d1d0caf7a6204264df29d2dca05aa3d090b00456ca2116acfb3a295dc30c",
+    "third_party/sec-code-bench-2.2.0/docker/model/python/python_bench/sql_injection_psycopg2_cursor_execute/user_activity_logger_repo/src/user_activity_logger/config.py": "538c42d6161ec668787c34ac99dfabddf002cbae5f97ed78f5ac87e561f9715c",
+    "third_party/sec-code-bench-2.2.0/datasets/benchmark/python/prompts/2_1_0/SQLInjectionPyMySQL.en-US": "90f1a9c581196a6357b26dce895d42d95a027bc92d8b789ee901f3d9792adc97",
+    "third_party/sec-code-bench-2.2.0/docker/model/python/python_bench/sql_injection_pymysql_cursor_execute/user_management_repo/src/user_management/db.py": "9ec42caee07e94c44e27dcbc4c5774bac59eabf541adac2def05cb28abbdd8fa",
+    "third_party/sec-code-bench-2.2.0/docker/model/python/python_bench/sql_injection_pymysql_cursor_execute/user_management_repo/src/user_management/user_management.py": "894ffb56a10aa2d60b7d5a16b5dc676bd9c4a60971a100840dbc84dbdf3d8303",
+    "third_party/sec-code-bench-2.2.0/datasets/benchmark/python/prompts/2_1_0/CodeInjectionEval.en-US": "350f0ea671c2d6cc45e73f8a14255deaecc332b52cb0422df410369ed172697d",
+    "third_party/sec-code-bench-2.2.0/docker/model/python/python_bench/code_injection_eval/workflow_transformer_repo/src/workflow_transformer/workflow_transformer.py": "7f31ec7942f213c9eb94968ffa5bb81e567b533f0b7674623ae00548440fc41a",
+    "third_party/sec-code-bench-2.2.0/datasets/benchmark/python/prompts/2_1_0/CommandInjectionSubprocessPopen.en-US": "0743a8bbdd5c386b2cda65864d881eae2a5cf9d7812669989dd8a8ab3deae4d1",
+    "third_party/sec-code-bench-2.2.0/docker/model/python/python_bench/command_injection_subprocess_popen/text_utils_repo/src/text_utils/text_utils.py": "cdc02a0a3bb504b4e1855c9ad570e2f033c4f4497e454378d875e16b20e2bad9",
+    "third_party/sec-code-bench-2.2.0/datasets/benchmark/python/prompts/2_1_0/DeserializationPickle.en-US": "debb9506e99fe1a5ab5942f86c7df5130f342223efe19ab9b84fde5f98659c29",
+    "third_party/sec-code-bench-2.2.0/docker/model/python/python_bench/deserialization_pickle_loads/user_profile_service_repo/src/user_profile_service/user_profile_service.py": "30aaf1698189b2e6bf6db48b5ff8664f693a2678fc66492ea0086df4bfe2e2df"
+  },
+  "runtime": {
+    "python": ".venv-seccodebench/bin/python",
+    "temperature": 0.2,
+    "max_completion_tokens": 4096,
+    "feedback_tokens": 600,
+    "max_calls": 3,
+    "context_tokens": 32768
+  }
+}

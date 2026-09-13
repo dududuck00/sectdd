@@ -1,0 +1,45 @@
+{
+  "complete": true,
+  "trajectories": 400,
+  "new_generation_records": 800,
+  "feedback_provenance_verified": true,
+  "functional_channel_invariance_verified": true,
+  "archived_response_reuse_verified": true,
+  "token_accounting_verified": true,
+  "max_context_budget_used": 5255,
+  "collection_failures_retained": [
+    {
+      "record": "artifacts/security-feedback-v1/trajectories/cweval/qwen25-coder-7b/functional_only/cwe_347_0/seed_151057/trajectory.json",
+      "partition": "visible",
+      "round": 1
+    },
+    {
+      "record": "artifacts/security-feedback-v1/trajectories/cweval/qwen25-coder-7b/functional_only/cwe_347_0/seed_151051/trajectory.json",
+      "partition": "visible",
+      "round": 1
+    },
+    {
+      "record": "artifacts/security-feedback-v1/trajectories/cweval/qwen25-coder-7b/functional_security/cwe_347_0/seed_151001/trajectory.json",
+      "partition": "visible",
+      "round": 1
+    },
+    {
+      "record": "artifacts/security-feedback-v1/trajectories/cweval/qwen25-coder-7b/functional_security/cwe_347_0/seed_151057/trajectory.json",
+      "partition": "visible",
+      "round": 1
+    },
+    {
+      "record": "artifacts/security-feedback-v1/trajectories/cweval/qwen25-coder-7b/functional_security/cwe_760_0/seed_151021/trajectory.json",
+      "partition": "visible",
+      "round": 2
+    },
+    {
+      "record": "artifacts/security-feedback-v1/trajectories/cweval/qwen25-coder-7b/functional_security/cwe_760_0/seed_151021/trajectory.json",
+      "partition": "hidden",
+      "round": 2
+    }
+  ],
+  "completion_cap_events_retained": [],
+  "source_correction": "collection-correction.json; original sources preserved",
+  "analysis_source_unchanged": true
+}

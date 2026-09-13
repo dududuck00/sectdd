@@ -1,0 +1,185 @@
+{
+  "complete": true,
+  "expected": 1200,
+  "completed": 1200,
+  "missing": [],
+  "task_count": 20,
+  "inference": "Task-cluster bootstrap 10000, seed 20260910; exact task sign randomization; Holm across five planned joint contrasts",
+  "methods": {
+    "blind": {
+      "functional": 0.5900000000000001,
+      "security": 0.67,
+      "joint": 0.5000000000000001
+    },
+    "binary": {
+      "functional": 0.565,
+      "security": 0.665,
+      "joint": 0.475
+    },
+    "fixed_raw": {
+      "functional": 0.5650000000000001,
+      "security": 0.6900000000000002,
+      "joint": 0.515
+    },
+    "priority_raw": {
+      "functional": 0.5700000000000001,
+      "security": 0.68,
+      "joint": 0.515
+    },
+    "fixed_structured": {
+      "functional": 0.5900000000000001,
+      "security": 0.7050000000000002,
+      "joint": 0.53
+    },
+    "priority_structured": {
+      "functional": 0.5900000000000001,
+      "security": 0.7150000000000001,
+      "joint": 0.53
+    }
+  },
+  "contrasts": {
+    "binary_minus_blind": {
+      "estimate_pp": -2.5,
+      "ci95_pp": [
+        -8.0,
+        1.5000000000000002
+      ],
+      "p_task_sign_randomization": 0.5,
+      "wins": 2,
+      "losses": 7,
+      "ties": 191,
+      "holm_adjusted_p": 1
+    },
+    "details_minus_binary": {
+      "estimate_pp": 4.0,
+      "ci95_pp": [
+        -0.5,
+        9.5
+      ],
+      "p_task_sign_randomization": 0.25,
+      "wins": 10,
+      "losses": 2,
+      "ties": 188,
+      "holm_adjusted_p": 1
+    },
+    "priority_minus_fixed_raw": {
+      "estimate_pp": 0.0,
+      "ci95_pp": [
+        0.0,
+        0.0
+      ],
+      "p_task_sign_randomization": 1.0,
+      "wins": 0,
+      "losses": 0,
+      "ties": 200,
+      "holm_adjusted_p": 1
+    },
+    "structured_minus_raw_fixed": {
+      "estimate_pp": 1.499999999999999,
+      "ci95_pp": [
+        -2.5000000000000013,
+        5.999999999999998
+      ],
+      "p_task_sign_randomization": 0.6875,
+      "wins": 6,
+      "losses": 3,
+      "ties": 191,
+      "holm_adjusted_p": 1
+    },
+    "selection_rendering_interaction": {
+      "estimate_pp": 2.7755575615628914e-16,
+      "ci95_pp": [
+        -1.4999999999999996,
+        1.5000000000000004
+      ],
+      "p_task_sign_randomization": 1.0,
+      "holm_adjusted_p": 1
+    }
+  },
+  "diagnostics": {
+    "blind": {
+      "regressions": {
+        "functional": 0,
+        "security": 2,
+        "joint": 0
+      },
+      "feedback_events": 400,
+      "truncated_events": 0,
+      "selection_set_opportunities": 9,
+      "selection_order_opportunities": 60,
+      "revision_prompt_tokens": 216596,
+      "revision_completion_tokens": 81366,
+      "revision_model_seconds": 1876.59394414071
+    },
+    "binary": {
+      "regressions": {
+        "functional": 0,
+        "security": 0,
+        "joint": 0
+      },
+      "feedback_events": 400,
+      "truncated_events": 0,
+      "selection_set_opportunities": 9,
+      "selection_order_opportunities": 61,
+      "revision_prompt_tokens": 220515,
+      "revision_completion_tokens": 81892,
+      "revision_model_seconds": 1923.686722382903
+    },
+    "fixed_raw": {
+      "regressions": {
+        "functional": 5,
+        "security": 4,
+        "joint": 0
+      },
+      "feedback_events": 400,
+      "truncated_events": 0,
+      "selection_set_opportunities": 10,
+      "selection_order_opportunities": 63,
+      "revision_prompt_tokens": 269832,
+      "revision_completion_tokens": 83127,
+      "revision_model_seconds": 1511.2320357020944
+    },
+    "priority_raw": {
+      "regressions": {
+        "functional": 5,
+        "security": 3,
+        "joint": 0
+      },
+      "feedback_events": 400,
+      "truncated_events": 0,
+      "selection_set_opportunities": 11,
+      "selection_order_opportunities": 62,
+      "revision_prompt_tokens": 269822,
+      "revision_completion_tokens": 83144,
+      "revision_model_seconds": 1583.465903162025
+    },
+    "fixed_structured": {
+      "regressions": {
+        "functional": 0,
+        "security": 2,
+        "joint": 0
+      },
+      "feedback_events": 400,
+      "truncated_events": 1,
+      "selection_set_opportunities": 10,
+      "selection_order_opportunities": 60,
+      "revision_prompt_tokens": 285496,
+      "revision_completion_tokens": 87309,
+      "revision_model_seconds": 1540.137989894487
+    },
+    "priority_structured": {
+      "regressions": {
+        "functional": 0,
+        "security": 0,
+        "joint": 0
+      },
+      "feedback_events": 400,
+      "truncated_events": 0,
+      "selection_set_opportunities": 10,
+      "selection_order_opportunities": 58,
+      "revision_prompt_tokens": 284132,
+      "revision_completion_tokens": 86202,
+      "revision_model_seconds": 1966.0816504852846
+    }
+  }
+}

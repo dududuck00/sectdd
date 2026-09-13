@@ -1,0 +1,20 @@
+# Install these into a Python 3.11 venv created with --system-site-packages
+# from <MODEL_ROOT>/anonymous-user/conda/envs/text2test.
+fire==0.7.1
+natsort==8.4.0
+pytest==9.1.1
+pytest-xdist==3.8.0
+pytest-timeout==2.4.0
+wrapt-timeout-decorator==1.5.1
+requests==2.34.2
+lxml==6.1.1
+PyYAML==6.0.3
+PyJWT==2.13.0
+argon2-cffi==25.1.0
+pycryptodome==3.23.0
+docker==7.2.0
+numpy==2.4.6
+p-tqdm==1.4.2
+litellm==1.93.0
+openai==2.48.0
+

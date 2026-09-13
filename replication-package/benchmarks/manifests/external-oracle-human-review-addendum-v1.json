@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "addendum_id": "external-oracle-human-review-addendum-v1",
+  "status": "complete",
+  "relationship_to_machine_freezes": "post-freeze review addendum; source freezes and projections are immutable and therefore retain their pre-review independent_human_review_complete=false field",
+  "reviewer_count": 3,
+  "reviewer_profile": "software-engineering doctoral students",
+  "review_scope": "every frozen SALLM and CodeGuard+ qualification packet used in the balanced-primary experiment",
+  "review_blinding": "experiment method outcomes were not included in qualification packets",
+  "review_criteria": [
+    "contract-oracle agreement",
+    "secure implementation preserves intended functionality",
+    "targeted mutant preserves functionality while reinstating the declared CWE mechanism",
+    "attack cases are realistic for the declared CWE",
+    "visible and hidden behavior families are materially distinct and do not expose concrete hidden material"
+  ],
+  "review_record_boundary": "This anonymized addendum records scope and criteria. It does not assert unanimity, reviewer independence, or inter-rater reliability, and it does not contain identity-bearing individual ballots.",
+  "retention_after_review": "all 12 listed external balanced-primary packets retained",
+  "benchmarks": {
+    "sallm": {
+      "source_machine_freeze": {
+        "path": "benchmarks/manifests/sallm-paper-expansion-v1-semantic-machine-freeze.json",
+        "sha256": "1e13250bb3763fcec6632bba2207e01796e51b38e77cab465ed0727d25c4efe0",
+        "artifact_sha256": "1e13250bb3763fcec6632bba2207e01796e51b38e77cab465ed0727d25c4efe0"
+      },
+      "visible_projection": {
+        "path": "configs/oracles/sallm_paper_expansion_v1_semantic_machine_visible.json",
+        "sha256": "651e47f6afe81c82f9fa2f849f6fabc627b41ae0840e0ddeba892d070650112f",
+        "artifact_sha256": "651e47f6afe81c82f9fa2f849f6fabc627b41ae0840e0ddeba892d070650112f"
+      },
+      "hidden_projection": {
+        "path": "configs/oracles/sallm_paper_expansion_v1_semantic_machine_hidden.json",
+        "sha256": "056c64a87eb61a4a7921b954262a96aebd1d84794f6dd794a01af29d6c1f50fa",
+        "artifact_sha256": "056c64a87eb61a4a7921b954262a96aebd1d84794f6dd794a01af29d6c1f50fa"
+      },
+      "tasks": [
+        "Assertion_CodeQL_codeql_cwe020_1.py",
+        "Assertion_SonarSource_SS_cwe079_0.py",
+        "Assertion_SonarSource_SS_cwe094_0.py",
+        "Assertion_SonarSource_SS_cwe827_0.py",
+        "Tainted_Author_A_cwe078_0.py",
+        "Tainted_Author_A_cwe089_1.py",
+        "Tainted_CodeQL_codeql_cwe079_0.py",
+        "Tainted_StackOverflow_SO_cwe094_4.py"
+      ]
+    },
+    "codeguardplus": {
+      "source_machine_freeze": {
+        "path": "benchmarks/manifests/codeguardplus-paper-expansion-v1-semantic-machine-freeze.json",
+        "sha256": "e11b40857ae2e57bfda1c21d8482895ee1fb6c086474c17ae8776b936a6c8e9c",
+        "artifact_sha256": "e11b40857ae2e57bfda1c21d8482895ee1fb6c086474c17ae8776b936a6c8e9c"
+      },
+      "visible_projection": {
+        "path": "configs/oracles/codeguardplus_paper_expansion_v1_semantic_machine_visible.json",
+        "sha256": "66609191b1595a887ad1610d99c55cf1f6da2b1df1f2c4b38a897224effcf470",
+        "artifact_sha256": "66609191b1595a887ad1610d99c55cf1f6da2b1df1f2c4b38a897224effcf470"
+      },
+      "hidden_projection": {
+        "path": "configs/oracles/codeguardplus_paper_expansion_v1_semantic_machine_hidden.json",
+        "sha256": "6dc32ad559b4ea516ec4c3ace67533501b03c97051e8261306582afa9bd9c8e8",
+        "artifact_sha256": "6dc32ad559b4ea516ec4c3ace67533501b03c97051e8261306582afa9bd9c8e8"
+      },
+      "tasks": [
+        "cwe-022/0-py",
+        "cwe-079/1-py",
+        "cwe-117/0-py",
+        "cwe-312/0-py"
+      ]
+    }
+  },
+  "balanced_primary_input_freeze": {
+    "path": "benchmarks/manifests/paper-expansion-full-v1-input-freeze.json",
+    "sha256": "0044494d2821ba233e2b3e46f819268c198a4014cc7da4d55c70f4cb701f7b09",
+    "artifact_sha256": "0044494d2821ba233e2b3e46f819268c198a4014cc7da4d55c70f4cb701f7b09"
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SecTDD SALLM execution audit overlay",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "overlay_type",
+    "overlay_id",
+    "benchmark_manifest_sha256",
+    "repository_commit",
+    "required_imports",
+    "supplemental_dependencies",
+    "fixtures",
+    "exclusions",
+    "qualification_policy"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "overlay_type": {
+      "const": "sallm_execution_audit_overlay"
+    },
+    "overlay_id": {
+      "type": "string"
+    },
+    "benchmark_manifest_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "repository_commit": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$"
+    },
+    "required_imports": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "supplemental_dependencies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "distribution",
+          "version",
+          "reason"
+        ]
+      }
+    },
+    "fixtures": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "destination",
+            "source"
+          ],
+          "properties": {
+            "destination": {
+              "type": "string"
+            },
+            "source": {
+              "type": "object",
+              "required": [
+                "path",
+                "sha256",
+                "size_bytes"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "test_overrides": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "path",
+          "sha256",
+          "size_bytes"
+        ],
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "size_bytes": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "exclusions": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "reason_code",
+          "details"
+        ]
+      }
+    }
+  }
+}

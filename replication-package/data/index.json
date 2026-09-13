@@ -1,0 +1,60 @@
+{
+  "schema_version": 2,
+  "anonymous_review_artifact": true,
+  "primary": {
+    "path": "data/primary-trajectories.jsonl.gz",
+    "records": 3200,
+    "task_instances": 20,
+    "compressed_bytes": 2433890,
+    "sha256": "33442ba05b36127dd8eea911563c62a671d2f80cbb849b1e2ac15023f854566f",
+    "source_grid_sha256": "3550febb9f51de47deb8753059c431abaf7cc2a2e88d022751738618b458ddad"
+  },
+  "legacy": {
+    "path": "data/legacy-trajectories.jsonl.gz",
+    "records": 2705,
+    "task_instances": 31,
+    "compressed_bytes": 1895383,
+    "sha256": "f98d5c8d6f70ddb2ff37275fce7088e5515eca82c3e28ac1346ee1fe8f9c62c5",
+    "source_grid_sha256": "5a0dedf83ae6b7d893be41efdf3a7f4848c846a6605cc7edaf085c8c3b0a9160"
+  },
+  "security_only_upfront": {
+    "path": "data/security-only-upfront-trajectories.jsonl.gz",
+    "records": 240,
+    "task_instances": 12,
+    "benchmark_records": {
+      "sallm": 160,
+      "codeguardplus": 80
+    },
+    "model_records": {
+      "qwen25-coder-7b": 60,
+      "qwen25-coder-14b": 60,
+      "qwen36-27b": 60,
+      "deepseek-v4-flash": 60
+    },
+    "compressed_bytes": 164873,
+    "sha256": "895a2d3fd7adb28e047cf1f15ad84d57de967714e3202edff08cacdd571c573b",
+    "source_grid_sha256": "1b800d07dfef93756548f477591708354d74418aa5c63325dd8a0844b15cc259"
+  },
+  "factorial_ablation": {
+    "records": 960,
+    "reused_primary_records": 720,
+    "new_security_only_records": 240,
+    "task_instances": 12,
+    "models": 4,
+    "methods": [
+      "B0",
+      "B2",
+      "B7",
+      "B3"
+    ],
+    "interpretation": "The 720 B0/B2/B3 observations are reused from primary; only the 240 B7 observations are new."
+  },
+  "combined": {
+    "records": 6145,
+    "pre_addendum_records": 5905,
+    "new_security_only_records": 240,
+    "task_instances": 51,
+    "distinct_cwes": 24,
+    "interpretation": "All unique archived evidence. Primary and B7 are confirmatory/post-primary analyses; the heterogeneous 51-task synthesis remains descriptive."
+  }
+}

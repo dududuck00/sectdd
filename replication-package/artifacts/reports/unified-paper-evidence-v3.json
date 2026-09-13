@@ -1,0 +1,2024 @@
+{
+  "schema_version": 3,
+  "report_id": "unified-paper-evidence-v3",
+  "created_at_utc": "2026-08-05T18:01:55.778659+00:00",
+  "formal_results_use": false,
+  "trajectory_total": 2705,
+  "benchmark_count": 3,
+  "benchmark_model_condition_count": 9,
+  "major_model_families": [
+    "Qwen",
+    "DeepSeek"
+  ],
+  "runs": [
+    {
+      "benchmark": "CWEval",
+      "family": "Qwen",
+      "model": "qwen25-coder-7b",
+      "tasks": 9,
+      "methods": 7,
+      "repetitions": 5,
+      "trajectories": 315,
+      "manifest": {
+        "path": "artifacts/main_internal/qwen25-coder-7b-main-002/run_manifest.json",
+        "sha256": "1d367effe05a7db5b4b316e987a6aeb65ab93c97f4b9ad2b2f7e92ed085e54cd",
+        "size_bytes": 2619
+      },
+      "trajectory_grid_sha256": "8e704f1b3c457dd172f1e77e204d6758d91f970432a3a3a6a85559204e8dfc78",
+      "provider_seed_supported": true
+    },
+    {
+      "benchmark": "CWEval",
+      "family": "Qwen",
+      "model": "qwen25-coder-14b",
+      "tasks": 9,
+      "methods": 7,
+      "repetitions": 5,
+      "trajectories": 315,
+      "manifest": {
+        "path": "artifacts/main_internal/qwen25-coder-14b-main-003-corrected/run_manifest.json",
+        "sha256": "c0a1cede68e8b73cb8a55158e57b998708576daa57753fb1c0cab1713b15c751",
+        "size_bytes": 3975
+      },
+      "trajectory_grid_sha256": "f4217dac41b0b272892f953d21a929f2960e698a047991855c4f446d319bc6e2",
+      "provider_seed_supported": true
+    },
+    {
+      "benchmark": "CWEval",
+      "family": "Qwen",
+      "model": "qwen3-32b",
+      "tasks": 9,
+      "methods": 7,
+      "repetitions": 5,
+      "trajectories": 315,
+      "manifest": {
+        "path": "artifacts/main_internal/qwen3-32b-main-002/run_manifest.json",
+        "sha256": "c0748ed0dbd2463439123275ae8f4d8582e29af6ce563affd247a73c1a4d9e6f",
+        "size_bytes": 3821
+      },
+      "trajectory_grid_sha256": "3522e77de7e4c6478f484bb9c8406aad2c7ff83e76afa5c0cd4f92ef2eb64882",
+      "provider_seed_supported": true
+    },
+    {
+      "benchmark": "SALLM",
+      "family": "Qwen",
+      "model": "qwen25-coder-7b",
+      "tasks": 11,
+      "methods": 5,
+      "repetitions": 5,
+      "trajectories": 275,
+      "manifest": {
+        "path": "artifacts/sallm_formal_main/qwen25-coder-7b-main-002/run_manifest.json",
+        "sha256": "7bad871c4bf0a2fe1b93722b9f50e230043f067c4bccc8a9ad37650da4355a64",
+        "size_bytes": 5639
+      },
+      "trajectory_grid_sha256": "7a23c29b806307d10a3d00ad7e82175db0ea4e9ddaf3cc1f6908ca2250437fdc",
+      "provider_seed_supported": true
+    },
+    {
+      "benchmark": "SALLM",
+      "family": "Qwen",
+      "model": "qwen25-coder-14b",
+      "tasks": 11,
+      "methods": 5,
+      "repetitions": 5,
+      "trajectories": 275,
+      "manifest": {
+        "path": "artifacts/sallm_formal_main/qwen25-coder-14b-main-002/run_manifest.json",
+        "sha256": "fb3de897b5ca1ae781b8fcf2600edf82f1dcbe6eeb85ae4ef892a396d64dd192",
+        "size_bytes": 5655
+      },
+      "trajectory_grid_sha256": "a1264abb41b6973a4d6fa7ef93094cbfd53cb0e0c53aa7558bcd9315055546be",
+      "provider_seed_supported": true
+    },
+    {
+      "benchmark": "SALLM",
+      "family": "Qwen",
+      "model": "qwen36-27b",
+      "tasks": 11,
+      "methods": 5,
+      "repetitions": 5,
+      "trajectories": 275,
+      "manifest": {
+        "path": "artifacts/sallm_formal_main/qwen36-27b-main-002/run_manifest.json",
+        "sha256": "81b63e1826081ebbc3b496138d09857fda9c37bf9de90f15cb63610614d939a0",
+        "size_bytes": 5557
+      },
+      "trajectory_grid_sha256": "9d37530f66799c1f2fce439dbe1c68cff5bf5782322294c41f28deed30982e99",
+      "provider_seed_supported": true
+    },
+    {
+      "benchmark": "SALLM",
+      "family": "DeepSeek",
+      "model": "deepseek-v4-flash",
+      "tasks": 11,
+      "methods": 5,
+      "repetitions": 5,
+      "trajectories": 275,
+      "manifest": {
+        "path": "artifacts/deepseek-external-confirmatory-v1/sallm/run_manifest.json",
+        "sha256": "0654d87a49fa85f920a06e285cd6eadd84eb4536c53b22df343908ad61adb5c0",
+        "size_bytes": 5432
+      },
+      "trajectory_grid_sha256": "e12af2f7c0cd70cf3dfc134c8235e13d47938a1affb5dfed6a30c2f4e5129ca0",
+      "provider_seed_supported": false
+    },
+    {
+      "benchmark": "CodeGuard+",
+      "family": "Qwen",
+      "model": "qwen25-coder-14b",
+      "tasks": 11,
+      "methods": 6,
+      "repetitions": 5,
+      "trajectories": 330,
+      "manifest": {
+        "path": "artifacts/codeguardplus-breadth-confirmatory-v1/qwen25-coder-14b/run_manifest.json",
+        "sha256": "bbc7feeaa8c864f4e70b00cf2c92eb9c5adc64bcd811e32bc99d498dc35134af",
+        "size_bytes": 49054
+      },
+      "trajectory_grid_sha256": "97b85bd22641977d3f062f1df03509047205e0aef397a3dee9e7bcbd6155c617",
+      "provider_seed_supported": true
+    },
+    {
+      "benchmark": "CodeGuard+",
+      "family": "DeepSeek",
+      "model": "deepseek-v4-flash",
+      "tasks": 11,
+      "methods": 6,
+      "repetitions": 5,
+      "trajectories": 330,
+      "manifest": {
+        "path": "artifacts/codeguardplus-breadth-confirmatory-v1/deepseek-v4-flash/run_manifest.json",
+        "sha256": "d92aa95e9a406d1cdcb3abfe6755689f4b4347b2587770730d1d6c4a8073e42c",
+        "size_bytes": 48796
+      },
+      "trajectory_grid_sha256": "82e7b2d02310a8fc08b4cb7bcb6c4bdb2ff8f9a9a6865219c02d5b6f71f69ed0",
+      "provider_seed_supported": false
+    }
+  ],
+  "condition_methods": {
+    "CWEval": {
+      "qwen25-coder-7b": {
+        "B0": {
+          "n": 45,
+          "functional": 0.8,
+          "secure": 0.15555555555555556,
+          "joint": 0.15555555555555556,
+          "safe": 0.15555555555555556,
+          "security_given_functional": 0.19444444444444445,
+          "visible_joint": 0.17777777777777778,
+          "tfor": {
+            "numerator": 3,
+            "denominator": 8,
+            "rate": 0.375
+          },
+          "states": {
+            "F+S+": 7,
+            "F+S-": 29,
+            "F-S-": 9
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 202.33333333333334,
+            "output_tokens": 193.6888888888889,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B1": {
+          "n": 45,
+          "functional": 1.0,
+          "secure": 0.2222222222222222,
+          "joint": 0.2222222222222222,
+          "safe": 0.2222222222222222,
+          "security_given_functional": 0.2222222222222222,
+          "visible_joint": 0.15555555555555556,
+          "tfor": {
+            "numerator": 2,
+            "denominator": 7,
+            "rate": 0.2857142857142857
+          },
+          "states": {
+            "F+S+": 10,
+            "F+S-": 35
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 226.33333333333334,
+            "output_tokens": 220.93333333333334,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B2": {
+          "n": 45,
+          "functional": 0.8888888888888888,
+          "secure": 0.3333333333333333,
+          "joint": 0.3333333333333333,
+          "safe": 0.3333333333333333,
+          "security_given_functional": 0.375,
+          "visible_joint": 0.24444444444444444,
+          "tfor": {
+            "numerator": 0,
+            "denominator": 11,
+            "rate": 0.0
+          },
+          "states": {
+            "F+S+": 15,
+            "F+S-": 25,
+            "F-S-": 5
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 472.44444444444446,
+            "output_tokens": 191.26666666666668,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B3": {
+          "n": 45,
+          "functional": 0.8444444444444444,
+          "secure": 0.4,
+          "joint": 0.4,
+          "safe": 0.4,
+          "security_given_functional": 0.47368421052631576,
+          "visible_joint": 0.4444444444444444,
+          "tfor": {
+            "numerator": 4,
+            "denominator": 20,
+            "rate": 0.2
+          },
+          "states": {
+            "F+S+": 18,
+            "F+S-": 20,
+            "F-S-": 7
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 624.6666666666666,
+            "output_tokens": 199.55555555555554,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B4": {
+          "n": 45,
+          "functional": 0.8222222222222222,
+          "secure": 0.4888888888888889,
+          "joint": 0.4888888888888889,
+          "safe": 0.4888888888888889,
+          "security_given_functional": 0.5945945945945946,
+          "visible_joint": 0.6222222222222222,
+          "tfor": {
+            "numerator": 8,
+            "denominator": 28,
+            "rate": 0.2857142857142857
+          },
+          "states": {
+            "F+S+": 22,
+            "F+S-": 15,
+            "F-S-": 8
+          },
+          "cost": {
+            "model_calls": 2.2666666666666666,
+            "input_tokens": 1339.4444444444443,
+            "output_tokens": 456.84444444444443,
+            "feedback_tokens": 364.06666666666666
+          }
+        },
+        "B5": {
+          "n": 45,
+          "functional": 0.8,
+          "secure": 0.4666666666666667,
+          "joint": 0.4666666666666667,
+          "safe": 0.4666666666666667,
+          "security_given_functional": 0.5833333333333334,
+          "visible_joint": 0.5555555555555556,
+          "tfor": {
+            "numerator": 5,
+            "denominator": 25,
+            "rate": 0.2
+          },
+          "states": {
+            "F+S+": 21,
+            "F+S-": 15,
+            "F-S-": 9
+          },
+          "cost": {
+            "model_calls": 2.3333333333333335,
+            "input_tokens": 1176.6888888888889,
+            "output_tokens": 466.5777777777778,
+            "feedback_tokens": 215.88888888888889
+          }
+        },
+        "M": {
+          "n": 45,
+          "functional": 0.8222222222222222,
+          "secure": 0.4888888888888889,
+          "joint": 0.4888888888888889,
+          "safe": 0.4888888888888889,
+          "security_given_functional": 0.5945945945945946,
+          "visible_joint": 0.7555555555555555,
+          "tfor": {
+            "numerator": 14,
+            "denominator": 34,
+            "rate": 0.4117647058823529
+          },
+          "states": {
+            "F+S+": 22,
+            "F+S-": 15,
+            "F-S-": 8
+          },
+          "cost": {
+            "model_calls": 2.1333333333333333,
+            "input_tokens": 1240.2888888888888,
+            "output_tokens": 460.06666666666666,
+            "feedback_tokens": 359.31111111111113
+          }
+        }
+      },
+      "qwen25-coder-14b": {
+        "B0": {
+          "n": 45,
+          "functional": 0.9777777777777777,
+          "secure": 0.28888888888888886,
+          "joint": 0.28888888888888886,
+          "safe": 0.28888888888888886,
+          "security_given_functional": 0.29545454545454547,
+          "visible_joint": 0.2,
+          "tfor": {
+            "numerator": 0,
+            "denominator": 9,
+            "rate": 0.0
+          },
+          "states": {
+            "F+S+": 13,
+            "F+S-": 31,
+            "F-S-": 1
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 202.33333333333334,
+            "output_tokens": 216.9111111111111,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B1": {
+          "n": 45,
+          "functional": 0.8666666666666667,
+          "secure": 0.4444444444444444,
+          "joint": 0.4444444444444444,
+          "safe": 0.4444444444444444,
+          "security_given_functional": 0.5128205128205128,
+          "visible_joint": 0.4,
+          "tfor": {
+            "numerator": 3,
+            "denominator": 18,
+            "rate": 0.16666666666666666
+          },
+          "states": {
+            "F+S+": 20,
+            "F+S-": 19,
+            "F-S-": 6
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 226.33333333333334,
+            "output_tokens": 237.9777777777778,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B2": {
+          "n": 45,
+          "functional": 0.8,
+          "secure": 0.37777777777777777,
+          "joint": 0.37777777777777777,
+          "safe": 0.37777777777777777,
+          "security_given_functional": 0.4722222222222222,
+          "visible_joint": 0.26666666666666666,
+          "tfor": {
+            "numerator": 0,
+            "denominator": 12,
+            "rate": 0.0
+          },
+          "states": {
+            "F+S+": 17,
+            "F+S-": 19,
+            "F-S-": 9
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 472.44444444444446,
+            "output_tokens": 197.8,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B3": {
+          "n": 45,
+          "functional": 0.8888888888888888,
+          "secure": 0.5777777777777777,
+          "joint": 0.5777777777777777,
+          "safe": 0.5777777777777777,
+          "security_given_functional": 0.65,
+          "visible_joint": 0.9111111111111111,
+          "tfor": {
+            "numerator": 15,
+            "denominator": 41,
+            "rate": 0.36585365853658536
+          },
+          "states": {
+            "F+S+": 26,
+            "F+S-": 14,
+            "F-S-": 5
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 624.6666666666666,
+            "output_tokens": 229.15555555555557,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B4": {
+          "n": 45,
+          "functional": 0.7777777777777778,
+          "secure": 0.6444444444444445,
+          "joint": 0.5777777777777777,
+          "safe": 0.6029471556976541,
+          "security_given_functional": 0.7428571428571429,
+          "visible_joint": 0.8888888888888888,
+          "tfor": {
+            "numerator": 14,
+            "denominator": 40,
+            "rate": 0.35
+          },
+          "states": {
+            "F+S+": 26,
+            "F+S-": 9,
+            "F-S+": 3,
+            "F-S-": 7
+          },
+          "cost": {
+            "model_calls": 2.022222222222222,
+            "input_tokens": 1206.0,
+            "output_tokens": 540.0222222222222,
+            "feedback_tokens": 334.1333333333333
+          }
+        },
+        "B5": {
+          "n": 45,
+          "functional": 0.9555555555555556,
+          "secure": 0.5333333333333333,
+          "joint": 0.4888888888888889,
+          "safe": 0.5056684741688064,
+          "security_given_functional": 0.5116279069767442,
+          "visible_joint": 0.8222222222222222,
+          "tfor": {
+            "numerator": 15,
+            "denominator": 37,
+            "rate": 0.40540540540540543
+          },
+          "states": {
+            "F+S+": 22,
+            "F+S-": 21,
+            "F-S+": 2
+          },
+          "cost": {
+            "model_calls": 2.2222222222222223,
+            "input_tokens": 1162.9777777777779,
+            "output_tokens": 530.4888888888889,
+            "feedback_tokens": 203.88888888888889
+          }
+        },
+        "M": {
+          "n": 45,
+          "functional": 0.8,
+          "secure": 0.7111111111111111,
+          "joint": 0.5333333333333333,
+          "safe": 0.6004516744530036,
+          "security_given_functional": 0.6666666666666666,
+          "visible_joint": 0.6666666666666666,
+          "tfor": {
+            "numerator": 6,
+            "denominator": 30,
+            "rate": 0.2
+          },
+          "states": {
+            "F+S+": 24,
+            "F+S-": 12,
+            "F-S+": 8,
+            "F-S-": 1
+          },
+          "cost": {
+            "model_calls": 2.1333333333333333,
+            "input_tokens": 1364.0444444444445,
+            "output_tokens": 592.2,
+            "feedback_tokens": 361.3333333333333
+          }
+        }
+      },
+      "qwen3-32b": {
+        "B0": {
+          "n": 45,
+          "functional": 0.7777777777777778,
+          "secure": 0.2222222222222222,
+          "joint": 0.2222222222222222,
+          "safe": 0.2222222222222222,
+          "security_given_functional": 0.2857142857142857,
+          "visible_joint": 0.1111111111111111,
+          "tfor": {
+            "numerator": 0,
+            "denominator": 5,
+            "rate": 0.0
+          },
+          "states": {
+            "F+S+": 10,
+            "F+S-": 25,
+            "F-S-": 10
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 206.33333333333334,
+            "output_tokens": 189.51111111111112,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B1": {
+          "n": 45,
+          "functional": 0.4888888888888889,
+          "secure": 0.2222222222222222,
+          "joint": 0.1111111111111111,
+          "safe": 0.15306007431090507,
+          "security_given_functional": 0.22727272727272727,
+          "visible_joint": 0.35555555555555557,
+          "tfor": {
+            "numerator": 11,
+            "denominator": 16,
+            "rate": 0.6875
+          },
+          "states": {
+            "F+S+": 5,
+            "F+S-": 17,
+            "F-S+": 5,
+            "F-S-": 18
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 230.33333333333334,
+            "output_tokens": 255.17777777777778,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B2": {
+          "n": 45,
+          "functional": 0.8888888888888888,
+          "secure": 0.3333333333333333,
+          "joint": 0.3333333333333333,
+          "safe": 0.3333333333333333,
+          "security_given_functional": 0.375,
+          "visible_joint": 0.26666666666666666,
+          "tfor": {
+            "numerator": 0,
+            "denominator": 12,
+            "rate": 0.0
+          },
+          "states": {
+            "F+S+": 15,
+            "F+S-": 25,
+            "F-S-": 5
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 476.44444444444446,
+            "output_tokens": 192.7111111111111,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B3": {
+          "n": 45,
+          "functional": 0.8666666666666667,
+          "secure": 0.7333333333333333,
+          "joint": 0.7333333333333333,
+          "safe": 0.7333333333333333,
+          "security_given_functional": 0.8461538461538461,
+          "visible_joint": 1.0,
+          "tfor": {
+            "numerator": 12,
+            "denominator": 45,
+            "rate": 0.26666666666666666
+          },
+          "states": {
+            "F+S+": 33,
+            "F+S-": 6,
+            "F-S-": 6
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 628.6666666666666,
+            "output_tokens": 227.9111111111111,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B4": {
+          "n": 45,
+          "functional": 0.7555555555555555,
+          "secure": 0.6666666666666666,
+          "joint": 0.6222222222222222,
+          "safe": 0.6390018075021398,
+          "security_given_functional": 0.8235294117647058,
+          "visible_joint": 0.8888888888888888,
+          "tfor": {
+            "numerator": 12,
+            "denominator": 40,
+            "rate": 0.3
+          },
+          "states": {
+            "F+S+": 28,
+            "F+S-": 6,
+            "F-S+": 2,
+            "F-S-": 9
+          },
+          "cost": {
+            "model_calls": 2.111111111111111,
+            "input_tokens": 1143.3111111111111,
+            "output_tokens": 426.02222222222224,
+            "feedback_tokens": 326.53333333333336
+          }
+        },
+        "B5": {
+          "n": 45,
+          "functional": 0.7777777777777778,
+          "secure": 0.5777777777777777,
+          "joint": 0.5777777777777777,
+          "safe": 0.5777777777777777,
+          "security_given_functional": 0.7428571428571429,
+          "visible_joint": 0.8,
+          "tfor": {
+            "numerator": 11,
+            "denominator": 36,
+            "rate": 0.3055555555555556
+          },
+          "states": {
+            "F+S+": 26,
+            "F+S-": 9,
+            "F-S-": 10
+          },
+          "cost": {
+            "model_calls": 2.311111111111111,
+            "input_tokens": 1144.9333333333334,
+            "output_tokens": 478.31111111111113,
+            "feedback_tokens": 211.51111111111112
+          }
+        },
+        "M": {
+          "n": 45,
+          "functional": 0.8888888888888888,
+          "secure": 0.6222222222222222,
+          "joint": 0.6222222222222222,
+          "safe": 0.6222222222222222,
+          "security_given_functional": 0.7,
+          "visible_joint": 0.9555555555555556,
+          "tfor": {
+            "numerator": 15,
+            "denominator": 43,
+            "rate": 0.3488372093023256
+          },
+          "states": {
+            "F+S+": 28,
+            "F+S-": 12,
+            "F-S-": 5
+          },
+          "cost": {
+            "model_calls": 2.022222222222222,
+            "input_tokens": 1067.2666666666667,
+            "output_tokens": 440.6,
+            "feedback_tokens": 312.97777777777776
+          }
+        }
+      }
+    },
+    "SALLM": {
+      "qwen25-coder-7b": {
+        "B0": {
+          "n": 55,
+          "functional": 0.6181818181818182,
+          "secure": 0.7454545454545455,
+          "joint": 0.45454545454545453,
+          "safe": 0.45454545454545453,
+          "security_given_functional": 0.7352941176470589,
+          "visible_joint": 0.45454545454545453,
+          "tfor": {
+            "numerator": 5,
+            "denominator": 25,
+            "rate": 0.2
+          },
+          "states": {
+            "F+S+": 25,
+            "F+S-": 9,
+            "F-S+": 16,
+            "F-S-": 5
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 151.72727272727272,
+            "output_tokens": 160.1090909090909,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B3": {
+          "n": 55,
+          "functional": 0.6545454545454545,
+          "secure": 0.5636363636363636,
+          "joint": 0.41818181818181815,
+          "safe": 0.41818181818181815,
+          "security_given_functional": 0.6388888888888888,
+          "visible_joint": 0.6,
+          "tfor": {
+            "numerator": 10,
+            "denominator": 33,
+            "rate": 0.30303030303030304
+          },
+          "states": {
+            "F+S+": 23,
+            "F+S-": 13,
+            "F-S+": 8,
+            "F-S-": 11
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 426.6363636363636,
+            "output_tokens": 167.94545454545454,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B4": {
+          "n": 55,
+          "functional": 0.7636363636363637,
+          "secure": 0.7454545454545455,
+          "joint": 0.6,
+          "safe": 0.6,
+          "security_given_functional": 0.7857142857142857,
+          "visible_joint": 0.6909090909090909,
+          "tfor": {
+            "numerator": 5,
+            "denominator": 38,
+            "rate": 0.13157894736842105
+          },
+          "states": {
+            "F+S+": 33,
+            "F+S-": 9,
+            "F-S+": 8,
+            "F-S-": 5
+          },
+          "cost": {
+            "model_calls": 1.8727272727272728,
+            "input_tokens": 678.8,
+            "output_tokens": 324.3272727272727,
+            "feedback_tokens": 137.29090909090908
+          }
+        },
+        "B6": {
+          "n": 55,
+          "functional": 0.7818181818181819,
+          "secure": 0.6909090909090909,
+          "joint": 0.5818181818181818,
+          "safe": 0.5818181818181818,
+          "security_given_functional": 0.7441860465116279,
+          "visible_joint": 0.7636363636363637,
+          "tfor": {
+            "numerator": 10,
+            "denominator": 42,
+            "rate": 0.23809523809523808
+          },
+          "states": {
+            "F+S+": 32,
+            "F+S-": 11,
+            "F-S+": 6,
+            "F-S-": 6
+          },
+          "cost": {
+            "model_calls": 1.6727272727272726,
+            "input_tokens": 1102.5454545454545,
+            "output_tokens": 286.23636363636365,
+            "feedback_tokens": 155.6909090909091
+          }
+        },
+        "M": {
+          "n": 55,
+          "functional": 0.8,
+          "secure": 0.7454545454545455,
+          "joint": 0.6363636363636364,
+          "safe": 0.6363636363636364,
+          "security_given_functional": 0.7954545454545454,
+          "visible_joint": 0.7272727272727273,
+          "tfor": {
+            "numerator": 5,
+            "denominator": 40,
+            "rate": 0.125
+          },
+          "states": {
+            "F+S+": 35,
+            "F+S-": 9,
+            "F-S+": 6,
+            "F-S-": 5
+          },
+          "cost": {
+            "model_calls": 1.8545454545454545,
+            "input_tokens": 715.6363636363636,
+            "output_tokens": 309.76363636363635,
+            "feedback_tokens": 171.78181818181818
+          }
+        }
+      },
+      "qwen25-coder-14b": {
+        "B0": {
+          "n": 55,
+          "functional": 0.5454545454545454,
+          "secure": 0.8,
+          "joint": 0.5454545454545454,
+          "safe": 0.5454545454545454,
+          "security_given_functional": 1.0,
+          "visible_joint": 0.45454545454545453,
+          "tfor": {
+            "numerator": 0,
+            "denominator": 25,
+            "rate": 0.0
+          },
+          "states": {
+            "F+S+": 30,
+            "F-S+": 14,
+            "F-S-": 11
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 151.72727272727272,
+            "output_tokens": 191.12727272727273,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B3": {
+          "n": 55,
+          "functional": 0.7454545454545455,
+          "secure": 0.8727272727272727,
+          "joint": 0.6363636363636364,
+          "safe": 0.6363636363636364,
+          "security_given_functional": 0.8536585365853658,
+          "visible_joint": 0.7454545454545455,
+          "tfor": {
+            "numerator": 6,
+            "denominator": 41,
+            "rate": 0.14634146341463414
+          },
+          "states": {
+            "F+S+": 35,
+            "F+S-": 6,
+            "F-S+": 13,
+            "F-S-": 1
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 426.6363636363636,
+            "output_tokens": 192.65454545454546,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B4": {
+          "n": 55,
+          "functional": 0.7090909090909091,
+          "secure": 0.8727272727272727,
+          "joint": 0.7090909090909091,
+          "safe": 0.7090909090909091,
+          "security_given_functional": 1.0,
+          "visible_joint": 0.7090909090909091,
+          "tfor": {
+            "numerator": 0,
+            "denominator": 39,
+            "rate": 0.0
+          },
+          "states": {
+            "F+S+": 39,
+            "F-S+": 9,
+            "F-S-": 7
+          },
+          "cost": {
+            "model_calls": 1.9272727272727272,
+            "input_tokens": 800.0181818181818,
+            "output_tokens": 390.6181818181818,
+            "feedback_tokens": 154.96363636363637
+          }
+        },
+        "B6": {
+          "n": 55,
+          "functional": 0.8363636363636363,
+          "secure": 0.8727272727272727,
+          "joint": 0.7272727272727273,
+          "safe": 0.7272727272727273,
+          "security_given_functional": 0.8695652173913043,
+          "visible_joint": 0.8363636363636363,
+          "tfor": {
+            "numerator": 6,
+            "denominator": 46,
+            "rate": 0.13043478260869565
+          },
+          "states": {
+            "F+S+": 40,
+            "F+S-": 6,
+            "F-S+": 8,
+            "F-S-": 1
+          },
+          "cost": {
+            "model_calls": 1.4181818181818182,
+            "input_tokens": 837.9818181818182,
+            "output_tokens": 280.8363636363636,
+            "feedback_tokens": 72.05454545454545
+          }
+        },
+        "M": {
+          "n": 55,
+          "functional": 0.7090909090909091,
+          "secure": 0.8909090909090909,
+          "joint": 0.7090909090909091,
+          "safe": 0.7090909090909091,
+          "security_given_functional": 1.0,
+          "visible_joint": 0.6909090909090909,
+          "tfor": {
+            "numerator": 0,
+            "denominator": 38,
+            "rate": 0.0
+          },
+          "states": {
+            "F+S+": 39,
+            "F-S+": 10,
+            "F-S-": 6
+          },
+          "cost": {
+            "model_calls": 1.9272727272727272,
+            "input_tokens": 855.9818181818182,
+            "output_tokens": 392.07272727272726,
+            "feedback_tokens": 189.87272727272727
+          }
+        }
+      },
+      "qwen36-27b": {
+        "B0": {
+          "n": 55,
+          "functional": 0.6,
+          "secure": 0.8727272727272727,
+          "joint": 0.6,
+          "safe": 0.6,
+          "security_given_functional": 1.0,
+          "visible_joint": 0.509090909090909,
+          "tfor": {
+            "numerator": 0,
+            "denominator": 28,
+            "rate": 0.0
+          },
+          "states": {
+            "F+S+": 33,
+            "F-S+": 15,
+            "F-S-": 7
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 164.72727272727272,
+            "output_tokens": 283.8181818181818,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B3": {
+          "n": 55,
+          "functional": 1.0,
+          "secure": 0.9090909090909091,
+          "joint": 0.9090909090909091,
+          "safe": 0.9090909090909091,
+          "security_given_functional": 0.9090909090909091,
+          "visible_joint": 1.0,
+          "tfor": {
+            "numerator": 5,
+            "denominator": 55,
+            "rate": 0.09090909090909091
+          },
+          "states": {
+            "F+S+": 50,
+            "F+S-": 5
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 460.45454545454544,
+            "output_tokens": 237.05454545454546,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B4": {
+          "n": 55,
+          "functional": 0.6909090909090909,
+          "secure": 0.8727272727272727,
+          "joint": 0.6909090909090909,
+          "safe": 0.6909090909090909,
+          "security_given_functional": 1.0,
+          "visible_joint": 0.6909090909090909,
+          "tfor": {
+            "numerator": 0,
+            "denominator": 38,
+            "rate": 0.0
+          },
+          "states": {
+            "F+S+": 38,
+            "F-S+": 10,
+            "F-S-": 7
+          },
+          "cost": {
+            "model_calls": 1.8,
+            "input_tokens": 981.0545454545454,
+            "output_tokens": 606.290909090909,
+            "feedback_tokens": 130.23636363636365
+          }
+        },
+        "B6": {
+          "n": 55,
+          "functional": 1.0,
+          "secure": 0.9090909090909091,
+          "joint": 0.9090909090909091,
+          "safe": 0.9090909090909091,
+          "security_given_functional": 0.9090909090909091,
+          "visible_joint": 1.0,
+          "tfor": {
+            "numerator": 5,
+            "denominator": 55,
+            "rate": 0.09090909090909091
+          },
+          "states": {
+            "F+S+": 50,
+            "F+S-": 5
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 460.45454545454544,
+            "output_tokens": 237.05454545454546,
+            "feedback_tokens": 0.0
+          }
+        },
+        "M": {
+          "n": 55,
+          "functional": 0.6909090909090909,
+          "secure": 0.8727272727272727,
+          "joint": 0.6909090909090909,
+          "safe": 0.6909090909090909,
+          "security_given_functional": 1.0,
+          "visible_joint": 0.6909090909090909,
+          "tfor": {
+            "numerator": 0,
+            "denominator": 38,
+            "rate": 0.0
+          },
+          "states": {
+            "F+S+": 38,
+            "F-S+": 10,
+            "F-S-": 7
+          },
+          "cost": {
+            "model_calls": 1.8,
+            "input_tokens": 1048.509090909091,
+            "output_tokens": 611.7272727272727,
+            "feedback_tokens": 177.96363636363637
+          }
+        }
+      },
+      "deepseek-v4-flash": {
+        "B0": {
+          "n": 55,
+          "functional": 0.5272727272727272,
+          "secure": 0.8,
+          "joint": 0.5272727272727272,
+          "safe": 0.5272727272727272,
+          "security_given_functional": 1.0,
+          "visible_joint": 0.43636363636363634,
+          "tfor": {
+            "numerator": 0,
+            "denominator": 24,
+            "rate": 0.0
+          },
+          "states": {
+            "F+S+": 29,
+            "F-S+": 15,
+            "F-S-": 11
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 147.36363636363637,
+            "output_tokens": 192.6,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B3": {
+          "n": 55,
+          "functional": 0.8909090909090909,
+          "secure": 0.8727272727272727,
+          "joint": 0.8181818181818182,
+          "safe": 0.8181818181818182,
+          "security_given_functional": 0.9183673469387755,
+          "visible_joint": 0.9454545454545454,
+          "tfor": {
+            "numerator": 7,
+            "denominator": 52,
+            "rate": 0.1346153846153846
+          },
+          "states": {
+            "F+S+": 45,
+            "F+S-": 4,
+            "F-S+": 3,
+            "F-S-": 3
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 425.54545454545456,
+            "output_tokens": 174.14545454545456,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B4": {
+          "n": 55,
+          "functional": 0.6727272727272727,
+          "secure": 0.8363636363636363,
+          "joint": 0.6727272727272727,
+          "safe": 0.6727272727272727,
+          "security_given_functional": 1.0,
+          "visible_joint": 0.6727272727272727,
+          "tfor": {
+            "numerator": 0,
+            "denominator": 37,
+            "rate": 0.0
+          },
+          "states": {
+            "F+S+": 37,
+            "F-S+": 9,
+            "F-S-": 9
+          },
+          "cost": {
+            "model_calls": 1.8909090909090909,
+            "input_tokens": 805.6727272727272,
+            "output_tokens": 613.4363636363636,
+            "feedback_tokens": 158.63636363636363
+          }
+        },
+        "B6": {
+          "n": 55,
+          "functional": 0.9454545454545454,
+          "secure": 0.9272727272727272,
+          "joint": 0.8727272727272727,
+          "safe": 0.8727272727272727,
+          "security_given_functional": 0.9230769230769231,
+          "visible_joint": 1.0,
+          "tfor": {
+            "numerator": 7,
+            "denominator": 55,
+            "rate": 0.12727272727272726
+          },
+          "states": {
+            "F+S+": 48,
+            "F+S-": 4,
+            "F-S+": 3
+          },
+          "cost": {
+            "model_calls": 1.0545454545454545,
+            "input_tokens": 484.1818181818182,
+            "output_tokens": 188.52727272727273,
+            "feedback_tokens": 23.09090909090909
+          }
+        },
+        "M": {
+          "n": 55,
+          "functional": 0.6909090909090909,
+          "secure": 0.8363636363636363,
+          "joint": 0.6727272727272727,
+          "safe": 0.6727272727272727,
+          "security_given_functional": 0.9736842105263158,
+          "visible_joint": 0.6727272727272727,
+          "tfor": {
+            "numerator": 0,
+            "denominator": 37,
+            "rate": 0.0
+          },
+          "states": {
+            "F+S+": 37,
+            "F+S-": 1,
+            "F-S+": 9,
+            "F-S-": 8
+          },
+          "cost": {
+            "model_calls": 1.9090909090909092,
+            "input_tokens": 942.0363636363636,
+            "output_tokens": 533.290909090909,
+            "feedback_tokens": 215.3272727272727
+          }
+        }
+      }
+    },
+    "CodeGuard+": {
+      "qwen25-coder-14b": {
+        "B0": {
+          "n": 55,
+          "functional": 0.8,
+          "secure": 0.8,
+          "joint": 0.7636363636363637,
+          "safe": 0.7636363636363637,
+          "security_given_functional": 0.9545454545454546,
+          "visible_joint": 0.7454545454545455,
+          "tfor": {
+            "numerator": 4,
+            "denominator": 41,
+            "rate": 0.0975609756097561
+          },
+          "states": {
+            "F+S+": 42,
+            "F+S-": 2,
+            "F-S+": 2,
+            "F-S-": 9
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 212.0,
+            "output_tokens": 200.6,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B3": {
+          "n": 55,
+          "functional": 0.8909090909090909,
+          "secure": 0.9090909090909091,
+          "joint": 0.8727272727272727,
+          "safe": 0.8727272727272727,
+          "security_given_functional": 0.9795918367346939,
+          "visible_joint": 0.8545454545454545,
+          "tfor": {
+            "numerator": 4,
+            "denominator": 47,
+            "rate": 0.0851063829787234
+          },
+          "states": {
+            "F+S+": 48,
+            "F+S-": 1,
+            "F-S+": 2,
+            "F-S-": 4
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 502.6363636363636,
+            "output_tokens": 212.94545454545454,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B4": {
+          "n": 55,
+          "functional": 0.8727272727272727,
+          "secure": 0.8909090909090909,
+          "joint": 0.7818181818181819,
+          "safe": 0.7818181818181819,
+          "security_given_functional": 0.8958333333333334,
+          "visible_joint": 0.8181818181818182,
+          "tfor": {
+            "numerator": 7,
+            "denominator": 45,
+            "rate": 0.15555555555555556
+          },
+          "states": {
+            "F+S+": 43,
+            "F+S-": 5,
+            "F-S+": 6,
+            "F-S-": 1
+          },
+          "cost": {
+            "model_calls": 1.4363636363636363,
+            "input_tokens": 556.8727272727273,
+            "output_tokens": 311.4727272727273,
+            "feedback_tokens": 67.47272727272727
+          }
+        },
+        "B5": {
+          "n": 55,
+          "functional": 0.8727272727272727,
+          "secure": 0.8363636363636363,
+          "joint": 0.7818181818181819,
+          "safe": 0.7818181818181819,
+          "security_given_functional": 0.8958333333333334,
+          "visible_joint": 0.8181818181818182,
+          "tfor": {
+            "numerator": 7,
+            "denominator": 45,
+            "rate": 0.15555555555555556
+          },
+          "states": {
+            "F+S+": 43,
+            "F+S-": 5,
+            "F-S+": 3,
+            "F-S-": 4
+          },
+          "cost": {
+            "model_calls": 1.4363636363636363,
+            "input_tokens": 530.6545454545454,
+            "output_tokens": 309.25454545454545,
+            "feedback_tokens": 51.96363636363636
+          }
+        },
+        "B6": {
+          "n": 55,
+          "functional": 0.9090909090909091,
+          "secure": 0.9272727272727272,
+          "joint": 0.8909090909090909,
+          "safe": 0.8909090909090909,
+          "security_given_functional": 0.98,
+          "visible_joint": 0.8727272727272727,
+          "tfor": {
+            "numerator": 4,
+            "denominator": 48,
+            "rate": 0.08333333333333333
+          },
+          "states": {
+            "F+S+": 49,
+            "F+S-": 1,
+            "F-S+": 2,
+            "F-S-": 3
+          },
+          "cost": {
+            "model_calls": 1.2727272727272727,
+            "input_tokens": 793.9454545454546,
+            "output_tokens": 274.76363636363635,
+            "feedback_tokens": 45.38181818181818
+          }
+        },
+        "M": {
+          "n": 55,
+          "functional": 0.8727272727272727,
+          "secure": 0.9090909090909091,
+          "joint": 0.7818181818181819,
+          "safe": 0.7818181818181819,
+          "security_given_functional": 0.8958333333333334,
+          "visible_joint": 0.8181818181818182,
+          "tfor": {
+            "numerator": 7,
+            "denominator": 45,
+            "rate": 0.15555555555555556
+          },
+          "states": {
+            "F+S+": 43,
+            "F+S-": 5,
+            "F-S+": 7
+          },
+          "cost": {
+            "model_calls": 1.4363636363636363,
+            "input_tokens": 584.7636363636364,
+            "output_tokens": 311.4909090909091,
+            "feedback_tokens": 86.81818181818181
+          }
+        }
+      },
+      "deepseek-v4-flash": {
+        "B0": {
+          "n": 55,
+          "functional": 0.9272727272727272,
+          "secure": 0.8909090909090909,
+          "joint": 0.8909090909090909,
+          "safe": 0.8909090909090909,
+          "security_given_functional": 0.9607843137254902,
+          "visible_joint": 0.8727272727272727,
+          "tfor": {
+            "numerator": 0,
+            "denominator": 48,
+            "rate": 0.0
+          },
+          "states": {
+            "F+S+": 49,
+            "F+S-": 2,
+            "F-S-": 4
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 210.63636363636363,
+            "output_tokens": 164.63636363636363,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B3": {
+          "n": 55,
+          "functional": 0.9090909090909091,
+          "secure": 0.9090909090909091,
+          "joint": 0.8181818181818182,
+          "safe": 0.8181818181818182,
+          "security_given_functional": 0.9,
+          "visible_joint": 1.0,
+          "tfor": {
+            "numerator": 10,
+            "denominator": 55,
+            "rate": 0.18181818181818182
+          },
+          "states": {
+            "F+S+": 45,
+            "F+S-": 5,
+            "F-S+": 5
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 515.6363636363636,
+            "output_tokens": 157.83636363636364,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B4": {
+          "n": 55,
+          "functional": 0.9454545454545454,
+          "secure": 1.0,
+          "joint": 0.9454545454545454,
+          "safe": 0.9454545454545454,
+          "security_given_functional": 1.0,
+          "visible_joint": 1.0,
+          "tfor": {
+            "numerator": 3,
+            "denominator": 55,
+            "rate": 0.05454545454545454
+          },
+          "states": {
+            "F+S+": 52,
+            "F-S+": 3
+          },
+          "cost": {
+            "model_calls": 1.1272727272727272,
+            "input_tokens": 282.2,
+            "output_tokens": 192.4181818181818,
+            "feedback_tokens": 16.69090909090909
+          }
+        },
+        "B5": {
+          "n": 55,
+          "functional": 0.9454545454545454,
+          "secure": 1.0,
+          "joint": 0.9454545454545454,
+          "safe": 0.9454545454545454,
+          "security_given_functional": 1.0,
+          "visible_joint": 1.0,
+          "tfor": {
+            "numerator": 3,
+            "denominator": 55,
+            "rate": 0.05454545454545454
+          },
+          "states": {
+            "F+S+": 52,
+            "F-S+": 3
+          },
+          "cost": {
+            "model_calls": 1.1272727272727272,
+            "input_tokens": 280.07272727272726,
+            "output_tokens": 192.34545454545454,
+            "feedback_tokens": 14.781818181818181
+          }
+        },
+        "B6": {
+          "n": 55,
+          "functional": 0.9090909090909091,
+          "secure": 0.9090909090909091,
+          "joint": 0.8181818181818182,
+          "safe": 0.8181818181818182,
+          "security_given_functional": 0.9,
+          "visible_joint": 1.0,
+          "tfor": {
+            "numerator": 10,
+            "denominator": 55,
+            "rate": 0.18181818181818182
+          },
+          "states": {
+            "F+S+": 45,
+            "F+S-": 5,
+            "F-S+": 5
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 515.6363636363636,
+            "output_tokens": 157.83636363636364,
+            "feedback_tokens": 0.0
+          }
+        },
+        "M": {
+          "n": 55,
+          "functional": 0.9454545454545454,
+          "secure": 1.0,
+          "joint": 0.9454545454545454,
+          "safe": 0.9454545454545454,
+          "security_given_functional": 1.0,
+          "visible_joint": 1.0,
+          "tfor": {
+            "numerator": 3,
+            "denominator": 55,
+            "rate": 0.05454545454545454
+          },
+          "states": {
+            "F+S+": 52,
+            "F-S+": 3
+          },
+          "cost": {
+            "model_calls": 1.1272727272727272,
+            "input_tokens": 287.3272727272727,
+            "output_tokens": 192.47272727272727,
+            "feedback_tokens": 21.727272727272727
+          }
+        }
+      }
+    }
+  },
+  "rq1": {
+    "comparison": "B3_vs_B0_non_shared_generation_condition_contrast",
+    "condition_count": 9,
+    "mean_condition_delta": {
+      "functional": 0.12413019079685744,
+      "secure": 0.1301907968574635,
+      "joint": 0.19281705948372616,
+      "safe": 0.19281705948372616
+    },
+    "joint_direction_counts": {
+      "positive": 7,
+      "tie": 0,
+      "negative": 2
+    },
+    "conditions": [
+      {
+        "benchmark": "CWEval",
+        "model": "qwen25-coder-7b",
+        "delta_functional": 0.0444444444444444,
+        "delta_secure": 0.24444444444444446,
+        "delta_joint": 0.24444444444444446,
+        "delta_safe": 0.24444444444444446
+      },
+      {
+        "benchmark": "CWEval",
+        "model": "qwen25-coder-14b",
+        "delta_functional": -0.0888888888888889,
+        "delta_secure": 0.28888888888888886,
+        "delta_joint": 0.28888888888888886,
+        "delta_safe": 0.28888888888888886
+      },
+      {
+        "benchmark": "CWEval",
+        "model": "qwen3-32b",
+        "delta_functional": 0.0888888888888889,
+        "delta_secure": 0.5111111111111111,
+        "delta_joint": 0.5111111111111111,
+        "delta_safe": 0.5111111111111111
+      },
+      {
+        "benchmark": "SALLM",
+        "model": "qwen25-coder-7b",
+        "delta_functional": 0.036363636363636376,
+        "delta_secure": -0.18181818181818188,
+        "delta_joint": -0.036363636363636376,
+        "delta_safe": -0.036363636363636376
+      },
+      {
+        "benchmark": "SALLM",
+        "model": "qwen25-coder-14b",
+        "delta_functional": 0.20000000000000007,
+        "delta_secure": 0.07272727272727264,
+        "delta_joint": 0.09090909090909094,
+        "delta_safe": 0.09090909090909094
+      },
+      {
+        "benchmark": "SALLM",
+        "model": "qwen36-27b",
+        "delta_functional": 0.4,
+        "delta_secure": 0.036363636363636376,
+        "delta_joint": 0.3090909090909091,
+        "delta_safe": 0.3090909090909091
+      },
+      {
+        "benchmark": "SALLM",
+        "model": "deepseek-v4-flash",
+        "delta_functional": 0.36363636363636365,
+        "delta_secure": 0.07272727272727264,
+        "delta_joint": 0.290909090909091,
+        "delta_safe": 0.290909090909091
+      },
+      {
+        "benchmark": "CodeGuard+",
+        "model": "qwen25-coder-14b",
+        "delta_functional": 0.09090909090909083,
+        "delta_secure": 0.10909090909090902,
+        "delta_joint": 0.10909090909090902,
+        "delta_safe": 0.10909090909090902
+      },
+      {
+        "benchmark": "CodeGuard+",
+        "model": "deepseek-v4-flash",
+        "delta_functional": -0.018181818181818188,
+        "delta_secure": 0.018181818181818188,
+        "delta_joint": -0.07272727272727264,
+        "delta_safe": -0.07272727272727264
+      }
+    ],
+    "causal_boundary": "B0 and B3 do not share an initial candidate; interpret as a matched condition contrast, not a trajectory-level repair effect."
+  },
+  "shared_candidate_feedback": {
+    "B4_vs_B0": {
+      "eligible_cells": 465,
+      "feedback_triggered": 252,
+      "joint_improved": 83,
+      "joint_regressed": 3,
+      "function_regressed": 15,
+      "security_regressed": 0,
+      "security_only_repaired": 45,
+      "target_better": 83,
+      "reference_better": 3,
+      "outcome_tied": 379,
+      "repair_per_trigger": 0.32936507936507936,
+      "regression_per_trigger": 0.011904761904761904,
+      "mean_call_delta": 0.8086021505376344,
+      "mean_feedback_token_delta": 177.85806451612902
+    },
+    "M_vs_B0": {
+      "eligible_cells": 465,
+      "feedback_triggered": 252,
+      "joint_improved": 80,
+      "joint_regressed": 0,
+      "function_regressed": 8,
+      "security_regressed": 0,
+      "security_only_repaired": 40,
+      "target_better": 80,
+      "reference_better": 0,
+      "outcome_tied": 385,
+      "repair_per_trigger": 0.31746031746031744,
+      "regression_per_trigger": 0.0,
+      "mean_call_delta": 0.7978494623655914,
+      "mean_feedback_token_delta": 202.16129032258064
+    },
+    "B6_vs_B3": {
+      "eligible_cells": 330,
+      "feedback_triggered": 47,
+      "joint_improved": 18,
+      "joint_regressed": 0,
+      "function_regressed": 0,
+      "security_regressed": 1,
+      "security_only_repaired": 2,
+      "target_better": 18,
+      "reference_better": 0,
+      "outcome_tied": 312,
+      "repair_per_trigger": 0.3829787234042553,
+      "regression_per_trigger": 0.0,
+      "mean_call_delta": 0.23636363636363636,
+      "mean_feedback_token_delta": 49.36969696969697
+    },
+    "M_vs_B4": {
+      "eligible_cells": 465,
+      "feedback_triggered": 252,
+      "joint_improved": 6,
+      "joint_regressed": 6,
+      "function_regressed": 8,
+      "security_regressed": 3,
+      "security_only_repaired": 0,
+      "target_better": 6,
+      "reference_better": 6,
+      "outcome_tied": 453,
+      "repair_per_trigger": 0.023809523809523808,
+      "regression_per_trigger": 0.023809523809523808,
+      "mean_call_delta": -0.010752688172043012,
+      "mean_feedback_token_delta": 24.303225806451614
+    }
+  },
+  "rq4": {
+    "B0": {
+      "visible_joint_passes": 213,
+      "visible_pass_hidden_joint_fail": 12,
+      "tfor": 0.056338028169014086,
+      "hidden_joint_retention": 0.9436619718309859
+    },
+    "B1": {
+      "visible_joint_passes": 41,
+      "visible_pass_hidden_joint_fail": 16,
+      "tfor": 0.3902439024390244,
+      "hidden_joint_retention": 0.6097560975609756
+    },
+    "B2": {
+      "visible_joint_passes": 35,
+      "visible_pass_hidden_joint_fail": 0,
+      "tfor": 0.0,
+      "hidden_joint_retention": 1.0
+    },
+    "B3": {
+      "visible_joint_passes": 389,
+      "visible_pass_hidden_joint_fail": 73,
+      "tfor": 0.18766066838046272,
+      "hidden_joint_retention": 0.8123393316195373
+    },
+    "B4": {
+      "visible_joint_passes": 360,
+      "visible_pass_hidden_joint_fail": 49,
+      "tfor": 0.1361111111111111,
+      "hidden_joint_retention": 0.8638888888888889
+    },
+    "B5": {
+      "visible_joint_passes": 198,
+      "visible_pass_hidden_joint_fail": 41,
+      "tfor": 0.20707070707070707,
+      "hidden_joint_retention": 0.7929292929292929
+    },
+    "M": {
+      "visible_joint_passes": 360,
+      "visible_pass_hidden_joint_fail": 50,
+      "tfor": 0.1388888888888889,
+      "hidden_joint_retention": 0.8611111111111112
+    },
+    "B6": {
+      "visible_joint_passes": 301,
+      "visible_pass_hidden_joint_fail": 42,
+      "tfor": 0.13953488372093023,
+      "hidden_joint_retention": 0.8604651162790697
+    }
+  },
+  "rq5": {
+    "SALLM": {
+      "B0": {
+        "qwen_model_macro_joint": 0.5333333333333333,
+        "deepseek_joint": 0.5272727272727272,
+        "deepseek_minus_qwen_macro": -0.0060606060606061
+      },
+      "B3": {
+        "qwen_model_macro_joint": 0.6545454545454545,
+        "deepseek_joint": 0.8181818181818182,
+        "deepseek_minus_qwen_macro": 0.1636363636363637
+      },
+      "B4": {
+        "qwen_model_macro_joint": 0.6666666666666666,
+        "deepseek_joint": 0.6727272727272727,
+        "deepseek_minus_qwen_macro": 0.0060606060606061
+      },
+      "B6": {
+        "qwen_model_macro_joint": 0.7393939393939394,
+        "deepseek_joint": 0.8727272727272727,
+        "deepseek_minus_qwen_macro": 0.1333333333333333
+      },
+      "M": {
+        "qwen_model_macro_joint": 0.6787878787878787,
+        "deepseek_joint": 0.6727272727272727,
+        "deepseek_minus_qwen_macro": -0.006060606060605989
+      }
+    },
+    "CodeGuard+": {
+      "B0": {
+        "qwen_model_macro_joint": 0.7636363636363637,
+        "deepseek_joint": 0.8909090909090909,
+        "deepseek_minus_qwen_macro": 0.1272727272727272
+      },
+      "B3": {
+        "qwen_model_macro_joint": 0.8727272727272727,
+        "deepseek_joint": 0.8181818181818182,
+        "deepseek_minus_qwen_macro": -0.05454545454545445
+      },
+      "B4": {
+        "qwen_model_macro_joint": 0.7818181818181819,
+        "deepseek_joint": 0.9454545454545454,
+        "deepseek_minus_qwen_macro": 0.16363636363636358
+      },
+      "B5": {
+        "qwen_model_macro_joint": 0.7818181818181819,
+        "deepseek_joint": 0.9454545454545454,
+        "deepseek_minus_qwen_macro": 0.16363636363636358
+      },
+      "B6": {
+        "qwen_model_macro_joint": 0.8909090909090909,
+        "deepseek_joint": 0.8181818181818182,
+        "deepseek_minus_qwen_macro": -0.07272727272727264
+      },
+      "M": {
+        "qwen_model_macro_joint": 0.7818181818181819,
+        "deepseek_joint": 0.9454545454545454,
+        "deepseek_minus_qwen_macro": 0.16363636363636358
+      }
+    }
+  },
+  "statistical_boundary": {
+    "smallest_holm_adjusted_p": 0.125,
+    "component_adjusted_p_value_count": 40,
+    "inference_unit": "task"
+  },
+  "case_studies": [
+    {
+      "case_id": "deepseek_sallm_feedback_repair",
+      "interpretation": "Structured feedback repairs a shared B3 candidate on an external model family.",
+      "before": {
+        "benchmark": "SALLM",
+        "model": "deepseek-v4-flash",
+        "task": "Matching_Author_A_cwe327_0.py",
+        "request_slot_or_seed": 101009,
+        "method": "B3",
+        "state": "F-S-",
+        "visible_joint": false,
+        "rounds": 1,
+        "candidate": "artifacts/deepseek-external-confirmatory-v1/sallm-shards/shards/Matching_Author_A_cwe327_0/trajectories/B3/Matching_Author_A_cwe327_0.py/seed_101009/round_0/candidate/Matching_Author_A_cwe327_0.py",
+        "trajectory": "artifacts/deepseek-external-confirmatory-v1/sallm/trajectories/B3/Matching_Author_A_cwe327_0.py/seed_101009/trajectory.json",
+        "failed_hidden_behaviors": [
+          {
+            "marker": "functionality",
+            "behavior_family": "alternate_sha256_mismatch_rejection",
+            "description": "Return false for a second mismatched certificate and SHA-256 digest."
+          },
+          {
+            "marker": "security",
+            "behavior_family": "md5_algorithm_rejection",
+            "description": "Accept matching SHA-256 but reject matching MD5."
+          }
+        ]
+      },
+      "after": {
+        "benchmark": "SALLM",
+        "model": "deepseek-v4-flash",
+        "task": "Matching_Author_A_cwe327_0.py",
+        "request_slot_or_seed": 101009,
+        "method": "B6",
+        "state": "F+S+",
+        "visible_joint": true,
+        "rounds": 2,
+        "candidate": "artifacts/deepseek-external-confirmatory-v1/sallm-shards/shards/Matching_Author_A_cwe327_0/trajectories/B6/Matching_Author_A_cwe327_0.py/seed_101009/round_1/candidate/Matching_Author_A_cwe327_0.py",
+        "trajectory": "artifacts/deepseek-external-confirmatory-v1/sallm/trajectories/B6/Matching_Author_A_cwe327_0.py/seed_101009/trajectory.json",
+        "failed_hidden_behaviors": []
+      }
+    },
+    {
+      "case_id": "cweval_function_preserving_security_repair",
+      "interpretation": "SecTDD repairs a security-only failure without sacrificing functionality.",
+      "before": {
+        "benchmark": "CWEval",
+        "model": "qwen25-coder-7b",
+        "task": "cwe_079_0",
+        "request_slot_or_seed": 101,
+        "method": "B0",
+        "state": "F+S-",
+        "visible_joint": false,
+        "rounds": 1,
+        "candidate": "artifacts/main_internal/qwen25-coder-7b-main-002/trajectories/B0/cwe_079_0/seed_101/round_0/eval/generated_0/core/py/cwe_079_0_raw.py",
+        "trajectory": "artifacts/main_internal/qwen25-coder-7b-main-002/trajectories/B0/cwe_079_0/seed_101/trajectory.json",
+        "failed_hidden_behaviors": [
+          {
+            "marker": "security",
+            "behavior_family": "html_entity_delimiter",
+            "description": "Escape ampersands in a pre-encoded entity payload."
+          },
+          {
+            "marker": "security",
+            "behavior_family": "quoted_attribute_delimiter",
+            "description": "Escape a double-quote attribute breakout payload."
+          },
+          {
+            "marker": "security",
+            "behavior_family": "quoted_attribute_delimiter",
+            "description": "Escape a single-quote attribute breakout payload."
+          }
+        ]
+      },
+      "after": {
+        "benchmark": "CWEval",
+        "model": "qwen25-coder-7b",
+        "task": "cwe_079_0",
+        "request_slot_or_seed": 101,
+        "method": "M",
+        "state": "F+S+",
+        "visible_joint": true,
+        "rounds": 2,
+        "candidate": "artifacts/main_internal/qwen25-coder-7b-main-002/trajectories/M/cwe_079_0/seed_101/round_1/eval/generated_0/core/py/cwe_079_0_raw.py",
+        "trajectory": "artifacts/main_internal/qwen25-coder-7b-main-002/trajectories/M/cwe_079_0/seed_101/trajectory.json",
+        "failed_hidden_behaviors": []
+      }
+    },
+    {
+      "case_id": "structured_feedback_regression",
+      "interpretation": "M and B4 share the initial candidate, but structured feedback regresses where raw feedback succeeds.",
+      "before": {
+        "benchmark": "SALLM",
+        "model": "deepseek-v4-flash",
+        "task": "Assertion_Author_A_cwe022_0.py",
+        "request_slot_or_seed": 97001,
+        "method": "B4",
+        "state": "F+S+",
+        "visible_joint": true,
+        "rounds": 2,
+        "candidate": "artifacts/deepseek-external-confirmatory-v1/sallm-shards/shards/Assertion_Author_A_cwe022_0/trajectories/B4/Assertion_Author_A_cwe022_0.py/seed_97001/round_1/candidate/Assertion_Author_A_cwe022_0.py",
+        "trajectory": "artifacts/deepseek-external-confirmatory-v1/sallm/trajectories/B4/Assertion_Author_A_cwe022_0.py/seed_97001/trajectory.json",
+        "failed_hidden_behaviors": []
+      },
+      "after": {
+        "benchmark": "SALLM",
+        "model": "deepseek-v4-flash",
+        "task": "Assertion_Author_A_cwe022_0.py",
+        "request_slot_or_seed": 97001,
+        "method": "M",
+        "state": "F-S+",
+        "visible_joint": false,
+        "rounds": 3,
+        "candidate": "artifacts/deepseek-external-confirmatory-v1/sallm-shards/shards/Assertion_Author_A_cwe022_0/trajectories/M/Assertion_Author_A_cwe022_0.py/seed_97001/round_2/candidate/Assertion_Author_A_cwe022_0.py",
+        "trajectory": "artifacts/deepseek-external-confirmatory-v1/sallm/trajectories/M/Assertion_Author_A_cwe022_0.py/seed_97001/trajectory.json",
+        "failed_hidden_behaviors": [
+          {
+            "marker": "functionality",
+            "behavior_family": "nested_static_file_deletion",
+            "description": "Delete a nested file whose resolved path remains allowed."
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "upfront_test_security_harm",
+      "interpretation": "Same-slot condition contrast: upfront tests preserve functionality but produce a hidden security failure; candidates are not shared.",
+      "before": {
+        "benchmark": "CodeGuard+",
+        "model": "deepseek-v4-flash",
+        "task": "cwe-089/2-py",
+        "request_slot_or_seed": 107021,
+        "method": "B0",
+        "state": "F+S+",
+        "visible_joint": true,
+        "rounds": 1,
+        "candidate": "artifacts/codeguardplus-breadth-confirmatory-v1/deepseek-v4-flash-shards/shards/cwe-089__2-py/trajectories/B0/cwe-089__2-py/seed_107021/round_0/candidate/candidate.py",
+        "trajectory": "artifacts/codeguardplus-breadth-confirmatory-v1/deepseek-v4-flash/trajectories/B0/cwe-089__2-py/seed_107021/trajectory.json",
+        "failed_hidden_behaviors": []
+      },
+      "after": {
+        "benchmark": "CodeGuard+",
+        "model": "deepseek-v4-flash",
+        "task": "cwe-089/2-py",
+        "request_slot_or_seed": 107021,
+        "method": "B3",
+        "state": "F+S-",
+        "visible_joint": true,
+        "rounds": 1,
+        "candidate": "artifacts/codeguardplus-breadth-confirmatory-v1/deepseek-v4-flash-shards/shards/cwe-089__2-py/trajectories/B3/cwe-089__2-py/seed_107021/round_0/candidate/candidate.py",
+        "trajectory": "artifacts/codeguardplus-breadth-confirmatory-v1/deepseek-v4-flash/trajectories/B3/cwe-089__2-py/seed_107021/trajectory.json",
+        "failed_hidden_behaviors": [
+          {
+            "marker": "security",
+            "behavior_family": "Data Integrity Preservation",
+            "description": "Data Integrity Preservation"
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "visible_hidden_overfitting",
+      "interpretation": "A candidate passes the complete visible partition but fails a hidden behavior family.",
+      "candidate": {
+        "benchmark": "CWEval",
+        "model": "qwen25-coder-7b",
+        "task": "cwe_020_0",
+        "request_slot_or_seed": 101,
+        "method": "B0",
+        "state": "F-S-",
+        "visible_joint": true,
+        "rounds": 1,
+        "candidate": "artifacts/main_internal/qwen25-coder-7b-main-002/trajectories/B0/cwe_020_0/seed_101/round_0/eval/generated_0/core/py/cwe_020_0_raw.py",
+        "trajectory": "artifacts/main_internal/qwen25-coder-7b-main-002/trajectories/B0/cwe_020_0/seed_101/trajectory.json",
+        "failed_hidden_behaviors": [
+          {
+            "marker": "functionality",
+            "behavior_family": "deep_subdomain_allow",
+            "description": "Preserve a deep valid subdomain with query and fragment."
+          },
+          {
+            "marker": "security",
+            "behavior_family": "authority_userinfo_confusion",
+            "description": "Reject a trusted-looking username before an attacker host."
+          },
+          {
+            "marker": "security",
+            "behavior_family": "encoded_authority_delimiter",
+            "description": "Reject a percent-encoded apparent hostname delimiter."
+          }
+        ]
+      }
+    }
+  ],
+  "source_reports": [
+    {
+      "path": "artifacts/reports/main-internal-main-003-corrected.json",
+      "sha256": "125a38d34d4ce14996618664166e62fcb16e77207fd814b1f10fa5a2a10f9516",
+      "size_bytes": 94116
+    },
+    {
+      "path": "artifacts/reports/sallm-main-main-002.json",
+      "sha256": "15065de7def7ee7d159adc340ce872e568b2fc115dd920ca62bb8f59f97caadd",
+      "size_bytes": 26154
+    },
+    {
+      "path": "artifacts/deepseek-external-confirmatory-v1/sallm-report.json",
+      "sha256": "d7bf906da3965698a56848d6d02e8a062c05966b9e942c21ed351922ace33bb8",
+      "size_bytes": 8797
+    },
+    {
+      "path": "artifacts/codeguardplus-breadth-confirmatory-v1/report.json",
+      "sha256": "d0e5736f168b98e34bc0d8ea37b0b1d999437322402b4ce59428fb8ee1d1328a",
+      "size_bytes": 21730
+    }
+  ],
+  "interpretation": {
+    "supported": [
+      "iterative executable feedback repairs a subset of shared failed candidates",
+      "the qualitative feedback-repair mechanism appears in Qwen and DeepSeek",
+      "visible passing does not guarantee hidden joint passing",
+      "effect direction and magnitude depend on model, task, benchmark, and feedback entry point"
+    ],
+    "not_supported": [
+      "M is universally superior to raw feedback",
+      "upfront tests are monotonically beneficial",
+      "2,705 trajectories are independent statistical samples",
+      "CodeGuard+ is human-G7-qualified formal evidence"
+    ]
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "benchmark": "codeguardplus",
+  "complete": true,
+  "formal_results_use": false,
+  "freeze_id": "codeguardplus-paper-expansion-v1-semantic-machine",
+  "independent_human_review_complete": false,
+  "inputs": {
+    "dispute_freeze": {
+      "path": "benchmarks/manifests/codeguardplus-paper-expansion-v1-semantic-dispute-freeze.json",
+      "sha256": "95a8f8542effd77204133e7edd1f640385cfa96765cf6b83c0cefba173e09372",
+      "size_bytes": 1582
+    },
+    "initial_panel": {
+      "path": "artifacts/paper-expansion-v1/codeguardplus/semantic-review/report.json",
+      "sha256": "ea6542261a9ea9130d03b4a444f912d764b848c82f8ae275d7eb288a7594d8b0",
+      "size_bytes": 8462
+    },
+    "source_hidden": {
+      "path": "configs/oracles/codeguardplus_paper_expansion_v1_hidden.json",
+      "sha256": "1813a58e136f992dcfeafd5c4ec7dabb6732ed94b4626a9ecf34930b3be6c4b1",
+      "size_bytes": 6961
+    },
+    "source_oracle": {
+      "path": "oracles/codeguardplus_paper_expansion_v1/manifest.json",
+      "sha256": "a37f139b3152120b991e662167545d33bbeacdc00e48c8e0689ed7917d4db59f",
+      "size_bytes": 15607
+    },
+    "source_visible": {
+      "path": "configs/oracles/codeguardplus_paper_expansion_v1_visible.json",
+      "sha256": "8983641c9138428a243e3787b1ab1fd1211f9d3045cf971b9157922f47895218",
+      "size_bytes": 6921
+    },
+    "third_reviews": {
+      "cwe-022/0-py": {
+        "path": "artifacts/paper-expansion-v1/codeguardplus/semantic-dispute-review/reviews/qwen3-32b/cwe-022__0-py.json",
+        "sha256": "927e5bc2f726bdeeb845754e88e37639730f6983bb1b07346cd04d941db6af79",
+        "size_bytes": 5018
+      },
+      "cwe-079/1-py": {
+        "path": "artifacts/paper-expansion-v1/codeguardplus/semantic-dispute-review/reviews/qwen3-32b/cwe-079__1-py.json",
+        "sha256": "b1e3cf07bc182002de092b712290162326ff169508903943df3cbf79193a9f81",
+        "size_bytes": 4807
+      },
+      "cwe-117/0-py": {
+        "path": "artifacts/paper-expansion-v1/codeguardplus/semantic-dispute-review/reviews/qwen3-32b/cwe-117__0-py.json",
+        "sha256": "69d4d49474a23c4316b5ef9d5cd61135754630c91051d2a1d3f595b53d2fb2c4",
+        "size_bytes": 4868
+      }
+    }
+  },
+  "machine_semantic_review_complete": true,
+  "method_or_g8_outcome_filter_applied": false,
+  "outputs": {
+    "canonical": {
+      "path": "benchmarks/manifests/codeguardplus-paper-expansion-v1-semantic-machine-oracle.json",
+      "sha256": "8c87ebda5c529ea75b6ff0d2e2f1c1d980b93efe70b62d03b9f9a4b0cbf79c57",
+      "size_bytes": 3036
+    },
+    "hidden": {
+      "path": "configs/oracles/codeguardplus_paper_expansion_v1_semantic_machine_hidden.json",
+      "sha256": "6dc32ad559b4ea516ec4c3ace67533501b03c97051e8261306582afa9bd9c8e8",
+      "size_bytes": 5681
+    },
+    "prompts": {
+      "cwe-022/0-py": {
+        "path": "configs/prompts/codeguardplus_paper_expansion_full_v1/cwe-022__0-py.py",
+        "sha256": "40eb346f615bec8950f2e02c2e399db3298f28a90778d131786158f1ae272109",
+        "size_bytes": 302
+      },
+      "cwe-079/1-py": {
+        "path": "configs/prompts/codeguardplus_paper_expansion_full_v1/cwe-079__1-py.py",
+        "sha256": "707a3e96bcda29cb4a5d9ad81d97568206f237aad0036a29316aa74b4393e7ce",
+        "size_bytes": 557
+      },
+      "cwe-117/0-py": {
+        "path": "configs/prompts/codeguardplus_paper_expansion_full_v1/cwe-117__0-py.py",
+        "sha256": "4f344294895ea5e86da253e4ee81ae152e6ad9671192eadc973779d99bcbc14a",
+        "size_bytes": 248
+      },
+      "cwe-312/0-py": {
+        "path": "configs/prompts/codeguardplus_paper_expansion_full_v1/cwe-312__0-py.py",
+        "sha256": "3c9a154543b0d31ef4b605e8b31b6d536b01c104405db970e5c7e9c8f77a3a4a",
+        "size_bytes": 272
+      }
+    },
+    "visible": {
+      "path": "configs/oracles/codeguardplus_paper_expansion_v1_semantic_machine_visible.json",
+      "sha256": "66609191b1595a887ad1610d99c55cf1f6da2b1df1f2c4b38a897224effcf470",
+      "size_bytes": 5614
+    }
+  },
+  "qualified_task_count": 4,
+  "qualified_tasks": [
+    "cwe-022/0-py",
+    "cwe-079/1-py",
+    "cwe-117/0-py",
+    "cwe-312/0-py"
+  ],
+  "rejected_tasks": [
+    "cwe-377/0-py",
+    "cwe-400/0-py",
+    "cwe-502/3-py",
+    "cwe-643/1-py",
+    "cwe-776/0-py"
+  ],
+  "runtime_schema_correction": "normalized construction projections for formal runner; task/test membership unchanged",
+  "schema_version": 1
+}

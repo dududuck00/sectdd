@@ -1,0 +1,110 @@
+{
+  "benchmarks": {
+    "codeguardplus": {
+      "config": {
+        "path": "configs/experiments/codeguardplus_paper_expansion_full_v1.json",
+        "sha256": "bfb4ec6bf3f17369fbb9c65a9f09eb0c37bf6f9b39790dad761a7d8e77c83ac5",
+        "size_bytes": 5103
+      },
+      "hidden": {
+        "path": "configs/oracles/codeguardplus_paper_expansion_v1_semantic_machine_hidden.json",
+        "sha256": "6dc32ad559b4ea516ec4c3ace67533501b03c97051e8261306582afa9bd9c8e8",
+        "size_bytes": 5681
+      },
+      "tasks": 4,
+      "trajectories": 640,
+      "visible": {
+        "path": "configs/oracles/codeguardplus_paper_expansion_v1_semantic_machine_visible.json",
+        "sha256": "66609191b1595a887ad1610d99c55cf1f6da2b1df1f2c4b38a897224effcf470",
+        "size_bytes": 5614
+      }
+    },
+    "cweval": {
+      "config": {
+        "path": "configs/experiments/cweval_paper_expansion_full_v1.json",
+        "sha256": "9c81f6c9a1c3cf29cb02a8c2a6d085bed8567be61084b13adf091a2c4b1b5473",
+        "size_bytes": 5148
+      },
+      "hidden": {
+        "path": "configs/oracles/cweval_py_paper_expansion_v1_semantic_machine_hidden.json",
+        "sha256": "4d405b5bd5b8f63e90ee5abb919ce7287458c7e130db55393ecd14ef91b7fedb",
+        "size_bytes": 16676
+      },
+      "tasks": 8,
+      "trajectories": 1280,
+      "visible": {
+        "path": "configs/oracles/cweval_py_paper_expansion_v1_semantic_machine_visible.json",
+        "sha256": "b04fa755568bf62d79410bcbf2d0f4abf47fd691922cc82c5d3ceb1cc6565ea4",
+        "size_bytes": 16294
+      }
+    },
+    "sallm": {
+      "config": {
+        "path": "configs/experiments/sallm_paper_expansion_full_v1.json",
+        "sha256": "a54527dad29ffac2d128b94110130b5e9162fe58adaab89d299394b9917fbe0d",
+        "size_bytes": 5339
+      },
+      "hidden": {
+        "path": "configs/oracles/sallm_paper_expansion_v1_semantic_machine_hidden.json",
+        "sha256": "056c64a87eb61a4a7921b954262a96aebd1d84794f6dd794a01af29d6c1f50fa",
+        "size_bytes": 12803
+      },
+      "tasks": 8,
+      "trajectories": 1280,
+      "visible": {
+        "path": "configs/oracles/sallm_paper_expansion_v1_semantic_machine_visible.json",
+        "sha256": "651e47f6afe81c82f9fa2f849f6fabc627b41ae0840e0ddeba892d070650112f",
+        "size_bytes": 12731
+      }
+    }
+  },
+  "complete": true,
+  "created_at_utc": "2026-08-07T17:37:42.818242+00:00",
+  "expected_paid_api_trajectory_count": 800,
+  "expected_trajectory_count": 3200,
+  "freeze_id": "paper-expansion-full-v1",
+  "frozen_before_generation": true,
+  "generation_seeds_or_request_slots": [
+    151001,
+    151021,
+    151051,
+    151057,
+    151091
+  ],
+  "maximum_paid_api_calls_after_shared_initial_reuse": 1200,
+  "method_or_g8_outcome_filter_applied": false,
+  "methods": [
+    "B0",
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "M",
+    "B6"
+  ],
+  "minimum_external_tasks_per_benchmark": 8,
+  "minimum_total_expansion_tasks": 32,
+  "models": [
+    "qwen25-coder-7b",
+    "qwen25-coder-14b",
+    "qwen36-27b",
+    "deepseek-v4-flash"
+  ],
+  "new_task_count": 20,
+  "qualified_shortfall": 12,
+  "qualified_shortfall_accepted": true,
+  "qualified_shortfall_policy": "All result-blind dynamically and semantically qualified tasks are retained; the aspirational construction target is not a stopping rule and no prior method/G8 outcomes are used to replace rejected tasks.",
+  "realized_tasks_by_benchmark": {
+    "codeguardplus": 4,
+    "cweval": 8,
+    "sallm": 8
+  },
+  "runtime_input_correction": {
+    "correction_id": "paper-expansion-full-v1-runtime-input-correction",
+    "reason": "restore runner-required projection metadata and disable default Qwen3.6 thinking in orchestrator",
+    "selection_or_method_outcomes_changed": false,
+    "task_test_method_seed_budget_membership_changed": false
+  },
+  "schema_version": 1
+}

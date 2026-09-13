@@ -1,0 +1,58 @@
+\clearpage
+\begin{table}[ht]
+\caption{Security-feedback outcomes stratified by initial visible state. Final pass rates are Secure-Pass@1 (\%). F-only and F+S denote the two feedback conditions. Each branch makes two revisions. Tasks can occur in multiple strata. F.Reg. counts hidden functional regression relative to the shared initial candidate. These are post-hoc descriptive strata.}
+\centering\small
+\begin{tabular}{lrrr rrr}
+\toprule
+Initial visible & Initials & Tasks & \shortstack{Secure-Pass@1\\F-only (\%)} & \shortstack{Secure-Pass@1\\F+S (\%)} & Wins/losses/ties & F.Reg./F+S \\
+\midrule
+F+S+ & 100 & 12 & 85.0 & 84.0 & 0/1/99 & 1 \\
+F+S- & 18 & 4 & 0.0 & 16.7 & 3/0/15 & 2 \\
+F-S+ & 50 & 7 & 28.0 & 26.0 & 1/2/47 & 0 \\
+F-S- & 32 & 6 & 12.5 & 21.9 & 3/0/29 & 0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+\begin{table}[ht]
+\caption{External B0-to-M outcomes by initial visible state. Repair and regression counts use the initial hidden state; a visible functional failure need not imply a hidden functional failure. Calls exclude the shared initial generation.}
+\centering\small
+\begin{tabular}{lrrrrrr}
+\toprule
+Initial visible & Initials & Tasks & J repairs & F.Reg. & \shortstack{Secure-Pass@1\\M (\%)} & New calls \\
+\midrule
+F+S+ & 27 & 6 & 0 & 0 & 85.2 & 0 \\
+F+S- & 28 & 7 & 6 & 13 & 21.4 & 47 \\
+F-S+ & 39 & 6 & 12 & 0 & 53.8 & 64 \\
+F-S- & 6 & 1 & 0 & 3 & 0.0 & 12 \\
+\bottomrule
+\end{tabular}
+\end{table}
+\begin{table}[ht]
+\caption{External functional regression mechanisms. All 16 B0-to-M regressions are included; categories describe the observed failing execution, not inferred model intent.}
+\centering\small
+\begin{tabular}{lrl}
+\toprule
+Mechanism & Count & Cases \\
+\midrule
+Response extraction / loading failure & 6 & EX02, EX08, EX10--11, EX15--16 \\
+Unpickler used as context manager & 4 & EX04--07 \\
+Template syntax or interpolation damage & 3 & EX12--14 \\
+AST interpreter semantic errors & 2 & EX01, EX03 \\
+Overrestrictive preference schema & 1 & EX09 \\
+\bottomrule
+\end{tabular}
+\end{table}
+\clearpage
+\paragraph{Case selection and evidence.}
+The artifact ledger includes all ten security-feedback joint disagreements, plus two additional functional regressions that tie on joint failure, and all 16 external B0-to-M functional regressions. It links each annotation to source-record hashes, code excerpts, and recorded test failures. Automated checks verify complete selection and evidence correspondence; they do not replace independent human semantic review. No generation was repeated and no primary outcome was rescored.
+
+\paragraph{Security-feedback cases.}
+SF01--04 add a null-result guard after \texttt{safe\_join}; the observed defect is an exception on rejected traversal input, not demonstrated file disclosure. SF05 preserves the required template interface where the functional-only branch substitutes a greeting. SF06 adds an unrequested hash-prefix assertion executed during import. SF07--08 use \texttt{escape} without an import. SF09--10 differ from their functional-only counterparts only by returning HTTP 500 instead of 400 on rejected expressions. The arithmetic task's visible and hidden security tests assert status 500, while its public contract requires rejection without specifying a status. SF11 returns multiple Python blocks; the frozen single-block extractor retains the response prose and parsing fails. SF12 introduces unavailable \texttt{sympy}. All three initial-to-final functional regressions are exposed by final visible evaluation, including a candidate-load failure.
+
+\paragraph{External regressions.}
+EX01 resolves \texttt{input\_data} as a dictionary key instead of the variable binding; EX03 rejects string subscripts. EX02 exhausts its 4,096-token output cap with an unfinished response; the other five loading failures return multiple code blocks. EX04--07 raise a context-manager \texttt{TypeError} before unpickling benign or malicious data. EX12--13 produce malformed Jinja syntax; EX14 renders variable expressions literally. Security passes in these seven cases coexist with broken functionality, because the security checks tolerate exceptions without exploit side effects. EX09 restricts preferences to \texttt{theme}/\texttt{language}, rejecting the legitimate hidden \texttt{notifications} key; its visible functional example contains only the two allowed keys. Validation after \texttt{pickle.loads} also fails to prevent recorded malicious side effects.
+
+Fifteen of the 16 regressions already fail the final visible functional test, but remain the final output at the revision limit. EX09 alone passes it. These cases distinguish response-format failures, execution defects, and a visible coverage gap; they do not support attributing every regression to hidden-test generalization.
+
+\paragraph{Opportunity, costs, and sensitivity.}
+Initial-state strata retain all 200 paired initials and all 100 external B0 initials. No stratum uses revised code or hidden outcomes for assignment. The accompanying CSV gives Pass@1, Secure@1, Secure-Pass@1, repairs, regressions, calls, and mean input/output tokens for each stratum; JSON additionally retains model breakdowns for the security-feedback experiment. The separate whole-task sensitivity excludes all ten arithmetic-task pairs, not just favorable or unfavorable cases: functional-only and combined feedback score 54.21\% and 55.26\% joint success on the remaining 190 pairs. This exclusion is post-hoc and supplements, rather than replaces, the 20-task analysis.

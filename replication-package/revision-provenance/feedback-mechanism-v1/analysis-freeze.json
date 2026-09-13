@@ -1,0 +1,7 @@
+{
+  "script": "tools/analyze_feedback_mechanism_v1.py",
+  "sha256": "0008824256e540f1c66279acae16539341e682c5a61035a6d3b6f36acf57448d",
+  "analysis_seed": 20260910,
+  "bootstrap_replicates": 10000,
+  "timing": "analysis protocol specified before generation; analyzer implementation frozen after generation started, before inspecting aggregate outcomes"
+}

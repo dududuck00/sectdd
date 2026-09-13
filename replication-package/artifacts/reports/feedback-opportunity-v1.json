@@ -1,0 +1,654 @@
+{
+  "analysis_type": "post-hoc descriptive; strata use initial visible outcomes; no confidence intervals or new hypothesis tests",
+  "security_feedback": {
+    "F+S+": {
+      "initials": 100,
+      "tasks": 12,
+      "by_method": {
+        "functional_only": {
+          "n": 100,
+          "rates_pct": {
+            "functional": 85.0,
+            "security": 90.0,
+            "joint_pass": 85.0
+          },
+          "joint_repairs": 0,
+          "joint_regressions": 0,
+          "functional_regressions": 0,
+          "function_preserving_security_repairs": 0,
+          "new_calls": 200,
+          "mean_new_prompt_tokens": 1080.96,
+          "mean_new_completion_tokens": 440.63,
+          "final_visible_functional_failure": 0
+        },
+        "functional_security": {
+          "n": 100,
+          "rates_pct": {
+            "functional": 84.0,
+            "security": 89.0,
+            "joint_pass": 84.0
+          },
+          "joint_repairs": 0,
+          "joint_regressions": 1,
+          "functional_regressions": 1,
+          "function_preserving_security_repairs": 0,
+          "new_calls": 200,
+          "mean_new_prompt_tokens": 1105.58,
+          "mean_new_completion_tokens": 459.15,
+          "final_visible_functional_failure": 1
+        }
+      },
+      "joint_wins_losses_ties": [
+        0,
+        1,
+        99
+      ],
+      "joint_delta_pp": -1.0,
+      "by_model": {
+        "qwen25-coder-14b": {
+          "functional_only": {
+            "n": 58,
+            "rates_pct": {
+              "functional": 91.37931034482759,
+              "security": 91.37931034482759,
+              "joint_pass": 91.37931034482759
+            },
+            "joint_repairs": 0,
+            "joint_regressions": 0,
+            "functional_regressions": 0,
+            "function_preserving_security_repairs": 0,
+            "new_calls": 116,
+            "mean_new_prompt_tokens": 1095.5344827586207,
+            "mean_new_completion_tokens": 406.1551724137931,
+            "final_visible_functional_failure": 0
+          },
+          "functional_security": {
+            "n": 58,
+            "rates_pct": {
+              "functional": 91.37931034482759,
+              "security": 91.37931034482759,
+              "joint_pass": 91.37931034482759
+            },
+            "joint_repairs": 0,
+            "joint_regressions": 0,
+            "functional_regressions": 0,
+            "function_preserving_security_repairs": 0,
+            "new_calls": 116,
+            "mean_new_prompt_tokens": 1112.5862068965516,
+            "mean_new_completion_tokens": 403.8448275862069,
+            "final_visible_functional_failure": 0
+          }
+        },
+        "qwen25-coder-7b": {
+          "functional_only": {
+            "n": 42,
+            "rates_pct": {
+              "functional": 76.19047619047619,
+              "security": 88.0952380952381,
+              "joint_pass": 76.19047619047619
+            },
+            "joint_repairs": 0,
+            "joint_regressions": 0,
+            "functional_regressions": 0,
+            "function_preserving_security_repairs": 0,
+            "new_calls": 84,
+            "mean_new_prompt_tokens": 1060.8333333333333,
+            "mean_new_completion_tokens": 488.23809523809524,
+            "final_visible_functional_failure": 0
+          },
+          "functional_security": {
+            "n": 42,
+            "rates_pct": {
+              "functional": 73.80952380952381,
+              "security": 85.71428571428571,
+              "joint_pass": 73.80952380952381
+            },
+            "joint_repairs": 0,
+            "joint_regressions": 1,
+            "functional_regressions": 1,
+            "function_preserving_security_repairs": 0,
+            "new_calls": 84,
+            "mean_new_prompt_tokens": 1095.904761904762,
+            "mean_new_completion_tokens": 535.5238095238095,
+            "final_visible_functional_failure": 1
+          }
+        }
+      }
+    },
+    "F+S-": {
+      "initials": 18,
+      "tasks": 4,
+      "by_method": {
+        "functional_only": {
+          "n": 18,
+          "rates_pct": {
+            "functional": 100.0,
+            "security": 0.0,
+            "joint_pass": 0.0
+          },
+          "joint_repairs": 0,
+          "joint_regressions": 0,
+          "functional_regressions": 0,
+          "function_preserving_security_repairs": 0,
+          "new_calls": 36,
+          "mean_new_prompt_tokens": 1181.111111111111,
+          "mean_new_completion_tokens": 466.6666666666667,
+          "final_visible_functional_failure": 0
+        },
+        "functional_security": {
+          "n": 18,
+          "rates_pct": {
+            "functional": 88.88888888888889,
+            "security": 16.666666666666668,
+            "joint_pass": 16.666666666666668
+          },
+          "joint_repairs": 3,
+          "joint_regressions": 0,
+          "functional_regressions": 2,
+          "function_preserving_security_repairs": 3,
+          "new_calls": 36,
+          "mean_new_prompt_tokens": 1748.1666666666667,
+          "mean_new_completion_tokens": 558.5,
+          "final_visible_functional_failure": 2
+        }
+      },
+      "joint_wins_losses_ties": [
+        3,
+        0,
+        15
+      ],
+      "joint_delta_pp": 16.666666666666668,
+      "by_model": {
+        "qwen25-coder-14b": {
+          "functional_only": {
+            "n": 6,
+            "rates_pct": {
+              "functional": 100.0,
+              "security": 0.0,
+              "joint_pass": 0.0
+            },
+            "joint_repairs": 0,
+            "joint_regressions": 0,
+            "functional_regressions": 0,
+            "function_preserving_security_repairs": 0,
+            "new_calls": 12,
+            "mean_new_prompt_tokens": 1379.1666666666667,
+            "mean_new_completion_tokens": 565.6666666666666,
+            "final_visible_functional_failure": 0
+          },
+          "functional_security": {
+            "n": 6,
+            "rates_pct": {
+              "functional": 100.0,
+              "security": 33.333333333333336,
+              "joint_pass": 33.333333333333336
+            },
+            "joint_repairs": 2,
+            "joint_regressions": 0,
+            "functional_regressions": 0,
+            "function_preserving_security_repairs": 2,
+            "new_calls": 12,
+            "mean_new_prompt_tokens": 1953.3333333333333,
+            "mean_new_completion_tokens": 676.8333333333334,
+            "final_visible_functional_failure": 0
+          }
+        },
+        "qwen25-coder-7b": {
+          "functional_only": {
+            "n": 12,
+            "rates_pct": {
+              "functional": 100.0,
+              "security": 0.0,
+              "joint_pass": 0.0
+            },
+            "joint_repairs": 0,
+            "joint_regressions": 0,
+            "functional_regressions": 0,
+            "function_preserving_security_repairs": 0,
+            "new_calls": 24,
+            "mean_new_prompt_tokens": 1082.0833333333333,
+            "mean_new_completion_tokens": 417.1666666666667,
+            "final_visible_functional_failure": 0
+          },
+          "functional_security": {
+            "n": 12,
+            "rates_pct": {
+              "functional": 83.33333333333333,
+              "security": 8.333333333333334,
+              "joint_pass": 8.333333333333334
+            },
+            "joint_repairs": 1,
+            "joint_regressions": 0,
+            "functional_regressions": 2,
+            "function_preserving_security_repairs": 1,
+            "new_calls": 24,
+            "mean_new_prompt_tokens": 1645.5833333333333,
+            "mean_new_completion_tokens": 499.3333333333333,
+            "final_visible_functional_failure": 2
+          }
+        }
+      }
+    },
+    "F-S+": {
+      "initials": 50,
+      "tasks": 7,
+      "by_method": {
+        "functional_only": {
+          "n": 50,
+          "rates_pct": {
+            "functional": 28.0,
+            "security": 72.0,
+            "joint_pass": 28.0
+          },
+          "joint_repairs": 9,
+          "joint_regressions": 0,
+          "functional_regressions": 0,
+          "function_preserving_security_repairs": 0,
+          "new_calls": 100,
+          "mean_new_prompt_tokens": 1594.02,
+          "mean_new_completion_tokens": 550.4,
+          "final_visible_functional_failure": 36
+        },
+        "functional_security": {
+          "n": 50,
+          "rates_pct": {
+            "functional": 26.0,
+            "security": 66.0,
+            "joint_pass": 26.0
+          },
+          "joint_repairs": 8,
+          "joint_regressions": 0,
+          "functional_regressions": 0,
+          "function_preserving_security_repairs": 0,
+          "new_calls": 100,
+          "mean_new_prompt_tokens": 1637.38,
+          "mean_new_completion_tokens": 538.08,
+          "final_visible_functional_failure": 36
+        }
+      },
+      "joint_wins_losses_ties": [
+        1,
+        2,
+        47
+      ],
+      "joint_delta_pp": -2.0,
+      "by_model": {
+        "qwen25-coder-14b": {
+          "functional_only": {
+            "n": 21,
+            "rates_pct": {
+              "functional": 23.80952380952381,
+              "security": 76.19047619047619,
+              "joint_pass": 23.80952380952381
+            },
+            "joint_repairs": 0,
+            "joint_regressions": 0,
+            "functional_regressions": 0,
+            "function_preserving_security_repairs": 0,
+            "new_calls": 42,
+            "mean_new_prompt_tokens": 1771.4761904761904,
+            "mean_new_completion_tokens": 699.5714285714286,
+            "final_visible_functional_failure": 15
+          },
+          "functional_security": {
+            "n": 21,
+            "rates_pct": {
+              "functional": 23.80952380952381,
+              "security": 76.19047619047619,
+              "joint_pass": 23.80952380952381
+            },
+            "joint_repairs": 0,
+            "joint_regressions": 0,
+            "functional_regressions": 0,
+            "function_preserving_security_repairs": 0,
+            "new_calls": 42,
+            "mean_new_prompt_tokens": 1758.5238095238096,
+            "mean_new_completion_tokens": 651.4285714285714,
+            "final_visible_functional_failure": 15
+          }
+        },
+        "qwen25-coder-7b": {
+          "functional_only": {
+            "n": 29,
+            "rates_pct": {
+              "functional": 31.03448275862069,
+              "security": 68.96551724137932,
+              "joint_pass": 31.03448275862069
+            },
+            "joint_repairs": 9,
+            "joint_regressions": 0,
+            "functional_regressions": 0,
+            "function_preserving_security_repairs": 0,
+            "new_calls": 58,
+            "mean_new_prompt_tokens": 1465.5172413793102,
+            "mean_new_completion_tokens": 442.37931034482756,
+            "final_visible_functional_failure": 21
+          },
+          "functional_security": {
+            "n": 29,
+            "rates_pct": {
+              "functional": 27.586206896551722,
+              "security": 58.62068965517241,
+              "joint_pass": 27.586206896551722
+            },
+            "joint_repairs": 8,
+            "joint_regressions": 0,
+            "functional_regressions": 0,
+            "function_preserving_security_repairs": 0,
+            "new_calls": 58,
+            "mean_new_prompt_tokens": 1549.655172413793,
+            "mean_new_completion_tokens": 456.0,
+            "final_visible_functional_failure": 21
+          }
+        }
+      }
+    },
+    "F-S-": {
+      "initials": 32,
+      "tasks": 6,
+      "by_method": {
+        "functional_only": {
+          "n": 32,
+          "rates_pct": {
+            "functional": 28.125,
+            "security": 12.5,
+            "joint_pass": 12.5
+          },
+          "joint_repairs": 4,
+          "joint_regressions": 0,
+          "functional_regressions": 0,
+          "function_preserving_security_repairs": 0,
+          "new_calls": 64,
+          "mean_new_prompt_tokens": 1800.78125,
+          "mean_new_completion_tokens": 652.4375,
+          "final_visible_functional_failure": 24
+        },
+        "functional_security": {
+          "n": 32,
+          "rates_pct": {
+            "functional": 25.0,
+            "security": 25.0,
+            "joint_pass": 21.875
+          },
+          "joint_repairs": 7,
+          "joint_regressions": 0,
+          "functional_regressions": 0,
+          "function_preserving_security_repairs": 0,
+          "new_calls": 64,
+          "mean_new_prompt_tokens": 2350.21875,
+          "mean_new_completion_tokens": 641.6875,
+          "final_visible_functional_failure": 25
+        }
+      },
+      "joint_wins_losses_ties": [
+        3,
+        0,
+        29
+      ],
+      "joint_delta_pp": 9.375,
+      "by_model": {
+        "qwen25-coder-14b": {
+          "functional_only": {
+            "n": 15,
+            "rates_pct": {
+              "functional": 26.666666666666668,
+              "security": 0.0,
+              "joint_pass": 0.0
+            },
+            "joint_repairs": 0,
+            "joint_regressions": 0,
+            "functional_regressions": 0,
+            "function_preserving_security_repairs": 0,
+            "new_calls": 30,
+            "mean_new_prompt_tokens": 1877.3333333333333,
+            "mean_new_completion_tokens": 692.7333333333333,
+            "final_visible_functional_failure": 11
+          },
+          "functional_security": {
+            "n": 15,
+            "rates_pct": {
+              "functional": 26.666666666666668,
+              "security": 20.0,
+              "joint_pass": 20.0
+            },
+            "joint_repairs": 3,
+            "joint_regressions": 0,
+            "functional_regressions": 0,
+            "function_preserving_security_repairs": 0,
+            "new_calls": 30,
+            "mean_new_prompt_tokens": 2408.9333333333334,
+            "mean_new_completion_tokens": 706.4666666666667,
+            "final_visible_functional_failure": 11
+          }
+        },
+        "qwen25-coder-7b": {
+          "functional_only": {
+            "n": 17,
+            "rates_pct": {
+              "functional": 29.41176470588235,
+              "security": 23.529411764705884,
+              "joint_pass": 23.529411764705884
+            },
+            "joint_repairs": 4,
+            "joint_regressions": 0,
+            "functional_regressions": 0,
+            "function_preserving_security_repairs": 0,
+            "new_calls": 34,
+            "mean_new_prompt_tokens": 1733.235294117647,
+            "mean_new_completion_tokens": 616.8823529411765,
+            "final_visible_functional_failure": 13
+          },
+          "functional_security": {
+            "n": 17,
+            "rates_pct": {
+              "functional": 23.529411764705884,
+              "security": 29.41176470588235,
+              "joint_pass": 23.529411764705884
+            },
+            "joint_repairs": 4,
+            "joint_regressions": 0,
+            "functional_regressions": 0,
+            "function_preserving_security_repairs": 0,
+            "new_calls": 34,
+            "mean_new_prompt_tokens": 2298.4117647058824,
+            "mean_new_completion_tokens": 584.5294117647059,
+            "final_visible_functional_failure": 14
+          }
+        }
+      }
+    }
+  },
+  "security_failure_groups": {
+    "security_failed": {
+      "initials": 50,
+      "tasks": 7,
+      "by_method": {
+        "functional_only": {
+          "n": 50,
+          "rates_pct": {
+            "functional": 54.0,
+            "security": 8.0,
+            "joint_pass": 8.0
+          },
+          "joint_repairs": 4,
+          "joint_regressions": 0,
+          "functional_regressions": 0,
+          "function_preserving_security_repairs": 0,
+          "new_calls": 100,
+          "mean_new_prompt_tokens": 1577.7,
+          "mean_new_completion_tokens": 585.56,
+          "final_visible_functional_failure": 24
+        },
+        "functional_security": {
+          "n": 50,
+          "rates_pct": {
+            "functional": 48.0,
+            "security": 22.0,
+            "joint_pass": 20.0
+          },
+          "joint_repairs": 10,
+          "joint_regressions": 0,
+          "functional_regressions": 2,
+          "function_preserving_security_repairs": 3,
+          "new_calls": 100,
+          "mean_new_prompt_tokens": 2133.48,
+          "mean_new_completion_tokens": 611.74,
+          "final_visible_functional_failure": 27
+        }
+      },
+      "joint_wins_losses_ties": [
+        6,
+        0,
+        44
+      ]
+    },
+    "security_passed": {
+      "initials": 150,
+      "tasks": 17,
+      "by_method": {
+        "functional_only": {
+          "n": 150,
+          "rates_pct": {
+            "functional": 66.0,
+            "security": 84.0,
+            "joint_pass": 66.0
+          },
+          "joint_repairs": 9,
+          "joint_regressions": 0,
+          "functional_regressions": 0,
+          "function_preserving_security_repairs": 0,
+          "new_calls": 300,
+          "mean_new_prompt_tokens": 1251.98,
+          "mean_new_completion_tokens": 477.22,
+          "final_visible_functional_failure": 36
+        },
+        "functional_security": {
+          "n": 150,
+          "rates_pct": {
+            "functional": 64.66666666666667,
+            "security": 81.33333333333333,
+            "joint_pass": 64.66666666666667
+          },
+          "joint_repairs": 8,
+          "joint_regressions": 1,
+          "functional_regressions": 1,
+          "function_preserving_security_repairs": 0,
+          "new_calls": 300,
+          "mean_new_prompt_tokens": 1282.8466666666666,
+          "mean_new_completion_tokens": 485.46,
+          "final_visible_functional_failure": 37
+        }
+      },
+      "joint_wins_losses_ties": [
+        1,
+        3,
+        146
+      ]
+    }
+  },
+  "external_B0_to_M": {
+    "F+S+": {
+      "initials": 27,
+      "tasks": 6,
+      "M": {
+        "n": 27,
+        "rates_pct": {
+          "functional": 88.88888888888889,
+          "security": 96.29629629629629,
+          "joint_pass": 85.18518518518519
+        },
+        "joint_repairs": 0,
+        "joint_regressions": 0,
+        "functional_regressions": 0,
+        "function_preserving_security_repairs": 0,
+        "new_calls": 0,
+        "mean_new_prompt_tokens": 0.0,
+        "mean_new_completion_tokens": 0.0,
+        "final_visible_functional_failure": 0
+      }
+    },
+    "F+S-": {
+      "initials": 28,
+      "tasks": 7,
+      "M": {
+        "n": 28,
+        "rates_pct": {
+          "functional": 42.857142857142854,
+          "security": 46.42857142857143,
+          "joint_pass": 21.428571428571427
+        },
+        "joint_repairs": 6,
+        "joint_regressions": 0,
+        "functional_regressions": 13,
+        "function_preserving_security_repairs": 6,
+        "new_calls": 47,
+        "mean_new_prompt_tokens": 1777.4642857142858,
+        "mean_new_completion_tokens": 812.7857142857143,
+        "final_visible_functional_failure": 12
+      }
+    },
+    "F-S+": {
+      "initials": 39,
+      "tasks": 6,
+      "M": {
+        "n": 39,
+        "rates_pct": {
+          "functional": 53.84615384615385,
+          "security": 100.0,
+          "joint_pass": 53.84615384615385
+        },
+        "joint_repairs": 12,
+        "joint_regressions": 0,
+        "functional_regressions": 0,
+        "function_preserving_security_repairs": 0,
+        "new_calls": 64,
+        "mean_new_prompt_tokens": 1789.7179487179487,
+        "mean_new_completion_tokens": 450.94871794871796,
+        "final_visible_functional_failure": 14
+      }
+    },
+    "F-S-": {
+      "initials": 6,
+      "tasks": 1,
+      "M": {
+        "n": 6,
+        "rates_pct": {
+          "functional": 50.0,
+          "security": 50.0,
+          "joint_pass": 0.0
+        },
+        "joint_repairs": 0,
+        "joint_regressions": 0,
+        "functional_regressions": 3,
+        "function_preserving_security_repairs": 0,
+        "new_calls": 12,
+        "mean_new_prompt_tokens": 1985.1666666666667,
+        "mean_new_completion_tokens": 236.66666666666666,
+        "final_visible_functional_failure": 5
+      }
+    }
+  },
+  "status_code_oracle_sensitivity": {
+    "excluded_task": "Tainted_StackOverflow_SO_cwe094_4.py",
+    "reason": "Security test requires HTTP 500 despite public contract allowing rejection without a status code specification; descriptive whole-task exclusion, original scores retained.",
+    "pairs": 190,
+    "tasks": 19,
+    "rates_pct": {
+      "functional_only": {
+        "functional": 61.578947368421055,
+        "security": 68.42105263157895,
+        "joint_pass": 54.21052631578947
+      },
+      "functional_security": {
+        "functional": 60.0,
+        "security": 68.94736842105263,
+        "joint_pass": 55.26315789473684
+      }
+    },
+    "delta_pp": {
+      "functional": -1.5789473684210549,
+      "security": 0.526315789473685,
+      "joint_pass": 1.05263157894737
+    }
+  }
+}

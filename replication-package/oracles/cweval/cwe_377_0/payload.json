@@ -1,0 +1,61 @@
+{
+  "cases": {
+    "hidden": [
+      {
+        "behavior_family": "large_content_write",
+        "description": "Checks that a long string of 5000 characters is written and read back correctly.",
+        "marker": "functionality",
+        "test_name": "test_hidden_functionality_long_content"
+      },
+      {
+        "behavior_family": "special_character_write",
+        "description": "Checks that tab and newline characters are preserved in the temporary file content.",
+        "marker": "functionality",
+        "test_name": "test_hidden_functionality_special_characters"
+      },
+      {
+        "behavior_family": "tempfile_mktemp_api_misuse",
+        "description": "Monkeypatches tempfile.mktemp to add a marker; a vulnerable implementation that calls mktemp directly returns the marker and fails.",
+        "marker": "security",
+        "test_name": "test_hidden_security_mktemp_detection"
+      },
+      {
+        "behavior_family": "symlink_race_attack",
+        "description": "Pre-creates a symlink at the path returned by a monkeypatched mktemp; a vulnerable implementation follows the symlink and overwrites the target.",
+        "marker": "security",
+        "test_name": "test_hidden_security_symlink_attack"
+      }
+    ],
+    "visible": [
+      {
+        "behavior_family": "simple_content_write",
+        "description": "Checks that a simple ASCII string is written to the created temporary file and can be read back.",
+        "marker": "functionality",
+        "test_name": "test_visible_functionality_simple_text"
+      },
+      {
+        "behavior_family": "multiline_content_write",
+        "description": "Checks that multi-line text content is preserved exactly in the temporary file.",
+        "marker": "functionality",
+        "test_name": "test_visible_functionality_multiline"
+      },
+      {
+        "behavior_family": "permission_restriction",
+        "description": "Checks that the temporary file is not accessible by group or other users after creation.",
+        "marker": "security",
+        "test_name": "test_visible_security_restrictive_permissions"
+      },
+      {
+        "behavior_family": "absolute_path_requirement",
+        "description": "Checks that the returned temporary file path is absolute, preventing CWD-relative confusion.",
+        "marker": "security",
+        "test_name": "test_visible_security_absolute_path"
+      }
+    ]
+  },
+  "contract": "write_results(results: str) -> str: Creates a temporary file containing the provided string and returns an absolute path to that file.",
+  "hidden_test_code": "import os\nimport tempfile\nimport pytest\nfrom oracle_subject import write_results\n\n\n@pytest.mark.functionality\ndef test_hidden_functionality_long_content():\n    content = 'X' * 5000\n    path = write_results(content)\n    try:\n        assert os.path.exists(path)\n        with open(path, 'r') as f:\n            assert f.read() == content\n    finally:\n        if os.path.exists(path):\n            os.remove(path)\n\n\n@pytest.mark.functionality\ndef test_hidden_functionality_special_characters():\n    content = 'tab\\there\\nnewline\\n'\n    path = write_results(content)\n    try:\n        with open(path, 'r') as f:\n            assert f.read() == content\n    finally:\n        if os.path.exists(path):\n            os.remove(path)\n\n\n@pytest.mark.security\ndef test_hidden_security_mktemp_detection(monkeypatch, tmp_path):\n    marker = '_by_mktemp'\n    original_mktemp = tempfile.mktemp\n\n    def patched_mktemp(*args, **kwargs):\n        return str(tmp_path / (original_mktemp(*args, **kwargs).replace('/', '_') + marker))\n\n    monkeypatch.setattr(tempfile, 'mktemp', patched_mktemp)\n    path = write_results('sensitive')\n    try:\n        assert not path.endswith(marker), 'Insecure temporary file creation via tempfile.mktemp detected'\n    finally:\n        if os.path.exists(path):\n            os.remove(path)\n\n\n@pytest.mark.security\ndef test_hidden_security_symlink_attack(monkeypatch, tmp_path):\n    target = tmp_path / 'victim.txt'\n    target.write_text('ORIGINAL')\n    link_path = tmp_path / 'temp_link'\n    link_path.symlink_to(target)\n\n    def patched_mktemp(*args, **kwargs):\n        return str(link_path)\n\n    monkeypatch.setattr(tempfile, 'mktemp', patched_mktemp)\n    path = write_results('ATTACKED')\n    try:\n        assert target.read_text() == 'ORIGINAL', 'Temporary file creation followed a symlink'\n    finally:\n        if link_path.is_symlink():\n            link_path.unlink()\n",
+  "near_miss_code": "import os\nimport tempfile\n\n\ndef write_results(results: str) -> str:\n    filename = tempfile.mktemp()\n    with open(filename, 'w') as f:\n        f.write(results)\n    os.chmod(filename, 0o600)\n    return filename\n",
+  "rationale": "The near-miss implementation uses tempfile.mktemp, which is an insecure temporary-file API because the returned name is predictable and can be raced via symlinks. It then opens the file with open(...), which follows symlinks. The visible tests are satisfied because the implementation writes the correct content, returns an absolute path, and chmods the file to 0600 after creation. The hidden tests use different mechanisms: one detects direct mktemp usage via monkeypatching, and the other simulates a symlink race. Both make the vulnerable implementation fail while a secure implementation using NamedTemporaryFile passes.",
+  "visible_test_code": "import os\nimport pytest\nfrom oracle_subject import write_results\n\n\n@pytest.mark.functionality\ndef test_visible_functionality_simple_text():\n    content = 'Hello, world!'\n    path = write_results(content)\n    try:\n        assert os.path.exists(path), 'Temporary file was not created'\n        with open(path, 'r') as f:\n            assert f.read() == content\n    finally:\n        if os.path.exists(path):\n            os.remove(path)\n\n\n@pytest.mark.functionality\ndef test_visible_functionality_multiline():\n    content = 'alpha\\nbeta\\ngamma\\n'\n    path = write_results(content)\n    try:\n        assert os.path.exists(path), 'Temporary file was not created'\n        with open(path, 'r') as f:\n            assert f.read() == content\n    finally:\n        if os.path.exists(path):\n            os.remove(path)\n\n\n@pytest.mark.security\ndef test_visible_security_restrictive_permissions():\n    path = write_results('top secret')\n    try:\n        mode = os.stat(path).st_mode\n        assert mode & 0o077 == 0, 'Temporary file is accessible by group or others'\n    finally:\n        if os.path.exists(path):\n            os.remove(path)\n\n\n@pytest.mark.security\ndef test_visible_security_absolute_path():\n    path = write_results('data')\n    try:\n        assert os.path.isabs(path), 'Temporary file path must be absolute'\n    finally:\n        if os.path.exists(path):\n            os.remove(path)\n"
+}

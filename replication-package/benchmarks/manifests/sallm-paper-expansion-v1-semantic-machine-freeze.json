@@ -1,0 +1,171 @@
+{
+  "accepted_by_wave": {
+    "supplement": [
+      "Assertion_SonarSource_SS_cwe094_0.py",
+      "Tainted_CodeQL_codeql_cwe079_0.py",
+      "Tainted_StackOverflow_SO_cwe094_4.py"
+    ],
+    "wave1": [
+      "Assertion_CodeQL_codeql_cwe020_1.py",
+      "Assertion_SonarSource_SS_cwe079_0.py",
+      "Assertion_SonarSource_SS_cwe827_0.py",
+      "Tainted_Author_A_cwe078_0.py",
+      "Tainted_Author_A_cwe089_1.py"
+    ]
+  },
+  "complete": true,
+  "formal_results_use": false,
+  "freeze_id": "sallm-paper-expansion-v1-semantic-machine",
+  "independent_human_review_complete": false,
+  "inputs": {
+    "supplement": {
+      "audit": {
+        "accepted": [
+          "Assertion_SonarSource_SS_cwe094_0.py",
+          "Tainted_CodeQL_codeql_cwe079_0.py",
+          "Tainted_StackOverflow_SO_cwe094_4.py"
+        ],
+        "initial_unanimous_accept": [],
+        "rejected": [
+          "Assertion_CodeQL_codeql_cwe020_2.py",
+          "Assertion_CodeQL_codeql_cwe020_3.py",
+          "Assertion_CodeQL_codeql_cwe730_1.py",
+          "Tainted_StackOverflow_SO_cwe094_2.py"
+        ],
+        "split_tasks": [
+          "Assertion_SonarSource_SS_cwe094_0.py",
+          "Tainted_CodeQL_codeql_cwe079_0.py",
+          "Tainted_StackOverflow_SO_cwe094_4.py"
+        ],
+        "tie_break_accept": [
+          "Assertion_SonarSource_SS_cwe094_0.py",
+          "Tainted_CodeQL_codeql_cwe079_0.py",
+          "Tainted_StackOverflow_SO_cwe094_4.py"
+        ]
+      },
+      "dispute_freeze": {
+        "path": "benchmarks/manifests/sallm-paper-expansion-supplement-v1-semantic-dispute-freeze.json",
+        "sha256": "a52f133a6d4717f6c4b8bb256c8e454807bfe0d0a17e2324399af1fba45d4dfd",
+        "size_bytes": 1831
+      },
+      "dispute_report": {
+        "path": "artifacts/paper-expansion-v1/sallm-supplement/semantic-dispute-review/report.json",
+        "sha256": "5dce6237f71b296bbe94e6a70bccd43718601507afb9fab9591e2bb52ad645c0",
+        "size_bytes": 2886
+      },
+      "hidden": {
+        "path": "configs/oracles/sallm_paper_expansion_supplement_v1_hidden.json",
+        "sha256": "f696b2c65a3179f53cd3d13bb0f47be3e1dfe63bde0f62ef63d4a5e170147a11",
+        "size_bytes": 12308
+      },
+      "panel": {
+        "path": "artifacts/paper-expansion-v1/sallm-supplement/semantic-review/report.json",
+        "sha256": "09ffacbc50080a049e367dd41d6f059a59260a79cf56a97432cd8cfa739048e8",
+        "size_bytes": 7307
+      },
+      "visible": {
+        "path": "configs/oracles/sallm_paper_expansion_supplement_v1_visible.json",
+        "sha256": "10d9eeb42fc0940a70d2bb1fc734e344140c84dd2ba29063580fd7ce8e341a7e",
+        "size_bytes": 12119
+      }
+    },
+    "wave1": {
+      "audit": {
+        "accepted": [
+          "Assertion_CodeQL_codeql_cwe020_1.py",
+          "Assertion_SonarSource_SS_cwe079_0.py",
+          "Assertion_SonarSource_SS_cwe827_0.py",
+          "Tainted_Author_A_cwe078_0.py",
+          "Tainted_Author_A_cwe089_1.py"
+        ],
+        "initial_unanimous_accept": [
+          "Assertion_SonarSource_SS_cwe079_0.py"
+        ],
+        "rejected": [
+          "Assertion_CodeQL_codeql_cwe730_0.py",
+          "Tainted_SecurityEval_SE_cwe094_1.py"
+        ],
+        "split_tasks": [
+          "Assertion_CodeQL_codeql_cwe020_1.py",
+          "Assertion_SonarSource_SS_cwe827_0.py",
+          "Tainted_Author_A_cwe078_0.py",
+          "Tainted_Author_A_cwe089_1.py"
+        ],
+        "tie_break_accept": [
+          "Assertion_CodeQL_codeql_cwe020_1.py",
+          "Assertion_SonarSource_SS_cwe827_0.py",
+          "Tainted_Author_A_cwe078_0.py",
+          "Tainted_Author_A_cwe089_1.py"
+        ]
+      },
+      "dispute_freeze": {
+        "path": "benchmarks/manifests/sallm-paper-expansion-v1-semantic-dispute-freeze.json",
+        "sha256": "5dae4034d36a35b46adcc73fdf3ac4fa941679ed27d2f78003c49c70c7b66607",
+        "size_bytes": 1809
+      },
+      "dispute_report": {
+        "path": "artifacts/paper-expansion-v1/sallm/semantic-dispute-review/report.json",
+        "sha256": "3e4462ccbc2750d322f10aa507afdccbe53dbcf14c9bcc2e9dff6ec88992c970",
+        "size_bytes": 3301
+      },
+      "hidden": {
+        "path": "configs/oracles/sallm_paper_expansion_v1_hidden.json",
+        "sha256": "fcaf7dc014c72b24488d0258cdcc08e1c6f21379caafa3a8013e6ec6b3b09167",
+        "size_bytes": 11335
+      },
+      "panel": {
+        "path": "artifacts/paper-expansion-v1/sallm/semantic-review/report.json",
+        "sha256": "aa180e177783e05edb50c13bf0c13d4ed36f3e7baa8c01321e6ca527daf0ea2d",
+        "size_bytes": 7126
+      },
+      "visible": {
+        "path": "configs/oracles/sallm_paper_expansion_v1_visible.json",
+        "sha256": "95bd08a3f28a060821297936f10bacc2369a1e2eb7f19522364e3e5247140619",
+        "size_bytes": 11458
+      }
+    }
+  },
+  "method_or_g8_outcome_filter_applied": false,
+  "outputs": {
+    "canonical": {
+      "path": "benchmarks/manifests/sallm-paper-expansion-v1-semantic-machine-oracle.json",
+      "sha256": "e31b2900a90cceb9f161002315684fe17cb92ba5719265ba7b3b87aa2a10632d",
+      "size_bytes": 5340
+    },
+    "execution_overlays": {
+      "hidden": {
+        "path": "configs/benchmarks/sallm_paper_expansion_v1_semantic_machine_hidden.json",
+        "sha256": "3f52bcdf385a84f3054306dd6b9c236d4bef6743deadad976809c07d0b2dbcbb",
+        "size_bytes": 9826
+      },
+      "visible": {
+        "path": "configs/benchmarks/sallm_paper_expansion_v1_semantic_machine_visible.json",
+        "sha256": "6d74450d36b7c923cee28afe0ea6b740720fb6edbac7674ec534416ce52ba69c",
+        "size_bytes": 9836
+      }
+    },
+    "hidden": {
+      "path": "configs/oracles/sallm_paper_expansion_v1_semantic_machine_hidden.json",
+      "sha256": "056c64a87eb61a4a7921b954262a96aebd1d84794f6dd794a01af29d6c1f50fa",
+      "size_bytes": 12803
+    },
+    "visible": {
+      "path": "configs/oracles/sallm_paper_expansion_v1_semantic_machine_visible.json",
+      "sha256": "651e47f6afe81c82f9fa2f849f6fabc627b41ae0840e0ddeba892d070650112f",
+      "size_bytes": 12731
+    }
+  },
+  "qualified_task_count": 8,
+  "qualified_tasks": [
+    "Assertion_CodeQL_codeql_cwe020_1.py",
+    "Assertion_SonarSource_SS_cwe079_0.py",
+    "Assertion_SonarSource_SS_cwe827_0.py",
+    "Tainted_Author_A_cwe078_0.py",
+    "Tainted_Author_A_cwe089_1.py",
+    "Assertion_SonarSource_SS_cwe094_0.py",
+    "Tainted_CodeQL_codeql_cwe079_0.py",
+    "Tainted_StackOverflow_SO_cwe094_4.py"
+  ],
+  "runtime_schema_correction": "added combined execution overlays; task/test membership unchanged",
+  "schema_version": 1
+}

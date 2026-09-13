@@ -1,0 +1,17 @@
+{
+  "experiment": "representation-v1",
+  "benchmarks": ["sallm", "codeguardplus"],
+  "models": {
+    "qwen25-coder-7b": "<MODEL_ROOT>/Qwen/Qwen2.5-Coder-7B-Instruct",
+    "qwen25-coder-14b": "<MODEL_ROOT>/Qwen/Qwen2.5-Coder-14B-Instruct"
+  },
+  "seeds": [151001,151021,151051,151057,151091],
+  "methods": ["code_functional","prose_functional","code_both","prose_both"],
+  "specifications": "configs/experiments/representation_specifications_v1.json",
+  "output": "artifacts/representation-v1",
+  "temperature": 0.2,
+  "max_completion_tokens": 3072,
+  "context_tokens": 32768,
+  "bootstrap_seed": 20260911,
+  "bootstrap_replicates": 10000
+}

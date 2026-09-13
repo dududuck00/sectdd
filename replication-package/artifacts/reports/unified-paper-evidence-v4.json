@@ -1,0 +1,3227 @@
+{
+  "schema_version": 4,
+  "report_id": "unified-paper-evidence-v4",
+  "created_at_utc": "2026-08-08T22:40:26.651579+00:00",
+  "complete": true,
+  "formal_results_use": false,
+  "scope": {
+    "legacy_tasks": 31,
+    "expansion_tasks": 20,
+    "combined_tasks": 51,
+    "legacy_trajectories": 2705,
+    "expansion_trajectories": 3200,
+    "combined_trajectories": 5905,
+    "distinct_cwe_count": 24,
+    "tasks_by_benchmark": {
+      "CWEval": 17,
+      "CodeGuard+": 15,
+      "SALLM": 19
+    },
+    "major_model_families": [
+      "Qwen",
+      "DeepSeek"
+    ],
+    "named_model_configurations": [
+      "deepseek-v4-flash",
+      "qwen25-coder-14b",
+      "qwen25-coder-7b",
+      "qwen3-32b",
+      "qwen36-27b"
+    ]
+  },
+  "evidence_roles": {
+    "primary_confirmatory": "balanced_expansion_20",
+    "supporting_sensitivity": "legacy_heterogeneous_31",
+    "combined_coverage": "descriptive_only"
+  },
+  "runs": [
+    {
+      "benchmark": "CWEval",
+      "family": "Qwen",
+      "model": "qwen25-coder-7b",
+      "tasks": 9,
+      "methods": 7,
+      "repetitions": 5,
+      "trajectories": 315,
+      "manifest": {
+        "path": "artifacts/main_internal/qwen25-coder-7b-main-002/run_manifest.json",
+        "sha256": "1d367effe05a7db5b4b316e987a6aeb65ab93c97f4b9ad2b2f7e92ed085e54cd",
+        "size_bytes": 2619
+      },
+      "trajectory_grid_sha256": "8e704f1b3c457dd172f1e77e204d6758d91f970432a3a3a6a85559204e8dfc78",
+      "provider_seed_supported": true,
+      "evidence_phase": "legacy_heterogeneous_31"
+    },
+    {
+      "benchmark": "CWEval",
+      "family": "Qwen",
+      "model": "qwen25-coder-14b",
+      "tasks": 9,
+      "methods": 7,
+      "repetitions": 5,
+      "trajectories": 315,
+      "manifest": {
+        "path": "artifacts/main_internal/qwen25-coder-14b-main-003-corrected/run_manifest.json",
+        "sha256": "c0a1cede68e8b73cb8a55158e57b998708576daa57753fb1c0cab1713b15c751",
+        "size_bytes": 3975
+      },
+      "trajectory_grid_sha256": "f4217dac41b0b272892f953d21a929f2960e698a047991855c4f446d319bc6e2",
+      "provider_seed_supported": true,
+      "evidence_phase": "legacy_heterogeneous_31"
+    },
+    {
+      "benchmark": "CWEval",
+      "family": "Qwen",
+      "model": "qwen3-32b",
+      "tasks": 9,
+      "methods": 7,
+      "repetitions": 5,
+      "trajectories": 315,
+      "manifest": {
+        "path": "artifacts/main_internal/qwen3-32b-main-002/run_manifest.json",
+        "sha256": "c0748ed0dbd2463439123275ae8f4d8582e29af6ce563affd247a73c1a4d9e6f",
+        "size_bytes": 3821
+      },
+      "trajectory_grid_sha256": "3522e77de7e4c6478f484bb9c8406aad2c7ff83e76afa5c0cd4f92ef2eb64882",
+      "provider_seed_supported": true,
+      "evidence_phase": "legacy_heterogeneous_31"
+    },
+    {
+      "benchmark": "SALLM",
+      "family": "Qwen",
+      "model": "qwen25-coder-7b",
+      "tasks": 11,
+      "methods": 5,
+      "repetitions": 5,
+      "trajectories": 275,
+      "manifest": {
+        "path": "artifacts/sallm_formal_main/qwen25-coder-7b-main-002/run_manifest.json",
+        "sha256": "7bad871c4bf0a2fe1b93722b9f50e230043f067c4bccc8a9ad37650da4355a64",
+        "size_bytes": 5639
+      },
+      "trajectory_grid_sha256": "7a23c29b806307d10a3d00ad7e82175db0ea4e9ddaf3cc1f6908ca2250437fdc",
+      "provider_seed_supported": true,
+      "evidence_phase": "legacy_heterogeneous_31"
+    },
+    {
+      "benchmark": "SALLM",
+      "family": "Qwen",
+      "model": "qwen25-coder-14b",
+      "tasks": 11,
+      "methods": 5,
+      "repetitions": 5,
+      "trajectories": 275,
+      "manifest": {
+        "path": "artifacts/sallm_formal_main/qwen25-coder-14b-main-002/run_manifest.json",
+        "sha256": "fb3de897b5ca1ae781b8fcf2600edf82f1dcbe6eeb85ae4ef892a396d64dd192",
+        "size_bytes": 5655
+      },
+      "trajectory_grid_sha256": "a1264abb41b6973a4d6fa7ef93094cbfd53cb0e0c53aa7558bcd9315055546be",
+      "provider_seed_supported": true,
+      "evidence_phase": "legacy_heterogeneous_31"
+    },
+    {
+      "benchmark": "SALLM",
+      "family": "Qwen",
+      "model": "qwen36-27b",
+      "tasks": 11,
+      "methods": 5,
+      "repetitions": 5,
+      "trajectories": 275,
+      "manifest": {
+        "path": "artifacts/sallm_formal_main/qwen36-27b-main-002/run_manifest.json",
+        "sha256": "81b63e1826081ebbc3b496138d09857fda9c37bf9de90f15cb63610614d939a0",
+        "size_bytes": 5557
+      },
+      "trajectory_grid_sha256": "9d37530f66799c1f2fce439dbe1c68cff5bf5782322294c41f28deed30982e99",
+      "provider_seed_supported": true,
+      "evidence_phase": "legacy_heterogeneous_31"
+    },
+    {
+      "benchmark": "SALLM",
+      "family": "DeepSeek",
+      "model": "deepseek-v4-flash",
+      "tasks": 11,
+      "methods": 5,
+      "repetitions": 5,
+      "trajectories": 275,
+      "manifest": {
+        "path": "artifacts/deepseek-external-confirmatory-v1/sallm/run_manifest.json",
+        "sha256": "0654d87a49fa85f920a06e285cd6eadd84eb4536c53b22df343908ad61adb5c0",
+        "size_bytes": 5432
+      },
+      "trajectory_grid_sha256": "e12af2f7c0cd70cf3dfc134c8235e13d47938a1affb5dfed6a30c2f4e5129ca0",
+      "provider_seed_supported": false,
+      "evidence_phase": "legacy_heterogeneous_31"
+    },
+    {
+      "benchmark": "CodeGuard+",
+      "family": "Qwen",
+      "model": "qwen25-coder-14b",
+      "tasks": 11,
+      "methods": 6,
+      "repetitions": 5,
+      "trajectories": 330,
+      "manifest": {
+        "path": "artifacts/codeguardplus-breadth-confirmatory-v1/qwen25-coder-14b/run_manifest.json",
+        "sha256": "bbc7feeaa8c864f4e70b00cf2c92eb9c5adc64bcd811e32bc99d498dc35134af",
+        "size_bytes": 49054
+      },
+      "trajectory_grid_sha256": "97b85bd22641977d3f062f1df03509047205e0aef397a3dee9e7bcbd6155c617",
+      "provider_seed_supported": true,
+      "evidence_phase": "legacy_heterogeneous_31"
+    },
+    {
+      "benchmark": "CodeGuard+",
+      "family": "DeepSeek",
+      "model": "deepseek-v4-flash",
+      "tasks": 11,
+      "methods": 6,
+      "repetitions": 5,
+      "trajectories": 330,
+      "manifest": {
+        "path": "artifacts/codeguardplus-breadth-confirmatory-v1/deepseek-v4-flash/run_manifest.json",
+        "sha256": "d92aa95e9a406d1cdcb3abfe6755689f4b4347b2587770730d1d6c4a8073e42c",
+        "size_bytes": 48796
+      },
+      "trajectory_grid_sha256": "82e7b2d02310a8fc08b4cb7bcb6c4bdb2ff8f9a9a6865219c02d5b6f71f69ed0",
+      "provider_seed_supported": false,
+      "evidence_phase": "legacy_heterogeneous_31"
+    },
+    {
+      "evidence_phase": "balanced_expansion_20",
+      "benchmark": "CWEval",
+      "family": "Qwen",
+      "model": "qwen25-coder-7b",
+      "tasks": 8,
+      "methods": 8,
+      "repetitions": 5,
+      "trajectories": 320,
+      "manifest": {
+        "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-7b/run_manifest.json",
+        "sha256": "1c68f6fd4294d3e3757813cbf3fe598738484f5c5fbb9ea115fc992edcb3e792",
+        "size_bytes": 4056
+      },
+      "trajectory_grid_sha256": "5baab4b9f1f9920bbe5f0efabc086d60bf6b4e14aaf737f88d7d0d9d5719f7e7"
+    },
+    {
+      "evidence_phase": "balanced_expansion_20",
+      "benchmark": "CWEval",
+      "family": "Qwen",
+      "model": "qwen25-coder-14b",
+      "tasks": 8,
+      "methods": 8,
+      "repetitions": 5,
+      "trajectories": 320,
+      "manifest": {
+        "path": "artifacts/paper-expansion-full-v1/cweval/qwen25-coder-14b/run_manifest.json",
+        "sha256": "03617676a92716aab867db52627b280f274aa73433c8d4a702d9233df334a004",
+        "size_bytes": 4069
+      },
+      "trajectory_grid_sha256": "5df7289ea4609b4a2c50ea6e49cfce5db526923a55acdc6f2fcff996d3cfbea2"
+    },
+    {
+      "evidence_phase": "balanced_expansion_20",
+      "benchmark": "CWEval",
+      "family": "Qwen",
+      "model": "qwen36-27b",
+      "tasks": 8,
+      "methods": 8,
+      "repetitions": 5,
+      "trajectories": 320,
+      "manifest": {
+        "path": "artifacts/paper-expansion-full-v1/cweval/qwen36-27b/run_manifest.json",
+        "sha256": "847594af06844ce84ccb2885860a1f9b83ef347badd5907fbc25848c737abc21",
+        "size_bytes": 3989
+      },
+      "trajectory_grid_sha256": "f3623fb0040fb5bc895562fad1f5165891208cd10a2a001d178adfe78894938d"
+    },
+    {
+      "evidence_phase": "balanced_expansion_20",
+      "benchmark": "CWEval",
+      "family": "DeepSeek",
+      "model": "deepseek-v4-flash",
+      "tasks": 8,
+      "methods": 8,
+      "repetitions": 5,
+      "trajectories": 320,
+      "manifest": {
+        "path": "artifacts/paper-expansion-full-v1/cweval/deepseek-v4-flash/run_manifest.json",
+        "sha256": "a264d418933f07b4449848fcb98b9ffb0f9980958e4f4c9f45057cfe20997534",
+        "size_bytes": 3899
+      },
+      "trajectory_grid_sha256": "b0c29e78a5fcef823fdb1613d94fc4b8e877ecf6b79a0ce4251f78a24603a972"
+    },
+    {
+      "evidence_phase": "balanced_expansion_20",
+      "benchmark": "SALLM",
+      "family": "Qwen",
+      "model": "qwen25-coder-7b",
+      "tasks": 8,
+      "methods": 8,
+      "repetitions": 5,
+      "trajectories": 320,
+      "manifest": {
+        "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-7b/run_manifest.json",
+        "sha256": "0b35f49c040d402fd37d02564abf9d5025216ea4982b51d568794b6e38812e62",
+        "size_bytes": 5213
+      },
+      "trajectory_grid_sha256": "05956b77b21b29d8a9436b8d7f6732faa5703c06bc6c824ecbb23716e6c4f8e8"
+    },
+    {
+      "evidence_phase": "balanced_expansion_20",
+      "benchmark": "SALLM",
+      "family": "Qwen",
+      "model": "qwen25-coder-14b",
+      "tasks": 8,
+      "methods": 8,
+      "repetitions": 5,
+      "trajectories": 320,
+      "manifest": {
+        "path": "artifacts/paper-expansion-full-v1/sallm/qwen25-coder-14b/run_manifest.json",
+        "sha256": "e11647e8a33c7d8bbdace15b32afb7edb69e7423e289d59f852983161ba6b8f9",
+        "size_bytes": 5226
+      },
+      "trajectory_grid_sha256": "6f07d428176b561030106dc6612ff0391d3bad6ed67c2c623f4ead63b7b3e81e"
+    },
+    {
+      "evidence_phase": "balanced_expansion_20",
+      "benchmark": "SALLM",
+      "family": "Qwen",
+      "model": "qwen36-27b",
+      "tasks": 8,
+      "methods": 8,
+      "repetitions": 5,
+      "trajectories": 320,
+      "manifest": {
+        "path": "artifacts/paper-expansion-full-v1/sallm/qwen36-27b/run_manifest.json",
+        "sha256": "9c9124341483075188cea7f277d403f1a79ce15fbd7f52f269dc10e71a4f129b",
+        "size_bytes": 5146
+      },
+      "trajectory_grid_sha256": "827871e1afb16f3a97d74ace4d5edfde7dce34b622172f64bbda6aa8ac0c4015"
+    },
+    {
+      "evidence_phase": "balanced_expansion_20",
+      "benchmark": "SALLM",
+      "family": "DeepSeek",
+      "model": "deepseek-v4-flash",
+      "tasks": 8,
+      "methods": 8,
+      "repetitions": 5,
+      "trajectories": 320,
+      "manifest": {
+        "path": "artifacts/paper-expansion-full-v1/sallm/deepseek-v4-flash/run_manifest.json",
+        "sha256": "976e789b02ad79c210f4a43819edb2c482f04ca82cba826c216ebebfe6d1138d",
+        "size_bytes": 4865
+      },
+      "trajectory_grid_sha256": "8f2795cf65b63f8f95f71190cd315858a41f63d28a4b0b1fca926c6bf9235f79"
+    },
+    {
+      "evidence_phase": "balanced_expansion_20",
+      "benchmark": "CodeGuard+",
+      "family": "Qwen",
+      "model": "qwen25-coder-7b",
+      "tasks": 4,
+      "methods": 8,
+      "repetitions": 5,
+      "trajectories": 160,
+      "manifest": {
+        "path": "artifacts/paper-expansion-full-v1/codeguardplus/qwen25-coder-7b/run_manifest.json",
+        "sha256": "03b8124282ffcc48cb20e70d71ca3d976872060b21ca45b5ae0d22748e74c705",
+        "size_bytes": 24834
+      },
+      "trajectory_grid_sha256": "93d90e6aaa8abf50a479b1eb110bfa76fe39aa5aa8123361f082e508f5bb74b5"
+    },
+    {
+      "evidence_phase": "balanced_expansion_20",
+      "benchmark": "CodeGuard+",
+      "family": "Qwen",
+      "model": "qwen25-coder-14b",
+      "tasks": 4,
+      "methods": 8,
+      "repetitions": 5,
+      "trajectories": 160,
+      "manifest": {
+        "path": "artifacts/paper-expansion-full-v1/codeguardplus/qwen25-coder-14b/run_manifest.json",
+        "sha256": "babc2cdfc5dd4edfe58206a4302913d7be1f73dbe9aa6029d10bde5b5444362b",
+        "size_bytes": 24843
+      },
+      "trajectory_grid_sha256": "895fcb79b8a9e517159a230edf5b16122222ebab99ff99e118ae2b2320f26cfe"
+    },
+    {
+      "evidence_phase": "balanced_expansion_20",
+      "benchmark": "CodeGuard+",
+      "family": "Qwen",
+      "model": "qwen36-27b",
+      "tasks": 4,
+      "methods": 8,
+      "repetitions": 5,
+      "trajectories": 160,
+      "manifest": {
+        "path": "artifacts/paper-expansion-full-v1/codeguardplus/qwen36-27b/run_manifest.json",
+        "sha256": "241aea582f9d75b3d24e08e5651eb011c38da7c5995630bcddb95d0bc022c3aa",
+        "size_bytes": 24787
+      },
+      "trajectory_grid_sha256": "4ae09df4d3bd46b52b82327cb0ff8982c78b195c79213250c64116c28e784461"
+    },
+    {
+      "evidence_phase": "balanced_expansion_20",
+      "benchmark": "CodeGuard+",
+      "family": "DeepSeek",
+      "model": "deepseek-v4-flash",
+      "tasks": 4,
+      "methods": 8,
+      "repetitions": 5,
+      "trajectories": 160,
+      "manifest": {
+        "path": "artifacts/paper-expansion-full-v1/codeguardplus/deepseek-v4-flash/run_manifest.json",
+        "sha256": "65b4cd61d28f001d7099be73b4f9f1e384f61af90461c67341e5c9d321892de7",
+        "size_bytes": 24578
+      },
+      "trajectory_grid_sha256": "88512cfc10470ebc411a4dbfbec6b1d9e250c670e116e5b35d65cddc3db1371c"
+    }
+  ],
+  "condition_methods": {
+    "CWEval": {
+      "qwen25-coder-7b": {
+        "B0": {
+          "n": 85,
+          "functional": 0.7176470588235294,
+          "secure": 0.43529411764705883,
+          "joint": 0.3176470588235294,
+          "safe": 0.3620636080938996,
+          "security_given_functional": 0.4426229508196721,
+          "visible_joint": 0.38823529411764707,
+          "tfor": {
+            "numerator": 8,
+            "denominator": 33,
+            "rate": 0.24242424242424243
+          },
+          "states": {
+            "F+S+": 27,
+            "F+S-": 34,
+            "F-S+": 10,
+            "F-S-": 14
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 199.88235294117646,
+            "output_tokens": 199.04705882352943,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B1": {
+          "n": 85,
+          "functional": 0.8705882352941177,
+          "secure": 0.5176470588235295,
+          "joint": 0.4,
+          "safe": 0.44441654927037016,
+          "security_given_functional": 0.4594594594594595,
+          "visible_joint": 0.36470588235294116,
+          "tfor": {
+            "numerator": 6,
+            "denominator": 31,
+            "rate": 0.1935483870967742
+          },
+          "states": {
+            "F+S+": 34,
+            "F+S-": 40,
+            "F-S+": 10,
+            "F-S-": 1
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 223.88235294117646,
+            "output_tokens": 219.51764705882354,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B2": {
+          "n": 85,
+          "functional": 0.8705882352941177,
+          "secure": 0.36470588235294116,
+          "joint": 0.35294117647058826,
+          "safe": 0.35294117647058826,
+          "security_given_functional": 0.40540540540540543,
+          "visible_joint": 0.38823529411764707,
+          "tfor": {
+            "numerator": 7,
+            "denominator": 33,
+            "rate": 0.21212121212121213
+          },
+          "states": {
+            "F+S+": 30,
+            "F+S-": 44,
+            "F-S+": 1,
+            "F-S-": 10
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 471.29411764705884,
+            "output_tokens": 203.3764705882353,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B3": {
+          "n": 85,
+          "functional": 0.9058823529411765,
+          "secure": 0.6,
+          "joint": 0.6,
+          "safe": 0.6,
+          "security_given_functional": 0.6623376623376623,
+          "visible_joint": 0.6705882352941176,
+          "tfor": {
+            "numerator": 8,
+            "denominator": 57,
+            "rate": 0.14035087719298245
+          },
+          "states": {
+            "F+S+": 51,
+            "F+S-": 26,
+            "F-S-": 8
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 626.7058823529412,
+            "output_tokens": 205.31764705882352,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B4": {
+          "n": 85,
+          "functional": 0.7294117647058823,
+          "secure": 0.5647058823529412,
+          "joint": 0.5058823529411764,
+          "safe": 0.5280906275763616,
+          "security_given_functional": 0.6935483870967742,
+          "visible_joint": 0.6823529411764706,
+          "tfor": {
+            "numerator": 17,
+            "denominator": 58,
+            "rate": 0.29310344827586204
+          },
+          "states": {
+            "F+S+": 43,
+            "F+S-": 19,
+            "F-S+": 5,
+            "F-S-": 18
+          },
+          "cost": {
+            "model_calls": 2.011764705882353,
+            "input_tokens": 1150.9058823529413,
+            "output_tokens": 422.47058823529414,
+            "feedback_tokens": 301.08235294117645
+          }
+        },
+        "B5": {
+          "n": 85,
+          "functional": 0.7529411764705882,
+          "secure": 0.5647058823529412,
+          "joint": 0.5058823529411764,
+          "safe": 0.5280906275763616,
+          "security_given_functional": 0.671875,
+          "visible_joint": 0.6823529411764706,
+          "tfor": {
+            "numerator": 16,
+            "denominator": 58,
+            "rate": 0.27586206896551724
+          },
+          "states": {
+            "F+S+": 43,
+            "F+S-": 21,
+            "F-S+": 5,
+            "F-S-": 16
+          },
+          "cost": {
+            "model_calls": 1.9764705882352942,
+            "input_tokens": 923.1529411764706,
+            "output_tokens": 412.15294117647056,
+            "feedback_tokens": 159.41176470588235
+          }
+        },
+        "M": {
+          "n": 85,
+          "functional": 0.7647058823529411,
+          "secure": 0.6235294117647059,
+          "joint": 0.5294117647058824,
+          "safe": 0.5560616942681045,
+          "security_given_functional": 0.6923076923076923,
+          "visible_joint": 0.7529411764705882,
+          "tfor": {
+            "numerator": 21,
+            "denominator": 64,
+            "rate": 0.328125
+          },
+          "states": {
+            "F+S+": 45,
+            "F+S-": 20,
+            "F-S+": 8,
+            "F-S-": 12
+          },
+          "cost": {
+            "model_calls": 1.8941176470588235,
+            "input_tokens": 1045.035294117647,
+            "output_tokens": 417.0705882352941,
+            "feedback_tokens": 283.16470588235296
+          }
+        },
+        "B6": {
+          "n": 40,
+          "functional": 0.975,
+          "secure": 0.825,
+          "joint": 0.825,
+          "safe": 0.825,
+          "security_given_functional": 0.8461538461538461,
+          "visible_joint": 0.925,
+          "tfor": {
+            "numerator": 4,
+            "denominator": 37,
+            "rate": 0.10810810810810811
+          },
+          "states": {
+            "F+S+": 33,
+            "F+S-": 6,
+            "F-S-": 1
+          },
+          "cost": {
+            "model_calls": 1.15,
+            "input_tokens": 835.675,
+            "output_tokens": 255.425,
+            "feedback_tokens": 44.7
+          }
+        }
+      },
+      "qwen25-coder-14b": {
+        "B0": {
+          "n": 85,
+          "functional": 0.9764705882352941,
+          "secure": 0.611764705882353,
+          "joint": 0.6,
+          "safe": 0.604441654927037,
+          "security_given_functional": 0.6144578313253012,
+          "visible_joint": 0.49411764705882355,
+          "tfor": {
+            "numerator": 0,
+            "denominator": 42,
+            "rate": 0.0
+          },
+          "states": {
+            "F+S+": 51,
+            "F+S-": 32,
+            "F-S+": 1,
+            "F-S-": 1
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 199.88235294117646,
+            "output_tokens": 232.78823529411764,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B1": {
+          "n": 85,
+          "functional": 0.9294117647058824,
+          "secure": 0.7058823529411765,
+          "joint": 0.7058823529411765,
+          "safe": 0.7058823529411765,
+          "security_given_functional": 0.759493670886076,
+          "visible_joint": 0.6235294117647059,
+          "tfor": {
+            "numerator": 3,
+            "denominator": 53,
+            "rate": 0.05660377358490566
+          },
+          "states": {
+            "F+S+": 60,
+            "F+S-": 19,
+            "F-S-": 6
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 223.88235294117646,
+            "output_tokens": 249.71764705882353,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B2": {
+          "n": 85,
+          "functional": 0.8470588235294118,
+          "secure": 0.5529411764705883,
+          "joint": 0.5058823529411764,
+          "safe": 0.5236489726493245,
+          "security_given_functional": 0.5972222222222222,
+          "visible_joint": 0.49411764705882355,
+          "tfor": {
+            "numerator": 4,
+            "denominator": 42,
+            "rate": 0.09523809523809523
+          },
+          "states": {
+            "F+S+": 43,
+            "F+S-": 29,
+            "F-S+": 4,
+            "F-S-": 9
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 471.29411764705884,
+            "output_tokens": 211.4470588235294,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B3": {
+          "n": 85,
+          "functional": 0.8823529411764706,
+          "secure": 0.7058823529411765,
+          "joint": 0.6470588235294118,
+          "safe": 0.669267098164597,
+          "security_given_functional": 0.7333333333333333,
+          "visible_joint": 0.9529411764705882,
+          "tfor": {
+            "numerator": 26,
+            "denominator": 81,
+            "rate": 0.32098765432098764
+          },
+          "states": {
+            "F+S+": 55,
+            "F+S-": 20,
+            "F-S+": 5,
+            "F-S-": 5
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 626.7058823529412,
+            "output_tokens": 237.91764705882352,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B4": {
+          "n": 85,
+          "functional": 0.8705882352941177,
+          "secure": 0.8117647058823529,
+          "joint": 0.7647058823529411,
+          "safe": 0.7824725020610893,
+          "security_given_functional": 0.8783783783783784,
+          "visible_joint": 0.9411764705882353,
+          "tfor": {
+            "numerator": 15,
+            "denominator": 80,
+            "rate": 0.1875
+          },
+          "states": {
+            "F+S+": 65,
+            "F+S-": 9,
+            "F-S+": 4,
+            "F-S-": 7
+          },
+          "cost": {
+            "model_calls": 1.6235294117647059,
+            "input_tokens": 784.8941176470588,
+            "output_tokens": 430.61176470588236,
+            "feedback_tokens": 186.31764705882352
+          }
+        },
+        "B5": {
+          "n": 85,
+          "functional": 0.9647058823529412,
+          "secure": 0.7411764705882353,
+          "joint": 0.7058823529411765,
+          "safe": 0.7192073177222875,
+          "security_given_functional": 0.7317073170731707,
+          "visible_joint": 0.9058823529411765,
+          "tfor": {
+            "numerator": 17,
+            "denominator": 77,
+            "rate": 0.22077922077922077
+          },
+          "states": {
+            "F+S+": 60,
+            "F+S-": 22,
+            "F-S+": 3
+          },
+          "cost": {
+            "model_calls": 1.7294117647058824,
+            "input_tokens": 761.0235294117647,
+            "output_tokens": 425.7294117647059,
+            "feedback_tokens": 116.27058823529411
+          }
+        },
+        "M": {
+          "n": 85,
+          "functional": 0.8823529411764706,
+          "secure": 0.8352941176470589,
+          "joint": 0.7294117647058823,
+          "safe": 0.7693866590492154,
+          "security_given_functional": 0.8266666666666667,
+          "visible_joint": 0.8235294117647058,
+          "tfor": {
+            "numerator": 8,
+            "denominator": 70,
+            "rate": 0.11428571428571428
+          },
+          "states": {
+            "F+S+": 62,
+            "F+S-": 13,
+            "F-S+": 9,
+            "F-S-": 1
+          },
+          "cost": {
+            "model_calls": 1.6823529411764706,
+            "input_tokens": 872.564705882353,
+            "output_tokens": 472.5764705882353,
+            "feedback_tokens": 204.71764705882353
+          }
+        },
+        "B6": {
+          "n": 40,
+          "functional": 0.875,
+          "secure": 0.85,
+          "joint": 0.725,
+          "safe": 0.7721925835997683,
+          "security_given_functional": 0.8285714285714286,
+          "visible_joint": 1.0,
+          "tfor": {
+            "numerator": 11,
+            "denominator": 40,
+            "rate": 0.275
+          },
+          "states": {
+            "F+S+": 29,
+            "F+S-": 6,
+            "F-S+": 5
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 629.0,
+            "output_tokens": 247.775,
+            "feedback_tokens": 0.0
+          }
+        }
+      },
+      "qwen3-32b": {
+        "B0": {
+          "n": 45,
+          "functional": 0.7777777777777778,
+          "secure": 0.2222222222222222,
+          "joint": 0.2222222222222222,
+          "safe": 0.2222222222222222,
+          "security_given_functional": 0.2857142857142857,
+          "visible_joint": 0.1111111111111111,
+          "tfor": {
+            "numerator": 0,
+            "denominator": 5,
+            "rate": 0.0
+          },
+          "states": {
+            "F+S+": 10,
+            "F+S-": 25,
+            "F-S-": 10
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 206.33333333333334,
+            "output_tokens": 189.51111111111112,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B1": {
+          "n": 45,
+          "functional": 0.4888888888888889,
+          "secure": 0.2222222222222222,
+          "joint": 0.1111111111111111,
+          "safe": 0.15306007431090507,
+          "security_given_functional": 0.22727272727272727,
+          "visible_joint": 0.35555555555555557,
+          "tfor": {
+            "numerator": 11,
+            "denominator": 16,
+            "rate": 0.6875
+          },
+          "states": {
+            "F+S+": 5,
+            "F+S-": 17,
+            "F-S+": 5,
+            "F-S-": 18
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 230.33333333333334,
+            "output_tokens": 255.17777777777778,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B2": {
+          "n": 45,
+          "functional": 0.8888888888888888,
+          "secure": 0.3333333333333333,
+          "joint": 0.3333333333333333,
+          "safe": 0.3333333333333333,
+          "security_given_functional": 0.375,
+          "visible_joint": 0.26666666666666666,
+          "tfor": {
+            "numerator": 0,
+            "denominator": 12,
+            "rate": 0.0
+          },
+          "states": {
+            "F+S+": 15,
+            "F+S-": 25,
+            "F-S-": 5
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 476.44444444444446,
+            "output_tokens": 192.7111111111111,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B3": {
+          "n": 45,
+          "functional": 0.8666666666666667,
+          "secure": 0.7333333333333333,
+          "joint": 0.7333333333333333,
+          "safe": 0.7333333333333333,
+          "security_given_functional": 0.8461538461538461,
+          "visible_joint": 1.0,
+          "tfor": {
+            "numerator": 12,
+            "denominator": 45,
+            "rate": 0.26666666666666666
+          },
+          "states": {
+            "F+S+": 33,
+            "F+S-": 6,
+            "F-S-": 6
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 628.6666666666666,
+            "output_tokens": 227.9111111111111,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B4": {
+          "n": 45,
+          "functional": 0.7555555555555555,
+          "secure": 0.6666666666666666,
+          "joint": 0.6222222222222222,
+          "safe": 0.6390018075021398,
+          "security_given_functional": 0.8235294117647058,
+          "visible_joint": 0.8888888888888888,
+          "tfor": {
+            "numerator": 12,
+            "denominator": 40,
+            "rate": 0.3
+          },
+          "states": {
+            "F+S+": 28,
+            "F+S-": 6,
+            "F-S+": 2,
+            "F-S-": 9
+          },
+          "cost": {
+            "model_calls": 2.111111111111111,
+            "input_tokens": 1143.3111111111111,
+            "output_tokens": 426.02222222222224,
+            "feedback_tokens": 326.53333333333336
+          }
+        },
+        "B5": {
+          "n": 45,
+          "functional": 0.7777777777777778,
+          "secure": 0.5777777777777777,
+          "joint": 0.5777777777777777,
+          "safe": 0.5777777777777777,
+          "security_given_functional": 0.7428571428571429,
+          "visible_joint": 0.8,
+          "tfor": {
+            "numerator": 11,
+            "denominator": 36,
+            "rate": 0.3055555555555556
+          },
+          "states": {
+            "F+S+": 26,
+            "F+S-": 9,
+            "F-S-": 10
+          },
+          "cost": {
+            "model_calls": 2.311111111111111,
+            "input_tokens": 1144.9333333333334,
+            "output_tokens": 478.31111111111113,
+            "feedback_tokens": 211.51111111111112
+          }
+        },
+        "M": {
+          "n": 45,
+          "functional": 0.8888888888888888,
+          "secure": 0.6222222222222222,
+          "joint": 0.6222222222222222,
+          "safe": 0.6222222222222222,
+          "security_given_functional": 0.7,
+          "visible_joint": 0.9555555555555556,
+          "tfor": {
+            "numerator": 15,
+            "denominator": 43,
+            "rate": 0.3488372093023256
+          },
+          "states": {
+            "F+S+": 28,
+            "F+S-": 12,
+            "F-S-": 5
+          },
+          "cost": {
+            "model_calls": 2.022222222222222,
+            "input_tokens": 1067.2666666666667,
+            "output_tokens": 440.6,
+            "feedback_tokens": 312.97777777777776
+          }
+        }
+      },
+      "qwen36-27b": {
+        "B0": {
+          "n": 40,
+          "functional": 0.8,
+          "secure": 0.65,
+          "joint": 0.65,
+          "safe": 0.65,
+          "security_given_functional": 0.8125,
+          "visible_joint": 0.675,
+          "tfor": {
+            "numerator": 1,
+            "denominator": 27,
+            "rate": 0.037037037037037035
+          },
+          "states": {
+            "F+S+": 26,
+            "F+S-": 6,
+            "F-S-": 8
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 212.75,
+            "output_tokens": 290.05,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B1": {
+          "n": 40,
+          "functional": 0.95,
+          "secure": 0.95,
+          "joint": 0.95,
+          "safe": 0.95,
+          "security_given_functional": 1.0,
+          "visible_joint": 0.875,
+          "tfor": {
+            "numerator": 0,
+            "denominator": 35,
+            "rate": 0.0
+          },
+          "states": {
+            "F+S+": 38,
+            "F-S-": 2
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 236.75,
+            "output_tokens": 324.875,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B2": {
+          "n": 40,
+          "functional": 1.0,
+          "secure": 1.0,
+          "joint": 1.0,
+          "safe": 1.0,
+          "security_given_functional": 1.0,
+          "visible_joint": 1.0,
+          "tfor": {
+            "numerator": 0,
+            "denominator": 40,
+            "rate": 0.0
+          },
+          "states": {
+            "F+S+": 40
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 499.75,
+            "output_tokens": 261.175,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B3": {
+          "n": 40,
+          "functional": 0.975,
+          "secure": 0.9,
+          "joint": 0.875,
+          "safe": 0.875,
+          "security_given_functional": 0.8974358974358975,
+          "visible_joint": 0.975,
+          "tfor": {
+            "numerator": 4,
+            "denominator": 39,
+            "rate": 0.10256410256410256
+          },
+          "states": {
+            "F+S+": 35,
+            "F+S-": 4,
+            "F-S+": 1
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 666.625,
+            "output_tokens": 348.0,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B4": {
+          "n": 40,
+          "functional": 1.0,
+          "secure": 0.85,
+          "joint": 0.85,
+          "safe": 0.85,
+          "security_given_functional": 0.85,
+          "visible_joint": 1.0,
+          "tfor": {
+            "numerator": 6,
+            "denominator": 40,
+            "rate": 0.15
+          },
+          "states": {
+            "F+S+": 34,
+            "F+S-": 6
+          },
+          "cost": {
+            "model_calls": 1.45,
+            "input_tokens": 715.725,
+            "output_tokens": 429.275,
+            "feedback_tokens": 136.0
+          }
+        },
+        "B5": {
+          "n": 40,
+          "functional": 1.0,
+          "secure": 0.85,
+          "joint": 0.85,
+          "safe": 0.85,
+          "security_given_functional": 0.85,
+          "visible_joint": 1.0,
+          "tfor": {
+            "numerator": 6,
+            "denominator": 40,
+            "rate": 0.15
+          },
+          "states": {
+            "F+S+": 34,
+            "F+S-": 6
+          },
+          "cost": {
+            "model_calls": 1.45,
+            "input_tokens": 589.225,
+            "output_tokens": 431.175,
+            "feedback_tokens": 53.2
+          }
+        },
+        "B6": {
+          "n": 40,
+          "functional": 0.975,
+          "secure": 0.9,
+          "joint": 0.875,
+          "safe": 0.875,
+          "security_given_functional": 0.8974358974358975,
+          "visible_joint": 0.975,
+          "tfor": {
+            "numerator": 4,
+            "denominator": 39,
+            "rate": 0.10256410256410256
+          },
+          "states": {
+            "F+S+": 35,
+            "F+S-": 4,
+            "F-S+": 1
+          },
+          "cost": {
+            "model_calls": 1.05,
+            "input_tokens": 765.45,
+            "output_tokens": 381.425,
+            "feedback_tokens": 10.55
+          }
+        },
+        "M": {
+          "n": 40,
+          "functional": 1.0,
+          "secure": 0.85,
+          "joint": 0.85,
+          "safe": 0.85,
+          "security_given_functional": 0.85,
+          "visible_joint": 1.0,
+          "tfor": {
+            "numerator": 6,
+            "denominator": 40,
+            "rate": 0.15
+          },
+          "states": {
+            "F+S+": 34,
+            "F+S-": 6
+          },
+          "cost": {
+            "model_calls": 1.45,
+            "input_tokens": 686.75,
+            "output_tokens": 428.875,
+            "feedback_tokens": 124.3
+          }
+        }
+      },
+      "deepseek-v4-flash": {
+        "B0": {
+          "n": 40,
+          "functional": 1.0,
+          "secure": 0.8,
+          "joint": 0.8,
+          "safe": 0.8,
+          "security_given_functional": 0.8,
+          "visible_joint": 0.775,
+          "tfor": {
+            "numerator": 5,
+            "denominator": 31,
+            "rate": 0.16129032258064516
+          },
+          "states": {
+            "F+S+": 32,
+            "F+S-": 8
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 193.25,
+            "output_tokens": 229.125,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B1": {
+          "n": 40,
+          "functional": 0.975,
+          "secure": 1.0,
+          "joint": 0.975,
+          "safe": 0.975,
+          "security_given_functional": 1.0,
+          "visible_joint": 0.8,
+          "tfor": {
+            "numerator": 0,
+            "denominator": 32,
+            "rate": 0.0
+          },
+          "states": {
+            "F+S+": 39,
+            "F-S+": 1
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 216.25,
+            "output_tokens": 339.9,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B2": {
+          "n": 40,
+          "functional": 1.0,
+          "secure": 0.75,
+          "joint": 0.75,
+          "safe": 0.75,
+          "security_given_functional": 0.75,
+          "visible_joint": 0.875,
+          "tfor": {
+            "numerator": 5,
+            "denominator": 35,
+            "rate": 0.14285714285714285
+          },
+          "states": {
+            "F+S+": 30,
+            "F+S-": 10
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 475.625,
+            "output_tokens": 205.575,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B3": {
+          "n": 40,
+          "functional": 1.0,
+          "secure": 0.875,
+          "joint": 0.875,
+          "safe": 0.875,
+          "security_given_functional": 0.875,
+          "visible_joint": 1.0,
+          "tfor": {
+            "numerator": 5,
+            "denominator": 40,
+            "rate": 0.125
+          },
+          "states": {
+            "F+S+": 35,
+            "F+S-": 5
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 639.5,
+            "output_tokens": 266.525,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B4": {
+          "n": 40,
+          "functional": 1.0,
+          "secure": 0.8,
+          "joint": 0.8,
+          "safe": 0.8,
+          "security_given_functional": 0.8,
+          "visible_joint": 1.0,
+          "tfor": {
+            "numerator": 8,
+            "denominator": 40,
+            "rate": 0.2
+          },
+          "states": {
+            "F+S+": 32,
+            "F+S-": 8
+          },
+          "cost": {
+            "model_calls": 1.225,
+            "input_tokens": 330.575,
+            "output_tokens": 286.1,
+            "feedback_tokens": 31.925
+          }
+        },
+        "B5": {
+          "n": 40,
+          "functional": 1.0,
+          "secure": 0.8,
+          "joint": 0.8,
+          "safe": 0.8,
+          "security_given_functional": 0.8,
+          "visible_joint": 1.0,
+          "tfor": {
+            "numerator": 8,
+            "denominator": 40,
+            "rate": 0.2
+          },
+          "states": {
+            "F+S+": 32,
+            "F+S-": 8
+          },
+          "cost": {
+            "model_calls": 1.225,
+            "input_tokens": 321.5,
+            "output_tokens": 286.1,
+            "feedback_tokens": 22.55
+          }
+        },
+        "B6": {
+          "n": 40,
+          "functional": 1.0,
+          "secure": 0.875,
+          "joint": 0.875,
+          "safe": 0.875,
+          "security_given_functional": 0.875,
+          "visible_joint": 1.0,
+          "tfor": {
+            "numerator": 5,
+            "denominator": 40,
+            "rate": 0.125
+          },
+          "states": {
+            "F+S+": 35,
+            "F+S-": 5
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 639.5,
+            "output_tokens": 266.525,
+            "feedback_tokens": 0.0
+          }
+        },
+        "M": {
+          "n": 40,
+          "functional": 1.0,
+          "secure": 0.8,
+          "joint": 0.8,
+          "safe": 0.8,
+          "security_given_functional": 0.8,
+          "visible_joint": 1.0,
+          "tfor": {
+            "numerator": 8,
+            "denominator": 40,
+            "rate": 0.2
+          },
+          "states": {
+            "F+S+": 32,
+            "F+S-": 8
+          },
+          "cost": {
+            "model_calls": 1.225,
+            "input_tokens": 342.225,
+            "output_tokens": 287.925,
+            "feedback_tokens": 43.675
+          }
+        }
+      }
+    },
+    "SALLM": {
+      "qwen25-coder-7b": {
+        "B0": {
+          "n": 95,
+          "functional": 0.5473684210526316,
+          "secure": 0.7052631578947368,
+          "joint": 0.3894736842105263,
+          "safe": 0.3894736842105263,
+          "security_given_functional": 0.7115384615384616,
+          "visible_joint": 0.3894736842105263,
+          "tfor": {
+            "numerator": 5,
+            "denominator": 37,
+            "rate": 0.13513513513513514
+          },
+          "states": {
+            "F+S+": 37,
+            "F+S-": 15,
+            "F-S+": 30,
+            "F-S-": 13
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 166.10526315789474,
+            "output_tokens": 154.8,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B3": {
+          "n": 95,
+          "functional": 0.6631578947368421,
+          "secure": 0.6421052631578947,
+          "joint": 0.4842105263157895,
+          "safe": 0.4842105263157895,
+          "security_given_functional": 0.7301587301587301,
+          "visible_joint": 0.5894736842105263,
+          "tfor": {
+            "numerator": 10,
+            "denominator": 56,
+            "rate": 0.17857142857142858
+          },
+          "states": {
+            "F+S+": 46,
+            "F+S-": 17,
+            "F-S+": 15,
+            "F-S-": 17
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 455.3157894736842,
+            "output_tokens": 165.1578947368421,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B4": {
+          "n": 95,
+          "functional": 0.6947368421052632,
+          "secure": 0.7263157894736842,
+          "joint": 0.5368421052631579,
+          "safe": 0.5368421052631579,
+          "security_given_functional": 0.7727272727272727,
+          "visible_joint": 0.5894736842105263,
+          "tfor": {
+            "numerator": 5,
+            "denominator": 56,
+            "rate": 0.08928571428571429
+          },
+          "states": {
+            "F+S+": 51,
+            "F+S-": 15,
+            "F-S+": 18,
+            "F-S-": 11
+          },
+          "cost": {
+            "model_calls": 2.0736842105263156,
+            "input_tokens": 861.2947368421053,
+            "output_tokens": 335.0736842105263,
+            "feedback_tokens": 178.45263157894738
+          }
+        },
+        "B6": {
+          "n": 95,
+          "functional": 0.7368421052631579,
+          "secure": 0.7157894736842105,
+          "joint": 0.5789473684210527,
+          "safe": 0.5789473684210527,
+          "security_given_functional": 0.7857142857142857,
+          "visible_joint": 0.6842105263157895,
+          "tfor": {
+            "numerator": 10,
+            "denominator": 65,
+            "rate": 0.15384615384615385
+          },
+          "states": {
+            "F+S+": 55,
+            "F+S-": 15,
+            "F-S+": 13,
+            "F-S-": 12
+          },
+          "cost": {
+            "model_calls": 1.7473684210526317,
+            "input_tokens": 1249.8,
+            "output_tokens": 303.2526315789474,
+            "feedback_tokens": 174.83157894736843
+          }
+        },
+        "M": {
+          "n": 95,
+          "functional": 0.6947368421052632,
+          "secure": 0.7052631578947368,
+          "joint": 0.5368421052631579,
+          "safe": 0.5368421052631579,
+          "security_given_functional": 0.7727272727272727,
+          "visible_joint": 0.5894736842105263,
+          "tfor": {
+            "numerator": 5,
+            "denominator": 56,
+            "rate": 0.08928571428571429
+          },
+          "states": {
+            "F+S+": 51,
+            "F+S-": 15,
+            "F-S+": 16,
+            "F-S-": 13
+          },
+          "cost": {
+            "model_calls": 2.0526315789473686,
+            "input_tokens": 929.8315789473684,
+            "output_tokens": 347.7368421052632,
+            "feedback_tokens": 228.31578947368422
+          }
+        },
+        "B1": {
+          "n": 40,
+          "functional": 0.425,
+          "secure": 0.625,
+          "joint": 0.3,
+          "safe": 0.3,
+          "security_given_functional": 0.7058823529411765,
+          "visible_joint": 0.3,
+          "tfor": {
+            "numerator": 0,
+            "denominator": 12,
+            "rate": 0.0
+          },
+          "states": {
+            "F+S+": 12,
+            "F+S-": 5,
+            "F-S+": 13,
+            "F-S-": 10
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 204.875,
+            "output_tokens": 152.7,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B2": {
+          "n": 40,
+          "functional": 0.575,
+          "secure": 0.75,
+          "joint": 0.5,
+          "safe": 0.5,
+          "security_given_functional": 0.8695652173913043,
+          "visible_joint": 0.5,
+          "tfor": {
+            "numerator": 0,
+            "denominator": 20,
+            "rate": 0.0
+          },
+          "states": {
+            "F+S+": 20,
+            "F+S-": 3,
+            "F-S+": 10,
+            "F-S-": 7
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 386.375,
+            "output_tokens": 166.2,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B5": {
+          "n": 40,
+          "functional": 0.6,
+          "secure": 0.7,
+          "joint": 0.45,
+          "safe": 0.45,
+          "security_given_functional": 0.75,
+          "visible_joint": 0.45,
+          "tfor": {
+            "numerator": 0,
+            "denominator": 18,
+            "rate": 0.0
+          },
+          "states": {
+            "F+S+": 18,
+            "F+S-": 6,
+            "F-S+": 10,
+            "F-S-": 6
+          },
+          "cost": {
+            "model_calls": 2.35,
+            "input_tokens": 1043.25,
+            "output_tokens": 349.3,
+            "feedback_tokens": 188.7
+          }
+        }
+      },
+      "qwen25-coder-14b": {
+        "B0": {
+          "n": 95,
+          "functional": 0.4842105263157895,
+          "secure": 0.7263157894736842,
+          "joint": 0.47368421052631576,
+          "safe": 0.47368421052631576,
+          "security_given_functional": 0.9782608695652174,
+          "visible_joint": 0.42105263157894735,
+          "tfor": {
+            "numerator": 0,
+            "denominator": 40,
+            "rate": 0.0
+          },
+          "states": {
+            "F+S+": 45,
+            "F+S-": 1,
+            "F-S+": 24,
+            "F-S-": 25
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 166.10526315789474,
+            "output_tokens": 215.7157894736842,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B3": {
+          "n": 95,
+          "functional": 0.6736842105263158,
+          "secure": 0.7789473684210526,
+          "joint": 0.5789473684210527,
+          "safe": 0.5789473684210527,
+          "security_given_functional": 0.859375,
+          "visible_joint": 0.6421052631578947,
+          "tfor": {
+            "numerator": 6,
+            "denominator": 61,
+            "rate": 0.09836065573770492
+          },
+          "states": {
+            "F+S+": 55,
+            "F+S-": 9,
+            "F-S+": 19,
+            "F-S-": 12
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 455.3157894736842,
+            "output_tokens": 199.42105263157896,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B4": {
+          "n": 95,
+          "functional": 0.6105263157894737,
+          "secure": 0.8105263157894737,
+          "joint": 0.6105263157894737,
+          "safe": 0.6105263157894737,
+          "security_given_functional": 1.0,
+          "visible_joint": 0.6105263157894737,
+          "tfor": {
+            "numerator": 0,
+            "denominator": 58,
+            "rate": 0.0
+          },
+          "states": {
+            "F+S+": 58,
+            "F-S+": 19,
+            "F-S-": 18
+          },
+          "cost": {
+            "model_calls": 2.031578947368421,
+            "input_tokens": 1015.1157894736842,
+            "output_tokens": 485.6842105263158,
+            "feedback_tokens": 195.2736842105263
+          }
+        },
+        "B6": {
+          "n": 95,
+          "functional": 0.7368421052631579,
+          "secure": 0.8,
+          "joint": 0.6526315789473685,
+          "safe": 0.6526315789473685,
+          "security_given_functional": 0.8857142857142857,
+          "visible_joint": 0.7157894736842105,
+          "tfor": {
+            "numerator": 6,
+            "denominator": 68,
+            "rate": 0.08823529411764706
+          },
+          "states": {
+            "F+S+": 62,
+            "F+S-": 8,
+            "F-S+": 14,
+            "F-S-": 11
+          },
+          "cost": {
+            "model_calls": 1.6631578947368422,
+            "input_tokens": 1215.8631578947368,
+            "output_tokens": 346.9684210526316,
+            "feedback_tokens": 161.0
+          }
+        },
+        "M": {
+          "n": 95,
+          "functional": 0.5894736842105263,
+          "secure": 0.8105263157894737,
+          "joint": 0.5894736842105263,
+          "safe": 0.5894736842105263,
+          "security_given_functional": 1.0,
+          "visible_joint": 0.5789473684210527,
+          "tfor": {
+            "numerator": 0,
+            "denominator": 55,
+            "rate": 0.0
+          },
+          "states": {
+            "F+S+": 56,
+            "F-S+": 21,
+            "F-S-": 18
+          },
+          "cost": {
+            "model_calls": 2.042105263157895,
+            "input_tokens": 1110.9894736842105,
+            "output_tokens": 496.63157894736844,
+            "feedback_tokens": 247.83157894736843
+          }
+        },
+        "B1": {
+          "n": 40,
+          "functional": 0.375,
+          "secure": 0.6,
+          "joint": 0.35,
+          "safe": 0.35,
+          "security_given_functional": 0.9333333333333333,
+          "visible_joint": 0.35,
+          "tfor": {
+            "numerator": 0,
+            "denominator": 14,
+            "rate": 0.0
+          },
+          "states": {
+            "F+S+": 14,
+            "F+S-": 1,
+            "F-S+": 10,
+            "F-S-": 15
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 204.875,
+            "output_tokens": 263.9,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B2": {
+          "n": 40,
+          "functional": 0.5,
+          "secure": 0.6,
+          "joint": 0.475,
+          "safe": 0.475,
+          "security_given_functional": 0.95,
+          "visible_joint": 0.475,
+          "tfor": {
+            "numerator": 0,
+            "denominator": 19,
+            "rate": 0.0
+          },
+          "states": {
+            "F+S+": 19,
+            "F+S-": 1,
+            "F-S+": 5,
+            "F-S-": 15
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 386.375,
+            "output_tokens": 271.325,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B5": {
+          "n": 40,
+          "functional": 0.475,
+          "secure": 0.725,
+          "joint": 0.45,
+          "safe": 0.45,
+          "security_given_functional": 0.9473684210526315,
+          "visible_joint": 0.45,
+          "tfor": {
+            "numerator": 0,
+            "denominator": 18,
+            "rate": 0.0
+          },
+          "states": {
+            "F+S+": 18,
+            "F+S-": 1,
+            "F-S+": 11,
+            "F-S-": 10
+          },
+          "cost": {
+            "model_calls": 2.225,
+            "input_tokens": 1248.825,
+            "output_tokens": 642.575,
+            "feedback_tokens": 172.275
+          }
+        }
+      },
+      "qwen36-27b": {
+        "B0": {
+          "n": 95,
+          "functional": 0.6736842105263158,
+          "secure": 0.8315789473684211,
+          "joint": 0.6210526315789474,
+          "safe": 0.6210526315789474,
+          "security_given_functional": 0.921875,
+          "visible_joint": 0.5684210526315789,
+          "tfor": {
+            "numerator": 0,
+            "denominator": 54,
+            "rate": 0.0
+          },
+          "states": {
+            "F+S+": 59,
+            "F+S-": 5,
+            "F-S+": 20,
+            "F-S-": 11
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 179.0,
+            "output_tokens": 284.87368421052633,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B3": {
+          "n": 95,
+          "functional": 0.9263157894736842,
+          "secure": 0.9263157894736842,
+          "joint": 0.8736842105263158,
+          "safe": 0.8736842105263158,
+          "security_given_functional": 0.9431818181818182,
+          "visible_joint": 0.968421052631579,
+          "tfor": {
+            "numerator": 9,
+            "denominator": 92,
+            "rate": 0.09782608695652174
+          },
+          "states": {
+            "F+S+": 83,
+            "F+S-": 5,
+            "F-S+": 5,
+            "F-S-": 2
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 488.6842105263158,
+            "output_tokens": 260.86315789473684,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B4": {
+          "n": 95,
+          "functional": 0.7894736842105263,
+          "secure": 0.8842105263157894,
+          "joint": 0.7473684210526316,
+          "safe": 0.7473684210526316,
+          "security_given_functional": 0.9466666666666667,
+          "visible_joint": 0.7473684210526316,
+          "tfor": {
+            "numerator": 0,
+            "denominator": 71,
+            "rate": 0.0
+          },
+          "states": {
+            "F+S+": 71,
+            "F+S-": 4,
+            "F-S+": 13,
+            "F-S-": 7
+          },
+          "cost": {
+            "model_calls": 1.694736842105263,
+            "input_tokens": 854.2842105263157,
+            "output_tokens": 550.8526315789474,
+            "feedback_tokens": 113.37894736842105
+          }
+        },
+        "B6": {
+          "n": 95,
+          "functional": 0.9473684210526315,
+          "secure": 0.9473684210526315,
+          "joint": 0.8947368421052632,
+          "safe": 0.8947368421052632,
+          "security_given_functional": 0.9444444444444444,
+          "visible_joint": 0.9894736842105263,
+          "tfor": {
+            "numerator": 9,
+            "denominator": 94,
+            "rate": 0.09574468085106383
+          },
+          "states": {
+            "F+S+": 85,
+            "F+S-": 5,
+            "F-S+": 5
+          },
+          "cost": {
+            "model_calls": 1.0421052631578946,
+            "input_tokens": 535.8421052631579,
+            "output_tokens": 272.82105263157894,
+            "feedback_tokens": 11.221052631578948
+          }
+        },
+        "M": {
+          "n": 95,
+          "functional": 0.7894736842105263,
+          "secure": 0.8947368421052632,
+          "joint": 0.7578947368421053,
+          "safe": 0.7578947368421053,
+          "security_given_functional": 0.96,
+          "visible_joint": 0.7578947368421053,
+          "tfor": {
+            "numerator": 0,
+            "denominator": 72,
+            "rate": 0.0
+          },
+          "states": {
+            "F+S+": 72,
+            "F+S-": 3,
+            "F-S+": 13,
+            "F-S-": 7
+          },
+          "cost": {
+            "model_calls": 1.694736842105263,
+            "input_tokens": 909.4736842105264,
+            "output_tokens": 555.421052631579,
+            "feedback_tokens": 152.4842105263158
+          }
+        },
+        "B1": {
+          "n": 40,
+          "functional": 0.8,
+          "secure": 0.775,
+          "joint": 0.725,
+          "safe": 0.725,
+          "security_given_functional": 0.90625,
+          "visible_joint": 0.725,
+          "tfor": {
+            "numerator": 0,
+            "denominator": 29,
+            "rate": 0.0
+          },
+          "states": {
+            "F+S+": 29,
+            "F+S-": 3,
+            "F-S+": 2,
+            "F-S-": 6
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 217.625,
+            "output_tokens": 404.05,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B2": {
+          "n": 40,
+          "functional": 0.775,
+          "secure": 0.75,
+          "joint": 0.75,
+          "safe": 0.75,
+          "security_given_functional": 0.967741935483871,
+          "visible_joint": 0.75,
+          "tfor": {
+            "numerator": 0,
+            "denominator": 30,
+            "rate": 0.0
+          },
+          "states": {
+            "F+S+": 30,
+            "F+S-": 1,
+            "F-S-": 9
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 410.125,
+            "output_tokens": 377.475,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B5": {
+          "n": 40,
+          "functional": 0.925,
+          "secure": 0.9,
+          "joint": 0.825,
+          "safe": 0.825,
+          "security_given_functional": 0.8918918918918919,
+          "visible_joint": 0.825,
+          "tfor": {
+            "numerator": 0,
+            "denominator": 33,
+            "rate": 0.0
+          },
+          "states": {
+            "F+S+": 33,
+            "F+S-": 4,
+            "F-S+": 3
+          },
+          "cost": {
+            "model_calls": 1.55,
+            "input_tokens": 667.375,
+            "output_tokens": 474.15,
+            "feedback_tokens": 77.6
+          }
+        }
+      },
+      "deepseek-v4-flash": {
+        "B0": {
+          "n": 95,
+          "functional": 0.5157894736842106,
+          "secure": 0.7052631578947368,
+          "joint": 0.4631578947368421,
+          "safe": 0.4631578947368421,
+          "security_given_functional": 0.8979591836734694,
+          "visible_joint": 0.4105263157894737,
+          "tfor": {
+            "numerator": 0,
+            "denominator": 39,
+            "rate": 0.0
+          },
+          "states": {
+            "F+S+": 44,
+            "F+S-": 5,
+            "F-S+": 23,
+            "F-S-": 23
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 161.89473684210526,
+            "output_tokens": 268.18947368421055,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B3": {
+          "n": 95,
+          "functional": 0.8105263157894737,
+          "secure": 0.8315789473684211,
+          "joint": 0.7684210526315789,
+          "safe": 0.7684210526315789,
+          "security_given_functional": 0.948051948051948,
+          "visible_joint": 0.8526315789473684,
+          "tfor": {
+            "numerator": 8,
+            "denominator": 81,
+            "rate": 0.09876543209876543
+          },
+          "states": {
+            "F+S+": 73,
+            "F+S-": 4,
+            "F-S+": 6,
+            "F-S-": 12
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 455.63157894736844,
+            "output_tokens": 198.66315789473686,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B4": {
+          "n": 95,
+          "functional": 0.7052631578947368,
+          "secure": 0.8631578947368421,
+          "joint": 0.7052631578947368,
+          "safe": 0.7052631578947368,
+          "security_given_functional": 1.0,
+          "visible_joint": 0.7052631578947368,
+          "tfor": {
+            "numerator": 0,
+            "denominator": 67,
+            "rate": 0.0
+          },
+          "states": {
+            "F+S+": 67,
+            "F-S+": 15,
+            "F-S-": 13
+          },
+          "cost": {
+            "model_calls": 1.9263157894736842,
+            "input_tokens": 908.4421052631579,
+            "output_tokens": 604.8315789473684,
+            "feedback_tokens": 178.0
+          }
+        },
+        "B6": {
+          "n": 95,
+          "functional": 0.9157894736842105,
+          "secure": 0.9157894736842105,
+          "joint": 0.8736842105263158,
+          "safe": 0.8736842105263158,
+          "security_given_functional": 0.9540229885057471,
+          "visible_joint": 0.9578947368421052,
+          "tfor": {
+            "numerator": 8,
+            "denominator": 91,
+            "rate": 0.08791208791208792
+          },
+          "states": {
+            "F+S+": 83,
+            "F+S-": 4,
+            "F-S+": 4,
+            "F-S-": 4
+          },
+          "cost": {
+            "model_calls": 1.231578947368421,
+            "input_tokens": 724.6210526315789,
+            "output_tokens": 243.07368421052632,
+            "feedback_tokens": 78.58947368421053
+          }
+        },
+        "M": {
+          "n": 95,
+          "functional": 0.7263157894736842,
+          "secure": 0.8631578947368421,
+          "joint": 0.7157894736842105,
+          "safe": 0.7157894736842105,
+          "security_given_functional": 0.9855072463768116,
+          "visible_joint": 0.7157894736842105,
+          "tfor": {
+            "numerator": 0,
+            "denominator": 68,
+            "rate": 0.0
+          },
+          "states": {
+            "F+S+": 68,
+            "F+S-": 1,
+            "F-S+": 14,
+            "F-S-": 12
+          },
+          "cost": {
+            "model_calls": 1.9473684210526316,
+            "input_tokens": 1037.3052631578948,
+            "output_tokens": 569.3263157894737,
+            "feedback_tokens": 240.54736842105262
+          }
+        },
+        "B1": {
+          "n": 40,
+          "functional": 0.55,
+          "secure": 0.525,
+          "joint": 0.45,
+          "safe": 0.45,
+          "security_given_functional": 0.8181818181818182,
+          "visible_joint": 0.45,
+          "tfor": {
+            "numerator": 0,
+            "denominator": 18,
+            "rate": 0.0
+          },
+          "states": {
+            "F+S+": 18,
+            "F+S-": 4,
+            "F-S+": 3,
+            "F-S-": 15
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 199.875,
+            "output_tokens": 412.95,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B2": {
+          "n": 40,
+          "functional": 0.65,
+          "secure": 0.65,
+          "joint": 0.525,
+          "safe": 0.525,
+          "security_given_functional": 0.8076923076923077,
+          "visible_joint": 0.525,
+          "tfor": {
+            "numerator": 0,
+            "denominator": 21,
+            "rate": 0.0
+          },
+          "states": {
+            "F+S+": 21,
+            "F+S-": 5,
+            "F-S+": 5,
+            "F-S-": 9
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 385.625,
+            "output_tokens": 232.55,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B5": {
+          "n": 40,
+          "functional": 0.825,
+          "secure": 0.95,
+          "joint": 0.825,
+          "safe": 0.825,
+          "security_given_functional": 1.0,
+          "visible_joint": 0.825,
+          "tfor": {
+            "numerator": 0,
+            "denominator": 33,
+            "rate": 0.0
+          },
+          "states": {
+            "F+S+": 33,
+            "F-S+": 5,
+            "F-S-": 2
+          },
+          "cost": {
+            "model_calls": 1.9,
+            "input_tokens": 924.5,
+            "output_tokens": 594.6,
+            "feedback_tokens": 133.5
+          }
+        }
+      }
+    },
+    "CodeGuard+": {
+      "qwen25-coder-14b": {
+        "B0": {
+          "n": 75,
+          "functional": 0.7066666666666667,
+          "secure": 0.6533333333333333,
+          "joint": 0.6266666666666667,
+          "safe": 0.6266666666666667,
+          "security_given_functional": 0.8867924528301887,
+          "visible_joint": 0.68,
+          "tfor": {
+            "numerator": 9,
+            "denominator": 51,
+            "rate": 0.17647058823529413
+          },
+          "states": {
+            "F+S+": 47,
+            "F+S-": 6,
+            "F-S+": 2,
+            "F-S-": 20
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 214.46666666666667,
+            "output_tokens": 195.37333333333333,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B3": {
+          "n": 75,
+          "functional": 0.84,
+          "secure": 0.7866666666666666,
+          "joint": 0.76,
+          "safe": 0.76,
+          "security_given_functional": 0.9047619047619048,
+          "visible_joint": 0.8133333333333334,
+          "tfor": {
+            "numerator": 9,
+            "denominator": 61,
+            "rate": 0.14754098360655737
+          },
+          "states": {
+            "F+S+": 57,
+            "F+S-": 6,
+            "F-S+": 2,
+            "F-S-": 10
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 502.26666666666665,
+            "output_tokens": 224.05333333333334,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B4": {
+          "n": 75,
+          "functional": 0.76,
+          "secure": 0.76,
+          "joint": 0.6666666666666666,
+          "safe": 0.6666666666666666,
+          "security_given_functional": 0.8771929824561403,
+          "visible_joint": 0.76,
+          "tfor": {
+            "numerator": 12,
+            "denominator": 57,
+            "rate": 0.21052631578947367
+          },
+          "states": {
+            "F+S+": 50,
+            "F+S-": 7,
+            "F-S+": 7,
+            "F-S-": 11
+          },
+          "cost": {
+            "model_calls": 1.56,
+            "input_tokens": 643.8133333333334,
+            "output_tokens": 331.56,
+            "feedback_tokens": 83.34666666666666
+          }
+        },
+        "B5": {
+          "n": 75,
+          "functional": 0.7733333333333333,
+          "secure": 0.7066666666666667,
+          "joint": 0.6666666666666666,
+          "safe": 0.6666666666666666,
+          "security_given_functional": 0.8620689655172413,
+          "visible_joint": 0.76,
+          "tfor": {
+            "numerator": 12,
+            "denominator": 57,
+            "rate": 0.21052631578947367
+          },
+          "states": {
+            "F+S+": 50,
+            "F+S-": 8,
+            "F-S+": 3,
+            "F-S-": 14
+          },
+          "cost": {
+            "model_calls": 1.56,
+            "input_tokens": 619.84,
+            "output_tokens": 329.6666666666667,
+            "feedback_tokens": 69.52
+          }
+        },
+        "B6": {
+          "n": 75,
+          "functional": 0.8666666666666667,
+          "secure": 0.88,
+          "joint": 0.8533333333333334,
+          "safe": 0.8533333333333334,
+          "security_given_functional": 0.9846153846153847,
+          "visible_joint": 0.9066666666666666,
+          "tfor": {
+            "numerator": 9,
+            "denominator": 68,
+            "rate": 0.1323529411764706
+          },
+          "states": {
+            "F+S+": 64,
+            "F+S-": 1,
+            "F-S+": 2,
+            "F-S-": 8
+          },
+          "cost": {
+            "model_calls": 1.28,
+            "input_tokens": 810.92,
+            "output_tokens": 299.88,
+            "feedback_tokens": 54.6
+          }
+        },
+        "M": {
+          "n": 75,
+          "functional": 0.7733333333333333,
+          "secure": 0.7466666666666667,
+          "joint": 0.6533333333333333,
+          "safe": 0.6533333333333333,
+          "security_given_functional": 0.8448275862068966,
+          "visible_joint": 0.7466666666666667,
+          "tfor": {
+            "numerator": 12,
+            "denominator": 56,
+            "rate": 0.21428571428571427
+          },
+          "states": {
+            "F+S+": 49,
+            "F+S-": 9,
+            "F-S+": 7,
+            "F-S-": 10
+          },
+          "cost": {
+            "model_calls": 1.5733333333333333,
+            "input_tokens": 694.7333333333333,
+            "output_tokens": 335.74666666666667,
+            "feedback_tokens": 107.82666666666667
+          }
+        },
+        "B1": {
+          "n": 20,
+          "functional": 0.45,
+          "secure": 0.25,
+          "joint": 0.25,
+          "safe": 0.25,
+          "security_given_functional": 0.5555555555555556,
+          "visible_joint": 0.5,
+          "tfor": {
+            "numerator": 5,
+            "denominator": 10,
+            "rate": 0.5
+          },
+          "states": {
+            "F+S+": 5,
+            "F+S-": 4,
+            "F-S-": 11
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 221.25,
+            "output_tokens": 180.6,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B2": {
+          "n": 20,
+          "functional": 0.6,
+          "secure": 0.35,
+          "joint": 0.35,
+          "safe": 0.35,
+          "security_given_functional": 0.5833333333333334,
+          "visible_joint": 0.6,
+          "tfor": {
+            "numerator": 5,
+            "denominator": 12,
+            "rate": 0.4166666666666667
+          },
+          "states": {
+            "F+S+": 7,
+            "F+S-": 5,
+            "F-S-": 8
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 413.75,
+            "output_tokens": 293.15,
+            "feedback_tokens": 0.0
+          }
+        }
+      },
+      "deepseek-v4-flash": {
+        "B0": {
+          "n": 75,
+          "functional": 0.8133333333333334,
+          "secure": 0.8533333333333334,
+          "joint": 0.7866666666666666,
+          "safe": 0.7866666666666666,
+          "security_given_functional": 0.9672131147540983,
+          "visible_joint": 0.7733333333333333,
+          "tfor": {
+            "numerator": 0,
+            "denominator": 58,
+            "rate": 0.0
+          },
+          "states": {
+            "F+S+": 59,
+            "F+S-": 2,
+            "F-S+": 5,
+            "F-S-": 9
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 212.53333333333333,
+            "output_tokens": 164.77333333333334,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B3": {
+          "n": 75,
+          "functional": 0.8533333333333334,
+          "secure": 0.9333333333333333,
+          "joint": 0.7866666666666666,
+          "safe": 0.7866666666666666,
+          "security_given_functional": 0.921875,
+          "visible_joint": 0.9333333333333333,
+          "tfor": {
+            "numerator": 11,
+            "denominator": 70,
+            "rate": 0.15714285714285714
+          },
+          "states": {
+            "F+S+": 59,
+            "F+S-": 5,
+            "F-S+": 11
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 515.0666666666667,
+            "output_tokens": 158.58666666666667,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B4": {
+          "n": 75,
+          "functional": 0.8933333333333333,
+          "secure": 0.9466666666666667,
+          "joint": 0.8933333333333333,
+          "safe": 0.8933333333333333,
+          "security_given_functional": 1.0,
+          "visible_joint": 0.9333333333333333,
+          "tfor": {
+            "numerator": 3,
+            "denominator": 70,
+            "rate": 0.04285714285714286
+          },
+          "states": {
+            "F+S+": 67,
+            "F-S+": 4,
+            "F-S-": 4
+          },
+          "cost": {
+            "model_calls": 1.2933333333333332,
+            "input_tokens": 378.8666666666667,
+            "output_tokens": 217.45333333333335,
+            "feedback_tokens": 33.77333333333333
+          }
+        },
+        "B5": {
+          "n": 75,
+          "functional": 0.8933333333333333,
+          "secure": 0.9333333333333333,
+          "joint": 0.8933333333333333,
+          "safe": 0.8933333333333333,
+          "security_given_functional": 1.0,
+          "visible_joint": 0.9333333333333333,
+          "tfor": {
+            "numerator": 3,
+            "denominator": 70,
+            "rate": 0.04285714285714286
+          },
+          "states": {
+            "F+S+": 67,
+            "F-S+": 3,
+            "F-S-": 5
+          },
+          "cost": {
+            "model_calls": 1.2933333333333332,
+            "input_tokens": 377.3466666666667,
+            "output_tokens": 217.90666666666667,
+            "feedback_tokens": 32.373333333333335
+          }
+        },
+        "B6": {
+          "n": 75,
+          "functional": 0.92,
+          "secure": 0.9333333333333333,
+          "joint": 0.8533333333333334,
+          "safe": 0.8533333333333334,
+          "security_given_functional": 0.927536231884058,
+          "visible_joint": 1.0,
+          "tfor": {
+            "numerator": 11,
+            "denominator": 75,
+            "rate": 0.14666666666666667
+          },
+          "states": {
+            "F+S+": 64,
+            "F+S-": 5,
+            "F-S+": 6
+          },
+          "cost": {
+            "model_calls": 1.0666666666666667,
+            "input_tokens": 569.5066666666667,
+            "output_tokens": 170.70666666666668,
+            "feedback_tokens": 9.666666666666666
+          }
+        },
+        "M": {
+          "n": 75,
+          "functional": 0.8933333333333333,
+          "secure": 0.9333333333333333,
+          "joint": 0.8933333333333333,
+          "safe": 0.8933333333333333,
+          "security_given_functional": 1.0,
+          "visible_joint": 0.9333333333333333,
+          "tfor": {
+            "numerator": 3,
+            "denominator": 70,
+            "rate": 0.04285714285714286
+          },
+          "states": {
+            "F+S+": 67,
+            "F-S+": 3,
+            "F-S-": 5
+          },
+          "cost": {
+            "model_calls": 1.2933333333333332,
+            "input_tokens": 391.12,
+            "output_tokens": 215.36,
+            "feedback_tokens": 43.86666666666667
+          }
+        },
+        "B1": {
+          "n": 20,
+          "functional": 0.5,
+          "secure": 0.75,
+          "joint": 0.5,
+          "safe": 0.5,
+          "security_given_functional": 1.0,
+          "visible_joint": 0.5,
+          "tfor": {
+            "numerator": 0,
+            "denominator": 10,
+            "rate": 0.0
+          },
+          "states": {
+            "F+S+": 10,
+            "F-S+": 5,
+            "F-S-": 5
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 217.75,
+            "output_tokens": 168.15,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B2": {
+          "n": 20,
+          "functional": 0.7,
+          "secure": 1.0,
+          "joint": 0.7,
+          "safe": 0.7,
+          "security_given_functional": 1.0,
+          "visible_joint": 0.75,
+          "tfor": {
+            "numerator": 1,
+            "denominator": 15,
+            "rate": 0.06666666666666667
+          },
+          "states": {
+            "F+S+": 14,
+            "F-S+": 6
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 422.5,
+            "output_tokens": 163.9,
+            "feedback_tokens": 0.0
+          }
+        }
+      },
+      "qwen25-coder-7b": {
+        "B0": {
+          "n": 20,
+          "functional": 0.05,
+          "secure": 0.25,
+          "joint": 0.0,
+          "safe": 0.0,
+          "security_given_functional": 0.0,
+          "visible_joint": 0.25,
+          "tfor": {
+            "numerator": 5,
+            "denominator": 5,
+            "rate": 1.0
+          },
+          "states": {
+            "F+S-": 1,
+            "F-S+": 5,
+            "F-S-": 14
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 221.25,
+            "output_tokens": 135.45,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B1": {
+          "n": 20,
+          "functional": 0.1,
+          "secure": 0.25,
+          "joint": 0.0,
+          "safe": 0.0,
+          "security_given_functional": 0.0,
+          "visible_joint": 0.25,
+          "tfor": {
+            "numerator": 5,
+            "denominator": 5,
+            "rate": 1.0
+          },
+          "states": {
+            "F+S-": 2,
+            "F-S+": 5,
+            "F-S-": 13
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 221.25,
+            "output_tokens": 133.8,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B2": {
+          "n": 20,
+          "functional": 0.4,
+          "secure": 0.4,
+          "joint": 0.15,
+          "safe": 0.15,
+          "security_given_functional": 0.375,
+          "visible_joint": 0.5,
+          "tfor": {
+            "numerator": 7,
+            "denominator": 10,
+            "rate": 0.7
+          },
+          "states": {
+            "F+S+": 3,
+            "F+S-": 5,
+            "F-S+": 5,
+            "F-S-": 7
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 413.75,
+            "output_tokens": 128.25,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B3": {
+          "n": 20,
+          "functional": 0.5,
+          "secure": 0.5,
+          "joint": 0.25,
+          "safe": 0.25,
+          "security_given_functional": 0.5,
+          "visible_joint": 0.5,
+          "tfor": {
+            "numerator": 5,
+            "denominator": 10,
+            "rate": 0.5
+          },
+          "states": {
+            "F+S+": 5,
+            "F+S-": 5,
+            "F-S+": 5,
+            "F-S-": 5
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 501.25,
+            "output_tokens": 131.3,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B4": {
+          "n": 20,
+          "functional": 0.3,
+          "secure": 0.4,
+          "joint": 0.3,
+          "safe": 0.3,
+          "security_given_functional": 1.0,
+          "visible_joint": 0.55,
+          "tfor": {
+            "numerator": 5,
+            "denominator": 11,
+            "rate": 0.45454545454545453
+          },
+          "states": {
+            "F+S+": 6,
+            "F-S+": 2,
+            "F-S-": 12
+          },
+          "cost": {
+            "model_calls": 2.35,
+            "input_tokens": 1218.4,
+            "output_tokens": 338.35,
+            "feedback_tokens": 285.75
+          }
+        },
+        "B5": {
+          "n": 20,
+          "functional": 0.3,
+          "secure": 0.35,
+          "joint": 0.3,
+          "safe": 0.3,
+          "security_given_functional": 1.0,
+          "visible_joint": 0.55,
+          "tfor": {
+            "numerator": 5,
+            "denominator": 11,
+            "rate": 0.45454545454545453
+          },
+          "states": {
+            "F+S+": 6,
+            "F-S+": 1,
+            "F-S-": 13
+          },
+          "cost": {
+            "model_calls": 2.3,
+            "input_tokens": 1043.95,
+            "output_tokens": 329.85,
+            "feedback_tokens": 177.05
+          }
+        },
+        "B6": {
+          "n": 20,
+          "functional": 0.5,
+          "secure": 0.75,
+          "joint": 0.5,
+          "safe": 0.5,
+          "security_given_functional": 1.0,
+          "visible_joint": 0.75,
+          "tfor": {
+            "numerator": 5,
+            "denominator": 15,
+            "rate": 0.3333333333333333
+          },
+          "states": {
+            "F+S+": 10,
+            "F-S+": 5,
+            "F-S-": 5
+          },
+          "cost": {
+            "model_calls": 1.8,
+            "input_tokens": 1277.4,
+            "output_tokens": 262.4,
+            "feedback_tokens": 145.05
+          }
+        },
+        "M": {
+          "n": 20,
+          "functional": 0.1,
+          "secure": 0.1,
+          "joint": 0.1,
+          "safe": 0.1,
+          "security_given_functional": 1.0,
+          "visible_joint": 0.35,
+          "tfor": {
+            "numerator": 5,
+            "denominator": 7,
+            "rate": 0.7142857142857143
+          },
+          "states": {
+            "F+S+": 2,
+            "F-S-": 18
+          },
+          "cost": {
+            "model_calls": 2.4,
+            "input_tokens": 1368.2,
+            "output_tokens": 348.8,
+            "feedback_tokens": 373.15
+          }
+        }
+      },
+      "qwen36-27b": {
+        "B0": {
+          "n": 20,
+          "functional": 0.35,
+          "secure": 0.95,
+          "joint": 0.35,
+          "safe": 0.35,
+          "security_given_functional": 1.0,
+          "visible_joint": 0.35,
+          "tfor": {
+            "numerator": 0,
+            "denominator": 7,
+            "rate": 0.0
+          },
+          "states": {
+            "F+S+": 7,
+            "F-S+": 12,
+            "F-S-": 1
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 234.0,
+            "output_tokens": 174.6,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B1": {
+          "n": 20,
+          "functional": 0.25,
+          "secure": 0.9,
+          "joint": 0.25,
+          "safe": 0.25,
+          "security_given_functional": 1.0,
+          "visible_joint": 0.25,
+          "tfor": {
+            "numerator": 0,
+            "denominator": 5,
+            "rate": 0.0
+          },
+          "states": {
+            "F+S+": 5,
+            "F-S+": 13,
+            "F-S-": 2
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 234.0,
+            "output_tokens": 173.1,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B2": {
+          "n": 20,
+          "functional": 0.5,
+          "secure": 1.0,
+          "joint": 0.5,
+          "safe": 0.5,
+          "security_given_functional": 1.0,
+          "visible_joint": 0.75,
+          "tfor": {
+            "numerator": 5,
+            "denominator": 15,
+            "rate": 0.3333333333333333
+          },
+          "states": {
+            "F+S+": 10,
+            "F-S+": 10
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 440.75,
+            "output_tokens": 170.45,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B3": {
+          "n": 20,
+          "functional": 0.5,
+          "secure": 1.0,
+          "joint": 0.5,
+          "safe": 0.5,
+          "security_given_functional": 1.0,
+          "visible_joint": 0.75,
+          "tfor": {
+            "numerator": 5,
+            "denominator": 15,
+            "rate": 0.3333333333333333
+          },
+          "states": {
+            "F+S+": 10,
+            "F-S+": 10
+          },
+          "cost": {
+            "model_calls": 1.0,
+            "input_tokens": 534.5,
+            "output_tokens": 165.6,
+            "feedback_tokens": 0.0
+          }
+        },
+        "B4": {
+          "n": 20,
+          "functional": 0.55,
+          "secure": 0.95,
+          "joint": 0.55,
+          "safe": 0.55,
+          "security_given_functional": 1.0,
+          "visible_joint": 0.75,
+          "tfor": {
+            "numerator": 4,
+            "denominator": 15,
+            "rate": 0.26666666666666666
+          },
+          "states": {
+            "F+S+": 11,
+            "F-S+": 8,
+            "F-S-": 1
+          },
+          "cost": {
+            "model_calls": 1.9,
+            "input_tokens": 810.35,
+            "output_tokens": 326.25,
+            "feedback_tokens": 122.5
+          }
+        },
+        "B5": {
+          "n": 20,
+          "functional": 0.55,
+          "secure": 0.95,
+          "joint": 0.55,
+          "safe": 0.55,
+          "security_given_functional": 1.0,
+          "visible_joint": 0.75,
+          "tfor": {
+            "numerator": 4,
+            "denominator": 15,
+            "rate": 0.26666666666666666
+          },
+          "states": {
+            "F+S+": 11,
+            "F-S+": 8,
+            "F-S-": 1
+          },
+          "cost": {
+            "model_calls": 1.9,
+            "input_tokens": 810.35,
+            "output_tokens": 326.25,
+            "feedback_tokens": 122.5
+          }
+        },
+        "B6": {
+          "n": 20,
+          "functional": 0.75,
+          "secure": 1.0,
+          "joint": 0.75,
+          "safe": 0.75,
+          "security_given_functional": 1.0,
+          "visible_joint": 1.0,
+          "tfor": {
+            "numerator": 5,
+            "denominator": 20,
+            "rate": 0.25
+          },
+          "states": {
+            "F+S+": 15,
+            "F-S+": 5
+          },
+          "cost": {
+            "model_calls": 1.25,
+            "input_tokens": 746.2,
+            "output_tokens": 210.5,
+            "feedback_tokens": 38.25
+          }
+        },
+        "M": {
+          "n": 20,
+          "functional": 0.5,
+          "secure": 0.95,
+          "joint": 0.5,
+          "safe": 0.5,
+          "security_given_functional": 1.0,
+          "visible_joint": 0.7,
+          "tfor": {
+            "numerator": 4,
+            "denominator": 14,
+            "rate": 0.2857142857142857
+          },
+          "states": {
+            "F+S+": 10,
+            "F-S+": 9,
+            "F-S-": 1
+          },
+          "cost": {
+            "model_calls": 1.95,
+            "input_tokens": 895.9,
+            "output_tokens": 335.1,
+            "feedback_tokens": 161.05
+          }
+        }
+      }
+    }
+  },
+  "shared_candidate_feedback": {
+    "B4_vs_B0": {
+      "eligible_cells": 865,
+      "feedback_triggered": 436,
+      "joint_improved": 142,
+      "joint_regressed": 3,
+      "function_regressed": 20,
+      "security_regressed": 6,
+      "security_only_repaired": 56,
+      "target_better": 142,
+      "reference_better": 3,
+      "outcome_tied": 720,
+      "repair_per_trigger": 0.3256880733944954,
+      "regression_per_trigger": 0.006880733944954129,
+      "mean_call_delta": 0.784971098265896,
+      "mean_feedback_token_delta": 165.2878612716763
+    },
+    "M_vs_B0": {
+      "eligible_cells": 865,
+      "feedback_triggered": 436,
+      "joint_improved": 132,
+      "joint_regressed": 0,
+      "function_regressed": 8,
+      "security_regressed": 7,
+      "security_only_repaired": 51,
+      "target_better": 132,
+      "reference_better": 0,
+      "outcome_tied": 733,
+      "repair_per_trigger": 0.30275229357798167,
+      "regression_per_trigger": 0.0,
+      "mean_call_delta": 0.7791907514450868,
+      "mean_feedback_token_delta": 192.95491329479768
+    },
+    "B6_vs_B3": {
+      "eligible_cells": 730,
+      "feedback_triggered": 128,
+      "joint_improved": 50,
+      "joint_regressed": 0,
+      "function_regressed": 0,
+      "security_regressed": 1,
+      "security_only_repaired": 14,
+      "target_better": 50,
+      "reference_better": 0,
+      "outcome_tied": 680,
+      "repair_per_trigger": 0.390625,
+      "regression_per_trigger": 0.0,
+      "mean_call_delta": 0.2945205479452055,
+      "mean_feedback_token_delta": 70.04383561643836
+    },
+    "M_vs_B4": {
+      "eligible_cells": 865,
+      "feedback_triggered": 436,
+      "joint_improved": 14,
+      "joint_regressed": 21,
+      "function_regressed": 23,
+      "security_regressed": 18,
+      "security_only_repaired": 2,
+      "target_better": 14,
+      "reference_better": 21,
+      "outcome_tied": 830,
+      "repair_per_trigger": 0.03211009174311927,
+      "regression_per_trigger": 0.0481651376146789,
+      "mean_call_delta": -0.005780346820809248,
+      "mean_feedback_token_delta": 27.667052023121386
+    }
+  },
+  "visible_to_hidden_overfitting": {
+    "B0": {
+      "visible_joint_passes": 429,
+      "visible_pass_hidden_joint_fail": 33,
+      "tfor": 0.07692307692307693,
+      "hidden_joint_retention": 0.9230769230769231
+    },
+    "B1": {
+      "visible_joint_passes": 270,
+      "visible_pass_hidden_joint_fail": 30,
+      "tfor": 0.1111111111111111,
+      "hidden_joint_retention": 0.8888888888888888
+    },
+    "B2": {
+      "visible_joint_passes": 304,
+      "visible_pass_hidden_joint_fail": 34,
+      "tfor": 0.1118421052631579,
+      "hidden_joint_retention": 0.8881578947368421
+    },
+    "B3": {
+      "visible_joint_passes": 708,
+      "visible_pass_hidden_joint_fail": 118,
+      "tfor": 0.16666666666666666,
+      "hidden_joint_retention": 0.8333333333333334
+    },
+    "B4": {
+      "visible_joint_passes": 663,
+      "visible_pass_hidden_joint_fail": 87,
+      "tfor": 0.13122171945701358,
+      "hidden_joint_retention": 0.8687782805429864
+    },
+    "B5": {
+      "visible_joint_passes": 506,
+      "visible_pass_hidden_joint_fail": 82,
+      "tfor": 0.16205533596837945,
+      "hidden_joint_retention": 0.8379446640316206
+    },
+    "M": {
+      "visible_joint_passes": 655,
+      "visible_pass_hidden_joint_fail": 87,
+      "tfor": 0.13282442748091602,
+      "hidden_joint_retention": 0.867175572519084
+    },
+    "B6": {
+      "visible_joint_passes": 652,
+      "visible_pass_hidden_joint_fail": 87,
+      "tfor": 0.1334355828220859,
+      "hidden_joint_retention": 0.8665644171779141
+    }
+  },
+  "combined_task_cluster_comparisons": [
+    {
+      "target": "B3",
+      "reference": "B0",
+      "eligible_task_clusters": 51,
+      "eligible_trajectory_pairs": 865,
+      "task_macro_joint_delta": 0.16732026143790849,
+      "task_bootstrap_ci95": [
+        0.09934640522875818,
+        0.23954248366013073
+      ],
+      "bootstrap_replicates": 10000,
+      "wins": 183,
+      "losses": 30,
+      "ties": 652
+    },
+    {
+      "target": "B4",
+      "reference": "B0",
+      "eligible_task_clusters": 51,
+      "eligible_trajectory_pairs": 865,
+      "task_macro_joint_delta": 0.15522875816993464,
+      "task_bootstrap_ci95": [
+        0.08496732026143791,
+        0.23333333333333334
+      ],
+      "bootstrap_replicates": 10000,
+      "wins": 142,
+      "losses": 3,
+      "ties": 720
+    },
+    {
+      "target": "M",
+      "reference": "B0",
+      "eligible_task_clusters": 51,
+      "eligible_trajectory_pairs": 865,
+      "task_macro_joint_delta": 0.1477124183006536,
+      "task_bootstrap_ci95": [
+        0.08235294117647059,
+        0.2258169934640523
+      ],
+      "bootstrap_replicates": 10000,
+      "wins": 132,
+      "losses": 0,
+      "ties": 733
+    },
+    {
+      "target": "B6",
+      "reference": "B3",
+      "eligible_task_clusters": 42,
+      "eligible_trajectory_pairs": 730,
+      "task_macro_joint_delta": 0.060714285714285714,
+      "task_bootstrap_ci95": [
+        0.025,
+        0.10238095238095238
+      ],
+      "bootstrap_replicates": 10000,
+      "wins": 50,
+      "losses": 0,
+      "ties": 680
+    },
+    {
+      "target": "M",
+      "reference": "B4",
+      "eligible_task_clusters": 51,
+      "eligible_trajectory_pairs": 865,
+      "task_macro_joint_delta": -0.007516339869281046,
+      "task_bootstrap_ci95": [
+        -0.028431372549019607,
+        0.010457516339869282
+      ],
+      "bootstrap_replicates": 10000,
+      "wins": 14,
+      "losses": 21,
+      "ties": 830
+    }
+  ],
+  "source_freezes": {
+    "legacy_31": {
+      "path": "benchmarks/manifests/paper-evidence-v3-results-freeze.json",
+      "sha256": "aa885c3030fc43361926097c12b19f5f0ce6211276d566e869ad8d86e31fb5f9",
+      "size_bytes": 4174
+    },
+    "balanced_expansion_20": {
+      "path": "benchmarks/manifests/paper-expansion-full-v1-results-freeze.json",
+      "sha256": "822732910e32fefb6b20860f19408243498db0c2a80caaae21b80eed6231512b",
+      "size_bytes": 3533
+    }
+  },
+  "interpretation_boundary": "The balanced 20-task, four-model, eight-method matrix is the primary confirmatory evidence. The combined 51-task/5,905-trajectory view is unbalanced and mixes legacy machine-qualified evidence, so it is used only for coverage and robustness; task is the inference unit."
+}

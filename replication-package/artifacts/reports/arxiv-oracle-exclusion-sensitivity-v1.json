@@ -1,0 +1,224 @@
+{
+  "excluded_task": "Matching_StackOverflow_SO_cwe078_0.py",
+  "reason": "implementation-sensitive subprocess.call oracle; post-hoc exclusion sensitivity, no rerun or corrected-outcome claim",
+  "by_run": [
+    {
+      "benchmark": "CWEval",
+      "model": "qwen25-coder-7b",
+      "with_task": {
+        "pairs": 45,
+        "m_wins": 0,
+        "raw_wins": 0,
+        "m_repairs": 15,
+        "raw_repairs": 15,
+        "m_joint_regressions": 0,
+        "raw_joint_regressions": 0
+      },
+      "without_task": {
+        "pairs": 45,
+        "m_wins": 0,
+        "raw_wins": 0,
+        "m_repairs": 15,
+        "raw_repairs": 15,
+        "m_joint_regressions": 0,
+        "raw_joint_regressions": 0
+      }
+    },
+    {
+      "benchmark": "CWEval",
+      "model": "qwen25-coder-14b",
+      "with_task": {
+        "pairs": 45,
+        "m_wins": 1,
+        "raw_wins": 3,
+        "m_repairs": 11,
+        "raw_repairs": 14,
+        "m_joint_regressions": 0,
+        "raw_joint_regressions": 1
+      },
+      "without_task": {
+        "pairs": 45,
+        "m_wins": 1,
+        "raw_wins": 3,
+        "m_repairs": 11,
+        "raw_repairs": 14,
+        "m_joint_regressions": 0,
+        "raw_joint_regressions": 1
+      }
+    },
+    {
+      "benchmark": "CWEval",
+      "model": "qwen3-32b",
+      "with_task": {
+        "pairs": 45,
+        "m_wins": 2,
+        "raw_wins": 2,
+        "m_repairs": 18,
+        "raw_repairs": 20,
+        "m_joint_regressions": 0,
+        "raw_joint_regressions": 2
+      },
+      "without_task": {
+        "pairs": 45,
+        "m_wins": 2,
+        "raw_wins": 2,
+        "m_repairs": 18,
+        "raw_repairs": 20,
+        "m_joint_regressions": 0,
+        "raw_joint_regressions": 2
+      }
+    },
+    {
+      "benchmark": "SALLM",
+      "model": "qwen25-coder-7b",
+      "with_task": {
+        "pairs": 55,
+        "m_wins": 2,
+        "raw_wins": 0,
+        "m_repairs": 10,
+        "raw_repairs": 8,
+        "m_joint_regressions": 0,
+        "raw_joint_regressions": 0
+      },
+      "without_task": {
+        "pairs": 50,
+        "m_wins": 2,
+        "raw_wins": 0,
+        "m_repairs": 10,
+        "raw_repairs": 8,
+        "m_joint_regressions": 0,
+        "raw_joint_regressions": 0
+      }
+    },
+    {
+      "benchmark": "SALLM",
+      "model": "qwen25-coder-14b",
+      "with_task": {
+        "pairs": 55,
+        "m_wins": 0,
+        "raw_wins": 0,
+        "m_repairs": 9,
+        "raw_repairs": 9,
+        "m_joint_regressions": 0,
+        "raw_joint_regressions": 0
+      },
+      "without_task": {
+        "pairs": 50,
+        "m_wins": 0,
+        "raw_wins": 0,
+        "m_repairs": 9,
+        "raw_repairs": 9,
+        "m_joint_regressions": 0,
+        "raw_joint_regressions": 0
+      }
+    },
+    {
+      "benchmark": "SALLM",
+      "model": "qwen36-27b",
+      "with_task": {
+        "pairs": 55,
+        "m_wins": 0,
+        "raw_wins": 0,
+        "m_repairs": 5,
+        "raw_repairs": 5,
+        "m_joint_regressions": 0,
+        "raw_joint_regressions": 0
+      },
+      "without_task": {
+        "pairs": 50,
+        "m_wins": 0,
+        "raw_wins": 0,
+        "m_repairs": 5,
+        "raw_repairs": 5,
+        "m_joint_regressions": 0,
+        "raw_joint_regressions": 0
+      }
+    },
+    {
+      "benchmark": "SALLM",
+      "model": "deepseek-v4-flash",
+      "with_task": {
+        "pairs": 55,
+        "m_wins": 1,
+        "raw_wins": 1,
+        "m_repairs": 8,
+        "raw_repairs": 8,
+        "m_joint_regressions": 0,
+        "raw_joint_regressions": 0
+      },
+      "without_task": {
+        "pairs": 50,
+        "m_wins": 0,
+        "raw_wins": 1,
+        "m_repairs": 7,
+        "raw_repairs": 8,
+        "m_joint_regressions": 0,
+        "raw_joint_regressions": 0
+      }
+    },
+    {
+      "benchmark": "CodeGuard+",
+      "model": "qwen25-coder-14b",
+      "with_task": {
+        "pairs": 55,
+        "m_wins": 0,
+        "raw_wins": 0,
+        "m_repairs": 1,
+        "raw_repairs": 1,
+        "m_joint_regressions": 0,
+        "raw_joint_regressions": 0
+      },
+      "without_task": {
+        "pairs": 55,
+        "m_wins": 0,
+        "raw_wins": 0,
+        "m_repairs": 1,
+        "raw_repairs": 1,
+        "m_joint_regressions": 0,
+        "raw_joint_regressions": 0
+      }
+    },
+    {
+      "benchmark": "CodeGuard+",
+      "model": "deepseek-v4-flash",
+      "with_task": {
+        "pairs": 55,
+        "m_wins": 0,
+        "raw_wins": 0,
+        "m_repairs": 3,
+        "raw_repairs": 3,
+        "m_joint_regressions": 0,
+        "raw_joint_regressions": 0
+      },
+      "without_task": {
+        "pairs": 55,
+        "m_wins": 0,
+        "raw_wins": 0,
+        "m_repairs": 3,
+        "raw_repairs": 3,
+        "m_joint_regressions": 0,
+        "raw_joint_regressions": 0
+      }
+    }
+  ],
+  "summary": {
+    "with_task": {
+      "pairs": 465,
+      "m_wins": 6,
+      "raw_wins": 6,
+      "m_repairs": 80,
+      "raw_repairs": 83,
+      "m_joint_regressions": 0,
+      "raw_joint_regressions": 3
+    },
+    "without_task": {
+      "pairs": 445,
+      "m_wins": 5,
+      "raw_wins": 6,
+      "m_repairs": 79,
+      "raw_repairs": 83,
+      "m_joint_regressions": 0,
+      "raw_joint_regressions": 3
+    }
+  }
+}

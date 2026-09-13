@@ -1,0 +1,28 @@
+.venv/
+.venv-sallm/
+.venv-codeguardplus/
+.tools/
+artifacts/
+third_party/CWEval/evals/
+__pycache__/
+*.pyc
+
+# Submission files and local research environments
+/FSE/
+/.venv*/
+/.tools/
+/.agents/
+/.codex/
+/.pytest_cache/
+/ccfa-review-reports/
+/third_party/
+/实验记录.md
+.env
+.env.*
+*.log
+*.aux
+*.toc
+*.synctex.gz
+
+# Curated, portable reproduction evidence is tracked explicitly.
+!/replication-package/**

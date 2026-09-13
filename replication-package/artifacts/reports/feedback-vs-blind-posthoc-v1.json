@@ -1,0 +1,23 @@
+{
+  "timing": "post-hoc after complete planned outcome inspection; separate exploratory family",
+  "contrasts": {
+    "fixed_raw-blind": {
+      "estimate_pp": 1.5000000000000002,
+      "ci95_pp": [
+        -3.4999999999999996,
+        7.000000000000002
+      ],
+      "p_task_sign_flip": 0.75,
+      "holm_adjusted_p": 1
+    },
+    "fixed_structured-blind": {
+      "estimate_pp": 2.999999999999999,
+      "ci95_pp": [
+        -4.0,
+        9.999999999999998
+      ],
+      "p_task_sign_flip": 0.53125,
+      "holm_adjusted_p": 1
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "correction_id": "codeguardplus-paper-expansion-functional-marker-v1",
+  "created_at_utc": "2026-08-08T22:12:48.217072+00:00",
+  "prepared": true,
+  "complete": true,
+  "formal_results_use": true,
+  "defect": {
+    "oracle_marker": "functional",
+    "orchestrator_expected_marker": "functionality",
+    "effects": [
+      "B2 omitted the visible functional case from its initial prompt",
+      "all CodeGuard+ hidden functional summaries were empty and false"
+    ]
+  },
+  "repair_policy": {
+    "rerun": "B2 only for every CodeGuard+ task/model/slot",
+    "recompute": "derived hidden functional/security/joint/SAFE summaries for other methods from immutable raw case outcomes",
+    "old_outputs": "recoverably quarantined"
+  },
+  "moved_b2_trajectory_count": 80,
+  "normalized_non_b2_trajectory_count": 560,
+  "old_results_freeze_sha256": "abbd1fe2a8f73640c9fc47b4e73c5e66bb1d18b73f9576030b50f1d3e03d8c06",
+  "models": [
+    {
+      "model": "qwen25-coder-7b",
+      "merged_output_quarantined_at": "artifacts/paper-expansion-full-v1/quarantine/codeguardplus-functional-marker-v1/merged/qwen25-coder-7b",
+      "shard_root_to_resume": "artifacts/paper-expansion-full-v1/codeguardplus/qwen25-coder-7b-shards"
+    },
+    {
+      "model": "qwen25-coder-14b",
+      "merged_output_quarantined_at": "artifacts/paper-expansion-full-v1/quarantine/codeguardplus-functional-marker-v1/merged/qwen25-coder-14b",
+      "shard_root_to_resume": "artifacts/paper-expansion-full-v1/codeguardplus/qwen25-coder-14b-shards"
+    },
+    {
+      "model": "qwen36-27b",
+      "merged_output_quarantined_at": "artifacts/paper-expansion-full-v1/quarantine/codeguardplus-functional-marker-v1/merged/qwen36-27b",
+      "shard_root_to_resume": "artifacts/paper-expansion-full-v1/codeguardplus/qwen36-27b-shards"
+    },
+    {
+      "model": "deepseek-v4-flash",
+      "merged_output_quarantined_at": "artifacts/paper-expansion-full-v1/quarantine/codeguardplus-functional-marker-v1/merged/deepseek-v4-flash",
+      "shard_root_to_resume": "artifacts/paper-expansion-full-v1/codeguardplus/deepseek-v4-flash-shards"
+    }
+  ],
+  "required_post_steps": [
+    "rerun paper-expansion-full-v1 analysis",
+    "rerun paper-evidence-v4 synthesis"
+  ],
+  "validated_trajectory_count": 640,
+  "validated_b2_prompt_count": 80
+}

@@ -1,0 +1,13 @@
+cohort,initial_visible_state,method,n,functional_pct,security_pct,joint_pct,joint_repairs,joint_regressions,functional_regressions,new_calls,mean_new_prompt_tokens,mean_new_completion_tokens
+security-feedback,F+S+,functional_only,100,85.0,90.0,85.0,0,0,0,200,1080.96,440.63
+security-feedback,F+S+,functional_security,100,84.0,89.0,84.0,0,1,1,200,1105.58,459.15
+security-feedback,F+S-,functional_only,18,100.0,0.0,0.0,0,0,0,36,1181.111111111111,466.6666666666667
+security-feedback,F+S-,functional_security,18,88.88888888888889,16.666666666666668,16.666666666666668,3,0,2,36,1748.1666666666667,558.5
+security-feedback,F-S+,functional_only,50,28.0,72.0,28.0,9,0,0,100,1594.02,550.4
+security-feedback,F-S+,functional_security,50,26.0,66.0,26.0,8,0,0,100,1637.38,538.08
+security-feedback,F-S-,functional_only,32,28.125,12.5,12.5,4,0,0,64,1800.78125,652.4375
+security-feedback,F-S-,functional_security,32,25.0,25.0,21.875,7,0,0,64,2350.21875,641.6875
+external,F+S+,M,27,88.88888888888889,96.29629629629629,85.18518518518519,0,0,0,0,0.0,0.0
+external,F+S-,M,28,42.857142857142854,46.42857142857143,21.428571428571427,6,0,13,47,1777.4642857142858,812.7857142857143
+external,F-S+,M,39,53.84615384615385,100.0,53.84615384615385,12,0,0,64,1789.7179487179487,450.94871794871796
+external,F-S-,M,6,50.0,50.0,0.0,0,0,3,12,1985.1666666666667,236.66666666666666

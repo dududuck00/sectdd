@@ -1,0 +1,41 @@
+{
+  "feedback-mechanism": {
+    "file": "feedback-mechanism-trajectories.jsonl.gz",
+    "records": 1200,
+    "sha256": "13f2c7532c1888f6818485926b1df59dafe5904c3159e2e3f7bda4e7da341e51",
+    "report": "feedback-mechanism-v1.json"
+  },
+  "seccodebench-external": {
+    "file": "seccodebench-external-trajectories.jsonl.gz",
+    "records": 400,
+    "sha256": "48e8b4492ec2f0a9737b034245cafb59815ce1979b876197393105d435bbf74c",
+    "report": "seccodebench-external-v1.json",
+    "tasks": [
+      "SSTIFlaskRenderTemplateString",
+      "DeserializationPyYAML",
+      "SQLInjectionSQLite3",
+      "CommandInjectionSubprocessRun",
+      "SSTIJinja2Template",
+      "SQLInjectionPsycopg2",
+      "SQLInjectionPyMySQL",
+      "CodeInjectionEval",
+      "CommandInjectionSubprocessPopen",
+      "DeserializationPickle"
+    ]
+  },
+  "total_unique_trajectories": 8625,
+  "representation": {
+    "file": "representation-trajectories.jsonl.gz",
+    "records": 480,
+    "sha256": "e62c922f51b2545d49655c1b0c618584c875de23e9707b1b909f976f08f076ed",
+    "report": "representation-v1.json",
+    "source_input_freeze_sha256": "9aafee53d02a7f1774e23eba84353828e37c4e6297cd0498c79a50fb5b2e2774"
+  },
+  "security-feedback": {
+    "file": "security-feedback-trajectories.jsonl.gz",
+    "records": 400,
+    "sha256": "1d46c65d2962210c39dac575c975d139bc60db5043907265fc305c829b17806a",
+    "report": "security-feedback-v1.json",
+    "source_input_freeze_sha256": "1db46b2c199c6eab35ec478d2bf1623a3d70782123f1aef3c4d5fc350ab040cc"
+  }
+}

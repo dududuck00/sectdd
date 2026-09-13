@@ -1,0 +1,194 @@
+{
+  "budgets": {
+    "max_feedback_tokens_per_round": 600,
+    "max_feedback_tokens_total": 1200,
+    "max_input_tokens_total": 14000,
+    "max_output_tokens_total": 9216,
+    "max_visible_test_executions": 24,
+    "timeout_per_test_seconds": 20,
+    "wall_timeout_seconds": 180
+  },
+  "development_only": false,
+  "formal_experiment": true,
+  "formal_results_use": true,
+  "generation": {
+    "max_completion_tokens_per_call": 3072,
+    "model_overrides": {
+      "deepseek-v4-flash": {
+        "extra_body": {
+          "thinking": {
+            "type": "disabled"
+          }
+        }
+      }
+    },
+    "temperature": 0.2
+  },
+  "generation_request_slots": [
+    151001,
+    151021,
+    151051,
+    151057,
+    151091
+  ],
+  "generation_seeds": [
+    151001,
+    151021,
+    151051,
+    151057,
+    151091
+  ],
+  "methods": {
+    "B0": {
+      "feedback": "none",
+      "max_calls": 1,
+      "name": "Requirement Only",
+      "security_reminder": false,
+      "shared_initial_from": null,
+      "upfront_tests": "none"
+    },
+    "B1": {
+      "feedback": "none",
+      "max_calls": 1,
+      "name": "Security Reminder",
+      "security_reminder": true,
+      "shared_initial_from": null,
+      "upfront_tests": "none"
+    },
+    "B2": {
+      "feedback": "none",
+      "max_calls": 1,
+      "name": "Functional Tests Upfront",
+      "security_reminder": false,
+      "shared_initial_from": null,
+      "upfront_tests": "functional"
+    },
+    "B3": {
+      "feedback": "none",
+      "max_calls": 1,
+      "name": "All Visible Tests Upfront",
+      "security_reminder": false,
+      "shared_initial_from": null,
+      "upfront_tests": "all"
+    },
+    "B4": {
+      "feedback": "fixed_raw",
+      "max_calls": 3,
+      "name": "Shared B0 plus Fixed Raw Feedback",
+      "security_reminder": false,
+      "shared_initial_from": "B0",
+      "upfront_tests": "none"
+    },
+    "B5": {
+      "feedback": "random_raw",
+      "max_calls": 3,
+      "name": "Shared B0 plus Random Raw Feedback",
+      "security_reminder": false,
+      "shared_initial_from": "B0",
+      "upfront_tests": "none"
+    },
+    "B6": {
+      "feedback": "sectdd_structured",
+      "max_calls": 3,
+      "name": "Shared B3 plus SecTDD Structured Priority",
+      "security_reminder": false,
+      "shared_initial_from": "B3",
+      "upfront_tests": "all"
+    },
+    "M": {
+      "feedback": "sectdd_structured",
+      "max_calls": 3,
+      "name": "Shared B0 plus SecTDD Structured Priority",
+      "security_reminder": false,
+      "shared_initial_from": "B0",
+      "upfront_tests": "none"
+    }
+  },
+  "models": {
+    "deepseek-v4-flash": {
+      "api_base": "https://api.deepseek.com",
+      "family": "DeepSeek",
+      "max_model_len": 16384,
+      "parameter_scale": "undisclosed_api",
+      "provider": "deepseek",
+      "remote_model": true,
+      "remote_model_id": "deepseek-v4-flash",
+      "tokenizer_accounting": "local_proxy_for_budget_only",
+      "tokenizer_proxy": "<MODEL_ROOT>/Qwen2.5-Coder-14B-Instruct"
+    },
+    "qwen25-coder-14b": {
+      "checkpoint": "<MODEL_ROOT>/Qwen2.5-Coder-14B-Instruct",
+      "dtype": "bfloat16",
+      "family": "Qwen2.5-Coder",
+      "max_model_len": 8192,
+      "parameter_scale": "14B",
+      "provider": "local"
+    },
+    "qwen25-coder-7b": {
+      "checkpoint": "<MODEL_ROOT>/Qwen2.5-Coder-7B-Instruct",
+      "dtype": "bfloat16",
+      "family": "Qwen2.5-Coder",
+      "max_model_len": 8192,
+      "parameter_scale": "7B",
+      "provider": "local"
+    },
+    "qwen36-27b": {
+      "checkpoint": "<MODEL_ROOT>/Qwen3.6/Qwen3.6-27B",
+      "dtype": "bfloat16",
+      "family": "Qwen3.6",
+      "max_model_len": 16384,
+      "parameter_scale": "27B",
+      "provider": "local"
+    }
+  },
+  "oracle_set_id": "codeguardplus-paper-expansion-v1-semantic-machine",
+  "pilot_only": false,
+  "primary_metric": "hidden_joint_at_1",
+  "remote_provider": {
+    "credential_env": "DEEPSEEK_API_KEY",
+    "credential_persisted": false,
+    "provider_seed_supported": false,
+    "request_slot_policy": "slot identifiers are not sent as unsupported seeds"
+  },
+  "schema_version": 4,
+  "secondary_metrics": [
+    "hidden_func_at_1",
+    "hidden_secure_at_1",
+    "hidden_safe_at_1",
+    "security_given_functional",
+    "tfor",
+    "feedback_repair_rate",
+    "joint_regression_rate",
+    "function_regression_rate",
+    "model_calls",
+    "input_tokens",
+    "output_tokens",
+    "feedback_tokens"
+  ],
+  "selection_policy": "dynamic and semantic oracle validity only; no B0--B6/M or G8 outcome filter",
+  "statistics": {
+    "bootstrap_clusters": "task",
+    "bootstrap_replicates": 10000,
+    "confidence_level": 0.95,
+    "inference_unit": "task",
+    "paired_comparisons": [
+      "B1_vs_B0",
+      "B2_vs_B0",
+      "B3_vs_B0",
+      "B4_vs_B0",
+      "B5_vs_B0",
+      "M_vs_B0",
+      "B6_vs_B3",
+      "M_vs_B4",
+      "M_vs_B5"
+    ]
+  },
+  "study_phase": "codeguardplus_paper_expansion_full_v1",
+  "tasks": [
+    "cwe-022/0-py",
+    "cwe-079/1-py",
+    "cwe-117/0-py",
+    "cwe-312/0-py"
+  ],
+  "technical_confirmatory": false
+}

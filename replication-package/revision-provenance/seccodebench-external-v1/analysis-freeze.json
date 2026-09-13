@@ -1,0 +1,5 @@
+{
+  "script": "tools/analyze_seccodebench_external_v1.py",
+  "sha256": "4fcf8adade22a18c5ff4bf000b18878cd89c940de42a224c368fda1110d2766a",
+  "timing": "protocol specified before generation; implementation frozen during generation, before aggregate outcome inspection"
+}

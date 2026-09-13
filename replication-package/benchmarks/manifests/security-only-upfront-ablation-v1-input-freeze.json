@@ -1,0 +1,165 @@
+{
+  "complete": true,
+  "configs": {
+    "codeguardplus": {
+      "ablation_config": {
+        "path": "configs/experiments/codeguardplus_security_only_upfront_ablation_v1.json",
+        "sha256": "34e20a733c095a584109fcee8d32ff23d447c2509b1a3ae962c68f2075acfca8",
+        "size_bytes": 4263
+      },
+      "base_config": {
+        "path": "configs/experiments/codeguardplus_paper_expansion_full_v1.json",
+        "sha256": "bfb4ec6bf3f17369fbb9c65a9f09eb0c37bf6f9b39790dad761a7d8e77c83ac5",
+        "size_bytes": 5103
+      },
+      "expected_new_model_calls": 80,
+      "expected_new_trajectories": 80,
+      "hidden_projection": {
+        "path": "configs/oracles/codeguardplus_paper_expansion_v1_semantic_machine_hidden.json",
+        "sha256": "6dc32ad559b4ea516ec4c3ace67533501b03c97051e8261306582afa9bd9c8e8",
+        "size_bytes": 5681
+      },
+      "models": [
+        "deepseek-v4-flash",
+        "qwen25-coder-14b",
+        "qwen25-coder-7b",
+        "qwen36-27b"
+      ],
+      "request_slots": [
+        151001,
+        151021,
+        151051,
+        151057,
+        151091
+      ],
+      "tasks": [
+        "cwe-022/0-py",
+        "cwe-079/1-py",
+        "cwe-117/0-py",
+        "cwe-312/0-py"
+      ],
+      "visible_case_audit": {
+        "cwe-022/0-py": {
+          "functional_cases_withheld": 1,
+          "security_cases_exposed": 1
+        },
+        "cwe-079/1-py": {
+          "functional_cases_withheld": 1,
+          "security_cases_exposed": 1
+        },
+        "cwe-117/0-py": {
+          "functional_cases_withheld": 1,
+          "security_cases_exposed": 1
+        },
+        "cwe-312/0-py": {
+          "functional_cases_withheld": 1,
+          "security_cases_exposed": 1
+        }
+      },
+      "visible_projection": {
+        "path": "configs/oracles/codeguardplus_paper_expansion_v1_semantic_machine_visible.json",
+        "sha256": "66609191b1595a887ad1610d99c55cf1f6da2b1df1f2c4b38a897224effcf470",
+        "size_bytes": 5614
+      }
+    },
+    "sallm": {
+      "ablation_config": {
+        "path": "configs/experiments/sallm_security_only_upfront_ablation_v1.json",
+        "sha256": "5ba4dea031413fdf8a6152a7b5074ce5116d2683fb604616b0ca7a5789901fc5",
+        "size_bytes": 4499
+      },
+      "base_config": {
+        "path": "configs/experiments/sallm_paper_expansion_full_v1.json",
+        "sha256": "a54527dad29ffac2d128b94110130b5e9162fe58adaab89d299394b9917fbe0d",
+        "size_bytes": 5339
+      },
+      "expected_new_model_calls": 160,
+      "expected_new_trajectories": 160,
+      "hidden_projection": {
+        "path": "configs/oracles/sallm_paper_expansion_v1_semantic_machine_hidden.json",
+        "sha256": "056c64a87eb61a4a7921b954262a96aebd1d84794f6dd794a01af29d6c1f50fa",
+        "size_bytes": 12803
+      },
+      "models": [
+        "deepseek-v4-flash",
+        "qwen25-coder-14b",
+        "qwen25-coder-7b",
+        "qwen36-27b"
+      ],
+      "request_slots": [
+        151001,
+        151021,
+        151051,
+        151057,
+        151091
+      ],
+      "tasks": [
+        "Assertion_CodeQL_codeql_cwe020_1.py",
+        "Assertion_SonarSource_SS_cwe079_0.py",
+        "Assertion_SonarSource_SS_cwe094_0.py",
+        "Assertion_SonarSource_SS_cwe827_0.py",
+        "Tainted_Author_A_cwe078_0.py",
+        "Tainted_Author_A_cwe089_1.py",
+        "Tainted_CodeQL_codeql_cwe079_0.py",
+        "Tainted_StackOverflow_SO_cwe094_4.py"
+      ],
+      "visible_case_audit": {
+        "Assertion_CodeQL_codeql_cwe020_1.py": {
+          "functional_cases_withheld": 1,
+          "security_cases_exposed": 1
+        },
+        "Assertion_SonarSource_SS_cwe079_0.py": {
+          "functional_cases_withheld": 1,
+          "security_cases_exposed": 1
+        },
+        "Assertion_SonarSource_SS_cwe094_0.py": {
+          "functional_cases_withheld": 1,
+          "security_cases_exposed": 1
+        },
+        "Assertion_SonarSource_SS_cwe827_0.py": {
+          "functional_cases_withheld": 1,
+          "security_cases_exposed": 1
+        },
+        "Tainted_Author_A_cwe078_0.py": {
+          "functional_cases_withheld": 1,
+          "security_cases_exposed": 1
+        },
+        "Tainted_Author_A_cwe089_1.py": {
+          "functional_cases_withheld": 1,
+          "security_cases_exposed": 1
+        },
+        "Tainted_CodeQL_codeql_cwe079_0.py": {
+          "functional_cases_withheld": 1,
+          "security_cases_exposed": 1
+        },
+        "Tainted_StackOverflow_SO_cwe094_4.py": {
+          "functional_cases_withheld": 1,
+          "security_cases_exposed": 1
+        }
+      },
+      "visible_projection": {
+        "path": "configs/oracles/sallm_paper_expansion_v1_semantic_machine_visible.json",
+        "sha256": "651e47f6afe81c82f9fa2f849f6fabc627b41ae0840e0ddeba892d070650112f",
+        "size_bytes": 12731
+      }
+    }
+  },
+  "created_at_utc": "2026-08-29T14:19:27.920549+00:00",
+  "freeze_id": "security-only-upfront-ablation-v1-input",
+  "interpretation_boundary": "This hypothesis-driven ablation was specified after inspection of the original primary results but before any B7 response. It strengthens RQ1 mechanism decomposition and is reported as a post-primary addendum.",
+  "post_primary_addendum": true,
+  "results_observed_at_freeze": false,
+  "schema_version": 1,
+  "scope": {
+    "benchmarks": [
+      "sallm",
+      "codeguardplus"
+    ],
+    "factorial_trajectory_count_including_archived_B0_B2_B3": 960,
+    "model_count": 4,
+    "new_condition": "B7-security-tests-only-upfront",
+    "new_trajectory_count": 240,
+    "repetitions_per_cell": 5,
+    "task_count": 12
+  }
+}
