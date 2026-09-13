@@ -1,6 +1,6 @@
-# SecTDD FSE27 revision artifact
+# SecTDD replication package
 
-This package supports the submission derived from arXiv v2, “Security Tests as Executable Specifications for LLM Code Generation: Benefits, Trade-offs, and Coverage Limits.” Evidence chronology is explicit: 2,705 original trajectories, 3,200 later balanced trajectories, 240 new security-only trajectories, 1,200 fixed-call feedback trajectories, and 400 external-project trajectories. An additional 480 matched-information trajectories bring the total to 8,225 unique trajectory identifiers, not independent statistical samples. Shared initial generation is not counted as a new model call.
+This package accompanies the paper “Security Tests as Executable Specifications for LLM Code Generation: Benefits, Trade-offs, and Coverage Limits.” It contains 8,625 unique trajectory records: 2,705 original, 3,200 balanced, 240 security-only, 1,200 fixed-call feedback, 400 external-project, 480 matched-information, and 400 security-feedback ablation trajectories. Shared initials and reused observations are identified explicitly; trajectory records are not independent statistical samples.
 
 ## Reproduce recorded results
 
@@ -21,7 +21,7 @@ The first verification script checks the original 6,145-record base and all mani
 
 Execution sources, configurations, project scaffolds and partitioned tests are included. Generation requires separately installed checkpoints, local model serving and the benchmark-specific Python dependencies. Paths have been anonymized and must be configured for the new host. The new experiments used bf16 Qwen2.5-Coder 7B/14B, a 32,768-token server context, and the recorded vLLM/runtime versions. Read the two experiment protocols and runtime identity records before executing. Sources under `code/` preserve the original relative project layout; place these directories beside `configs/`, `oracles/` and `third_party/` in a separate rerun checkout. The original input freeze hashes bind the execution inputs before anonymization; `revision-provenance/export-map.json` distinguishes those hashes from exported bytes. New generation must create a fresh freeze after host paths are configured. The fixed-call study uses archived B0 responses; the portable records contain these responses and prompts. A generation rerun is a new experiment, particularly for remotely served historical models.
 
-The external experiment contains ten eligible Python project tasks, not the official full multilingual score. Upstream security test methods may share attack families. Qualification results are machine checks, not new human annotations. The old oracle exclusion sensitivity is post hoc and leaves historical trajectories unchanged. No publication or remote upload is performed by this build.
+The external experiment contains ten eligible Python project tasks, not the official full multilingual score. Upstream security test methods may share attack families. Qualification results are machine checks, not new human annotations. The old oracle exclusion sensitivity is post hoc and leaves historical trajectories unchanged. 
 
 ## Unified-RQ revision
 
