@@ -26,3 +26,8 @@ __pycache__/
 
 # Curated, portable reproduction evidence is tracked explicitly.
 !/replication-package/**
+
+# JSS submission working files stay outside the public replication package.
+/JSS/
+/replication-package/supporting-results/build/
+.DS_Store

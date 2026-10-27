@@ -1,29 +1,29 @@
-\begin{table}[t]
+\begin{table}[pos=htbp]
 \centering
-\caption{Fixed two-revision experiment: 200 paired initial candidates per branch. Rates are percentages. Tokens count the two new completions per candidate, excluding the archived initial response.}
+\caption{Execution feedback with exactly two revisions and 200 paired initial candidates per branch. Fixed selection follows test identifier order. Rates are percentages. Tokens count the two new completions per candidate, excluding the archived initial response.}
 \label{tab:supp-fixed-calls}
 \begin{tabular}{lrrrr}
 \toprule
 Branch & Pass@1 & Secure@1 & \textbf{Secure-Pass@1} & Tokens \\
 \midrule
-Blind self-review & 59.0 & 67.0 & 50.0 & 407 \\
-Binary outcomes & 56.5 & 66.5 & 47.5 & 409 \\
-Fixed / raw & 56.5 & 69.0 & 51.5 & 416 \\
-Priority / raw & 57.0 & 68.0 & 51.5 & 416 \\
-Fixed / structured & 59.0 & 70.5 & 53.0 & 437 \\
-Priority / structured & 59.0 & 71.5 & 53.0 & 431 \\
+Self-review & 59.0 & 67.0 & 50.0 & 407 \\
+Binary status & 56.5 & 66.5 & 47.5 & 409 \\
+Raw, fixed selection & 56.5 & 69.0 & 51.5 & 416 \\
+Raw, security priority & 57.0 & 68.0 & 51.5 & 416 \\
+Structured, fixed selection & 59.0 & 70.5 & 53.0 & 437 \\
+Structured, security priority & 59.0 & 71.5 & 53.0 & 431 \\
 \bottomrule
 \end{tabular}
 \medskip
 \begin{tabular}{lrr}
 \toprule
-Secure-Pass@1 contrast & Difference (pp) & Holm $p$ \\
+Planned Secure-Pass@1 contrast & Difference (pp) & Holm $p$ \\
 \midrule
-Binary $-$ blind & -2.5 & 1.00 \\
-Details $-$ binary & 4.0 & 1.00 \\
-Priority $-$ fixed (raw) & 0.0 & 1.00 \\
+Binary $-$ self-review & -2.5 & 1.00 \\
+Raw (fixed) $-$ binary & 4.0 & 1.00 \\
+Security priority $-$ fixed (raw) & 0.0 & 1.00 \\
 Structured $-$ raw (fixed) & 1.5 & 1.00 \\
-Selection--rendering interaction & 0.0 & 1.00 \\
+Selection--presentation interaction & 0.0 & 1.00 \\
 \bottomrule
 \end{tabular}
 \end{table}

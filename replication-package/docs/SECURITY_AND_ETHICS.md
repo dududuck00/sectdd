@@ -8,7 +8,7 @@ The original study used fresh Bubblewrap sandboxes, minimal read-only mounts, di
 
 ## Hidden tests
 
-Hidden oracle files are included so reviewers can inspect and reproduce evaluation. They were not available to model generation, feedback selection, or stopping. To reduce future benchmark contamination, keep this review repository private until the end of double-anonymous review and coordinate any public release with the benchmark maintainers and conference artifact process.
+Hidden test files are retained to reproduce evaluation. They were not available to model generation, feedback selection, or stopping. Generation reruns must preserve this separation and the recorded visible/hidden partitions.
 
 ## External API data transfer
 
@@ -16,9 +16,9 @@ Prompts sent to the remote DeepSeek endpoint contained benchmark task requiremen
 
 ## Credentials and identity
 
-The package contains no API key, author name, affiliation, development Git history, host name, or original absolute path. Placeholder paths such as `<ARTIFACT_ROOT>` and `<MODEL_ROOT>` are documentary and must be configured locally for full regeneration.
+Credentials and original host paths are excluded from the curated package. Placeholder paths such as `<ARTIFACT_ROOT>` and `<MODEL_ROOT>` must be configured locally for regeneration. The current JSS supporting document includes the article authors.
 
-## Oracle qualification limitation
+## Test validation
 
-SALLM and CodeGuard+ overlays passed executable safe/mutant gates, repeated isolated execution, behavior-family separation, and blinded multi-model semantic review. They have not yet received independent human expert qualification. The artifact and paper consistently call them machine-semantic-qualified.
+The SALLM and CodeGuard+ test suites are checked with secure implementations and corresponding vulnerable implementations. Secure implementations pass functional and security tests; vulnerable implementations preserve functional passes while failing at least one security test. Repeated isolated executions check outcome stability. Frozen test files, task lists, and input bindings remain available for inspecting these checks.
 

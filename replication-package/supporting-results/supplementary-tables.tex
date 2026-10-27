@@ -1,29 +1,82 @@
-\documentclass[acmsmall,screen,anonymous]{acmart}
-\setcopyright{none}
-\settopmatter{printacmref=false}
-\usepackage{booktabs}
-\usepackage{graphicx}
+\documentclass[a4paper,fleqn]{cas-sc}
+\input{preamble}
+\renewcommand{\thetable}{S\arabic{table}}
+\renewcommand{\thefigure}{S\arabic{figure}}
 \begin{document}
-\pagestyle{plain}
-\begin{center}\large Supporting Results and Analyses\end{center}
-This document accompanies the replication package and provides the aggregate and per-task values underlying the result figures, initial-state analyses, and case-level evidence. Pass@1, Secure@1, and Secure-Pass@1 measure passing all hidden functional tests, all hidden security tests, and both, respectively. In candidate-state notation, F and S denote functional and security outcomes; joint repairs and regressions refer to transitions into and out of passing both.
+\shorttitle{Supporting Results and Analyses}
+\shortauthors{Liang et al.}
+\begin{center}
+{\Large\bfseries Supporting Results and Analyses\par}
+\medskip
+Yunhao Liang, Chengguang Gan, Ruixuan Ying, Hanjun Wei, Zhe Cui, and Shiwen Ni
+\end{center}
+This supplementary material accompanies the article ``Security Tests Guided Code Generation: An Empirical Study'' and the replication package and provides the aggregate and per-task values underlying the result figures, initial-state analyses, and case-level evidence. Pass@1, Secure@1, and Secure-Pass@1 measure passing all hidden functional tests, all hidden security tests, and both, respectively. In candidate-state notation, F and S denote functional and security outcomes; joint repairs and regressions refer to transitions into and out of passing both.
+\section{Original Benchmark Study}
+
+The original study evaluates a separate cohort of 31 tasks: nine from CWEval, 11 from SALLM, and 11 from CodeGuard+, covering 16 CWE categories. It contains 2,705 trajectories across five models and the benchmark--model combinations shown in Table~\ref{tab:original-joint}. These task identifiers do not overlap with the 20-task balanced core study. The original results are analyzed separately and retain their original condition coverage.
+
+B1 and B2 are evaluated on CWEval, B5 on CWEval and CodeGuard+, and B6 on SALLM and CodeGuard+. Model abbreviations are Qwen2.5-Coder-7B-Instruct (Q2.5-C7B), Qwen2.5-Coder-14B-Instruct (Q2.5-C14B), Qwen3-32B (Q3-32B), Qwen3.6-27B (Q3.6-27B), and DeepSeek-V4-Flash (DS-V4-F).
+
+\begin{table}[pos=htbp]
+\caption{Original benchmark results: Secure-Pass@1 (\%) by benchmark, model, and condition. Dashes indicate conditions not evaluated in this study. These results use the original 31-task cohort; the main paper uses the complete 20-task balanced comparison.}
+\label{tab:original-joint}
+\centering
+\resizebox{\textwidth}{!}{\input{generated/joint-outcomes-table}}
+\end{table}
+
+The original CWEval experiments use an output limit of 2,048 tokens per call, total limits of 12,000 input tokens and 6,144 output tokens, and at most 20 visible executions. The original SALLM and CodeGuard+ experiments use 3,072 output tokens per call, total limits of 14,000 input tokens and 9,216 output tokens, and at most six visible executions. All revision conditions permit at most two revisions, with 600 feedback tokens per revision and 1,200 in total.
+
+B3 exceeds B0 in seven of the nine original benchmark--model combinations, with an unweighted mean difference of 19.3 percentage points across those combinations. This descriptive average uses a different cohort and weighting from the task-weighted balanced comparison in the main paper.
+
+\begin{table}[pos=htbp]
+\caption{Original CodeGuard+ results on 11 qualified tasks. Pass@1, Secure@1, and Secure-Pass@1 are hidden-test pass rates (\%). TFOR is the hidden joint failure rate among visible joint passes; Calls is the mean number of model calls. Task inclusion does not depend on generation outcomes or feedback opportunities.}
+\label{tab:original-codeguard}
+\centering
+\resizebox{\textwidth}{!}{\input{generated/codeguard-breadth-table}}
+\end{table}
+
+The CodeGuard+ results in Table~\ref{tab:original-codeguard} include all 11 qualified tasks. An earlier three-task pilot selected tasks after checking for generation failures or feedback opportunities. That pilot is excluded from both the original 2,705 trajectories and the balanced core study.
+
+\begin{table}[pos=htbp]
+\caption{Visible-to-hidden generalization in the original 31-task study, for the four conditions available on every original benchmark--model combination. Hidden joint failures are counted among visible joint passes.}
+\label{tab:original-tfor}
+\centering\small
+\resizebox{\textwidth}{!}{\input{generated/tfor-table}}
+\end{table}
+
+\begin{table}[pos=htbp]
+\caption{Feedback outcomes in the original 31-task study. Task--rep.\ counts candidate pairs; Trig.\ counts pairs with a revision. In the first three rows, Repair, J.Reg., F.Reg., and Sec.-only denote initial-to-final joint repairs, joint regressions, functional regressions, and security repairs that preserve functionality. The M--B4 row compares final candidates: its Repair/J.Reg.\ entries denote M's joint wins/losses, and F.Reg.\ denotes functional losses relative to B4.}
+\label{tab:feedback}
+\centering\small
+\resizebox{\textwidth}{!}{\input{generated/feedback-events-table}}
+\end{table}
+
+The 465 M--B4 final comparisons yield six joint wins, six losses, and 453 ties. These comparisons describe differences between strategies' final code, separately from the initial-to-final repairs above.
+
+\section{Controlled Comparisons and Project-Level Analyses}
+
+\paragraph{Statistical comparison families}
+Holm correction is applied separately within each comparison family. The specification representation experiment has three planned contrasts: code versus prose at each content level and their interaction.
+
+The five planned contrasts for the experiment with exactly two revisions are listed in Table~\ref{tab:supp-fixed-calls}. They include binary status versus self-review. The two additional contrasts comparing raw and structured feedback under fixed selection with self-review form a separate post-hoc correction family.
+
+For the security feedback ablation, correction covers functional, security, and joint success. The project-level family comprises the joint-success contrasts B3 versus B0, M versus B0, and B6 versus B3.
+
+\paragraph{Reproducibility records}
+Run records retain model and task identifiers, conditions, budgets, prompts, code, test versions, usage, and execution results. Automated checks verify expected study coverage, consistency of the paired responses, and the absence of hidden test material from prompts and feedback. Reproduction scripts recompute the reported outcomes from the archived records.
+
 \input{generated/fixed-call-numeric-table}
+\begin{figure}[pos=htbp]
+\centering
+\includegraphics[width=\linewidth]{figures/fixed-call-effects.pdf}
+\caption{Execution feedback with exactly two revisions and 200 paired initial candidates per branch. (a) Pass@1, Secure@1, and Secure-Pass@1, with a dashed line marking initial Secure-Pass@1 (45\%). (b) Five planned Secure-Pass@1 differences, all with Holm-adjusted $p=1$. Complete rates, tokens, and contrasts appear in Table~\ref{tab:supp-fixed-calls}.}
+\label{fig:fixed-calls}
+\end{figure}
 \input{generated/external-numeric-table}
 \input{generated/external-task-numeric-table}
 \input{generated/representation-supplementary}
 \input{generated/security-feedback-supplementary}
-\begin{figure}[t]
-\centering
-\includegraphics[width=\linewidth]{figures/fixed-call-effects.pdf}
-\caption{Fixed two-revision experiment, 200 paired initial candidates per branch. (a) Pass@1, Secure@1, and Secure-Pass@1; the dashed line marks initial Secure-Pass@1 (45\%). (b) Five planned Secure-Pass@1 differences; all Holm-adjusted $p=1$. Observed ties do not establish population equivalence. Complete rates, tokens and contrasts are in the supplementary numeric tables.}
-\Description{Left: three metric markers per branch. Right: five effect estimates around a zero reference, with no significant adjusted contrast.}
-\label{fig:fixed-calls}
-\end{figure}
+
 \input{generated/feedback-mechanism-supplementary}
-\begin{table}[t]
-\caption{Paired feedback transitions over shared initial candidates. Task--rep. cells are repeated observations, not independent inference units. Repair denotes hidden joint failure $\rightarrow$ success; Trig. denotes at least one revision; J.Reg./F.Reg. denote hidden joint/function regression; Sec.-only denotes $F^+S^-\rightarrow F^+S^+$.}
-\label{tab:feedback}
-\centering
-\input{generated/feedback-events-table}
-\end{table}
+
 \end{document}

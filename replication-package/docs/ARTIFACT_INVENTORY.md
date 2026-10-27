@@ -1,51 +1,21 @@
 # Artifact inventory and scope
 
-## Included
+## Archived evidence
 
-### Complete structured evidence
+The package contains seven compressed trajectory files and two data indexes. There are 8,625 unique trajectory records: 2,705 original, 3,200 balanced, 240 security-only, 1,200 fixed-call, 400 project-level, 480 specification-representation, and 400 security-feedback records.
 
-The three compressed JSONL files contain one final trajectory record per
-experimental cell. Records preserve identities, prompts and responses,
-candidate code, visible and hidden case-level outcomes, budgets, stopping,
-shared-candidate metadata, hidden-isolation audits, and a SHA-256 digest of the
-pre-anonymization source JSON.
+Records preserve task/model/condition identities, prompts and responses, candidate code, case-level outcomes, budgets, stopping information, shared-candidate metadata, and source-record hashes. The upfront factorial reuses 720 balanced observations and adds 240 security-only observations; those 960 cells are already represented in the archive total.
 
-- balanced primary: 3,200 records over 20 tasks;
-- disjoint supporting grids: 2,705 records over 31 tasks;
-- post-primary security-only-upfront condition B7: 240 records over 12 primary
-  tasks.
+## Inputs, code, and analyses
 
-Thus the archive contains 6,145 unique trajectories. The 960-observation
-upfront factorial reuses 720 B0/B2/B3 primary records and adds 240 B7 records;
-960 must not be added again to the archive total.
+Included material covers frozen experiment settings, visible and hidden tests, secure implementations and targeted mutants, input/result freezes, execution and analysis code, dependency records, schemas, aggregate reports, and case evidence. `benchmarks/manifests/test-input-bindings-v1.json` links the balanced-study test files and task membership to their source and exported hashes.
 
-### Experiment inputs, implementation, and review evidence
+Runtime identities, input freezes, evaluation-correction records, and pre-correction execution sources are retained in `revision-provenance/`. Its export map distinguishes original input hashes from exported bytes. `supporting-results/` contains the current JSS supplementary PDF and editable sources.
 
-The package includes frozen primary and B7 configs, visible/hidden oracle
-projections, secure subjects and targeted mutants, result/input freezes,
-analysis and execution code, dependency locks, schemas, paper-facing aggregate
-reports and tables, and the human-review addendum. The addendum records that
-three software-engineering doctoral students reviewed every retained external
-qualification packet using a common semantic rubric. It records scope and
-criteria, not identity-bearing ballots or undocumented agreement statistics.
+## Outside the curated package
 
-## Intentionally excluded
+Model checkpoints, credentials, virtual environments, local caches, sandbox workspaces, compiler output, submission letters, and editorial working notes are not needed to reproduce the archived analyses. The full paper and submission forms are supplied through the journal submission system.
 
-| Excluded material | Reason |
-|---|---|
-| `.git` history | It can expose identities, emails, remotes, and chronology. |
-| Model checkpoints and API credentials | Large or secret; unnecessary for archived-response analysis. |
-| Virtual environments and third-party repository copies | Machine-specific or redundant with locks and provenance. |
-| Raw server logs, shard workspaces, and exploded sandboxes | Redundant and can expose local paths. |
-| Failed/quarantined runs and development notes | Not used by the reported analysis. |
-| Manuscript PDF/LaTeX and draft protocols | Submitted separately and outside the artifact evidence boundary. |
+## Integrity and provenance
 
-The exclusion of redundant runtime files does not remove any of the 6,145
-analyzed observations.
-
-## Trust boundary
-
-`MANIFEST.sha256` verifies packaged files. Each trajectory's
-`_artifact.source_record_sha256` identifies its confidential pre-anonymization
-source record. Sanitization changes packaged bytes, so the two hashes serve
-different purposes.
+`MANIFEST.sha256` covers the files in this published package. A trajectory's `_artifact.source_record_sha256` identifies its original pre-anonymization source record; the package manifest identifies the distributed bytes. These hashes serve different roles. Frozen data, test inputs, configurations, reports, and correction records retain their original content.

@@ -1,21 +1,6 @@
 {
   "schema_version": 1,
-  "addendum_id": "external-oracle-human-review-addendum-v1",
-  "status": "complete",
-  "relationship_to_machine_freezes": "post-freeze review addendum; source freezes and projections are immutable and therefore retain their pre-review independent_human_review_complete=false field",
-  "reviewer_count": 3,
-  "reviewer_profile": "software-engineering doctoral students",
-  "review_scope": "every frozen SALLM and CodeGuard+ qualification packet used in the balanced-primary experiment",
-  "review_blinding": "experiment method outcomes were not included in qualification packets",
-  "review_criteria": [
-    "contract-oracle agreement",
-    "secure implementation preserves intended functionality",
-    "targeted mutant preserves functionality while reinstating the declared CWE mechanism",
-    "attack cases are realistic for the declared CWE",
-    "visible and hidden behavior families are materially distinct and do not expose concrete hidden material"
-  ],
-  "review_record_boundary": "This anonymized addendum records scope and criteria. It does not assert unanimity, reviewer independence, or inter-rater reliability, and it does not contain identity-bearing individual ballots.",
-  "retention_after_review": "all 12 listed external balanced-primary packets retained",
+  "description": "File and task bindings for the archived balanced-study test inputs. Source hashes identify frozen originals; artifact hashes identify exported files.",
   "benchmarks": {
     "sallm": {
       "source_machine_freeze": {

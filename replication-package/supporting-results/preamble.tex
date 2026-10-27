@@ -1,0 +1,20 @@
+\usepackage[authoryear]{natbib}
+\usepackage{enumitem}
+\usepackage{placeins}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning}
+% Use CAS's text email labels without requiring the optional icon thumbnails.
+\ExplSyntaxOn
+\keys_set:nn { stm / mktitle } { nologo }
+\ExplSyntaxOff
+\newcommand{\system}{SecTDD\xspace}
+\newcommand{\joint}{Secure-Pass@1\xspace}
+\newcommand{\func}{Pass@1\xspace}
+\newcommand{\secure}{Secure@1\xspace}
+\newcommand{\tfor}{TFOR\xspace}
+\setlength{\emergencystretch}{2em}
+\pdfstringdefDisableCommands{\def\\{ }}
+\newcommand{\setarticlepdfmetadata}{%
+  \hypersetup{pdftitle={Security Tests Guided Code Generation: An Empirical Study},pdfsubject={Empirical software engineering},pdfauthor={Yunhao Liang; Chengguang Gan; Ruixuan Ying; Hanjun Wei; Zhe Cui; Shiwen Ni}}%
+}
+\setarticlepdfmetadata

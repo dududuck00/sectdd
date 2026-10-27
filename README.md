@@ -1,14 +1,12 @@
 # SecTDD
 
-Reproduction repository for **Security Tests as Executable Specifications for LLM Code Generation: Benefits, Trade-offs, and Coverage Limits**.
+Reproduction repository for **Security Tests Guided Code Generation: An Empirical Study**.
 
-The study examines how visible functional and security tests affect code generation and revision, including functionality–security trade-offs, feedback controls, matched-information representations, and transfer to project-level tasks.
+The study examines how functional and security tests guide code generation and revision, how both properties change during repair, and how visible-test coverage affects transfer to hidden tests.
 
-## Getting started
+## Reproduce recorded results
 
-The self-contained [replication package](replication-package/README.md) includes recorded trajectories, evaluation code, partitioned tests, experiment configurations, analysis scripts, and supporting results.
-
-To reproduce recorded results, use Python 3.11+:
+The self-contained [replication package](replication-package/README.md) includes archived trajectories, evaluation code, partitioned tests, experiment settings, analysis scripts, and supporting results. Python 3.11+ is required.
 
 ```bash
 cd replication-package
@@ -25,11 +23,11 @@ python scripts/reproduce_feedback_opportunity.py --artifact-directory .
 python scripts/reproduce_feedback_mechanisms.py --artifact-directory .
 ```
 
-Recorded-result analysis requires no GPU, model download, API key, or execution of generated code. Rerunning generation requires model access and benchmark-specific dependencies; see the [package instructions](replication-package/README.md#rerun-generation).
+Recorded-result analysis uses the archived responses and execution outcomes and requires no GPU, model download, API key, or execution of generated code. Generation and evaluation have separate model, dependency, and sandbox requirements described in the [reproduction guide](replication-package/docs/REPRODUCIBILITY.md).
 
 ## Evidence and metrics
 
-The package contains 8,625 unique trajectory records. Shared initial candidates and reused experimental observations are identified in the data; trajectory counts are not counts of independent statistical samples.
+The package contains 8,625 unique trajectory records across seven evidence groups. The [data dictionary](replication-package/docs/DATA_DICTIONARY.md) and indexes identify shared initial candidates and reused observations; trajectory counts are not counts of independent statistical samples.
 
 | Metric | Definition |
 | --- | --- |
@@ -37,20 +35,20 @@ The package contains 8,625 unique trajectory records. Shared initial candidates 
 | Secure@1 | All hidden security tests pass |
 | Secure-Pass@1 | Both sets of hidden tests pass |
 
-Each trajectory contributes one final candidate, including after revision. Security is evaluated through dynamic tests. The primary metric is Secure-Pass@1; functional regressions are reported separately.
+Each trajectory contributes one final candidate. Security is evaluated through dynamic tests. The primary metric is Secure-Pass@1; functional regressions are reported separately.
 
 ## Repository contents
 
 | Location | Contents |
 | --- | --- |
-| [Code](replication-package/code/) | Generation and evaluation implementations |
-| [Data](replication-package/data/) | Portable recorded trajectories and dataset indexes |
+| [Code](replication-package/code/) | Archived generation, evaluation, and analysis implementations |
+| [Data](replication-package/data/) | Recorded trajectories and dataset indexes |
 | [Analysis scripts](replication-package/scripts/) | Verification and reproduction entry points |
-| [Configurations](replication-package/configs/) | Experiment settings |
-| [Reports](replication-package/artifacts/reports/) | Recorded aggregate and per-task analyses |
-| [Supporting results](replication-package/supporting-results/README.md) | Detailed tables, case analyses, and editable document sources |
+| [Configurations](replication-package/configs/) | Archived experiment settings |
+| [Reports](replication-package/artifacts/reports/) | Aggregate, per-task, and case analyses |
+| [Supporting results](replication-package/supporting-results/README.md) | Current JSS supplementary PDF and editable sources |
 
-Read the [supporting results PDF](replication-package/supporting-results/supplementary-tables.pdf) for complete numeric tables and mechanism analyses. Case annotations are machine-assisted source/log interpretations; independent human semantic validation is not complete.
+Case interpretations link archived code and execution failures to source-record hashes. Automated checks verify case selection and evidence correspondence. Frozen inputs and evaluation-correction records retain their original provenance under `benchmarks/manifests/` and `revision-provenance/`.
 
 ## Licenses
 

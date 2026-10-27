@@ -1,49 +1,33 @@
 # Reproducibility guide
 
-## Level 1: integrity, anonymity, and qualification metadata
+## Package and base-evidence verification
 
 ```bash
-python3 scripts/verify_artifact.py
+python scripts/verify_artifact.py
 ```
 
-This checks manifest membership/hashes, the 3,200 + 2,705 + 240 record grids,
-canonical identities, hidden-test isolation, B7 accounting, and the conservative
-human-review addendum, then runs the anonymity/credential scan.
+The verifier checks manifest membership and hashes, 3,200 balanced plus 2,705 original plus 240 security-only trajectories, canonical identities, hidden-test isolation, factorial reuse accounting, and frozen test-input bindings. It also runs the configured path, identity, and credential scan. The test-input check compares task membership with the frozen benchmark lists and validates file-link hashes.
 
-## Level 2: reproduce archived metrics
+## Reproduce archived analyses
 
 ```bash
-python3 scripts/reproduce_results.py
-python3 scripts/reproduce_b7_results.py
+python scripts/reproduce_results.py
+python scripts/reproduce_b7_results.py
+python scripts/reproduce_revision_results.py
+python scripts/reproduce_oracle_sensitivity.py
+python scripts/reproduce_external_tasks.py --artifact-directory .
+python scripts/reproduce_representation.py --artifact-directory .
+python scripts/reproduce_security_feedback.py --artifact-directory .
+python scripts/reproduce_feedback_opportunity.py --artifact-directory .
+python scripts/reproduce_feedback_mechanisms.py --artifact-directory .
 ```
 
-The first command recomputes the balanced-primary and 51-task descriptive
-results from 5,905 pre-addendum observations. The second joins the 240 B7
-records with the archived B0/B2/B3 subset and recomputes the 960-observation
-2x2 upfront factorial, including task-cluster bootstrap intervals and
-benchmark--model strata. The files are intentionally analyzed separately so
-the 720 reused primary records cannot be double-counted.
+The base verifier covers 6,145 records. The additional analyses cover 1,200 fixed-call, 400 project-level, 480 representation, and 400 security-feedback records, giving 8,625 unique trajectories in the complete release. Shared initial candidates are retained across the paired branches. The core and original cohorts remain separate, and the 960-cell factorial includes 720 reused observations.
 
-## Level 3: regenerate model outputs
+`reproduce_results.py` checks the core and original evidence; `reproduce_b7_results.py` recomputes the upfront factorial. The later scripts reproduce their respective comparisons and case checks. Statistical calculations use the recorded dependencies in `requirements-analysis.txt`. Archived-result analysis requires no GPU, model download, API key, or candidate-code execution.
 
-Full regeneration requires separately obtained Qwen checkpoints, access to the
-named DeepSeek-compatible endpoint, Linux/Bubblewrap, benchmark dependencies,
-and substantial compute. Generation settings are frozen in
-`configs/experiments/`. DeepSeek uses `thinking.type=disabled`; its repetition
-identifiers are request slots and are not provider-side deterministic seeds.
-Archived responses are the reproducible analysis boundary because providers
-may update remote backends.
+## Regenerate model outputs
 
-Do not execute generated candidates without a fresh network-isolated sandbox.
+Configure a separate rerun checkout from the archived sources, settings, test files, dependency records, and runtime identities. Install the relevant model checkpoints or configure the remote endpoint and preserve Linux/Bubblewrap isolation. Original generation settings remain recorded under `configs/experiments/` and `revision-provenance/`.
 
-## Invariants
-
-- balanced-primary trajectories: 3,200;
-- supporting trajectories: 2,705;
-- new B7 trajectories: 240 (SALLM 160; CodeGuard+ 80; 60 per model);
-- all unique trajectories: 6,145;
-- upfront factorial: 960 = 720 reused primary + 240 new B7;
-- primary tasks / all task instances / distinct CWEs: 20 / 51 / 24;
-- B3-B0 primary hidden-joint delta: +17.00 percentage points;
-- B3-B2 factorial hidden-joint delta: +7.50 points, with a task-cluster
-  95% interval that crosses zero.
+Input freezes and the export map distinguish original experiment inputs from sanitized distributed files. Create a new input freeze for any rerun after configuring host paths. Remote model services can change, so regenerated outputs need not equal the archived responses. Execute generated candidates only in a fresh sandbox with the network and filesystem restrictions specified by the archived evaluator.

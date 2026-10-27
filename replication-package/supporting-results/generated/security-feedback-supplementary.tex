@@ -1,19 +1,18 @@
-\clearpage
-\begin{table}[ht]
-\caption{Security-feedback ablation by model. Each branch has 100 initial candidates per model and two revisions.}
+\begin{table}[pos=htbp]
+\caption{Security-feedback ablation by model. Each branch has 100 initial candidates per model and exactly two revisions.}
 \centering\small
 \begin{tabular}{llrrr}
 \toprule
 Model & Feedback & Pass@1 (\%) & Secure@1 (\%) & \textbf{Secure-Pass@1} (\%) \\
 \midrule
-7B & Functional only & 58.0 & 61.0 & 45.0 \\
-7B & Functional + security & 53.0 & 59.0 & 44.0 \\
-14B & Functional only & 68.0 & 69.0 & 58.0 \\
-14B & Functional + security & 68.0 & 74.0 & 63.0 \\
+Q2.5-C7B & Functional only & 58.0 & 61.0 & 45.0 \\
+Q2.5-C7B & Functional + security & 53.0 & 59.0 & 44.0 \\
+Q2.5-C14B & Functional only & 68.0 & 69.0 & 58.0 \\
+Q2.5-C14B & Functional + security & 68.0 & 74.0 & 63.0 \\
 \bottomrule
 \end{tabular}
 \end{table}
-\begin{table}[ht]
+\begin{table}[pos=htbp]
 \caption{Security-feedback ablation by task. Each branch has ten model--seed observations per task. Columns give Secure-Pass@1 (\%) for functional-only (F-only) and functional-plus-security (F+S) feedback, followed by the added-channel differences in Pass@1, Secure@1, and Secure-Pass@1 (percentage points). Full rates are in the accompanying CSV.}
 \centering\small
 \setlength{\tabcolsep}{3pt}
@@ -44,7 +43,7 @@ SA/StackOverflow\_SO\_cwe094\_4 & 0 & 20 & -20 & 20 & 20 \\
 \bottomrule
 \end{tabular}
 \end{table}
-\begin{table}[ht]
+\begin{table}[pos=htbp]
 \caption{Initial-to-final hidden states in the security-feedback ablation. Each column contains 200 candidates.}
 \centering\small
 \begin{tabular}{lrr}
@@ -66,9 +65,9 @@ Transition & Functional only & Functional + security \\
 \bottomrule
 \end{tabular}
 \end{table}
-\clearpage
-\paragraph{Feedback and generation costs.}
+\FloatBarrier
+\paragraph{Feedback and generation costs}
 Across two revisions, functional-only feedback uses a mean of 1,333.4 prompt tokens, 504.3 completion tokens, and 168.8 delivered feedback tokens per trajectory. Functional-plus-security feedback uses 1,495.5, 517.0, and 270.1 tokens, respectively. Functional channels are truncated in 10 and eight of 400 messages; security channels are truncated in 16 of 400 combined messages. No generation reaches the 3,072-token output cap. Both branches receive the same functional channel at the initial state; subsequent messages reflect their own revised candidates.
 
-\paragraph{Candidate-load failures.}
+\paragraph{Candidate-load failures}
 Six visible or hidden evaluations fail during candidate loading. Their responses remain in the grid. Functional feedback reports the visible load error and security feedback reports that tests did not run; final uncollectable candidates fail all three endpoints. The artifact preserves the execution correction, original sources, and generated responses. Hidden results never enter revision messages.

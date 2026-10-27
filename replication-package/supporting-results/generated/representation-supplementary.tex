@@ -1,22 +1,22 @@
-\begin{table}[ht]
+\begin{table}[pos=htbp]
 \caption{Representation results by model. Each row contains 60 task--seed observations.}
 \centering\small
 \begin{tabular}{lllrrr}
 \toprule
 Model & Content & Expression & Pass@1 (\%) & Secure@1 (\%) & \textbf{Secure-Pass@1} (\%) \\
 \midrule
-Qwen 7B & Functional & Code & 51.7 & 51.7 & 31.7 \\
-Qwen 7B & Functional & Prose & 38.3 & 40.0 & 21.7 \\
-Qwen 7B & Functional + security & Code & 55.0 & 63.3 & 38.3 \\
-Qwen 7B & Functional + security & Prose & 46.7 & 58.3 & 30.0 \\
-Qwen 14B & Functional & Code & 51.7 & 60.0 & 50.0 \\
-Qwen 14B & Functional & Prose & 55.0 & 51.7 & 50.0 \\
-Qwen 14B & Functional + security & Code & 55.0 & 60.0 & 40.0 \\
-Qwen 14B & Functional + security & Prose & 56.7 & 56.7 & 41.7 \\
+Q2.5-C7B & Functional & Code & 51.7 & 51.7 & 31.7 \\
+Q2.5-C7B & Functional & Prose & 38.3 & 40.0 & 21.7 \\
+Q2.5-C7B & Functional + security & Code & 55.0 & 63.3 & 38.3 \\
+Q2.5-C7B & Functional + security & Prose & 46.7 & 58.3 & 30.0 \\
+Q2.5-C14B & Functional & Code & 51.7 & 60.0 & 50.0 \\
+Q2.5-C14B & Functional & Prose & 55.0 & 51.7 & 50.0 \\
+Q2.5-C14B & Functional + security & Code & 55.0 & 60.0 & 40.0 \\
+Q2.5-C14B & Functional + security & Prose & 56.7 & 56.7 & 41.7 \\
 \bottomrule
 \end{tabular}
 \end{table}
-\begin{table}[ht]
+\begin{table}[pos=htbp]
 \caption{Per-task hidden joint pass rates (\%) for the representation experiment. Each condition has ten model--seed observations per task.}
 \centering\small
 \begin{tabular}{lrrrr}

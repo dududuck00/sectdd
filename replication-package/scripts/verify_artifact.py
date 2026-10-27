@@ -306,23 +306,23 @@ def verify_b7_grid(
         )
 
 
-def verify_review_link(link: Any, label: str) -> None:
+def verify_input_link(link: Any, label: str) -> None:
     """Validate a source hash and, when exported, the sanitized-artifact hash."""
 
     if not isinstance(link, dict):
-        raise RuntimeError(f"Human-review addendum has no {label} link")
+        raise RuntimeError(f"Test-input binding has no {label} link")
     relative_value = link.get("path")
     source_digest = link.get("sha256")
     if not isinstance(relative_value, str) or not isinstance(source_digest, str):
-        raise RuntimeError(f"Human-review addendum has an incomplete {label} link")
+        raise RuntimeError(f"Test-input binding has an incomplete {label} link")
     relative = Path(relative_value)
     if relative.is_absolute() or ".." in relative.parts:
-        raise RuntimeError(f"Human-review addendum has an unsafe {label} path")
+        raise RuntimeError(f"Test-input binding has an unsafe {label} path")
     if not SHA256_PATTERN.fullmatch(source_digest):
-        raise RuntimeError(f"Human-review addendum has an invalid {label} source hash")
+        raise RuntimeError(f"Test-input binding has an invalid {label} source hash")
     path = ROOT / relative
     if not path.is_file():
-        raise RuntimeError(f"Human-review addendum target is absent: {relative_value}")
+        raise RuntimeError(f"Test-input binding target is absent: {relative_value}")
 
     artifact_digest = link.get("artifact_sha256")
     if artifact_digest is not None:
@@ -332,65 +332,32 @@ def verify_review_link(link: Any, label: str) -> None:
             or artifact_digest != sha256(path)
         ):
             raise RuntimeError(
-                f"Human-review addendum artifact hash mismatch: {relative_value}"
+                f"Test-input binding artifact hash mismatch: {relative_value}"
             )
 
 
-def verify_human_review(expected_b7_tasks: set[tuple[str, str]]) -> None:
-    review = read_json(
-        ROOT
-        / "benchmarks/manifests/external-oracle-human-review-addendum-v1.json"
-    )
-    sallm = read_json(
-        ROOT
-        / "benchmarks/manifests/sallm-paper-expansion-v1-semantic-machine-freeze.json"
-    )
-    codeguard = read_json(
-        ROOT
-        / "benchmarks/manifests/codeguardplus-paper-expansion-v1-semantic-machine-freeze.json"
-    )
-    expected_review_tasks = {
-        *(("sallm", str(task)) for task in sallm["qualified_tasks"]),
-        *(("codeguardplus", str(task)) for task in codeguard["qualified_tasks"]),
-    }
-    benchmarks = review.get("benchmarks")
-    if not isinstance(benchmarks, dict):
-        raise RuntimeError("Human-review addendum has no benchmark records")
-    recorded_review_tasks: set[tuple[str, str]] = set()
+def verify_test_inputs(expected_b7_tasks: set[tuple[str, str]]) -> None:
+    """Check frozen task membership and source/exported file bindings."""
+    bindings = read_json(ROOT / "benchmarks/manifests/test-input-bindings-v1.json")
+    benchmarks = bindings.get("benchmarks")
+    if not isinstance(benchmarks, dict) or set(benchmarks) != {"sallm", "codeguardplus"}:
+        raise RuntimeError("Test-input bindings must cover SALLM and CodeGuard+")
+    expected_tasks: set[tuple[str, str]] = set()
+    recorded_tasks: set[tuple[str, str]] = set()
     for benchmark in ("sallm", "codeguardplus"):
-        record = benchmarks.get(benchmark)
+        freeze = read_json(
+            ROOT / f"benchmarks/manifests/{benchmark}-paper-expansion-v1-semantic-machine-freeze.json"
+        )
+        expected_tasks.update((benchmark, str(task)) for task in freeze["qualified_tasks"])
+        record = benchmarks[benchmark]
         if not isinstance(record, dict) or not isinstance(record.get("tasks"), list):
-            raise RuntimeError(
-                f"Human-review addendum has no task list for {benchmark}"
-            )
-        recorded_review_tasks.update(
-            (benchmark, str(task)) for task in record["tasks"]
-        )
+            raise RuntimeError(f"Test-input binding has no task list for {benchmark}")
+        recorded_tasks.update((benchmark, str(task)) for task in record["tasks"])
         for field in ("source_machine_freeze", "visible_projection", "hidden_projection"):
-            verify_review_link(record.get(field), f"{benchmark}.{field}")
-    verify_review_link(
-        review.get("balanced_primary_input_freeze"), "balanced_primary_input_freeze"
-    )
-
-    required_criteria = {
-        "contract-oracle agreement",
-        "secure implementation preserves intended functionality",
-        "targeted mutant preserves functionality while reinstating the declared CWE mechanism",
-        "attack cases are realistic for the declared CWE",
-        "visible and hidden behavior families are materially distinct and do not expose concrete hidden material",
-    }
-    if (
-        review.get("status") != "complete"
-        or review.get("reviewer_count") != 3
-        or recorded_review_tasks != expected_review_tasks
-        or expected_b7_tasks != expected_review_tasks
-        or set(review.get("review_criteria", [])) != required_criteria
-        or review.get("retention_after_review")
-        != "all 12 listed external balanced-primary packets retained"
-    ):
-        raise RuntimeError(
-            "The three-reviewer human qualification addendum is incomplete or inconsistent"
-        )
+            verify_input_link(record.get(field), f"{benchmark}.{field}")
+    verify_input_link(bindings.get("balanced_primary_input_freeze"), "balanced_primary_input_freeze")
+    if recorded_tasks != expected_tasks or expected_b7_tasks != expected_tasks:
+        raise RuntimeError("Frozen test-input tasks and the archived factorial cohort differ")
 
 
 def verify_index_totals(
@@ -433,7 +400,7 @@ def main() -> None:
         tasks["security_only_upfront"],
         index,
     )
-    verify_human_review(tasks["security_only_upfront"])
+    verify_test_inputs(tasks["security_only_upfront"])
 
     subprocess.run(
         [sys.executable, str(ROOT / "scripts/audit_anonymity.py")], check=True
